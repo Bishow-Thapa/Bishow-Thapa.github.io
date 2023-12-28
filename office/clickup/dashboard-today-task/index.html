@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../../research/tricks/">
+        <link rel="prev" href="../redux-actions/">
       
-      
-        <link rel="next" href="../redux-actions/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>ReplyChatbox.js - My Docs</title>
+        <title>Dashboard Today Task - My Docs</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#to-and-cc-to-be-auto-populated-in-internal-message-section" class="md-skip">
+        <a href="#scenario" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ReplyChatbox.js
+              Dashboard Today Task
             
           </span>
         </div>
@@ -528,28 +526,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ReplyChatbox.js
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../01-replychatbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,42 +538,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#to-and-cc-to-be-auto-populated-in-internal-message-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      To and Cc to be auto populated in Internal Message Section
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solved" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solved
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -624,10 +568,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../dashboard-today-task/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dashboard Today Task
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -636,6 +598,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -673,18 +662,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#to-and-cc-to-be-auto-populated-in-internal-message-section" class="md-nav__link">
+  <a href="#scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      To and Cc to be auto populated in Internal Message Section
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solved" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solved
+      Scenario
     </span>
   </a>
   
@@ -705,70 +685,36 @@
                   
 
 
-  <h1>ReplyChatbox.js</h1>
+  <h1>Dashboard Today Task</h1>
 
-<blockquote>
-<p>src/views/Email/Includes/ReplyChatBox.js</p>
-</blockquote>
-<h2 id="to-and-cc-to-be-auto-populated-in-internal-message-section">To and Cc to be auto populated in Internal Message Section</h2>
-<pre><code># changes: linenumber - 894
+<h2 id="scenario">Scenario</h2>
+<p>After adding the Task from the dashboard, it doesn't comes in the task list.</p>
+<pre><code>const onFinish = async (values) =&gt; {
+let newValues = {
+startDate: moment(values.startDate),
+privateUserId: participantFrom,
+organizerEventLabelId: &quot;5ed65d11-e8e4-4ca9-a35f-14dbaa6509a6&quot;,
+normalOrPhoneOrVisit: calls ? 1 : visit ? 2 : 0,
+isToday: 1,
+...values,
+};
 
-const menuGropCreate = () =&gt; (
-  &lt;Menu style={{ maxHeight: 250, overflow: &quot;auto&quot; }}&gt;
-    &lt;Menu.Item
-      key=&quot;Create Group&quot;
-      onClick={() =&gt; {
-        setCreateGroupModal(true);
-        setGroupDataToBeUpdate();
-        form4.resetFields();
-      }}
-    &gt;
-      Create Group
-    &lt;/Menu.Item&gt;
+# Comment old code
+# await dispatch(addToDoEvent(newValues));
 
-    {groupData &amp;&amp;
-      groupData?.map((x) =&gt; {
-        return (
-          &lt;Menu.Item
-            key={x?.id}
-            onClick={() =&gt; {
-              let userIdsForTo = [];
-              let userIdsForCc = [];
-              x?.userList?.map((x) =&gt; {
-                if (x?.participantTypeDto?.id === 0) {
-                  userIdsForTo.push(x?.userId);
-                } else {
-                  userIdsForCc.push(x?.userId);
-                }
-              });
-              setSelectTosNewCutGroup(userIdsForTo);
-              setSelectCcsNewCutGroup(userIdsForCc);
-              // added
-              setSelectedEmails(userIdsForCc);
-            }}
-            style={{ display: &quot;flex&quot;, justifyContent: &quot;space-between&quot; }}
-          &gt;
-            &lt;div&gt;{x?.groupName}&lt;/div&gt;
+# Structure
+# addToDoEvent(data, &lt;type&gt;, &lt;taskCat&gt;)
 
-            &lt;EditOutlined
-              style={{ paddingLeft: 15 }}
-              onClick={() =&gt; {
-                setGroupDataToBeUpdate(x);
-                setCreateGroupModal(true);
-              }}
-            /&gt;
-          &lt;/Menu.Item&gt;
-        );
-      })}
-  &lt;/Menu&gt;
-);
+# finally add this
+await dispatch(addToDoEvent(newValues, undefined, &quot;today&quot;));
 
+# Remove this
+// await fetchMoreData();
+
+await setCalls(false);
+await setVisit(false);
+};
 </code></pre>
-<hr />
-<h2 id="solved">Solved</h2>
-<blockquote>
-<p>setSelectedEmails(userIdsForCc);</p>
-</blockquote>
 
 
 
