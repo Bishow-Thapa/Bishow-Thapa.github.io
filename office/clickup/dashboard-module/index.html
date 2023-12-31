@@ -664,14 +664,14 @@
 
   <h1>Dasboard Financial Status</h1>
 
-<h2 id="dashboard-module">Dashboard Module</h2>
+<div><h2 id="dashboard-module">Dashboard Module</h2>
 <pre><code># Budget.js
 # line number: 104
 
 
 const tableDataSource = [
     {
-        type: &quot;Fee Due&quot;,
+        type: "Fee Due",
         amount: filteredDataSource
         ?.map((x) =&gt; {
             if (x.feeDue !== 0) {
@@ -696,15 +696,15 @@ const tableDataSource = [
         # Added
         lastUpdatedDate: filteredDataSource
         ?.map((x) =&gt; {
-            if (x?.accountCategory === &quot;FeeDue&quot;) {
+            if (x?.accountCategory === "FeeDue") {
             return x.lastUpdatedDate;
             }
         })
         .filter((x) =&gt; x !== undefined)
-        .join(&quot;&quot;),
+        .join(""),
     },
     {
-        type: &quot;Fee Remaining&quot;,
+        type: "Fee Remaining",
         amount: filteredDataSource
         ?.map((x) =&gt; {
             if (x.feeRemaining !== 0) {
@@ -728,16 +728,16 @@ const tableDataSource = [
         .filter((x) =&gt; x !== undefined),
         lastUpdatedDate: filteredDataSource
         ?.map((x) =&gt; {
-            if (x?.accountCategory === &quot;FeeRemaining&quot;) {
+            if (x?.accountCategory === "FeeRemaining") {
             return x.lastUpdatedDate;
             }
         })
         .filter((x) =&gt; x !== undefined)
-        .join(&quot;&quot;),
+        .join(""),
     },
 ];
 
-</code></pre>
+</code></pre></div>
 
 
 

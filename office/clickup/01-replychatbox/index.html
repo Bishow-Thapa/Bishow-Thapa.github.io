@@ -682,16 +682,16 @@
 
   <h1>ReplyChatbox.js</h1>
 
-<blockquote>
+<div><blockquote>
 <p>src/views/Email/Includes/ReplyChatBox.js</p>
 </blockquote>
 <h2 id="to-and-cc-to-be-auto-populated-in-internal-message-section">To and Cc to be auto populated in Internal Message Section</h2>
 <pre><code># changes: linenumber - 894
 
 const menuGropCreate = () =&gt; (
-  &lt;Menu style={{ maxHeight: 250, overflow: &quot;auto&quot; }}&gt;
+  &lt;Menu style={{ maxHeight: 250, overflow: "auto" }}&gt;
     &lt;Menu.Item
-      key=&quot;Create Group&quot;
+      key="Create Group"
       onClick={() =&gt; {
         setCreateGroupModal(true);
         setGroupDataToBeUpdate();
@@ -721,7 +721,7 @@ const menuGropCreate = () =&gt; (
               // added
               setSelectedEmails(userIdsForCc);
             }}
-            style={{ display: &quot;flex&quot;, justifyContent: &quot;space-between&quot; }}
+            style={{ display: "flex", justifyContent: "space-between" }}
           &gt;
             &lt;div&gt;{x?.groupName}&lt;/div&gt;
 
@@ -739,11 +739,11 @@ const menuGropCreate = () =&gt; (
 );
 
 </code></pre>
-<hr />
+<hr>
 <h2 id="solved">Solved</h2>
 <blockquote>
 <p>setSelectedEmails(userIdsForCc);</p>
-</blockquote>
+</blockquote></div>
 
 
 

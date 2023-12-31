@@ -700,7 +700,7 @@
 
   <h1>Action</h1>
 
-<h2 id="hitting-both-api-at-once">Hitting both api at once</h2>
+<div><h2 id="hitting-both-api-at-once">Hitting both api at once</h2>
 <h2 id="actions">ACTIONS</h2>
 <pre><code># ACTION:  services/redux/Reference/action.js
 # Line number: 180
@@ -713,7 +713,7 @@ export const ReferenceRemarksCompanyAdd = (data1, data2) =&gt; {
         const response = await referencesService.ReferenceCompanyManualAdd(data1);
         dispatch(finish(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD));
         if (response.isSuccess) {
-        message.success(&quot;Successfully updated company&quot;);
+        message.success("Successfully updated company");
         dispatch(
             success(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD, response.data)
         );
@@ -734,7 +734,7 @@ export const referencePartyRemarksHistoryAdd = (apiData) =&gt; {
       );
       dispatch(finish(REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD));
       if (response.isSuccess) {
-        message.success(&quot;Successfully added Remarks&quot;);
+        message.success("Successfully added Remarks");
         dispatch(
           success(
             REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD,
@@ -777,7 +777,7 @@ case REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD_SUCCESS:
     ],
     referencePartyListingResponse: updatedPartyListingResponse,
   };
-</code></pre>
+</code></pre></div>
 
 
 

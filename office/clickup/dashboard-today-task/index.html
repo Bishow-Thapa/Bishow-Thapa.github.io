@@ -682,7 +682,7 @@
 
   <h1>Dashboard Today Task</h1>
 
-<h2 id="scenario">Scenario</h2>
+<div><h2 id="scenario">Scenario</h2>
 <p>After adding the Task from the dashboard, it doesn't comes in the task list.</p>
 <blockquote>
 <p>views/Home/todolist.js</p>
@@ -694,7 +694,7 @@
 let newValues = {
 startDate: moment(values.startDate),
 privateUserId: participantFrom,
-organizerEventLabelId: &quot;5ed65d11-e8e4-4ca9-a35f-14dbaa6509a6&quot;,
+organizerEventLabelId: "5ed65d11-e8e4-4ca9-a35f-14dbaa6509a6",
 normalOrPhoneOrVisit: calls ? 1 : visit ? 2 : 0,
 isToday: 1,
 ...values,
@@ -707,7 +707,7 @@ isToday: 1,
 # addToDoEvent(data, &lt;type&gt;, &lt;taskCat&gt;)
 
 # finally add this
-await dispatch(addToDoEvent(newValues, undefined, &quot;today&quot;));
+await dispatch(addToDoEvent(newValues, undefined, "today"));
 
 # Remove this
 // await fetchMoreData();
@@ -725,12 +725,12 @@ await setVisit(false);
 </blockquote>
 <pre><code>export const addToDoEvent = (body, type, taskCat) =&gt; {
   return async (dispatch) =&gt; {
-    // console.log(&quot;type: &quot;, type, &quot;, taskCat at last: &quot;, taskCat);
+    // console.log("type: ", type, ", taskCat at last: ", taskCat);
     dispatch(init(TODO_TYPES.ADD_TODO_LISTS));
     const response = await toDoListService.addToDoEvent(body);
     dispatch(finish(TODO_TYPES.ADD_TODO_LISTS));
     if (response.isSuccess) {
-      // if (type !== &quot;calls&quot;) {
+      // if (type !== "calls") {
       //   dispatch(getTodoEventsPagination());
       // }
 
@@ -739,13 +739,13 @@ await setVisit(false);
       );
       dispatch(todoEventGetAllCounter());
       // dispatch(getTodoEventsPagination(`maxResultCount=10&amp;skipCount=0`));
-      message.success(&quot;To-Do Event added successfully&quot;);
+      message.success("To-Do Event added successfully");
     } else if (!response.isSuccess) {
       dispatch(error(response.errorMessage));
     }
   };
 };
-</code></pre>
+</code></pre></div>
 
 
 
