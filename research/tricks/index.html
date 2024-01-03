@@ -820,6 +820,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -899,6 +908,15 @@
   <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
       Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
     </span>
   </a>
   
@@ -999,6 +1017,15 @@ $ git cherry-pick &lt;commit&gt;
 &gt; from geeks.models import GeeksModel
 &gt; GeeksModel.objects.create(title="title1",description="description1").save()
 &gt; GeeksModel.objects.create(title="title2",description="description2").save()
+</code></pre>
+<h2 id="deployment">Deployment</h2>
+<pre><code>my-project/
+    mkdocs.yml
+    docs/
+orgname.github.io/
+
+$ cd ../orgname.github.io/
+$ mkdocs gh-deploy --config-file ../&lt;project-name&gt;/mkdocs.yml --remote-branch &lt;branch-name&gt;
 </code></pre>
 <hr>
 <h2 id="reference">Reference</h2>
