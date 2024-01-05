@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/01/02/how-to-implement-tokenization-using-jwt-and-django/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/01/05/django-cors/">
       
       
-        <link rel="prev" href="../../01/managing-development-env-in-django/">
+        <link rel="prev" href="../giscus-comment-system/">
       
       
-        <link rel="next" href="../../03/blog-crud-application-using-drf--viewsets/">
+        <link rel="next" href="../viewset-vs-apiview/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Implement Tokenization using JWT and Django - My Docs</title>
+        <title>Django cors - My Docs</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-implement-tokenization-using-jwt-and-django" class="md-skip">
+        <a href="#django-cors" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Implement Tokenization using JWT and Django
+              Django cors
             
           </span>
         </div>
@@ -798,9 +798,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project" class="md-nav__link">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      project
+      Reference
     </span>
   </a>
   
@@ -862,7 +862,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-01-02 00:00:00" class="md-ellipsis">January 2, 2024</time>
+                        <time datetime="2024-01-05 00:00:00" class="md-ellipsis">January 5, 2024</time>
                       </div>
                     </li>
                     
@@ -874,7 +874,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -897,78 +897,68 @@
   
 
 
-<div><h1 id="how-to-implement-tokenization-using-jwt-and-django">How to Implement Tokenization using JWT and Django</h1>
-<p>A JSON Web Token authentication plugin for the Django REST Framework.</p>
-<p>Simple JWT provides a JSON Web Token authentication backend for the Django REST Framework. It aims to cover the most common use cases of JWTs by offering a conservative set of default features. It also aims to be easily extensible in case a desired feature is not present.</p>
+<div><h1 id="django-cors">Django cors</h1>
+<p>django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS). Adding CORS headers allows your resources to be accessed on other domains.</p>
 <!-- more -->
 
-<pre><code>$ pip install djangorestframework-simplejwt
+<p>CORS is a mechanism to allow interaction with resources hosted on different domains.</p>
+<pre><code>$ pip install django-cors-headers
+
+$ pip install django djangorestframework django-cors-headers
 </code></pre>
-<h2 id="project">project</h2>
-<pre><code># urls.py
-
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/token/', TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path('api/token/refresh', TokenRefreshView.as_view(), name="token_refresh"),
+<p>and then add it to your installed apps:</p>
+<pre><code>INSTALLED_APPS = [
+    ...,
+    "corsheaders",
+    ...,
 ]
 </code></pre>
-<pre><code># settings.py
-
-INSTALLED_APPS = [
-  'django.contrib.admin',
-  'django.contrib.auth',
-  'django.contrib.contenttypes',
-  'django.contrib.sessions',
-  'django.contrib.messages',
-  'django.contrib.staticfiles',
-
-  # packages
-  'rest_framework',
-  'rest_framework_simplejwt',
-
-  # apps
-  'apps.accounts',
-  'apps.blogs',
-  'apps.privateapi',
-  'apps.books',
+<p>You will also need to add a middleware class to listen in on responses:</p>
+<pre><code>MIDDLEWARE = [
+    ...,
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    ...,
 ]
-
-# add this
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-}
-
-SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('Bearer',),
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS': False,
-    'BLACKLIST_AFTER_ROTATION': False,
-    'ALGORITHM': 'HS256',
-    'SIGNING_KEY': SECRET_KEY,
-    'VERIFYING_KEY': None,
-    'AUTH_HEADER_TYPES': ('Bearer',),
-    'USER_ID_FIELD': 'id',
-    'USER_ID_CLAIM': 'user_id',
-    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
-    'TOKEN_TYPE_CLAIM': 'token_type',
-    'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
-    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=15),
-    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
-}
-
 </code></pre>
-<hr>
+<p><code>CorsMiddleware</code> should be placed as high as possible, especially before any middleware that can generate responses such as Django’s <code>CommonMiddleware</code> or Whitenoise’s <code>WhiteNoiseMiddleware</code>. If it is not before, it will not be able to add the CORS headers to these responses.</p>
+<p><strong>Configuration</strong></p>
+<p>Configure the middleware’s behaviour in your Django settings. You must set at least one of three following settings:</p>
 <ul>
-<li><a href="https://django-rest-framework-simplejwt.readthedocs.io/en/latest/">simplejwt</a></li>
+<li><code>CORS_ALLOWED_ORIGINS</code></li>
+<li><code>CORS_ALLOWED_ORIGIN_REGEXES</code></li>
+<li><code>CORS_ALLOW_ALL_ORIGINS</code></li>
+</ul>
+<p>Example:</p>
+<pre><code>CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+]
+</code></pre>
+<p>CORS_ORIGIN_WHITELIST <code>Deprecated</code> <strong>VS</strong> CORS_ALLOWED_ORIGINS</p>
+<ul>
+<li><strong>before version</strong> <code>3.0.0</code> he setting used to whitelist allowed origins was <code>CORS_ORIGIN_WHITELIST</code>.</li>
+<li>In version <code>3.0.0</code> and later, the naming convention was changed to <code>CORS_ALLOWED_ORIGINS</code> for consistency with other Django settings.</li>
+<li>You should use <code>CORS_ALLOWED_ORIGINS</code> in more recent versions of <code>django-cors-headers</code>:</li>
+</ul>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://pypi.org/project/django-cors-headers/">django-cors-headers</a></li>
+<li><a href="https://www.stackhawk.com/blog/django-cors-guide/">Django CORS Guide</a></li>
+<li>
+<p><a href="https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react">whitelist cors</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@devsumitg/how-to-connect-reactjs-django-framework-c5ba268cb8be">How to Integrate ReactJS with Django Framework</a></p>
+</li>
+<li><a href="https://blog.logrocket.com/using-react-django-create-app-tutorial/">Using React with Django to create an app</a></li>
+<li><a href="https://medium.com/codex/how-to-integrate-react-and-django-framework-in-a-simple-way-c8b90f3ce945">How to Integrate React and Django framework, in a simpler way</a></li>
+<li><a href="https://www.reddit.com/r/django/comments/12jghzi/what_are_the_possible_ways_to_integrate_react_and/">what are the possible ways to integrate react: reddit</a></li>
+<li><a href="https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-django-react/">How to build a React application in a Django project </a></li>
+<li><a href="https://www.geeksforgeeks.org/integrating-django-with-reactjs-using-django-rest-framework/">Integrating Django with Reactjs using Django REST Framework</a></li>
 </ul></div>
 
 
@@ -1058,7 +1048,7 @@ SIMPLE_JWT = {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../01/managing-development-env-in-django/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Managing development .env in Django">
+          <a href="../giscus-comment-system/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Giscus comment system">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1068,20 +1058,20 @@ SIMPLE_JWT = {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Managing development .env in Django
+                Giscus comment system
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../03/blog-crud-application-using-drf--viewsets/" class="md-footer__link md-footer__link--next" aria-label="Next: Blog CRUD Application Using DRF — Viewsets">
+          <a href="../viewset-vs-apiview/" class="md-footer__link md-footer__link--next" aria-label="Next: Viewset vs APIView">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Blog CRUD Application Using DRF — Viewsets
+                Viewset vs APIView
               </div>
             </div>
             <div class="md-footer__button md-icon">
