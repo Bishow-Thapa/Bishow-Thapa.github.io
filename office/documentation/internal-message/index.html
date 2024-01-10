@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/office/documentation/01-doc/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/office/documentation/internal-message/">
       
       
         <link rel="prev" href="../../01-credentials/">
       
       
-        <link rel="next" href="../../clickup/01-replychatbox/">
+        <link rel="next" href="../redux-action-advanced/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dashboad - My Docs</title>
+        <title>Internal Message - My Docs</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#doc-1" class="md-skip">
+        <a href="#internal-message" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dashboad
+              Internal Message
             
           </span>
         </div>
@@ -530,12 +530,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Dashboad
+    Internal Message
   </span>
   
 
@@ -546,7 +548,7 @@
         
   
   <span class="md-ellipsis">
-    Dashboad
+    Internal Message
   </span>
   
 
@@ -558,6 +560,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -566,9 +570,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#doc-1" class="md-nav__link">
+  <a href="#internal-message-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Doc 1
+      Internal Message Components
     </span>
   </a>
   
@@ -578,6 +582,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redux-action-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tender Communication Redux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-listing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Listing Redux
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -829,6 +875,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -837,9 +885,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#doc-1" class="md-nav__link">
+  <a href="#internal-message-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Doc 1
+      Internal Message Components
     </span>
   </a>
   
@@ -863,9 +911,103 @@
   
 
 
-  <h1>Dashboad</h1>
+<div><h1 id="internal-message">Internal Message</h1>
+<pre><code># views/OfficeResource/Reference/Tabs/TenderTabs/companies/Companies.js
 
-<h2 id="doc-1">Doc 1</h2>
+import { Modal } from "antd";
+import ChatDetails from "views/GlobalEmailChat";
+
+# Chat State
+const [taskId, setTaskId] = useState();
+const [showChat, setShowChat] = useState(false);
+const [chatHeight, setChatHeight] = useState(false);
+const [smallChatHeight, setSmallChatHeight] = useState(false);
+const [chatBox, setchatBox] = useState(true);
+const [hideInternalMessage, setHideInternalMessage] = useState(false);
+const [todoDetails, setTodoDetails] = useState([]);
+# upto here
+
+const handleCircularModal = () =&gt; {
+  setIsCircularModalOpen(false);
+  setHideInternalMessage(true);
+};
+
+return (
+    &lt;&gt;
+        &lt;Button type="primary" onClick={() =&gt; setIsCircularModalOpen(true)}&gt;
+            Send for Approval
+        &lt;/Button&gt;
+
+        {/* Internal Message Model for Approval */}
+        &lt;Modal
+            title="Circular Planning"
+            visible={isCircularModalOpen}
+            onCancel={handleCircularModal}
+            footer={null}
+        &gt;
+            &lt;ChatDetails
+            // allToDoEvents={allToDoEvents}
+            taskId={getDetails?.referenceId}
+            setShowChat={setShowChat}
+            setSmallChatHeight={setSmallChatHeight}
+            setChatHeight={setChatHeight}
+            chatHeight={chatHeight}
+            smallChatHeight={smallChatHeight}
+            setchatBox={setchatBox}
+            chatBox={chatBox}
+            // module="Task"
+            origin="Dashboard"
+            module="CEAD_WeeklyReport"
+            // origin="tender"
+            setHideInternalMessage={setHideInternalMessage}
+            hideInternalMessage={hideInternalMessage}
+            todoDetails={todoDetails}
+            isPrivate={false}
+            /&gt;
+        &lt;/Modal&gt;
+    &lt;/&gt;
+)
+</code></pre>
+<pre><code># views/GlobalEmailChat/index.js
+
+const ChatDetails = (props) =&gt; {
+    const applicationTypeListing = async () =&gt; {
+    try {
+      const resp = await messageApplicationTypeListing();
+      console.log("resp: ", resp);
+      if (resp &amp;&amp; resp.status == 200) {
+        resp?.data?.map((type) =&gt; {
+          if (module === "Task" &amp;&amp; type.displayName === "Task") {
+            setApplicationType(type.id);
+          } else if (module === "Approvals" &amp;&amp; type.displayName === "Leave") {
+            setApplicationType(type.id);
+          } else if (
+            module === "CEAD_WeeklyReport" &amp;&amp;
+            type.displayName === "CEAD Weekly Report"
+          ) {
+            setApplicationType(type.id);
+          }
+
+          # if your dispaly &amp; module is new add here
+        });
+      }
+    } catch (error) {
+      message.error("Failure");
+    }
+  };
+}
+</code></pre>
+<h2 id="internal-message-components">Internal Message Components</h2>
+<p>To send only internal message use this components</p>
+<blockquote>
+<p>components</p>
+<blockquote>
+<p>InternalMNew</p>
+<blockquote>
+<p>index.js</p>
+</blockquote>
+</blockquote>
+</blockquote></div>
 
 
 
@@ -912,13 +1054,13 @@
         
         
           
-          <a href="../../clickup/01-replychatbox/" class="md-footer__link md-footer__link--next" aria-label="Next: ReplyChatbox.js">
+          <a href="../redux-action-advanced/" class="md-footer__link md-footer__link--next" aria-label="Next: Tender Communication Redux">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ReplyChatbox.js
+                Tender Communication Redux
               </div>
             </div>
             <div class="md-footer__button md-icon">
