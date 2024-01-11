@@ -786,6 +786,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickup/tender-mail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tender Mail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -842,6 +863,69 @@
   
   <span class="md-ellipsis">
     Tips & Tricks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/react-context-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React Context API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/useCallback-hook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React useCallback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/useRef-hook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React useRef
   </span>
   
 
@@ -912,91 +996,91 @@
 
 
 <div><h1 id="internal-message">Internal Message</h1>
-<pre><code># views/OfficeResource/Reference/Tabs/TenderTabs/companies/Companies.js
-
-import { Modal } from "antd";
-import ChatDetails from "views/GlobalEmailChat";
-
-# Chat State
-const [taskId, setTaskId] = useState();
-const [showChat, setShowChat] = useState(false);
-const [chatHeight, setChatHeight] = useState(false);
-const [smallChatHeight, setSmallChatHeight] = useState(false);
-const [chatBox, setchatBox] = useState(true);
-const [hideInternalMessage, setHideInternalMessage] = useState(false);
-const [todoDetails, setTodoDetails] = useState([]);
-# upto here
-
-const handleCircularModal = () =&gt; {
-  setIsCircularModalOpen(false);
-  setHideInternalMessage(true);
-};
-
-return (
-    &lt;&gt;
-        &lt;Button type="primary" onClick={() =&gt; setIsCircularModalOpen(true)}&gt;
-            Send for Approval
-        &lt;/Button&gt;
-
-        {/* Internal Message Model for Approval */}
-        &lt;Modal
-            title="Circular Planning"
-            visible={isCircularModalOpen}
-            onCancel={handleCircularModal}
-            footer={null}
-        &gt;
-            &lt;ChatDetails
-            // allToDoEvents={allToDoEvents}
-            taskId={getDetails?.referenceId}
-            setShowChat={setShowChat}
-            setSmallChatHeight={setSmallChatHeight}
-            setChatHeight={setChatHeight}
-            chatHeight={chatHeight}
-            smallChatHeight={smallChatHeight}
-            setchatBox={setchatBox}
-            chatBox={chatBox}
-            // module="Task"
-            origin="Dashboard"
-            module="CEAD_WeeklyReport"
-            // origin="tender"
-            setHideInternalMessage={setHideInternalMessage}
-            hideInternalMessage={hideInternalMessage}
-            todoDetails={todoDetails}
-            isPrivate={false}
-            /&gt;
-        &lt;/Modal&gt;
-    &lt;/&gt;
-)
-</code></pre>
-<pre><code># views/GlobalEmailChat/index.js
-
-const ChatDetails = (props) =&gt; {
-    const applicationTypeListing = async () =&gt; {
-    try {
-      const resp = await messageApplicationTypeListing();
-      console.log("resp: ", resp);
-      if (resp &amp;&amp; resp.status == 200) {
-        resp?.data?.map((type) =&gt; {
-          if (module === "Task" &amp;&amp; type.displayName === "Task") {
-            setApplicationType(type.id);
-          } else if (module === "Approvals" &amp;&amp; type.displayName === "Leave") {
-            setApplicationType(type.id);
-          } else if (
-            module === "CEAD_WeeklyReport" &amp;&amp;
-            type.displayName === "CEAD Weekly Report"
-          ) {
-            setApplicationType(type.id);
-          }
-
-          # if your dispaly &amp; module is new add here
-        });
-      }
-    } catch (error) {
-      message.error("Failure");
-    }
-  };
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># views/OfficeResource/Reference/Tabs/TenderTabs/companies/Companies.js
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>import { Modal } from "antd";
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>import ChatDetails from "views/GlobalEmailChat";
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a># Chat State
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>const [taskId, setTaskId] = useState();
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>const [showChat, setShowChat] = useState(false);
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>const [chatHeight, setChatHeight] = useState(false);
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>const [smallChatHeight, setSmallChatHeight] = useState(false);
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>const [chatBox, setchatBox] = useState(true);
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>const [hideInternalMessage, setHideInternalMessage] = useState(false);
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>const [todoDetails, setTodoDetails] = useState([]);
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a># upto here
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>const handleCircularModal = () =&gt; {
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  setIsCircularModalOpen(false);
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  setHideInternalMessage(true);
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>};
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>return (
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    &lt;&gt;
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        &lt;Button type="primary" onClick={() =&gt; setIsCircularModalOpen(true)}&gt;
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>            Send for Approval
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        &lt;/Button&gt;
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        {/* Internal Message Model for Approval */}
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        &lt;Modal
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            title="Circular Planning"
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            visible={isCircularModalOpen}
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            onCancel={handleCircularModal}
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>            footer={null}
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        &gt;
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>            &lt;ChatDetails
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>            // allToDoEvents={allToDoEvents}
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>            taskId={getDetails?.referenceId}
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>            setShowChat={setShowChat}
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            setSmallChatHeight={setSmallChatHeight}
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>            setChatHeight={setChatHeight}
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>            chatHeight={chatHeight}
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>            smallChatHeight={smallChatHeight}
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>            setchatBox={setchatBox}
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>            chatBox={chatBox}
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>            // module="Task"
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>            origin="Dashboard"
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>            module="CEAD_WeeklyReport"
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>            // origin="tender"
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>            setHideInternalMessage={setHideInternalMessage}
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>            hideInternalMessage={hideInternalMessage}
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>            todoDetails={todoDetails}
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>            isPrivate={false}
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>            /&gt;
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>        &lt;/Modal&gt;
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    &lt;/&gt;
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>)
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># views/GlobalEmailChat/index.js
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>const ChatDetails = (props) =&gt; {
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    const applicationTypeListing = async () =&gt; {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    try {
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      const resp = await messageApplicationTypeListing();
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      console.log("resp: ", resp);
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      if (resp &amp;&amp; resp.status == 200) {
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        resp?.data?.map((type) =&gt; {
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>          if (module === "Task" &amp;&amp; type.displayName === "Task") {
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            setApplicationType(type.id);
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>          } else if (module === "Approvals" &amp;&amp; type.displayName === "Leave") {
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            setApplicationType(type.id);
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>          } else if (
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            module === "CEAD_WeeklyReport" &amp;&amp;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            type.displayName === "CEAD Weekly Report"
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>          ) {
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            setApplicationType(type.id);
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>          }
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>          # if your dispaly &amp; module is new add here
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        });
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>      }
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    } catch (error) {
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>      message.error("Failure");
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    }
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  };
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>}
+</span></code></pre></div>
 <h2 id="internal-message-components">Internal Message Components</h2>
 <p>To send only internal message use this components</p>
 <blockquote>
@@ -1111,7 +1195,7 @@ const ChatDetails = (props) =&gt; {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>

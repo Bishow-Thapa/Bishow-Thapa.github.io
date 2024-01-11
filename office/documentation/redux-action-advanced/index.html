@@ -804,6 +804,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickup/tender-mail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tender Mail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -860,6 +881,69 @@
   
   <span class="md-ellipsis">
     Tips & Tricks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/react-context-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React Context API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/useCallback-hook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React useCallback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/useRef-hook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React useRef
   </span>
   
 
@@ -953,192 +1037,192 @@
 <blockquote>
 <p><code>services/redux/Reference/api.js</code></p>
 </blockquote>
-<pre><code># ReferencePartyRemarksHistoryAdd
-
-referencePartyRemarksHistoryAdd(apiData) {
-    let url = `${appBaseUrl}/referenceManagement/referencePartyRemarksHistoryAdd`;
-    let data = postService(url, apiData);
-    return data;
-}
-</code></pre>
-<pre><code># Reference remarks history listing
-
-referencePartyRemarksHistoryListing(body) {
-    let query = queryString.stringify(body);
-    let url = `${appBaseUrl}/referenceManagement/referencePartyRemarksHistoryListing?${query}`;
-    let data = getService(url);
-    return data;
-}
-</code></pre>
-<pre><code># reference company manual add
-
-ReferenceCompanyManualAdd(q) {
-    let query = queryString.stringify(q);
-    let url = `${appBaseUrl}/referenceManagement/referenceCompanyManualAdd?${query}`;
-    let data = getService(url);
-    return data;
-}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># ReferencePartyRemarksHistoryAdd
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>referencePartyRemarksHistoryAdd(apiData) {
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    let url = `${appBaseUrl}/referenceManagement/referencePartyRemarksHistoryAdd`;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    let data = postService(url, apiData);
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    return data;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Reference remarks history listing
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>referencePartyRemarksHistoryListing(body) {
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    let query = queryString.stringify(body);
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    let url = `${appBaseUrl}/referenceManagement/referencePartyRemarksHistoryListing?${query}`;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    let data = getService(url);
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    return data;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># reference company manual add
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>ReferenceCompanyManualAdd(q) {
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    let query = queryString.stringify(q);
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    let url = `${appBaseUrl}/referenceManagement/referenceCompanyManualAdd?${query}`;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    let data = getService(url);
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    return data;
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>}
+</span></code></pre></div>
 <h2 id="action">ACTION</h2>
 <blockquote>
 <p><code>services/redux/Reference/action.js</code></p>
 </blockquote>
-<pre><code># add company and remarks both
-
-export const ReferenceRemarksCompanyAdd = (data1, data2) =&gt; {
-  return async (dispatch) =&gt; {
-    dispatch(init(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD));
-    const response = await referencesService.ReferenceCompanyManualAdd(data1);
-    dispatch(finish(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD));
-    if (response.isSuccess) {
-      message.success("Successfully updated company");
-      dispatch(
-        success(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD, response.data)
-      );
-
-      # hitting another ACTION
-
-      await dispatch(referencePartyRemarksHistoryAdd(data2));
-
-    } else if (!response.isSuccess) {
-      dispatch(error(response.errorMessage));
-    }
-  };
-};
-</code></pre>
-<pre><code># ReferencePartyRemarksHistoryAdd
-
-export const referencePartyRemarksHistoryAdd = (apiData) =&gt; {
-  return async (dispatch) =&gt; {
-    dispatch(init(REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD));
-    const response = await referencesService.referencePartyRemarksHistoryAdd(
-      apiData
-    );
-    dispatch(finish(REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD));
-    if (response.isSuccess) {
-      message.success("Successfully added Remarks");
-      dispatch(
-        success(
-          REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD,
-          response.data
-        )
-      );
-    } else if (!response.isSuccess) {
-      dispatch(error(response.errorMessage));
-    }
-  };
-};
-</code></pre>
-<pre><code>export const actionForReferenceCircularPlanningAdd = (data, data1) =&gt; {
-  return async (dispatch) =&gt; {
-    dispatch(init(REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD));
-    const response =
-      await referencesService.referenceCompanyCircularPlanningAdd(data);
-    dispatch(finish(REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD));
-    if (response.isSuccess) {
-      dispatch(
-        success(REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD, response.data)
-      );
-
-      # hitting another ACTION
-
-      await dispatch(referenceCircularPlanningRemarksAdd(data1));
-
-    } else if (!response.isSuccess) {
-      dispatch(error(response.errorMessage));
-    }
-  };
-};
-</code></pre>
-<pre><code># circular remkarks add
-
-export const referenceCircularPlanningRemarksAdd = (data) =&gt; {
-  return async (dispatch) =&gt; {
-    dispatch(init(REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING));
-    const response = await referencesService.referencePartyRemarksHistoryAdd(
-      data
-    );
-    dispatch(finish(REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING));
-    if (response.isSuccess) {
-      message.success("Successfully added Remarks");
-      dispatch(
-        success(
-          REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING,
-          response.data
-        )
-      );
-    } else if (!response.isSuccess) {
-      dispatch(error(response.errorMessage));
-    }
-  };
-};
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># add company and remarks both
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>export const ReferenceRemarksCompanyAdd = (data1, data2) =&gt; {
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  return async (dispatch) =&gt; {
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    dispatch(init(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD));
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    const response = await referencesService.ReferenceCompanyManualAdd(data1);
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    dispatch(finish(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD));
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    if (response.isSuccess) {
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>      message.success("Successfully updated company");
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>      dispatch(
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        success(REFERENCE__TYPES.REFERENCE_COMPANY_MANUAL_ADD, response.data)
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>      );
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      # hitting another ACTION
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>      await dispatch(referencePartyRemarksHistoryAdd(data2));
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    } else if (!response.isSuccess) {
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>      dispatch(error(response.errorMessage));
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    }
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>  };
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>};
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># ReferencePartyRemarksHistoryAdd
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>export const referencePartyRemarksHistoryAdd = (apiData) =&gt; {
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  return async (dispatch) =&gt; {
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    dispatch(init(REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD));
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    const response = await referencesService.referencePartyRemarksHistoryAdd(
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>      apiData
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    );
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    dispatch(finish(REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD));
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    if (response.isSuccess) {
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>      message.success("Successfully added Remarks");
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>      dispatch(
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        success(
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>          REFERENCE__TYPES.REFERENCE_PARTY_REMARKS_HISTORY_ADD,
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>          response.data
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        )
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>      );
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    } else if (!response.isSuccess) {
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>      dispatch(error(response.errorMessage));
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    }
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  };
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>};
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export const actionForReferenceCircularPlanningAdd = (data, data1) =&gt; {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  return async (dispatch) =&gt; {
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    dispatch(init(REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD));
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    const response =
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      await referencesService.referenceCompanyCircularPlanningAdd(data);
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    dispatch(finish(REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD));
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    if (response.isSuccess) {
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>      dispatch(
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        success(REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD, response.data)
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>      );
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>      # hitting another ACTION
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>      await dispatch(referenceCircularPlanningRemarksAdd(data1));
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    } else if (!response.isSuccess) {
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>      dispatch(error(response.errorMessage));
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    }
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  };
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>};
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># circular remkarks add
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>export const referenceCircularPlanningRemarksAdd = (data) =&gt; {
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  return async (dispatch) =&gt; {
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    dispatch(init(REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING));
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    const response = await referencesService.referencePartyRemarksHistoryAdd(
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>      data
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    );
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    dispatch(finish(REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING));
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    if (response.isSuccess) {
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>      message.success("Successfully added Remarks");
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>      dispatch(
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        success(
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>          REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING,
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>          response.data
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>        )
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>      );
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    } else if (!response.isSuccess) {
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>      dispatch(error(response.errorMessage));
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    }
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>  };
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>};
+</span></code></pre></div>
 <h2 id="reducer">REDUCER</h2>
 <blockquote>
 <p><code>services/redux/Reference/reducer.js</code></p>
 </blockquote>
-<pre><code># POST circular planning
-
-case REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD_INIT:
-    return {
-        ...state,
-        referenceCircularPlanningAddResponse: null,
-        referenceCircularPlanningAddLoading: true,
-    };
-
-case REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD_SUCCESS:
-    const updateItems = state?.referencePartyListingCircularResponse;
-    return {
-        ...state,
-        referenceCircularPlanningAddLoading: false,
-        referenceCircularPlanningAddResponse: action.payload,
-        referencePartyListingCircularResponse: [...updateItems, action.payload],
-    };
-
-case REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD_FINISH:
-    return {
-        ...state,
-        referenceCircularPlanningAddLoading: false,
-    };
-</code></pre>
-<pre><code># CIRCULAR PLANNIG REMARKS
-
-case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_INIT:
-    return {
-        ...state,
-        circularPlanningRemarksResp: null,
-        circularPlanningRemarksLoading: true,
-    };
-
-case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_SUCCESS:
-    const lastPartyCircular =
-    state.referencePartyListingCircularResponse[
-        state.referencePartyListingCircularResponse.length - 1
-    ];
-
-    const updatedLastPartyCircular = {
-        ...lastPartyCircular,
-        remarks: action.payload?.remarks,
-    };
-
-    const updatedPartyListingCircularResponse = [
-        ...state.referencePartyListingCircularResponse.slice(0, -1),
-        updatedLastPartyCircular,
-    ];
-    return {
-        ...state,
-        circularPlanningRemarksResp: action.payload,
-        circularPlanningRemarksLoading: false,
-        referencePartyListingCircularResponse:
-            updatedPartyListingCircularResponse,
-    };
-
-case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_FINISH:
-    return {
-        ...state,
-        circularPlanningRemarksLoading: false,
-    };
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># POST circular planning
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>case REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD_INIT:
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    return {
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        ...state,
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        referenceCircularPlanningAddResponse: null,
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        referenceCircularPlanningAddLoading: true,
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    };
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>case REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD_SUCCESS:
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    const updateItems = state?.referencePartyListingCircularResponse;
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    return {
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        ...state,
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>        referenceCircularPlanningAddLoading: false,
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        referenceCircularPlanningAddResponse: action.payload,
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        referencePartyListingCircularResponse: [...updateItems, action.payload],
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    };
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>case REFERENCE__TYPES.REFERENCE_CIRCULAR_PLANNING_ADD_FINISH:
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    return {
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>        ...state,
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>        referenceCircularPlanningAddLoading: false,
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    };
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># CIRCULAR PLANNIG REMARKS
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_INIT:
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    return {
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        ...state,
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        circularPlanningRemarksResp: null,
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        circularPlanningRemarksLoading: true,
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    };
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_SUCCESS:
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    const lastPartyCircular =
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    state.referencePartyListingCircularResponse[
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        state.referencePartyListingCircularResponse.length - 1
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    ];
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    const updatedLastPartyCircular = {
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        ...lastPartyCircular,
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        remarks: action.payload?.remarks,
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    };
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    const updatedPartyListingCircularResponse = [
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>        ...state.referencePartyListingCircularResponse.slice(0, -1),
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>        updatedLastPartyCircular,
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    ];
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>    return {
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>        ...state,
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>        circularPlanningRemarksResp: action.payload,
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>        circularPlanningRemarksLoading: false,
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>        referencePartyListingCircularResponse:
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>            updatedPartyListingCircularResponse,
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>    };
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_FINISH:
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>    return {
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>        ...state,
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>        circularPlanningRemarksLoading: false,
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>    };
+</span></code></pre></div></div>
 
 
 
@@ -1242,7 +1326,7 @@ case REFERENCE__TYPES.REFERENCE_REMARKS_CIRCULAR_PLANNING_FINISH:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
