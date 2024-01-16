@@ -151,6 +151,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/research/rabbitmq-celery/</loc>
+         <lastmod>2024-01-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/research/react-context-api/</loc>
          <lastmod>2024-01-16</lastmod>
          <changefreq>daily</changefreq>
