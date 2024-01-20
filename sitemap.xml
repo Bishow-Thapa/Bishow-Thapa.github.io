@@ -91,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/01/18/react-router-v6-guide/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/02/how-to-implement-tokenization-using-jwt-and-django/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
