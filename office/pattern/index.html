@@ -712,6 +712,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/reference-tender-circular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tender Circular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/reference-project-circular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Circular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1297,9 +1339,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compound-components-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Components pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good
     </span>
   </a>
   
@@ -1326,10 +1404,89 @@
   <h1>Pattern</h1>
 
 <div><h2 id="react-mini-usable-pattern">React Mini Usable Pattern</h2>
+<p>Easy to use patterns</p>
+<blockquote>
+<p>React bits</p>
+</blockquote>
+<ol>
+<li>
+<p>Presentational and Container components</p>
+</li>
+<li>
+<p>Lists Components</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SearchSuggestions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1">// renderSearchSuggestion() behaves as a pseudo SearchSuggestion component</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="c1">// keep it self contained and it should be easy to extract later if needed</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">renderSearchSuggestion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">listItem</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">li</span><span class="w"> </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">listItem</span><span class="p">.</span><span class="nx">id</span><span class="p">}&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="p">{</span><span class="nx">listItem</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="nx">listItem</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">listItems</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">renderSearchSuggestion</span><span class="p">)}&lt;/</span><span class="nt">ul</span><span class="p">&gt;;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">};</span>
+</span></code></pre></div>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>patterns.dev</p>
+</blockquote>
+<h2 id="design-patterns">Design Patterns</h2>
+<ul>
+<li>Compound <code>Pattern</code></li>
+<li>HOC <code>Pattern</code></li>
+<li>Hooks <code>Pattern</code></li>
+<li>Container/Presentational <code>Pattern</code></li>
+<li>Render Props <code>Pattern</code></li>
+</ul>
+<hr>
+<blockquote>
+<p>React bits</p>
+</blockquote>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<ol>
+<li>
+<p><strong>Using indexes as keys</strong></p>
+<p>Keys should be stable, predictable, and unique so that React can keep track of elements.</p>
+<p><strong>Bad</strong></p>
+<p>In this snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{todos.map((todo, index) =&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &lt;Todo
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    {...todo}
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    key={index}
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  /&gt;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>)}
+</span></code></pre></div>
+<p><strong>Good</strong></p>
+<p>Assuming <code>todo.id</code> is unique to this list and stable, React would be able to reorder elements without needing to reevaluate them as much.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{todos.map((todo) =&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &lt;Todo
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    {...todo}
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    key={todo.id} /&gt;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>)}
+</span></code></pre></div>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>logrocket</p>
+</blockquote>
+<h2 id="compound-components-pattern">Compound Components pattern</h2>
+<p>Compound components is an advanced React container pattern that provides a simple and efficient way for multiple components to share states and handle logic — working together.</p>
+<p>The compound components pattern provides an expressive and flexible API for communication between a parent component and its children. Also, the compound components pattern enables a parent component to interact and share state with its children implicitly, which makes it suitable for building declarative UI.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href=""></a></li>
+<li><a href="https://www.patterns.dev/react/">patterns.dev</a></li>
+<li><a href="https://vasanthk.gitbooks.io/react-bits/content/">react mini patterns - react bits</a></li>
+<li><a href="https://kentcdodds.com/blog/compound-components-with-react-hooks">compound component in react by kentcdodds</a></li>
+<li><a href="https://blog.logrocket.com/react-design-patterns/">react design patterns - logrocket</a></li>
+</ul>
+<h2 id="good">Good</h2>
+<ul>
+<li><a href="https://blog.risingstack.com/react-js-best-practices-for-2016/">React js Best practices for 2026</a></li>
 </ul></div>
 
 
