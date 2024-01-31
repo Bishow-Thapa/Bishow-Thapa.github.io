@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/01/23/understanding-the-ssh-agent-why-it-matters-in-managing-ssh-keys/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/01/25/a-guide-to-secure-your-commits-with-gpg-keys/">
       
       
-        <link rel="prev" href="../../22/how-to-check-the-react-version-in-your-project/">
+        <link rel="prev" href="../../23/understanding-the-ssh-agent-why-it-matters-in-managing-ssh-keys/">
       
-      
-        <link rel="next" href="../../25/a-guide-to-secure-your-commits-with-gpg-keys/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>Understanding the SSH Agent: Why It Matters in Managing SSH Keys - Bishow Thapa</title>
+        <title>A Guide to Secure Your Commits with GPG Keys - Bishow Thapa</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-the-ssh-agent-why-it-matters-in-managing-ssh-keys" class="md-skip">
+        <a href="#a-guide-to-secure-your-commits-with-gpg-keys" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding the SSH Agent: Why It Matters in Managing SSH Keys
+              A Guide to Secure Your Commits with GPG Keys
             
           </span>
         </div>
@@ -1430,45 +1428,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-an-ssh-agent" class="md-nav__link">
+  <a href="#what-is-gpg" class="md-nav__link">
     <span class="md-ellipsis">
-      What is an SSH Agent?
+      What is GPG?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-do-we-need-to-start-the-ssh-agent" class="md-nav__link">
+  <a href="#step-1-generating-a-gpg-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Do We Need to Start the SSH Agent?
+      Step 1: Generating a GPG Key
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-start-the-ssh-agent" class="md-nav__link">
+  <a href="#step-2-adding-your-gpg-key-to-github" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Start the SSH Agent
+      Step 2: Adding Your GPG Key to GitHub
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-keys-to-the-ssh-agent" class="md-nav__link">
+  <a href="#step-3-configuring-git" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Keys to the SSH Agent
+      Step 3: Configuring Git
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#step-4-signing-commits" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Step 4: Signing Commits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-visual-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification and Visual Confirmation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -1530,7 +1546,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-01-23 00:00:00" class="md-ellipsis">January 23, 2024</time>
+                        <time datetime="2024-01-25 00:00:00" class="md-ellipsis">January 25, 2024</time>
                       </div>
                     </li>
                     
@@ -1574,15 +1590,6 @@
       <a href="../../../../../tags/#programming" class="md-tag md-tag-icon">Programming</a>
     
   
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#ssh" class="md-tag md-tag-icon">SSH</a>
-    
-  
 </nav>
 
 
@@ -1590,60 +1597,85 @@
   
 
 
-<div><h1 id="understanding-the-ssh-agent-why-it-matters-in-managing-ssh-keys">Understanding the SSH Agent: Why It Matters in Managing SSH Keys</h1>
-<p>Secure Shell (SSH) is a widely used protocol for secure communication over a computer network. It provides a secure way to access remote servers, transfer files, and execute commands. When working with multiple SSH keys for different purposes or accounts, it becomes essential to use an SSH agent. This blog post explores the significance of the SSH agent and why it is crucial in managing SSH keys.</p>
+<div><h1 id="a-guide-to-secure-your-commits-with-gpg-keys">A Guide to Secure Your Commits with GPG Keys</h1>
+<p>In the fast-paced world of software development, maintaining the integrity of your code is paramount. One powerful tool that helps ensure the authenticity of your commits is the GNU Privacy Guard (GPG). In this guide, we'll walk through the process of generating and using GPG keys to sign your commits, providing an extra layer of security for your projects.</p>
 <!-- more -->
 
-<h2 id="what-is-an-ssh-agent">What is an SSH Agent?</h2>
-<p>An SSH agent is a background process that manages SSH keys and handles the authentication process. It securely stores private keys and provides a convenient way to use them without repeatedly entering passphrases. The agent acts as a key manager, allowing users to add, remove, and list keys, simplifying the authentication process.</p>
-<h2 id="why-do-we-need-to-start-the-ssh-agent">Why Do We Need to Start the SSH Agent?</h2>
+<h2 id="what-is-gpg">What is GPG?</h2>
+<p>GPG, or GNU Privacy Guard, is a free and open-source software that implements the OpenPGP standard for encrypting and signing data. In the context of version control systems like Git, GPG keys are used to sign commits, verifying that the person making the commit is who they claim to be.</p>
+<h2 id="step-1-generating-a-gpg-key">Step 1: Generating a GPG Key</h2>
+<p>The first step is to generate your GPG key. Open a terminal on your local machine and use the following command:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gpg<span class="w"> </span>--full-generate-key
+</span></code></pre></div>
+<p>Follow the prompts to set up your key, providing your name, email address, and a strong passphrase. This passphrase is crucial, as it adds an additional layer of protection to your private key.</p>
+<h2 id="step-2-adding-your-gpg-key-to-github">Step 2: Adding Your GPG Key to GitHub</h2>
+<p>Once your GPG key is generated, you need to associate it with your GitHub account. Follow these steps:</p>
 <ol>
 <li>
-<p>Password-less Authentication</p>
-<p>One of the primary reasons to use an SSH agent is to enable password-less authentication. When you generate an SSH key pair, it consists of a public key (which is shared with servers) and a private key (which should be kept secure on your machine). The private key is often encrypted with a passphrase for an additional layer of security.</p>
-<p>The SSH agent allows you to load your private key into memory, eliminating the need to enter the passphrase each time you connect to a remote server. This enhances security by avoiding the risk of exposing the passphrase while making the authentication process more seamless.</p>
+<p>Copy your GPG key ID using the command:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gpg<span class="w"> </span>--list-secret-keys<span class="w"> </span>--keyid-format<span class="w"> </span>LONG
+</span></code></pre></div>
+<blockquote>
+<p>Terminology</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ gpg --list-keys
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sec (Secret Key):
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>ssb (Secret Subkey):
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>uid (User ID):
+</span></code></pre></div>
 </li>
 <li>
-<p>Managing Multiple SSH Keys</p>
-<p>In a professional or personal setting, individuals often work with multiple SSH keys, especially when dealing with various accounts or projects. The SSH agent simplifies the management of these keys by allowing you to add multiple keys and choose which one to use for a particular connection.</p>
+<p>To display the ASCII-armored version of your public key, use the following command:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gpg<span class="w"> </span>--armor<span class="w"> </span>--export<span class="w"> </span>&lt;YourKeyID&gt;
+</span></code></pre></div>
+<p>Replace <code>&lt;YourKeyID&gt;</code> with your actual GPG key ID.</p>
 </li>
 <li>
-<p>Avoiding Key Exhaustion</p>
-<p>SSH clients typically limit the number of authentication attempts in a given time frame. Without an SSH agent, each connection attempt may consume an authentication attempt, leading to temporary lockouts. The agent helps prevent key exhaustion by handling authentication efficiently.</p>
+<p>Go to your GitHub account settings, navigate to "SSH and GPG keys," and click on "New GPG key."</p>
+</li>
+<li>
+<p>Paste your GPG key ID and save it.</p>
 </li>
 </ol>
-<h2 id="how-to-start-the-ssh-agent">How to Start the SSH Agent</h2>
-<p>To start the SSH agent, use the following command:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">"</span>
+<h2 id="step-3-configuring-git">Step 3: Configuring Git</h2>
+<p>Configure Git to use your GPG key by running:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.signingkey<span class="w"> </span>&lt;GPG_KEY_ID&gt;
 </span></code></pre></div>
-<p>This command initializes the agent and prints environment variables to set up the agent's connection to the shell.</p>
-<h2 id="adding-keys-to-the-ssh-agent">Adding Keys to the SSH Agent</h2>
-<p>Once the agent is running, you can add your SSH keys using the <code>ssh-add</code> command. For example:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh-add<span class="w"> </span>~/.ssh/id_rsa_personal
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ssh-add<span class="w"> </span>~/.ssh/id_rsa_work
+<p>Replace <code>&lt;GPG_KEY_ID&gt;</code> with your actual GPG key ID. Additionally, set Git to sign all of your commits by default:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>commit.gpgSign<span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
-<p>This step ensures that the keys are loaded into the agent and ready for use.</p>
+<h2 id="step-4-signing-commits">Step 4: Signing Commits</h2>
+<p>From now on, every commit you make will be signed with your GPG key. You can sign a commit explicitly using:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-S<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Your commit message"</span>
+</span></code></pre></div>
+<h2 id="verification-and-visual-confirmation">Verification and Visual Confirmation</h2>
+<p>GitHub will display a "<code>Verified</code>" badge next to signed commits on the web interface, providing a visual confirmation of the commit's authenticity. You can also verify commits locally using:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>verify-commit<span class="w"> </span>&lt;commit-SHA&gt;
+</span></code></pre></div>
+<p>Replace <code>&lt;commit-SHA&gt;</code> with the actual SHA hash of the commit you want to verify.</p>
+<p>By following these steps, you've empowered your version control workflow with an added layer of security. GPG keys not only help in ensuring the trustworthiness of your commits but also contribute to a more secure and transparent collaboration environment in the world of software development.</p>
 <hr>
 <blockquote>
 <p>Notes</p>
 </blockquote>
-<p>Now, you can check the loaded keys using:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh-add<span class="w"> </span>-l
+<p>When you run the <strong><code>gpg --list-keys</code></strong> command, you'll typically see output that looks like this:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">pub</span><span class="w">   </span><span class="nt">4096R</span><span class="o">/&lt;</span><span class="nt">YourKeyID</span><span class="o">&gt;</span><span class="w">  </span><span class="nt">YYYY-MM-DD</span><span class="w"> </span><span class="o">[</span><span class="nt">expires</span><span class="o">:</span><span class="w"> </span><span class="nt">YYYY-MM-DD</span><span class="o">]</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">uid</span><span class="w">                  </span><span class="nt">Your</span><span class="w"> </span><span class="nt">Name</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">your</span><span class="p">.</span><span class="nc">email</span><span class="p">@</span><span class="k">example</span><span class="p">.</span><span class="nc">com</span><span class="o">&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nt">sub</span><span class="w">   </span><span class="nt">4096R</span><span class="o">/&lt;</span><span class="nt">SubKeyID</span><span class="o">&gt;</span><span class="w">  </span><span class="nt">YYYY-MM-DD</span><span class="w"> </span><span class="o">[</span><span class="nt">expires</span><span class="o">:</span><span class="w"> </span><span class="nt">YYYY-MM-DD</span><span class="o">]</span>
 </span></code></pre></div>
-<p>This should display the fingerprints of the SSH keys that are currently added to the agent.</p>
-<p>After starting the SSH agent and adding the keys, you can proceed to test the SSH connection to GitHub using the <code>ssh -T</code> command.</p>
-<blockquote>
-<p>Tips</p>
-</blockquote>
-<p>If you're using a shell that supports automatic SSH agent startup (like bash or zsh), you might want to add the following lines to your shell profile file (e.g., <code>~/.bashrc</code>, <code>~/.zshrc</code>) to ensure the agent is automatically started when you open a new terminal session:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$SSH_AUTH_SOCK</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">fi</span>
-</span></code></pre></div>
-<p>After making these changes, restart your terminal or run <code>source ~/.bashrc</code> (or <code>source ~/.zshrc</code> for zsh users) to apply the changes. Then, try running <code>ssh-add -l</code> again to ensure the agent is running and the keys are loaded.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>In conclusion, the SSH agent plays a crucial role in enhancing the security and convenience of SSH key management. By eliminating the need to repeatedly enter passphrases and facilitating the use of multiple keys, the SSH agent streamlines the authentication process for a more efficient and secure workflow.</p>
-<p>Understanding the importance of the SSH agent is key to optimizing your SSH key management strategy, especially in scenarios involving multiple accounts or projects. By leveraging the capabilities of the SSH agent, you can enjoy a smoother and more secure SSH experience.</p></div>
+<ul>
+<li><code>pub</code>: Public key information.</li>
+<li><code>uid</code>: User ID (your identity associated with the key).</li>
+<li><code>sub</code>: Subkey information.</li>
+</ul>
+<p>The "<code>R</code>" in "<code>4096R</code>" denotes the key's algorithm (RSA in this case), and the key IDs ("<code>&lt;YourKeyID&gt;</code>" and "<code>&lt;SubKeyID&gt;</code>") are unique identifiers for the keys.</p>
+<p>When you export the public key, you are essentially exporting the public part of the key pair, which includes the user ID information and the associated public subkey(s). The public key is what you can share with others, allowing them to encrypt messages or verify your digital signatures.</p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=xj9OiJL56pM&amp;ab_channel=AshishSinghBaghel">Verified Commits on GitHub from Windows PC ( GPG Keys ) : youtube</a></li>
+</ul></div>
 
 
 
@@ -1738,7 +1770,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../22/how-to-check-the-react-version-in-your-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to Check the React Version in Your Project">
+          <a href="../../23/understanding-the-ssh-agent-why-it-matters-in-managing-ssh-keys/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding the SSH Agent: Why It Matters in Managing SSH Keys">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1748,27 +1780,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                How to Check the React Version in Your Project
+                Understanding the SSH Agent: Why It Matters in Managing SSH Keys
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../25/a-guide-to-secure-your-commits-with-gpg-keys/" class="md-footer__link md-footer__link--next" aria-label="Next: A Guide to Secure Your Commits with GPG Keys">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                A Guide to Secure Your Commits with GPG Keys
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

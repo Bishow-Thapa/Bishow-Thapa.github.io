@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/01/25/a-guide-to-secure-your-commits-with-gpg-keys/</loc>
+         <lastmod>2024-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/viewset-vs-apiview/</loc>
          <lastmod>2024-01-31</lastmod>
          <changefreq>daily</changefreq>
