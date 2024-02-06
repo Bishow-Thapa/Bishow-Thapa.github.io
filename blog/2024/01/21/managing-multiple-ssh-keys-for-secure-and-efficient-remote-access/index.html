@@ -1426,7 +1426,7 @@
         
   
   <span class="md-ellipsis">
-    Project
+    Github Project
   </span>
   
 
@@ -1694,8 +1694,8 @@
 <li>
 <p>Add an entry for each host or domain along with the <code>IdentityFile</code> option specifying the path to the corresponding private key:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Host example.com
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>IdentityFile ~/.ssh/id_rsa_example
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>User your_username
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    IdentityFile ~/.ssh/id_rsa_example
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    User your_username
 </span></code></pre></div>
 <p>Replace <code>example.com</code> with the actual hostname, <code>~/.ssh/id_rsa_example</code> with the path to your private key, and <code>your_username</code> with your actual username.</p>
 </li>
@@ -1720,24 +1720,44 @@
 <p>Add the following configuration for each GitHub account:</p>
 <div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Personal account</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Host<span class="w"> </span>github.com
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>HostName<span class="w"> </span>github.com
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>User<span class="w"> </span>git
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>IdentityFile<span class="w"> </span>~/.ssh/id_rsa_personal
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>HostName<span class="w"> </span>github.com
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span>User<span class="w"> </span>git
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_rsa_personal
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Work account</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Host<span class="w"> </span>github-work
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>HostName<span class="w"> </span>github.com
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>User<span class="w"> </span>git
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>IdentityFile<span class="w"> </span>~/.ssh/id_rsa_work
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span>HostName<span class="w"> </span>github.com
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span>User<span class="w"> </span>git
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_rsa_work
 </span></code></pre></div>
+<blockquote>
+<p>Configuration</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Host</strong>: </p>
+<p>This is a custom name you choose to represent the remote server or service. It's like an alias for the actual host you're connecting to. You can name it anything you want, but it's typically chosen to be something memorable or descriptive.</p>
+</li>
+<li>
+<p><strong>HostName</strong>: </p>
+<p>This specifies the <code>actual hostname</code> or <code>IP address</code> of the remote server. For GitHub, the hostname is typically <code>github.com</code>. You can use any hostname that suits your needs, but it should resolve to the correct server.</p>
+</li>
+<li>
+<p><strong>User</strong>: </p>
+<p>This specifies the <code>username</code> you'll use when connecting to the remote server. For GitHub, the username is usually <code>git</code>. This is because when you use SSH to connect to GitHub, you authenticate as the <code>git</code> user. You can't change this unless GitHub allows you to connect with a different username, which is not the case for GitHub.</p>
+</li>
+</ol>
 <h2 id="test-your-connections">Test your connections:</h2>
 <p>Test your connections by running the following commands:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh -T git@github.com
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ssh -T git@github-work
 </span></code></pre></div>
+<p>or, you can only <code>&lt;HOST&gt;</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh -T github-work
+</span></code></pre></div>
 <p>You should see messages indicating successful authentication.</p>
 <p>Now, you should be able to clone, push, and pull repositories from both GitHub accounts using the configured SSH keys. When you clone a repository, use the appropriate hostname defined in your SSH config file, such as <code>github-work</code> for the work account. For example:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github-work:username/repo.git
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github-work:username/repo.git
 </span></code></pre></div>
 <hr>
 <h2 id="conclusion">Conclusion</h2>
