@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/01/06/drf-yasg-swagger/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/research/docker-guide/">
       
       
-        <link rel="prev" href="../../05/viewset-vs-apiview/">
+        <link rel="prev" href="../redis/">
       
       
-        <link rel="next" href="../../09/adding-syntax-hightlighting-in-the-material/">
+        <link rel="next" href="../project/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../../../images/bing.ico">
+      <link rel="icon" href="../../images/bing.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>drf-yasg: Swagger - Bishow Thapa</title>
+        <title>Docker - Bishow Thapa</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -51,14 +51,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -69,7 +69,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drf-yasg-swagger" class="md-skip">
+        <a href="#create-docker-image" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bing" viewBox="0 0 16 16">
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              drf-yasg: Swagger
+              Docker
             
           </span>
         </div>
@@ -231,13 +231,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -255,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../office/intro/" class="md-tabs__link">
+        <a href="../../office/intro/" class="md-tabs__link">
           
   
   Office
@@ -269,11 +267,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../research/tricks/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../tricks/" class="md-tabs__link">
           
   
   Research
@@ -295,9 +295,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -308,7 +306,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bing" viewBox="0 0 16 16">
@@ -339,8 +337,6 @@
       
   
   
-    
-  
   
   
     
@@ -351,12 +347,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -370,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -381,14 +377,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2023/" class="md-nav__link">
+      <a href="../../blog/archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/intro/" class="md-nav__link">
+      <a href="../../office/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/architecture/" class="md-nav__link">
+      <a href="../../office/documentation/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/internal-message/" class="md-nav__link">
+      <a href="../../office/documentation/internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/redux-action-advanced/" class="md-nav__link">
+      <a href="../../office/documentation/redux-action-advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/tutorial-listing/" class="md-nav__link">
+      <a href="../../office/documentation/tutorial-listing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/public-events/" class="md-nav__link">
+      <a href="../../office/documentation/public-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/sending-mail/" class="md-nav__link">
+      <a href="../../office/documentation/sending-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/sending-im/" class="md-nav__link">
+      <a href="../../office/documentation/sending-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/reference-tender-circular/" class="md-nav__link">
+      <a href="../../office/documentation/reference-tender-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/documentation/reference-project-circular/" class="md-nav__link">
+      <a href="../../office/documentation/reference-project-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -839,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/components/HTMLRenderer/" class="md-nav__link">
+      <a href="../../office/components/HTMLRenderer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/components/JSON-stringify/" class="md-nav__link">
+      <a href="../../office/components/JSON-stringify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/01-replychatbox/" class="md-nav__link">
+      <a href="../../office/clickup/01-replychatbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -947,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/redux-actions/" class="md-nav__link">
+      <a href="../../office/clickup/redux-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -968,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/dashboard-today-task/" class="md-nav__link">
+      <a href="../../office/clickup/dashboard-today-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/redux-add-upate/" class="md-nav__link">
+      <a href="../../office/clickup/redux-add-upate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1010,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/dashboard-module/" class="md-nav__link">
+      <a href="../../office/clickup/dashboard-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/tender-mail/" class="md-nav__link">
+      <a href="../../office/clickup/tender-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/mail-tender-loader/" class="md-nav__link">
+      <a href="../../office/clickup/mail-tender-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/modes-of-communication/" class="md-nav__link">
+      <a href="../../office/clickup/modes-of-communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/circular-planning/" class="md-nav__link">
+      <a href="../../office/clickup/circular-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/tender-mail-circular/" class="md-nav__link">
+      <a href="../../office/clickup/tender-mail-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1136,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/clickup/mail-reply-bug/" class="md-nav__link">
+      <a href="../../office/clickup/mail-reply-bug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/vscode/" class="md-nav__link">
+      <a href="../../office/vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../office/draft/" class="md-nav__link">
+      <a href="../../office/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,8 +1205,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1221,12 +1217,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1240,7 +1236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Research
@@ -1254,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/tricks/" class="md-nav__link">
+      <a href="../tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1275,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/react-context-api/" class="md-nav__link">
+      <a href="../react-context-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1296,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/useCallback-hook/" class="md-nav__link">
+      <a href="../useCallback-hook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1317,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/useRef-hook/" class="md-nav__link">
+      <a href="../useRef-hook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1338,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/rabbitmq-celery/" class="md-nav__link">
+      <a href="../rabbitmq-celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1359,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/tech-stack/" class="md-nav__link">
+      <a href="../tech-stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1380,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/ssh/" class="md-nav__link">
+      <a href="../ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1401,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/redis/" class="md-nav__link">
+      <a href="../redis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1419,10 +1415,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../research/docker-guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1431,6 +1445,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-docker-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Docker Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Docker Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1443,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/project/" class="md-nav__link">
+      <a href="../project/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/resource/" class="md-nav__link">
+      <a href="../resource/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1493,8 +1561,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1504,8 +1570,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1514,9 +1578,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#create-docker-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      Create Docker Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Docker Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference (Ubuntu)
     </span>
   </a>
   
@@ -1531,202 +1622,94 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Bishow Thapa
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-01-06 00:00:00" class="md-ellipsis">January 6, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              2 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#python" class="md-tag md-tag-icon">Python</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#drf" class="md-tag md-tag-icon">Drf</a>
-    
-  
-</nav>
-
+                  
 
   
   
 
 
-<div><h1 id="drf-yasg-swagger">drf-yasg: Swagger</h1>
-<p><code>drf-yasg</code> (Yet Another Swagger Generator) is a popular Django package that generates Swagger/OpenAPI documentation for your Django REST framework APIs. It allows you to have a clean, interactive, and dynamic API documentation that makes it easy for developers to understand and test your API.</p>
-<!-- more -->
+  <h1>Docker</h1>
 
+<div><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>&lt;docker.deb&gt;
+</span></code></pre></div>
+<blockquote>
+<p>Commands</p>
+</blockquote>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># List containers:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># List images:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>$<span class="w"> </span>docker<span class="w"> </span>images
+</span></code></pre></div>
+<hr>
+<h2 id="create-docker-image">Create Docker Image</h2>
+<p>When working with Docker, you typically create an image first and then use that image to create containers.</p>
 <ol>
 <li>
-<p>Install drf-yasg:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Install the package using pip:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">drf</span><span class="o">-</span><span class="n">yasg</span>
-</span></code></pre></div>
+<p><strong>Create <mark>Image</mark></strong>:</p>
+<p>An image is like a template that contains the filesystem and configuration needed to run a container. You define an image using a <code>Dockerfile</code>, which specifies the instructions to build the image. You use the docker build command to create an image from a Dockerfile.</p>
 </li>
 <li>
-<p>Add <code>drf_yasg</code> to INSTALLED_APPS:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Open your settings.py file and add drf_yasg to the INSTALLED_APPS:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="c1"># ...</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s1">'drf_yasg'</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="c1"># ...</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">]</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>Configure <code>drf-yasg</code> in your project's <code>urls.py</code>:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Add the following to your project's urls.py:</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">re_path</span><span class="p">,</span> <span class="n">include</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kn">from</span> <span class="nn">django.conf.urls.static</span> <span class="kn">import</span> <span class="n">static</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">permissions</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kn">from</span> <span class="nn">drf_yasg.views</span> <span class="kn">import</span> <span class="n">get_schema_view</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kn">from</span> <span class="nn">drf_yasg</span> <span class="kn">import</span> <span class="n">openapi</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">schema_view</span> <span class="o">=</span> <span class="n">get_schema_view</span><span class="p">(</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">openapi</span><span class="o">.</span><span class="n">Info</span><span class="p">(</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="n">title</span><span class="o">=</span><span class="s2">"Your API Title"</span><span class="p">,</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="n">default_version</span><span class="o">=</span><span class="s1">'v1'</span><span class="p">,</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">"Your API description"</span><span class="p">,</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="n">terms_of_service</span><span class="o">=</span><span class="s2">"https://www.yourapp.com/terms/"</span><span class="p">,</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="n">contact</span><span class="o">=</span><span class="n">openapi</span><span class="o">.</span><span class="n">Contact</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s2">"contact@yourapp.com"</span><span class="p">),</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="n">license</span><span class="o">=</span><span class="n">openapi</span><span class="o">.</span><span class="n">License</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Your License"</span><span class="p">),</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="p">),</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">public</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">permission_classes</span><span class="o">=</span><span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">AllowAny</span><span class="p">,),</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">)</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="c1"># ... your other URL patterns</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="n">re_path</span><span class="p">(</span><span class="sa">r</span><span class="s1">'^swagger(?P&lt;format&gt;\.json|\.yaml)$'</span><span class="p">,</span> <span class="n">schema_view</span><span class="o">.</span><span class="n">without_ui</span><span class="p">(</span><span class="n">cache_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'schema-json'</span><span class="p">),</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'swagger/'</span><span class="p">,</span> <span class="n">schema_view</span><span class="o">.</span><span class="n">with_ui</span><span class="p">(</span><span class="s1">'swagger'</span><span class="p">,</span> <span class="n">cache_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'schema-swagger-ui'</span><span class="p">),</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'redoc/'</span><span class="p">,</span> <span class="n">schema_view</span><span class="o">.</span><span class="n">with_ui</span><span class="p">(</span><span class="s1">'redoc'</span><span class="p">,</span> <span class="n">cache_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'schema-redoc'</span><span class="p">),</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="p">]</span>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="n">urlpatterns</span> <span class="o">+=</span> <span class="n">static</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">STATIC_URL</span><span class="p">,</span> <span class="n">document_root</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">STATIC_ROOT</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Replace "Your API Title" and other information in the openapi.Info section with your actual API details.</p>
-</li>
-<li>
-<p>Run your Django development server:</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Start your Django development server:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="err">$</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
-</span></code></pre></div>
-<p>Now you can access the Swagger documentation by navigating to
-<strong>http://127.0.0.1:8000/swagger/</strong> or <strong>http://127.0.0.1:8000/redoc/</strong> in your web browser.</p>
-<ul>
-<li>The Swagger UI is available at the <strong>/swagger/</strong> endpoint.</li>
-<li>The ReDoc UI is available at the <strong>/redoc/</strong> endpoint.</li>
-</ul>
-</li>
-<li>
-<p>Explore and Test Your API:</p>
-<p>Once in the Swagger or ReDoc UI, you can explore your <code>API's endpoints</code>, view the available methods,
-and even test your API directly from the interface.</p>
-<p>That's it! You've now integrated <code>drf-yasg</code> into your Django project,
-providing interactive API documentation for your RESTful API.</p>
+<p><strong>Create <mark>Container</mark></strong>:</p>
+<p>Once you have an image, you can create one or more containers from it. A container is a running instance of an image. You use the docker run command to create and start a container from an image. Each container runs in isolation from other containers but can communicate with them if configured to do so.</p>
 </li>
 </ol>
+<p>Here's a basic sequence of commands:</p>
+<ol>
+<li>Create the image:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-image<span class="w"> </span>.
+</span></code></pre></div>
+<ol>
+<li>Run a container based on that image:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>my-container<span class="w"> </span>my-image
+</span></code></pre></div>
+<p>So, to summarize, first, you build an image using a <code>Dockerfile</code>, then you create and run containers based on that image.</p>
 <hr>
-<blockquote>
-<p>Notes</p>
-</blockquote>
-<p>Keep in mind <a href="https://github.com/marcgibbons/django-rest-swagger">Django Rest Swagger</a> is now considered deprecated in favor of its successor, <code>drf-yasg</code>. You might want to consider using <code>drf-yasg</code> for newer projects. To use <code>drf-yasg</code>, follow my instructions above.</p>
-<hr>
-<h2 id="reference">Reference</h2>
+<h2 id="create-docker-container">Create Docker Container</h2>
+<p>example of creating a new container:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># syntax</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># 1. Run a new container with the new image:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>&lt;container_name&gt;<span class="w"> </span>-d<span class="w"> </span>&lt;new_image_name&gt;
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># 2. Stop the existing container:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>$<span class="w"> </span>docker<span class="w"> </span>stop<span class="w"> </span>&lt;container_name_or_id&gt;
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># 3. Remove the existing container (optional):</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>&lt;container_name_or_id&gt;
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># example</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>my-container<span class="w"> </span>-d<span class="w"> </span>my-image
+</span></code></pre></div>
 <ul>
-<li><a href="https://github.com/axnsan12/drf-yasg">drf-yasg: github</a></li>
+<li><code>--name my-container</code> sets the name of the container to my-container.</li>
+<li><code>-d</code> runs the container in detached mode (in the background).</li>
+<li><code>my-image</code> is the name of the image from which to create the container.</li>
+</ul>
+<p>This command will create a new container using the specified image. If the image is not available locally, Docker will automatically pull it from a registry like Docker Hub before creating the container.</p>
+<p>After running the command, you can use <code>docker ps</code> to see the list of running containers.</p>
+<hr>
+<h2 id="docker-volume">Docker Volume</h2>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># List Volumes in Use:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># list all containers to find out which volumes are in use:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># delete the volumes</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>&lt;volume_name_or_id&gt;
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># delete volumes along with the containers that use them</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>-v<span class="w"> </span>&lt;container_name_or_id&gt;
+</span></code></pre></div>
+<hr>
+<h2 id="reference-ubuntu">Reference (<code>Ubuntu</code>)</h2>
+<ul>
+<li><a href="https://docs.docker.com/desktop/install/ubuntu/">Install Docker Desktop on Ubuntu</a></li>
 </ul></div>
 
 
@@ -1735,72 +1718,15 @@ providing interactive API documentation for your RESTful API.</p>
 
 
 
-  
-  
 
 
 
 
-  
 
-
-
-<h2 id="__comments">Comments</h2>
-<!-- Insert generated snippet here -->
-<script
-  src="https://giscus.app/client.js"
-  data-repo="Bishow-Thapa/github-comments"
-  data-repo-id="R_kgDOK_Y_Kw"
-  data-category="Announcements"
-  data-category-id="DIC_kwDOK_Y_K84CcG6C"
-  data-mapping="blog"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="en"
-  crossorigin="anonymous"
-  async
-></script>
-
-<!-- Synchronize Giscus theme with palette -->
-<script>
-  var giscus = document.querySelector("script[src*=giscus]");
-
-  // Set palette on initial load
-  var palette = __md_get("__palette");
-  if (palette && typeof palette.color === "object") {
-    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
-
-    // Instruct Giscus to set theme
-    giscus.setAttribute("data-theme", theme);
-  }
-
-  // Register event handlers after documented loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    var ref = document.querySelector("[data-md-component=palette]");
-    ref.addEventListener("change", function () {
-      var palette = __md_get("__palette");
-      if (palette && typeof palette.color === "object") {
-        var theme =
-          palette.color.scheme === "slate" ? "transparent_dark" : "light";
-
-        // Instruct Giscus to change theme
-        var frame = document.querySelector(".giscus-frame");
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme } } },
-          "https://giscus.app"
-        );
-      }
-    });
-  });
-</script>
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1817,12 +1743,10 @@ providing interactive API documentation for your RESTful API.</p>
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../05/viewset-vs-apiview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Viewset vs APIView">
+          <a href="../redis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Redis">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1832,20 +1756,20 @@ providing interactive API documentation for your RESTful API.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Viewset vs APIView
+                Redis
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../09/adding-syntax-hightlighting-in-the-material/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding Syntax hightlighting in the material">
+          <a href="../project/" class="md-footer__link md-footer__link--next" aria-label="Next: Github Project">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Adding Syntax hightlighting in the material
+                Github Project
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1897,10 +1821,10 @@ providing interactive API documentation for your RESTful API.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
