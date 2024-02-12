@@ -1388,6 +1388,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nginx-engine-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      nginx (Engine X)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       Reference (Ubuntu)
@@ -1527,6 +1536,15 @@
   <a href="#jenkins" class="md-nav__link">
     <span class="md-ellipsis">
       Jenkins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-engine-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      nginx (Engine X)
     </span>
   </a>
   
@@ -1762,6 +1780,64 @@
 </li>
 </ol>
 <p>That's it! You've successfully pulled and started the Jenkins Docker container on your Linux server, and you can now begin configuring Jenkins for your development and deployment needs.</p>
+<hr>
+<h2 id="nginx-engine-x">nginx (Engine X)</h2>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nginx
+</span></code></pre></div>
+<p><code>/etc/nginx/nginx.conf</code></p>
+<p>The server_name directive in Nginx should specify only the domain name or names without the protocol (e.g., <code>http://</code>). Therefore, you need to modify your configuration like this:</p>
+<div class="language-bash highlight"><span class="filename">nginx</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>http<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>server<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span>listen<span class="w"> </span><span class="m">8080</span><span class="p">;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span>server_name<span class="w"> </span>generic-info.ispl.com.np<span class="p">;</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">        </span>proxy_pass<span class="w"> </span>http://10.114.0.175<span class="p">;</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Host<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Real-IP<span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span><span class="o">}</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="o">}</span>
+</span></code></pre></div>
+<p>``bash title="nginx"
+http {
+server {
+listen 9000;
+server_name generic-info.ispl.com.np;</p>
+<div class="language-text highlight"><pre><span></span><code>location / {
+  proxy_pass http://10.114.0.175:9000;  # Jenkins running on port 9000
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+}
+</code></pre></div>
+<p>}</p>
+<p>server {
+listen 8080;
+server_name generic-info.ispl.com.np;</p>
+<div class="language-text highlight"><pre><span></span><code>location / {
+  proxy_pass http://10.114.0.175:8080;  # Portainer running on port 8080
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+}
+</code></pre></div>
+<p>}
+}</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>After making this change, you should test the configuration to ensure there are no syntax errors:
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>```bash title="bash"
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>sudo nginx -t
+</span></code></pre></div>
+<p>If the test is successful, reload Nginx to apply the changes:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+</span></code></pre></div>
+<p>This should resolve the issue, and Nginx should be able to start without errors.</p>
 <hr>
 <h2 id="reference-ubuntu">Reference (<code>Ubuntu</code>)</h2>
 <ul>
