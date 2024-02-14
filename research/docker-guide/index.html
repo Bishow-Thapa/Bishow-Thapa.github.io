@@ -1415,6 +1415,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#connect-to-share-docker-daemon-from-the-host-with-jenkins-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect: To share Docker daemon from the host with jenkins nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tmux" class="md-nav__link">
     <span class="md-ellipsis">
       tmux
@@ -1590,6 +1599,15 @@
   <a href="#nginx-engine-x" class="md-nav__link">
     <span class="md-ellipsis">
       nginx (Engine X)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-share-docker-daemon-from-the-host-with-jenkins-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect: To share Docker daemon from the host with jenkins nodes
     </span>
   </a>
   
@@ -1924,15 +1942,31 @@
 </span></code></pre></div>
 <p>This should resolve the issue, and Nginx should be able to start without errors.</p>
 <hr>
+<h2 id="connect-to-share-docker-daemon-from-the-host-with-jenkins-nodes">Connect: To share Docker daemon from the host with jenkins nodes</h2>
+<p>To run Docker commands inside Jenkins, especially within a Jenkins instance running inside a Docker container, you have a couple of options:</p>
+<ol>
+<li>
+<p>Docker Socket Binding:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span>&lt;jenkins-image:tag&gt;
+</span></code></pre></div>
+</li>
+<li>
+<p>Docker-in-Docker (DinD):</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--privileged<span class="w"> </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span>docker:dind
+</span></code></pre></div>
+</li>
+</ol>
+<hr>
 <h2 id="tmux">tmux</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a># To resize the pane
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>&lt;Prefix&gt;, arrow down (hold)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a># To resize the pane
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>&lt;Prefix&gt;, arrow down (hold)
 </span></code></pre></div>
 <hr>
 <h2 id="reference-ubuntu">Reference (<code>Ubuntu</code>)</h2>
 <ul>
 <li><a href="https://docs.docker.com/desktop/install/ubuntu/">Install Docker Desktop on Ubuntu</a></li>
 <li><a href="https://manpages.ubuntu.com/manpages/jammy/man1/pass.1.html">pass tutorial</a></li>
+<li><a href="https://kodekloud.com/blog/run-docker-in-docker-container/#why-run-docker-in-docker">3 Best Ways to Run Docker in Docker Container</a></li>
 </ul>
 <p>tmux</p>
 <ul>
