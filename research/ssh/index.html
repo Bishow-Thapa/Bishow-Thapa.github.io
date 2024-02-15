@@ -1344,6 +1344,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue Solved
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1485,6 +1512,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue Solved
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1534,6 +1588,75 @@
 <h2 id="visual-studio">Visual Studio</h2>
 <p>Quickly open files</p>
 <p>Keyboard Shortcut: <code>Ctrl+P</code></p>
+<hr>
+<h2 id="tmux">tmux</h2>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># listing all tmux session</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>tmux<span class="w"> </span>list-sessions
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># shorcurt</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>$<span class="w"> </span>tmux<span class="w"> </span>ls
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># To resize the pane</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&lt;Prefix&gt;,<span class="w"> </span>arrow<span class="w"> </span>down<span class="w"> </span><span class="o">(</span>hold<span class="o">)</span>
+</span></code></pre></div>
+<hr>
+<h2 id="unix">Unix</h2>
+<p>To see the permissions of a user on a Unix-like system, you can use the <code>groups</code> command or <code>id</code> command.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Syntax</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>groups<span class="w"> </span>&lt;username&gt;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>id<span class="w"> </span>&lt;username&gt;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Example: ($USER refer to the currently logged-in user.)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>$<span class="w"> </span>groups<span class="w"> </span><span class="nv">$USER</span>
+</span></code></pre></div>
+<hr>
+<h2 id="issue-solved">Issue Solved</h2>
+<p>Step-by-step instructions to create a Docker image for Jenkins with Docker installed inside it and then run a Jenkins container with the Docker socket mounted from the host:</p>
+<ol>
+<li>
+<p><strong>Create a Dockerfile:</strong></p>
+<p>Create a file named <code>Dockerfile</code> with the following content:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM jenkins/jenkins:lts
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>USER root
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a># Install Docker prerequisites
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>RUN apt-get update &amp;&amp; \
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common &amp;&amp; \
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a># Install Docker
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>RUN curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; \
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    sh get-docker.sh
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a># Add Jenkins user to Docker group
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>RUN usermod -aG docker jenkins
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>USER jenkins
+</span></code></pre></div>
+<p>This Dockerfile installs Docker inside the Jenkins container and adds the Jenkins user to the Docker group.</p>
+</li>
+<li>
+<p><strong>Build the Docker Image:</strong></p>
+<p>Open a terminal and navigate to the directory containing the <code>Dockerfile</code>. Then, run the following command to build the Docker image:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-jenkins<span class="w"> </span>.
+</span></code></pre></div>
+<p>This command builds the Docker image using the Dockerfile and tags it with the name <code>my-jenkins</code>.</p>
+</li>
+<li>
+<p><strong>Run the Jenkins Container:</strong></p>
+<p>After the Docker image is built, you can run a Jenkins container with the Docker socket mounted from the host:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>my-jenkins
+</span></code></pre></div>
+<p>This command starts a Jenkins container named <code>jenkins</code>. It mounts the Docker socket (<code>/var/run/docker.sock</code>) from the host into the container and exposes the Jenkins web interface on port <code>8080</code> and the Jenkins agent communication port on port <code>50000</code>.</p>
+</li>
+</ol>
+<p>With these steps, you have a Jenkins container running with Docker installed inside it, and the Docker socket mounted from the host. This setup allows the Jenkins container to communicate with the Docker daemon on the host and perform Docker-related tasks within Jenkins pipelines or jobs.</p>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://www.atlassian.com/git/tutorials/git-ssh">What is a Git SSH Key? </a></li>
@@ -1541,6 +1664,13 @@
 <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a></li>
 <li><a href="https://petri.com/the-ultimate-guide-to-installing-openssh-on-windows/">The Ultimate Guide to Installing OpenSSH on Windows</a></li>
 <li><a href="https://phoenixnap.com/kb/how-to-configure-docker-in-jenkins">jenkins guide</a></li>
+</ul>
+<blockquote>
+<p>tmux</p>
+</blockquote>
+<ul>
+<li><a href="https://ostechnix.com/save-and-restore-tmux-environment/">How To Save And Restore Tmux Environments Across Reboots In Linux</a></li>
+<li><a href="https://superuser.com/questions/440015/restore-tmux-session-after-reboot">Restore tmux session after reboot</a></li>
 </ul></div>
 
 
