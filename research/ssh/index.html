@@ -1371,6 +1371,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#test-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1539,6 +1548,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#test-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1656,6 +1674,26 @@
 </li>
 </ol>
 <p>With these steps, you have a Jenkins container running with Docker installed inside it, and the Docker socket mounted from the host. This setup allows the Jenkins container to communicate with the Docker daemon on the host and perform Docker-related tasks within Jenkins pipelines or jobs.</p>
+<hr>
+<blockquote>
+<p>Notes</p>
+</blockquote>
+<p><strong>How to fix docker: Got permission denied while trying to connect to the Docker daemon socket</strong></p>
+<p>After an search hour this following solution finaly worked :</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
+</span></code></pre></div>
+<ul>
+<li><a href="https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket">Got permission denied while trying to connect to the Docker daemon socket</a></li>
+</ul>
+<hr>
+<h2 id="test-dockerfile">Test Dockerfile</h2>
+<p><code>Dockerfile</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># Use an existing image as a base
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>FROM alpine:latest
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a># Run a command in the container
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>CMD ["echo", "Hello, Jenkins!"]
+</span></code></pre></div>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
