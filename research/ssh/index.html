@@ -1380,6 +1380,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#portainer-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portainer with Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1557,6 +1566,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#portainer-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portainer with Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1693,6 +1711,84 @@
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a># Run a command in the container
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>CMD ["echo", "Hello, Jenkins!"]
+</span></code></pre></div>
+<hr>
+<p>if you want to check if a container named my_container is using any volumes:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>inspect<span class="w"> </span>&lt;my_container&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Mounts
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span>-v<span class="w"> </span>generic-volume:/var/jenkins_home/generic-volume<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span>jenkins/jenkins:lts
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">  </span>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">  </span>-v<span class="w"> </span>generic-volume:/var/jenkins_home/generic-volume<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">  </span>my-jenkins
+</span></code></pre></div>
+<h2 id="portainer-with-docker">Portainer with Docker</h2>
+<p>To use Docker Swarm mode with Portainer, you need to set up a Docker Swarm cluster and then deploy Portainer as a service within the Swarm. Here's a step-by-step guide on how to do this:</p>
+<ol>
+<li>
+<p>Initialize Docker Swarm:</p>
+<p>If you haven't already initialized Docker Swarm on your Docker host, you can do so by running the following command in your terminal:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>docker<span class="w"> </span>swarm<span class="w"> </span>init
+</span></code></pre></div>
+<p>This command initializes Docker Swarm mode on the current Docker host and creates a Swarm manager node.</p>
+</li>
+<li>
+<p>Deploy Portainer as a Service:</p>
+<p>Once Docker Swarm is initialized, you can deploy Portainer as a service within the Swarm. Run the following command to create a Portainer service:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>service<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>--name<span class="w"> </span>portainer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>--publish<span class="w"> </span><span class="m">9000</span>:9000<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>--constraint<span class="w"> </span><span class="s1">'node.role == manager'</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>/var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>portainer/portainer-ce
+</span></code></pre></div>
+<p>This command creates a new service named "portainer" using the Portainer Community Edition (CE) image. It publishes Portainer's web interface on port 9000 and mounts the Docker socket from the host into the Portainer container, allowing Portainer to interact with the Docker API.</p>
+</li>
+<li>
+<p>Access Portainer Web Interface:</p>
+<p>Once the Portainer service is deployed, you can access the Portainer web interface by navigating to http://<your-docker-host>:9000 in your web browser. If you're running Portainer locally, you can use http://localhost:9000.</your-docker-host></p>
+</li>
+<li>
+<p>Set Up Portainer:</p>
+<p>Follow the on-screen instructions to complete the initial setup of Portainer. You'll be prompted to create an admin user, choose a password, and specify whether you want to manage the local Docker environment or a remote Docker Swarm cluster.</p>
+</li>
+<li>
+<p>Connect Portainer to Docker Swarm:</p>
+<p>If you're managing a remote Docker Swarm cluster, you'll need to specify the Swarm endpoint URL and optionally provide authentication credentials. This allows Portainer to communicate with the Docker Swarm API and manage services, nodes, and other resources within the cluster.</p>
+</li>
+<li>
+<p>Start Managing Services:</p>
+<p>Once connected, you can start managing Docker Swarm services, nodes, stacks, and other resources using the Portainer web interface. You can create, scale, update, and monitor services, deploy applications using stacks, and perform various administrative tasks.</p>
+</li>
+</ol>
+<p>By following these steps, you can set up and use Docker Swarm mode with Portainer to manage your containerized applications at scale. Make sure to consult the official Portainer documentation for more detailed instructions and best practices.</p>
+<hr>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>server {
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    listen 80;
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    server_name generic.com.np;
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    location / {
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        proxy_pass http://&lt;container-ip&gt;:&lt;container-port&gt;;
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        proxy_set_header Host $host;
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        proxy_set_header X-Real-IP $remote_addr;
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        proxy_set_header X-Forwarded-Proto $scheme;
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    }
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>}
 </span></code></pre></div>
 <hr>
 <h2 id="reference">Reference</h2>
