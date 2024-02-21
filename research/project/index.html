@@ -1373,18 +1373,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional" class="md-nav__link">
+  <a href="#docker-host-port-vs-container-port" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional
+      Docker: Host port vs Container port
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-host-port-vs-container-port" class="md-nav__link">
+  <a href="#listen-services-running-on-specific-port-8000-9000" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker: Host port vs Container port
+      Listen services running on specific port :8000 :9000
     </span>
   </a>
   
@@ -1488,18 +1488,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional" class="md-nav__link">
+  <a href="#docker-host-port-vs-container-port" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional
+      Docker: Host port vs Container port
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-host-port-vs-container-port" class="md-nav__link">
+  <a href="#listen-services-running-on-specific-port-8000-9000" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker: Host port vs Container port
+      Listen services running on specific port :8000 :9000
     </span>
   </a>
   
@@ -1588,21 +1588,6 @@
 </ol>
 <p>In summary, if your system is using SysVinit as the init system, you would typically use <code>sudo service</code> to manage services. If your system is using systemd, <code>systemctl</code> is the preferred tool for service management. However, some distributions may provide compatibility layers or aliases to ensure compatibility between the two commands.</p>
 <hr>
-<h2 id="additional">Additional</h2>
-<p>Blog</p>
-<ul>
-<li><a href="https://dev.to/iggredible/useful-tmux-configuration-examples-k3g">usefull tmux configuration</a></li>
-<li><a href="https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">customizing tmux configuration</a></li>
-<li><a href="https://www.hostinger.com/tutorials/tmux-config">tmux config</a></li>
-</ul>
-<p>Github</p>
-<ul>
-<li><a href="https://github.com/tmux-plugins/tpm#installation">tmux plugins: github</a></li>
-<li><a href="https://github.com/rothgar/awesome-tmux?tab=readme-ov-file#plugins">list of awesome tmux: github</a></li>
-<li><a href="https://github.com/dracula/tmux?tab=readme-ov-file">dracula tmux plugins: github</a></li>
-<li><a href="https://draculatheme.com/tmux">draculatheme offical site</a></li>
-</ul>
-<hr>
 <h2 id="docker-host-port-vs-container-port">Docker: <code>Host</code> port <mark>vs</mark> <code>Container</code> port</h2>
 <p>What is left side of port ant right side of port in docker</p>
 <p>In Docker, when you expose ports for containers, you specify the port mappings using the <code>-p</code> flag or <code>--publish</code> flag when running a container. The syntax is typically <strong><code>hostPort</code><mark>:</mark><code>containerPort</code></strong>.</p>
@@ -1619,16 +1604,10 @@
 <p>For example, if you run a container with <code>-p 8080:80</code>, it means that port <code>80</code> inside the container will be accessible from port <code>8080</code> on the host machine. If you were to access <code>http://localhost:8080</code> on your host machine, Docker would forward that request to port <code>80</code> inside the container.</p>
 <p>This port mapping mechanism allows Docker containers to communicate with the outside world and for multiple containers to run on the same host without port conflicts.</p>
 <hr>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Here's how you can create a .tmux directory if you need it:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mkdir<span class="w"> </span>~/.tmux
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># To create a basic configuration file, you can do the following:</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>touch<span class="w"> </span>~/.tmux.conf
-</span></code></pre></div>
-<hr>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># You can use the following commands to find out which processes are using these ports:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:9000
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:8080
+<h2 id="listen-services-running-on-specific-port-8000-9000">Listen services running on specific port <code>:8000</code> <code>:9000</code></h2>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># You can use the following commands to find out which processes are using these ports:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:9000
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:8080
 </span></code></pre></div>
 <p>Once you identify the processes using these ports, you can decide whether to stop them or reconfigure them to use different ports. After ensuring that the ports are available, you can attempt to start the Nginx service again.</p>
 <hr>
@@ -1640,24 +1619,24 @@
 <li>
 <p>Add <code>Jenkins</code> user to the <mark>Docker group</mark>:</p>
 <p><mark>On the host machine where Docker is installed</mark>, run the following command:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>jenkins
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>jenkins
 </span></code></pre></div>
 <p>This command adds the Jenkins user to the docker group, granting it permission to interact with the Docker daemon.</p>
 </li>
 <li>
 <p><mark>Ensure permissions</mark> on the Docker socket:</p>
 <p>The Docker daemon socket (<code>/var/run/docker.sock</code>) should be <mark>readable</mark> and <mark>writable</mark> by <mark>members of the docker group</mark>. You can check and adjust the permissions if needed with the following command:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
 </span></code></pre></div>
 </li>
 <li>
 <p><mark>Restart Jenkins</mark>:</p>
 <p>Restart the Jenkins service to apply the changes:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>jenkins
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># or</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>docker<span class="w"> </span>restart<span class="w"> </span>&lt;container_id<span class="w"> </span>or<span class="w"> </span>container_name&gt;
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>jenkins
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># or</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>docker<span class="w"> </span>restart<span class="w"> </span>&lt;container_id<span class="w"> </span>or<span class="w"> </span>container_name&gt;
 </span></code></pre></div>
 </li>
 </ol>
@@ -1666,7 +1645,7 @@
 <h2 id="creating-a-user-without-password">Creating a <code>User</code> <mark>without password</mark></h2>
 <p>Yes, you can add the <code>jenkins</code> user without setting a password. This is often done for system users that don't require interactive login, such as the <code>jenkins</code> user used for automation tasks.</p>
 <p>To add the <code>jenkins</code> user without setting a password, you can use the useradd command with the <code>-r</code> (or <code>--system</code>) option, which creates a system user without a password or home directory. Here's the command:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>-r<span class="w"> </span>jenkins
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>-r<span class="w"> </span>jenkins
 </span></code></pre></div>
 <p>This command creates the <code>jenkins</code> user as a system user. <mark>System users are typically used for services and daemons and do not have passwords or home directories by default</mark>.</p>
 <p>After adding the user, you can proceed to grant the necessary permissions to the <code>jenkins</code> user, such as adding it to the 'docker' group if needed, to allow it to perform specific tasks without requiring a password.</p></div>
