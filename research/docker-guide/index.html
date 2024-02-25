@@ -1424,9 +1424,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference-ubuntu" class="md-nav__link">
+  <a href="#check-the-ip-address-of-the-docker-container" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference (Ubuntu)
+      Check the IP Address of the Docker Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -1605,9 +1623,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference-ubuntu" class="md-nav__link">
+  <a href="#check-the-ip-address-of-the-docker-container" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference (Ubuntu)
+      Check the IP Address of the Docker Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -1939,15 +1975,71 @@
 </li>
 </ol>
 <hr>
-<h2 id="reference-ubuntu">Reference (<code>Ubuntu</code>)</h2>
+<h2 id="check-the-ip-address-of-the-docker-container">Check the IP Address of the Docker Container</h2>
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>docker<span class="w"> </span>inspect<span class="w"> </span>-f<span class="w"> </span><span class="s1">'{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'</span><span class="w"> </span>&lt;container-name&gt;
+</span></code></pre></div>
+<p>Then try accessing the site using <code>curl</code> with the <code>IP address</code> and the <code>mapped port</code> (<code>8082</code> in this case).</p>
+<hr>
+<h2 id="theory">Theory</h2>
+<p><strong><code>Docker</code></strong>, <strong><code>Docker Compose</code></strong>, and <strong><code>Docker Swarm</code></strong> are all related tools in the Docker ecosystem, but they serve different purposes:</p>
+<ol>
+<li>
+<p><strong>Docker:</strong></p>
+<p>Docker is a platform and tool for building, distributing, and running <code>containers</code>. Containers allow developers to package an application with all of its dependencies into a standardized unit for software development. Docker provides the tools needed to create and manage these containers efficiently. With Docker, you can build container images, run containers from those images, and manage container lifecycles.</p>
+</li>
+<li>
+<p><strong>Docker Compose:</strong></p>
+<p>Docker Compose is a tool for defining and running <code>multi-container</code> Docker applications. It allows you to use a YAML file to configure the services that make up your application, including their dependencies, networking, and volumes. Docker Compose then takes care of starting, stopping, and managing all of these containers as a single application stack. It simplifies the process of managing complex applications composed of multiple interconnected containers.</p>
+</li>
+<li>
+<p><strong>Docker Swarm:</strong></p>
+<p>Docker Swarm is Docker's native clustering and <code>orchestration tool</code>. It allows you to create and manage a cluster of Docker nodes, turning them into a single virtual Docker engine. Docker Swarm enables you to deploy and manage multi-container applications across multiple hosts, providing features such as service scaling, rolling updates, and high availability. It simplifies the management of containerized applications at scale and provides built-in features for load balancing and service discovery.</p>
+</li>
+</ol>
+<p>In summary:</p>
+<ul>
+<li><code>Docker</code>: The core platform for building, distributing, and running containers.</li>
+<li><code>Docker Compose</code>: A tool for defining and managing multi-container applications using a YAML configuration file.</li>
+<li><code>Docker Swarm</code>: Docker's native clustering and orchestration tool for managing multi-container applications across multiple hosts.</li>
+</ul>
+<hr>
+<h2 id="reference">Reference</h2>
+<blockquote>
+<p>Linux (<code>Ubuntu</code>)</p>
+</blockquote>
 <ul>
 <li><a href="https://docs.docker.com/desktop/install/ubuntu/">Install Docker Desktop on Ubuntu</a></li>
 <li><a href="https://manpages.ubuntu.com/manpages/jammy/man1/pass.1.html">pass tutorial</a></li>
 <li><a href="https://kodekloud.com/blog/run-docker-in-docker-container/#why-run-docker-in-docker">3 Best Ways to Run Docker in Docker Container</a></li>
 </ul>
+<blockquote>
+<p>Blog</p>
+</blockquote>
+<ul>
+<li><a href="https://www.sumologic.com/glossary/docker-swarm/">What is a Docker Swarm?</a></li>
+<li><a href="https://www.chakray.com/key-differences-between-docker-and-docker-swarm-in-container-management-and-orchestration/">Key Differences Between Docker and Docker Swarm </a></li>
+</ul>
+<blockquote>
+<p>Youtube</p>
+</blockquote>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Tm0Q5zr3FL4&amp;ab_channel=Simplilearn">Docker Swarm: Simplilearn</a></li>
+<li><a href="https://www.youtube.com/watch?v=74p7csxKN8M&amp;ab_channel=Intellipaat">Docker Swarm Step by Step: Intellipaat</a></li>
+<li><a href="https://www.youtube.com/watch?v=9_s3h_GVzZc&amp;ab_channel=TechWorldwithNana">Docker vs Kubernetes vs Docker Swarm: Techworld with Nana</a></li>
+<li><a href="https://www.youtube.com/watch?v=6IYKdiRpTi4&amp;ab_channel=SelfHosted">The EASIEST Docker Swarm Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=HG6yIjZapSA&amp;ab_channel=ProgrammingwithMosh">Docker Compose Tutorial: Programming with Mosh</a></li>
+</ul>
+<blockquote>
 <p>tmux</p>
+</blockquote>
 <ul>
 <li><a href="https://superuser.com/questions/1560523/how-do-i-resize-tmux-pane-by-holding-down-prefix-and-arrow-key-for-a-while">tmux resizing pane</a></li>
+</ul>
+<blockquote>
+<p>Misc <code>youtube</code></p>
+</blockquote>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=lkg5QJsoCCQ&amp;ab_channel=anthonywritescode">what is podman vs docker</a></li>
 </ul></div>
 
 
