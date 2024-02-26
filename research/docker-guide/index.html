@@ -1442,6 +1442,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dangling-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dangling images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Presentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Presentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-images_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-volume_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Volume
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1637,6 +1706,75 @@
       Theory
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dangling-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dangling images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Presentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Presentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-images_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-volume_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Volume
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2002,6 +2140,65 @@
 <li><code>Docker Compose</code>: A tool for defining and managing multi-container applications using a YAML configuration file.</li>
 <li><code>Docker Swarm</code>: Docker's native clustering and orchestration tool for managing multi-container applications across multiple hosts.</li>
 </ul>
+<hr>
+<h2 id="dangling-images">Dangling images</h2>
+<p>Dangling images are layers that have no relationship to any tagged images. They no longer serve a purpose and consume disk space.</p>
+<p>Dangling images are created while creating new build of a image without renaming/updating the version of the image. So that the old image are converted into dangling images.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># List Dangling images</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>$<span class="w"> </span>docker<span class="w"> </span>images<span class="w"> </span>-f<span class="w"> </span><span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1"># Remove Dangling images</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>images<span class="w"> </span>-f<span class="w"> </span><span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span>-q<span class="k">)</span>
+</span></code></pre></div>
+<ul>
+<li><a href="https://waytoeasylearn.com/learn/docker-image-layers/">Remove unnecessary images</a></li>
+</ul>
+<hr>
+<h2 id="docker-presentation">Docker Presentation</h2>
+<h3 id="docker-architecture">Docker Architecture</h3>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*RY-0WiwlcOKbUfZt_WdJbA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*RY-0WiwlcOKbUfZt_WdJbA.png"></a></p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*A7zXIGxMDsmA6vQ7W5b8ig.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f" src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*A7zXIGxMDsmA6vQ7W5b8ig.png"></a></p>
+<p><a href="https://www.codementor.io/blog/docker-technology-5x1kilcbow"><strong>cgroups &amp; namespaces</strong></a>
+The backbone of the Docker technology are cgroups (short for control groups) and kernel namespaces.</p>
+<p>With <strong><code>cgroups</code></strong>, the Linux operating system can easily manage and monitor resource allocation for a given process and set resource limits, like CPU, memory, and network limits. </p>
+<p><strong><code>Namespaces</code></strong> are helpful in isolating process groups from each other. There are six default namespaces in Linux: <code>mnt</code>, <code>IPC</code>, <code>net</code>, <code>usr</code>, <code>pid</code>, and <code>uts</code>. Each container will have its own namespace and processes running inside that namespace, and will not have access to anything outside its namespace.</p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oQBStcYmbbtP5n58I1Lb_A.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://medium.com/@mrdevsecops/namespace-vs-cgroup-60c832c6b8c8" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oQBStcYmbbtP5n58I1Lb_A.png"></a></p>
+<h3 id="docker-steps">Docker Steps</h3>
+<p><a class="glightbox" href="https://jfrog.file.force.com/servlet/servlet.ImageServer?id=01569000008kqFT&amp;oid=00D20000000M3v0&amp;lastMod=1631619825000" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://jfrog.com/devops-tools/article/understanding-and-building-docker-images/" src="https://jfrog.file.force.com/servlet/servlet.ImageServer?id=01569000008kqFT&amp;oid=00D20000000M3v0&amp;lastMod=1631619825000"></a></p>
+<h3 id="docker-images_1">Docker Images</h3>
+<p><a href="https://betterstack.com/community/questions/where-are-docker-images-stored-on-host-machine/">Where Are Docker Images Stored on the Host Machine? </a></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$<span class="w"> </span>docker<span class="w"> </span>info
+</span></code></pre></div>
+<p><a href="https://www.simplilearn.com/tutorials/docker-tutorial/docker-images">Now, typically there are <strong>two categories of Docker Images</strong></a></p>
+<ul>
+<li>
+<p>Official Base Images</p>
+<p>that are pre-built and can be downloaded or pulled from registries, and </p>
+</li>
+<li>
+<p>Customized Images </p>
+<p>that use base images to create application-specific environments. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="https://docs.docker.com/build/guide/images/layers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://docs.docker.com/build/guide/layers/" src="https://docs.docker.com/build/guide/images/layers.png"></a></p>
+<p><a class="glightbox" href="https://blog.florianlopes.io/content/images/2016/04/Docker-layers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://blog.florianlopes.io/5-tips-to-reduce-docker-image-size/" src="https://blog.florianlopes.io/content/images/2016/04/Docker-layers.png"></a></p>
+<h3 id="docker-container">Docker Container</h3>
+<p><a class="glightbox" href="https://jfrog.file.force.com/servlet/servlet.ImageServer?id=01569000008kqFO&amp;oid=00D20000000M3v0&amp;lastMod=1631619804000" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://jfrog.com/devops-tools/article/understanding-and-building-docker-images/" src="https://jfrog.file.force.com/servlet/servlet.ImageServer?id=01569000008kqFO&amp;oid=00D20000000M3v0&amp;lastMod=1631619804000"></a></p>
+<p>The major <strong>difference</strong> between a <code>container</code> and an <code>image</code> is the <mark>top writable layer</mark>. </p>
+<p><a class="glightbox" href="https://test-dockerrr.readthedocs.io/en/latest/userguide/storagedriver/images/container-layers.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://test-dockerrr.readthedocs.io/en/latest/userguide/storagedriver/imagesandcontainers/" src="https://test-dockerrr.readthedocs.io/en/latest/userguide/storagedriver/images/container-layers.jpg"></a></p>
+<p>All changes made to the running container, such as writing new files, modifying existing files, and deleting files, are written to this thin writable container layer.</p>
+<p>When the container is stopped writable layer remains, and if container was removed writable layer is deleted. So that’s why people say, containers are stateless.</p>
+<p><a class="glightbox" href="../../images/docker/How-to-Handle-Container-Storage-01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://taikun.cloud/how-to-handle-container-storage/" src="../../images/docker/How-to-Handle-Container-Storage-01.png"></a></p>
+<h3 id="docker-volume_1">Docker Volume</h3>
+<p>How to Handle Container Storage</p>
+<p>To make data of any container persistent and accessible outside of the container, Docker provides two options: </p>
+<ul>
+<li><strong>Volumes</strong></li>
+<li><strong>Bind mounts</strong></li>
+</ul>
+<p><a class="glightbox" href="../../images/docker/How-to-Handle-Container-Storage-06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://taikun.cloud/how-to-handle-container-storage/" src="../../images/docker/How-to-Handle-Container-Storage-06.png"></a></p>
+<p><strong>Docker vs Docker Compose vs Docker Swarm</strong></p>
+<p><a class="glightbox" href="../../images/docker/1%20ngF2TC5F8lGiWkvGKgnLcA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://atharvyeole.medium.com/best-analogy-to-understand-docker-docker-compose-docker-swarm-and-kubernetes-69cd980a6e6a" src="../../images/docker/1%20ngF2TC5F8lGiWkvGKgnLcA.png"></a></p>
 <hr>
 <h2 id="reference">Reference</h2>
 <blockquote>
