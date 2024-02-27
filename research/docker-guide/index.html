@@ -1451,6 +1451,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recap-docker-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recap Docker Volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#docker-presentation" class="md-nav__link">
     <span class="md-ellipsis">
       Docker Presentation
@@ -1532,6 +1541,15 @@
   <a href="#docker-swarm" class="md-nav__link">
     <span class="md-ellipsis">
       Docker Swarm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-guide-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Guide Jenkins
     </span>
   </a>
   
@@ -1746,6 +1764,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recap-docker-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recap Docker Volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#docker-presentation" class="md-nav__link">
     <span class="md-ellipsis">
       Docker Presentation
@@ -1827,6 +1854,15 @@
   <a href="#docker-swarm" class="md-nav__link">
     <span class="md-ellipsis">
       Docker Swarm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-guide-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Guide Jenkins
     </span>
   </a>
   
@@ -2203,10 +2239,76 @@
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
 </span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1"># Remove Dangling images</span>
 </span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>images<span class="w"> </span>-f<span class="w"> </span><span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span>-q<span class="k">)</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="c1">##</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="c1"># To remove all dangling images.</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>prune
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="c1"># To remove all images which aren't used by existing containers, use the -a flag:</span>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="c1"># To remove all stopped containers.</span>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>$<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>prune
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="c1"># To removes stopped containers older than 24 hours:</span>
+</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>$<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>prune<span class="w"> </span>--filter<span class="w"> </span><span class="s2">"until=24h"</span>
+</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>
+</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a><span class="c1"># To remove all volumes not used by at least one container.</span>
+</span><span id="__span-25-21"><a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>prune
+</span><span id="__span-25-22"><a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a>
+</span><span id="__span-25-23"><a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a><span class="c1"># To remove all networks not used by at least one container.</span>
+</span><span id="__span-25-24"><a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>prune
+</span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a>
+</span><span id="__span-25-26"><a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a><span class="c1">##</span>
+</span><span id="__span-25-27"><a id="__codelineno-25-27" name="__codelineno-25-27" href="#__codelineno-25-27"></a><span class="c1"># The docker system prune command is a shortcut that prunes images, containers, and networks. # Volumes aren't pruned by default, and you must specify the --volumes flag for docker system # prune to prune volumes.</span>
+</span><span id="__span-25-28"><a id="__codelineno-25-28" name="__codelineno-25-28" href="#__codelineno-25-28"></a>
+</span><span id="__span-25-29"><a id="__codelineno-25-29" name="__codelineno-25-29" href="#__codelineno-25-29"></a><span class="c1"># To prune images, containers and network</span>
+</span><span id="__span-25-30"><a id="__codelineno-25-30" name="__codelineno-25-30" href="#__codelineno-25-30"></a>$<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>prune
+</span><span id="__span-25-31"><a id="__codelineno-25-31" name="__codelineno-25-31" href="#__codelineno-25-31"></a>
+</span><span id="__span-25-32"><a id="__codelineno-25-32" name="__codelineno-25-32" href="#__codelineno-25-32"></a><span class="c1"># To also prune volumes, add the --volumes flag:</span>
+</span><span id="__span-25-33"><a id="__codelineno-25-33" name="__codelineno-25-33" href="#__codelineno-25-33"></a>$<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>--volumes
 </span></code></pre></div>
 <ul>
 <li><a href="https://waytoeasylearn.com/learn/docker-image-layers/">Remove unnecessary images</a></li>
+<li><a href="https://docs.docker.com/config/pruning/">Docker container and image prune</a></li>
 </ul>
+<hr>
+<h2 id="recap-docker-volume">Recap Docker Volume</h2>
+<p>In a previous chapter, we used the "<code>-v</code>" option to a "<code>docker run</code>" command to declare that we wanted to use a volume with a container. The abbreviated "<code>-v</code>" option is exactly the same as the "<code>--volume</code>" option. However, the newer and preferred way to mount volumes in a container is the "<code>--mount</code>" option. Docker recommends that you use "<code>--mount</code>" instead of "<code>-v</code>" or "<code>--volume</code>", as their research has shown "<code>--mount</code>" is easier to use. However, if you are an old Docker user like myself, then you're probably accustomed to using and seeing "<code>-v</code>". In any case, either works, but we will focus on "<code>--mount</code>", as it’s the recommended way.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>withvolume<span class="w"> </span>--mount<span class="w"> </span><span class="nv">source</span><span class="o">=</span>mydata1,destination<span class="o">=</span>/root/volume<span class="w"> </span>nginx
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="c1">#</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>withvolume2<span class="w"> </span>--mount<span class="w"> </span><span class="nv">src</span><span class="o">=</span>mydata1,dst<span class="o">=</span>/root/volume<span class="w"> </span>nginx
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-dit<span class="w"> </span>--name<span class="w"> </span>ephemeral<span class="w"> </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>tmpfs,destination<span class="o">=</span>/root/volume<span class="w"> </span>nginx
+</span></code></pre></div>
+<ul>
+<li><a href="">Docker: A project based learning</a></li>
+<li><a href="https://devops4solutions.com/publish-docker-image-to-dockerhub-using-jenkins-pipeline/">Publish Docker image to Dockerhub using Jenkins Pipeline</a></li>
+<li><a href="https://k-adithya21.medium.com/build-a-docker-jenkins-pipeline-to-implement-ci-cd-workflow-e4918bb8bca3">Build a Docker Jenkins Pipeline to Implement CI/CD Workflow</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>what is differnce between 8080:80 and 8080:8080. is there any real difference</p>
+</blockquote>
+<ul>
+<li><strong>8080:80</strong></li>
+</ul>
+<p>This notation maps port 80 of the container to port 8080 of the host. It means that any traffic directed at port 8080 on the host machine will be forwarded to port 80 inside the Docker container. This is useful when you want to expose a service running inside the container on a standard HTTP port (80) of the host machine.</p>
+<ul>
+<li><strong>8080:8080</strong></li>
+</ul>
+<p>This notation maps port 8080 of the container to port 8080 of the host. It means that any traffic directed at port 8080 on the host machine will be forwarded to port 8080 inside the Docker container. This is useful when you want to expose a service running inside the container on a non-standard port (8080) of the host machine.</p>
+<p>In both cases, the first port number (8080) specifies the port on the host machine, and the second port number (80 or 8080) specifies the port inside the Docker container. The port on the host machine is what you use to access the service running inside the container.</p>
+<p>So, the difference lies in which port on the host machine you want to use to access the service and which port inside the container the service is listening on.</p>
+<blockquote>
+<p>so why the jenkins not running on 8080:80 but running on 8080:8080</p>
+</blockquote>
+<p>If Jenkins is running inside a Docker container and you've mapped port 8080:8080 but not <code>8080:80</code>, it means that Jenkins is configured to listen for incoming connections on port 8080 inside the container.</p>
+<p>When you map <code>8080:8080</code>, it indicates that traffic directed to port <code>8080</code> on the host machine should be forwarded to port <code>8080</code> inside the Docker container where Jenkins is running. This setup expects Jenkins to be listening for connections on port <code>8080</code> inside the container.</p>
+<p>If Jenkins is running on port <code>8080</code> inside the container, mapping <code>8080:8080</code> correctly exposes Jenkins to external traffic on port <code>8080</code> of the host machine.</p>
+<p>On the other hand, if you were to map <code>8080:80</code>, it would expect Jenkins to be configured to listen on port <code>80</code> inside the container. By default, Jenkins typically runs on port 8080, so mapping <code>8080:80</code> wouldn't work unless you specifically configured Jenkins to listen on port 80 inside the container.</p>
+<p>Therefore, mapping <code>8080:8080</code> correctly exposes Jenkins running on port <code>8080</code> inside the container to external traffic on port <code>8080</code> of the host machine, which is why it works in your case.</p>
 <hr>
 <h2 id="docker-presentation">Docker Presentation</h2>
 <h3 id="docker-architecture">Docker Architecture</h3>
@@ -2221,7 +2323,7 @@ The backbone of the Docker technology are cgroups (short for control groups) and
 <p><a class="glightbox" href="https://jfrog.file.force.com/servlet/servlet.ImageServer?id=01569000008kqFT&amp;oid=00D20000000M3v0&amp;lastMod=1631619825000" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://jfrog.com/devops-tools/article/understanding-and-building-docker-images/" src="https://jfrog.file.force.com/servlet/servlet.ImageServer?id=01569000008kqFT&amp;oid=00D20000000M3v0&amp;lastMod=1631619825000"></a></p>
 <h3 id="docker-images_1">Docker Images</h3>
 <p><a href="https://betterstack.com/community/questions/where-are-docker-images-stored-on-host-machine/">Where Are Docker Images Stored on the Host Machine? </a></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$<span class="w"> </span>docker<span class="w"> </span>info
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>$<span class="w"> </span>docker<span class="w"> </span>info
 </span></code></pre></div>
 <p><a href="https://www.simplilearn.com/tutorials/docker-tutorial/docker-images">Now, typically there are <strong>two categories of Docker Images</strong></a></p>
 <ul>
@@ -2260,6 +2362,13 @@ The backbone of the Docker technology are cgroups (short for control groups) and
 <p><a class="glightbox" href="../../images/docker/container-orchestration-tool.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Container Orchestration Tools" src="../../images/docker/container-orchestration-tool.jpg"></a></p>
 <h2 id="docker-swarm">Docker Swarm</h2>
 <p><a class="glightbox" href="https://k21academy.com/wp-content/uploads/2021/08/Docker-Swarm-Orchestration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://k21academy.com/docker-kubernetes/docker-swarm/" src="https://k21academy.com/wp-content/uploads/2021/08/Docker-Swarm-Orchestration.png"></a></p>
+<hr>
+<h2 id="practical-guide-jenkins">Practical Guide Jenkins</h2>
+<p><a class="glightbox" href="https://devops4solutions.com/wp-content/uploads/2020/09/Dockerpublish.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://devops4solutions.com/publish-docker-image-to-dockerhub-using-jenkins-pipeline/" src="https://devops4solutions.com/wp-content/uploads/2020/09/Dockerpublish.png"></a></p>
+<p><a class="glightbox" href="../../images/docker/jenkins-docker-hub.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Jenkins docker hub" src="../../images/docker/jenkins-docker-hub.png"></a>
+<a class="glightbox" href="../../images/docker/jenkins-image-download.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Jenkins download image" src="../../images/docker/jenkins-image-download.png"></a></p>
+<p><a class="glightbox" href="../../images/docker/running-jenkins-images-container.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Jenkins image and container runnit" src="../../images/docker/running-jenkins-images-container.png"></a>
+<a class="glightbox" href="../../images/docker/jenkins-login.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="jenkins login" src="../../images/docker/jenkins-login.png"></a></p>
 <hr>
 <h2 id="reference">Reference</h2>
 <blockquote>
