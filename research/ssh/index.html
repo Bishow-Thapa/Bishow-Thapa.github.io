@@ -1518,6 +1518,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#certbot-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      certbot in linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1740,6 +1758,24 @@
   <a href="#installing-xampp-in-linux" class="md-nav__link">
     <span class="md-ellipsis">
       Installing Xampp in Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certbot-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      certbot in linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEM
     </span>
   </a>
   
@@ -2081,6 +2117,61 @@
 <p>In summary, <code>sudo visudo</code> is used to safely edit the sudoers file, which is critical for managing user privileges and access control on a Linux system.</p>
 <ul>
 <li><a href="https://itsfoss.com/install-xampp-ubuntu/">How to Install and Use XAMPP on Ubuntu</a></li>
+</ul>
+<hr>
+<h2 id="certbot-in-linux"><mark>certbot</mark> in linux</h2>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># There is two ways you can download certbot</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1"># 1. with PIP</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1"># 2. with snapd</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="c1"># step1: Install snapd:</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="c1"># step2: Ensure you have the latest snapd version installed:</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>core<span class="p">;</span><span class="w"> </span>sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>coreCopied!
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="c1"># step3: Install Certbot with snapd:</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>--classic<span class="w"> </span>certbot
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="c1"># step4: Create a symlink to ensure Certbot runs:</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/snap/bin/certbot<span class="w"> </span>/usr/bin/certbot
+</span></code></pre></div>
+<p>Create an SSL Certificate with Certbot</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># step1: Choose the best option for your needs.</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1"># Create SSL certs for all domains and configure redirects in the web server:</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--apache
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="c1"># Create SSL certs for a specified domain (recommended if you’re using your system hostname):</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--apache<span class="w"> </span>-d<span class="w"> </span>example.com<span class="w"> </span>-d<span class="w"> </span>www.example.com
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="c1"># Only install SSL certs:</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--apache
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--nginx
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="c1"># step2: Enter an email address for renewal and security notices.</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="c1"># step3: Agree to the terms of service.</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="c1"># step4: Specify whether to receive emails from EFF.</span>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="c1"># step5: If prompted, choose whether to redirect HTTP traffic to HTTPS – 1 (no redirect, no further changes to the server) or # 2 (redirect all HTTP requests to HTTPS).</span>
+</span></code></pre></div>
+<ul>
+<li><a href="https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/">How to Install Let’s Encrypt SSL on Ubuntu with Certbot</a></li>
+<li><a href="https://linuxhostsupport.com/blog/install-lets-encrypt-ssl-certificates-using-certbot/">Install Let’s Encrypt SSL Certificates using Certbot</a></li>
+</ul>
+<p>Solved</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/53223914/issue-using-certbot-with-nginx">Issue using certbot with nginx: stackoverflow</a></li>
+<li><a href="https://www.youtube.com/watch?v=kyRlG6a0u3M">Whaaaat Are AAAA Records in DNS? youtube</a></li>
+</ul>
+<hr>
+<h2 id="bem">BEM</h2>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:1400/1*O3bBonPBEugnTOVzpTaghg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="bem css" src="https://miro.medium.com/v2/resize:fit:1400/1*O3bBonPBEugnTOVzpTaghg.png"></a>
+<a class="glightbox" href="https://sourcedcode.com/storage/2022/01/bem-simple-example.1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="bem structure" src="https://sourcedcode.com/storage/2022/01/bem-simple-example.1.png"></a></p>
+<p>Reference</p>
+<ul>
+<li><a href="https://sourcedcode.com/blog/css/what-is-bem-with-examples">What is BEM? What are some examples?</a></li>
+<li><a href="https://blog.tinaciousdesign.com/bem-css-scalable-maintainable">Use BEM for scalable and maintainable CSS</a></li>
 </ul>
 <hr>
 <h2 id="reference">Reference</h2>
