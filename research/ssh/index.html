@@ -1473,7 +1473,7 @@
           <li class="md-nav__item">
   <a href="#installing-tmux-plugin-manager-tpm" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing: Tmux Plugin Manager TPM
+      Installing: Tmux Plugin Manager - TPM
     </span>
   </a>
   
@@ -1503,45 +1503,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#issue-solved" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issue Solved
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test Dockerfile
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#portainer-with-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Portainer with Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installing-xampp-in-linux" class="md-nav__link">
     <span class="md-ellipsis">
       Installing Xampp in Linux
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certbot-in-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      certbot in linux
     </span>
   </a>
   
@@ -1719,7 +1683,7 @@
           <li class="md-nav__item">
   <a href="#installing-tmux-plugin-manager-tpm" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing: Tmux Plugin Manager TPM
+      Installing: Tmux Plugin Manager - TPM
     </span>
   </a>
   
@@ -1749,45 +1713,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#issue-solved" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issue Solved
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test Dockerfile
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#portainer-with-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Portainer with Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installing-xampp-in-linux" class="md-nav__link">
     <span class="md-ellipsis">
       Installing Xampp in Linux
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certbot-in-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      certbot in linux
     </span>
   </a>
   
@@ -1889,8 +1817,7 @@
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># To resize the pane</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>&lt;Prefix&gt;,<span class="w"> </span>arrow<span class="w"> </span>down<span class="w"> </span><span class="o">(</span>hold<span class="o">)</span>
 </span></code></pre></div>
-<h3 id="installing-tmux-plugin-manager-tpm"><code>Installing:</code> Tmux Plugin Manager <code>TPM</code></h3>
-<p><a href="https://github.com/tmux-plugins/tpm">Clone TPM</a>:</p>
+<h3 id="installing-tmux-plugin-manager-tpm">Installing: <a href="https://github.com/tmux-plugins/tpm">Tmux Plugin Manager</a> - <code>TPM</code></h3>
 <div class="language-text highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 </span></code></pre></div>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Here's how you can create a .tmux directory if you need it:</span>
@@ -1899,16 +1826,19 @@
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># To create a basic configuration file, you can do the following:</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>touch<span class="w"> </span>~/.tmux.conf
 </span></code></pre></div>
+<ul>
+<li>
 <p><strong>One way</strong></p>
 <p>While in tmux session, press <code>prefix</code> + <code>I</code> (capital <code>i</code>, as in Install) to fetch the plugin.</p>
-<blockquote>
-<p>Notes</p>
-</blockquote>
-<p>Heads Up: The default prefix to tmux is <code>Ctrl+b</code>.</p>
+<p><code>Notes</code>: The default prefix to tmux is <code>Ctrl+b</code>.</p>
+</li>
+<li>
 <p><strong>Other way</strong></p>
 <p>You can also reload the Tmux configuration file by running the following command to add the plugin.</p>
 <div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>tmux<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.tmux.conf
 </span></code></pre></div>
+</li>
+</ul>
 <h3 id="tmux-command-mode">tmux <code>command</code> mode:</h3>
 <p>In tmux, <mark>command mode</mark> allows you to interact with tmux commands without prefixing them with the tmux prefix key (by default, it's <code>Ctrl+b</code>). This can be convenient for executing a series of tmux commands quickly.</p>
 <p>To enter command mode in tmux, you can use the tmux prompt key, which is <code>:</code> (colon) by default. Pressing this key will bring up the tmux command prompt at the bottom of the terminal window.</p>
@@ -1969,221 +1899,32 @@
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>$<span class="w"> </span>groups<span class="w"> </span><span class="nv">$USER</span>
 </span></code></pre></div>
 <hr>
-<h2 id="issue-solved">Issue Solved</h2>
-<p>Step-by-step instructions to create a Docker image for Jenkins with Docker installed inside it and then run a Jenkins container with the Docker socket mounted from the host:</p>
-<ol>
-<li>
-<p><strong>Create a Dockerfile:</strong></p>
-<p>Create a file named <code>Dockerfile</code> with the following content:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>FROM jenkins/jenkins:lts
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>USER root
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a># Install Docker prerequisites
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>RUN apt-get update &amp;&amp; \
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common &amp;&amp; \
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a># Install Docker
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>RUN curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; \
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    sh get-docker.sh
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a># Add Jenkins user to Docker group
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>RUN usermod -aG docker jenkins
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>USER jenkins
-</span></code></pre></div>
-<p>This Dockerfile installs Docker inside the Jenkins container and adds the Jenkins user to the Docker group.</p>
-</li>
-<li>
-<p><strong>Build the Docker Image:</strong></p>
-<p>Open a terminal and navigate to the directory containing the <code>Dockerfile</code>. Then, run the following command to build the Docker image:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-jenkins<span class="w"> </span>.
-</span></code></pre></div>
-<p>This command builds the Docker image using the Dockerfile and tags it with the name <code>my-jenkins</code>.</p>
-</li>
-<li>
-<p><strong>Run the Jenkins Container:</strong></p>
-<p>After the Docker image is built, you can run a Jenkins container with the Docker socket mounted from the host:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>my-jenkins
-</span></code></pre></div>
-<p>This command starts a Jenkins container named <code>jenkins</code>. It mounts the Docker socket (<code>/var/run/docker.sock</code>) from the host into the container and exposes the Jenkins web interface on port <code>8080</code> and the Jenkins agent communication port on port <code>50000</code>.</p>
-</li>
-</ol>
-<p>With these steps, you have a Jenkins container running with Docker installed inside it, and the Docker socket mounted from the host. This setup allows the Jenkins container to communicate with the Docker daemon on the host and perform Docker-related tasks within Jenkins pipelines or jobs.</p>
-<hr>
-<blockquote>
-<p>Notes</p>
-</blockquote>
-<p><strong>How to fix docker: Got permission denied while trying to connect to the Docker daemon socket</strong></p>
-<p>After an search hour this following solution finaly worked :</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
-</span></code></pre></div>
-<ul>
-<li><a href="https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket">Got permission denied while trying to connect to the Docker daemon socket</a></li>
-</ul>
-<hr>
-<h2 id="test-dockerfile">Test Dockerfile</h2>
-<p><code>Dockerfile</code></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a># Use an existing image as a base
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>FROM alpine:latest
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a># Run a command in the container
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>CMD ["echo", "Hello, Jenkins!"]
-</span></code></pre></div>
-<hr>
-<p>if you want to check if a container named my_container is using any volumes:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>inspect<span class="w"> </span>&lt;my_container&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Mounts
-</span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span>-v<span class="w"> </span>generic-volume:/var/jenkins_home/generic-volume<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">  </span>jenkins/jenkins:lts
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
-</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
-</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">  </span>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">  </span>-v<span class="w"> </span>generic-volume:/var/jenkins_home/generic-volume<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">  </span>my-jenkins
-</span></code></pre></div>
-<h2 id="portainer-with-docker">Portainer with Docker</h2>
-<p>To use Docker Swarm mode with Portainer, you need to set up a Docker Swarm cluster and then deploy Portainer as a service within the Swarm. Here's a step-by-step guide on how to do this:</p>
-<ol>
-<li>
-<p>Initialize Docker Swarm:</p>
-<p>If you haven't already initialized Docker Swarm on your Docker host, you can do so by running the following command in your terminal:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>docker<span class="w"> </span>swarm<span class="w"> </span>init
-</span></code></pre></div>
-<p>This command initializes Docker Swarm mode on the current Docker host and creates a Swarm manager node.</p>
-</li>
-<li>
-<p>Deploy Portainer as a Service:</p>
-<p>Once Docker Swarm is initialized, you can deploy Portainer as a service within the Swarm. Run the following command to create a Portainer service:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker<span class="w"> </span>service<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>--name<span class="w"> </span>portainer<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>--publish<span class="w"> </span><span class="m">9000</span>:9000<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>--constraint<span class="w"> </span><span class="s1">'node.role == manager'</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>/var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>portainer/portainer-ce
-</span></code></pre></div>
-<p>This command creates a new service named "portainer" using the Portainer Community Edition (CE) image. It publishes Portainer's web interface on port 9000 and mounts the Docker socket from the host into the Portainer container, allowing Portainer to interact with the Docker API.</p>
-</li>
-<li>
-<p>Access Portainer Web Interface:</p>
-<p>Once the Portainer service is deployed, you can access the Portainer web interface by navigating to http://<your-docker-host>:9000 in your web browser. If you're running Portainer locally, you can use http://localhost:9000.</your-docker-host></p>
-</li>
-<li>
-<p>Set Up Portainer:</p>
-<p>Follow the on-screen instructions to complete the initial setup of Portainer. You'll be prompted to create an admin user, choose a password, and specify whether you want to manage the local Docker environment or a remote Docker Swarm cluster.</p>
-</li>
-<li>
-<p>Connect Portainer to Docker Swarm:</p>
-<p>If you're managing a remote Docker Swarm cluster, you'll need to specify the Swarm endpoint URL and optionally provide authentication credentials. This allows Portainer to communicate with the Docker Swarm API and manage services, nodes, and other resources within the cluster.</p>
-</li>
-<li>
-<p>Start Managing Services:</p>
-<p>Once connected, you can start managing Docker Swarm services, nodes, stacks, and other resources using the Portainer web interface. You can create, scale, update, and monitor services, deploy applications using stacks, and perform various administrative tasks.</p>
-</li>
-</ol>
-<p>By following these steps, you can set up and use Docker Swarm mode with Portainer to manage your containerized applications at scale. Make sure to consult the official Portainer documentation for more detailed instructions and best practices.</p>
-<hr>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>server {
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    listen 80;
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    server_name generic.com.np;
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    location / {
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>        proxy_pass http://&lt;container-ip&gt;:&lt;container-port&gt;;
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>        proxy_set_header Host $host;
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>        proxy_set_header X-Real-IP $remote_addr;
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>        proxy_set_header X-Forwarded-Proto $scheme;
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>    }
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>}
-</span></code></pre></div>
-<hr>
 <h2 id="installing-xampp-in-linux"><a href="https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu">Installing Xampp</a> in Linux</h2>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># To Launch XAMPP</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>sudo<span class="w"> </span>/opt/lampp/./manager-linux-x64.run
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># To Unistall</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>sudo<span class="w"> </span>/opt/lampp/./uninstall
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="c1"># After uninstall, remove the directory</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>/opt/lamp
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># To Launch XAMPP</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>/opt/lampp/./manager-linux-x64.run
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># To Unistall</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>sudo<span class="w"> </span>/opt/lampp/./uninstall
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1"># After uninstall, remove the directory</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>/opt/lamp
 </span></code></pre></div>
 <p><code>sudo visudo</code> is a command used in Linux to edit the sudoers file, which determines who has administrative privileges on the system and what commands they can run with elevated permissions using the <code>sudo</code> command. The <mark>sudoers</mark> file is crucial for system security, as it controls access to sensitive operations.</p>
 <p>Here's what each part of the command does:</p>
 <ul>
-<li><code>sudo</code>:</li>
-</ul>
+<li>
+<p><code>sudo</code>:</p>
 <p>This is a command used in Unix-like operating systems to allow users to run programs with the security privileges of another user (usually the <code>superuser</code>, or "<code>root</code>"). It stands for "superuser do."</p>
-<ul>
-<li><code>visudo</code>:</li>
-</ul>
+</li>
+<li>
+<p><code>visudo</code>:</p>
 <p>This is a command-line utility specifically designed for editing the <mark>sudoers file</mark>. It opens the sudoers file in a text editor, but it performs some syntax checking before saving changes to ensure that the file remains in a valid state. This helps prevent accidental misconfigurations that could lock users out of administrative access or potentially compromise system security.</p>
+</li>
+</ul>
 <p>In summary, <code>sudo visudo</code> is used to safely edit the sudoers file, which is critical for managing user privileges and access control on a Linux system.</p>
 <ul>
 <li><a href="https://itsfoss.com/install-xampp-ubuntu/">How to Install and Use XAMPP on Ubuntu</a></li>
-</ul>
-<hr>
-<h2 id="certbot-in-linux"><mark>certbot</mark> in linux</h2>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># There is two ways you can download certbot</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1"># 1. with PIP</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1"># 2. with snapd</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="c1"># step1: Install snapd:</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="c1"># step2: Ensure you have the latest snapd version installed:</span>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>core<span class="p">;</span><span class="w"> </span>sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>coreCopied!
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="c1"># step3: Install Certbot with snapd:</span>
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>--classic<span class="w"> </span>certbot
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="c1"># step4: Create a symlink to ensure Certbot runs:</span>
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/snap/bin/certbot<span class="w"> </span>/usr/bin/certbot
-</span></code></pre></div>
-<p>Create an SSL Certificate with Certbot</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># step1: Choose the best option for your needs.</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1"># Create SSL certs for all domains and configure redirects in the web server:</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--apache
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="c1"># Create SSL certs for a specified domain (recommended if you’re using your system hostname):</span>
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--apache<span class="w"> </span>-d<span class="w"> </span>example.com<span class="w"> </span>-d<span class="w"> </span>www.example.com
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="c1"># Only install SSL certs:</span>
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--apache
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>certonly<span class="w"> </span>--nginx
-</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>
-</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
-</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="c1"># step2: Enter an email address for renewal and security notices.</span>
-</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="c1"># step3: Agree to the terms of service.</span>
-</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="c1"># step4: Specify whether to receive emails from EFF.</span>
-</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="c1"># step5: If prompted, choose whether to redirect HTTP traffic to HTTPS – 1 (no redirect, no further changes to the server) or # 2 (redirect all HTTP requests to HTTPS).</span>
-</span></code></pre></div>
-<ul>
-<li><a href="https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/">How to Install Let’s Encrypt SSL on Ubuntu with Certbot</a></li>
-<li><a href="https://linuxhostsupport.com/blog/install-lets-encrypt-ssl-certificates-using-certbot/">Install Let’s Encrypt SSL Certificates using Certbot</a></li>
-</ul>
-<p>Solved</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/53223914/issue-using-certbot-with-nginx">Issue using certbot with nginx: stackoverflow</a></li>
-<li><a href="https://www.youtube.com/watch?v=kyRlG6a0u3M">Whaaaat Are AAAA Records in DNS? youtube</a></li>
 </ul>
 <hr>
 <h2 id="bem">BEM</h2>
