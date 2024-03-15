@@ -1643,27 +1643,25 @@
 <hr>
 <h2 id="login-remote-with-ssh-key-based-authentication">Login remote with SSH key-based authentication</h2>
 <p>To log in to an SSH remote server without entering a password, you can set up SSH key-based authentication. Here's a step-by-step guide to do that:</p>
-<ol>
-<li>
-<p><strong>Generate SSH Key Pair</strong> (if you don't have one already):</p>
+<div class="admonition tip">
+<p class="admonition-title">1. Generate SSH Key Pair: (if you don't have one already)</p>
 <div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa
 </span></code></pre></div>
 <p>This command will generate a new SSH key pair (<code>public</code> and <code>private</code>)</p>
-</li>
-<li>
-<p><strong>Copy the Public Key to the Remote Server:</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">2. Copy the Public Key to the Remote Server:</p>
 <p>Use the <mark>ssh-copy-id</mark> command to copy your public key to the remote server. Replace <code>username</code> and <code>remote_host</code> with your username and the hostname or IP address of the remote server.</p>
 <div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh-copy-id<span class="w"> </span>username@remote_host
 </span></code></pre></div>
 <p>You'll be prompted to enter your password for the remote server. After that, your public key will be added to the <code>~/.ssh/authorized_keys</code> file on the remote server.</p>
-</li>
-<li>
-<p><strong>Test SSH Connection:</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">3. Test SSH Connection:</p>
 <p>Try to SSH into the remote server again. You should be able to log in without being prompted for a password:</p>
 <div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh<span class="w"> </span>username@remote_host
 </span></code></pre></div>
-</li>
-</ol>
+</div>
 <p>With <strong>SSH key-based authentication</strong> set up, you can now log in to your remote server <code>without entering a password</code>, provided you have the corresponding private key stored on your local machine.</p>
 <hr>
 <h2 id="reference">Reference</h2>
