@@ -2109,6 +2109,23 @@
 <p>Quickly open files</p>
 <p>Keyboard Shortcut: <code>Ctrl+P</code></p>
 <hr>
+<details class="example">
+<summary><code>django-autoslug</code> library</summary>
+<p>The <strong>AutoSlugField</strong> <mark>is not a built-in field</mark> <strong>provided by Django itself</strong>. It appears to be from a third-party library called django-autoslug. This library provides a field for Django models that automatically generates a unique slug for each instance of the model.</p>
+<p>To use <strong>AutoSlugField</strong>, you need to install the <mark>django-autoslug library</mark> via pip. You can do this by running:</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>pip<span class="w"> </span>install<span class="w"> </span>django-autoslug
+</span></code></pre></div>
+<p>Once installed, you can import AutoSlugField in your Django model file and use it like any other field. Here's a basic example of how you might use it:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>  <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>  <span class="kn">from</span> <span class="nn">autoslug</span> <span class="kn">import</span> <span class="n">AutoSlugField</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>  <span class="k">class</span> <span class="nc">YourModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>  <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>  <span class="n">slug</span> <span class="o">=</span> <span class="n">AutoSlugField</span><span class="p">(</span><span class="n">populate_from</span><span class="o">=</span><span class="s1">'title'</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In this example, the slug field will automatically generate a slug based on the title field whenever a new instance of YourModel is created. The unique=True parameter ensures that each generated slug is unique within the database.</p>
+</details>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://ostechnix.com/save-and-restore-tmux-environment/">How To Save And Restore Tmux Environments Across Reboots In Linux</a></li>
