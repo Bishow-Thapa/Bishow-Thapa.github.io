@@ -1902,6 +1902,59 @@
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>$<span class="w"> </span>git<span class="w"> </span>cherry-pick<span class="w"> </span>&lt;commit&gt;
 </span></code></pre></div>
+<details class="example">
+<summary>git tags</summary>
+<p>To add a tag in Git, you have <mark>two main options</mark>: <strong>lightweight tags</strong> and <strong>annotated tags</strong>.</p>
+<p><strong>1. Lightweight Tags:</strong></p>
+<p>Lightweight tags are simply pointers to a specific commit. They are created with the git tag command followed by the tag name. Here's how you can add a lightweight tag:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>tag<span class="w"> </span>&lt;tag_name&gt;
+</span></code></pre></div>
+<p>For example, if you want to tag the current commit with the tag "v1.0.0", you would run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>tag<span class="w"> </span>v1.0.0
+</span></code></pre></div>
+<p><strong>2. Annotated Tags:</strong></p>
+<p>Annotated tags, on the other hand, are stored as full objects in the Git database. They include a tagger name, email, date, and a tagging message. You create an annotated tag using the -a option with the git tag command, like so:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>&lt;tag_name&gt;<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Tagging message"</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Version 1.0.0 release"</span>
+</span></code></pre></div>
+<hr>
+<p><strong>Pushing Tags to Remote Repository:</strong></p>
+<p>After creating the tag locally, you might want to push it to a remote repository like GitHub. You can do this using the git push command with the --tags option to push all tags:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--tags
+</span></code></pre></div>
+<p>If you only want to push a specific tag, you can specify it like this:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;tag_name&gt;
+</span></code></pre></div>
+<p>For example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+</span></code></pre></div>
+<hr>
+<p><mark>Example Workflow:</mark></p>
+<p>Here's a complete example workflow to add a tag and push it to a remote repository:</p>
+<ol>
+<li>Create a lightweight tag:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>tag<span class="w"> </span>v1.0.0
+</span></code></pre></div>
+<ol>
+<li>Push the tag to the remote repository:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+</span></code></pre></div>
+<p><strong>Alternatively, if you want to create an annotated tag:</strong></p>
+<ol>
+<li>Create an annotated tag with a message:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Version 1.0.0 release"</span>
+</span></code></pre></div>
+<ol>
+<li>Push the annotated tag to the remote repository:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+</span></code></pre></div>
+<p>Remember to replace <code>&lt;tag_name&gt;</code> with the name of your tag and <code>&lt;tagging_message&gt;</code> with a descriptive message for annotated tags.</p>
+</details>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
@@ -1912,6 +1965,9 @@
 </li>
 <li>
 <p><a href="https://github.com/mkdocs/catalog">mkdocs plugins</a></p>
+</li>
+<li>
+<p><a href="https://www.bitband.com/blog/git-tags-are-they-useful-and-how-to-use-them/">git tags? how to use them</a></p>
 </li>
 </ul></div>
 
