@@ -2109,6 +2109,20 @@
 <p>Quickly open files</p>
 <p>Keyboard Shortcut: <code>Ctrl+P</code></p>
 <hr>
+<div class="admonition abstract">
+<p class="admonition-title">To rename the app name in the Django admin interface,</p>
+<p>you can customize the display name by providing a custom AppConfig for your app and then <strong>specifying the <mark>verbose name</mark></strong>. Here's how you can do it:</p>
+<p>Create an AppConfig class in your app's apps.py file:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>  <span class="c1"># myapp/apps.py</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>  <span class="kn">from</span> <span class="nn">django.apps</span> <span class="kn">import</span> <span class="n">AppConfig</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>  <span class="k">class</span> <span class="nc">MyAppConfig</span><span class="p">(</span><span class="n">AppConfig</span><span class="p">):</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>        <span class="n">name</span> <span class="o">=</span> <span class="s1">'myapp'</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">'New Display Name'</span>
+</span></code></pre></div>
+</div>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://ostechnix.com/save-and-restore-tmux-environment/">How To Save And Restore Tmux Environments Across Reboots In Linux</a></li>
