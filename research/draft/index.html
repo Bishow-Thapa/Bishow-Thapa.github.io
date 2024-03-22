@@ -25,7 +25,7 @@
     
     
       
-        <title>Draft - Bishow Thapa</title>
+        <title>Research Draft - Bishow Thapa</title>
       
     
     
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Draft
+              Research Draft
             
           </span>
         </div>
@@ -1474,7 +1474,7 @@
           
   
   <span class="md-ellipsis">
-    Draft
+    Research Draft
   </span>
   
 
@@ -1485,7 +1485,7 @@
         
   
   <span class="md-ellipsis">
-    Draft
+    Research Draft
   </span>
   
 
@@ -1637,7 +1637,7 @@
   
 
 
-  <h1>Draft</h1>
+  <h1>Research Draft</h1>
 
 <div><div class="admonition question">
 <p class="admonition-title">Linux</p>
@@ -1810,65 +1810,6 @@
 <ul>
 <li><a href="https://itsfoss.com/install-xampp-ubuntu/">How to Install and Use XAMPP on Ubuntu</a></li>
 </ul>
-</details>
-<hr>
-<div class="admonition question">
-<p class="admonition-title">Docker</p>
-</div>
-<details class="note">
-<summary>Docker: <code>Host</code> port <mark>vs</mark> <code>Container</code> port</summary>
-<p>What is left side of port ant right side of port in docker</p>
-<p>In Docker, when you expose ports for containers, you specify the port mappings using the <code>-p</code> flag or <code>--publish</code> flag when running a container. The syntax is typically <strong><code>hostPort</code><mark>:</mark><code>containerPort</code></strong>.</p>
-<ul>
-<li>
-<p><strong>Left side</strong> (<code>hostPort</code>):</p>
-<p>This is the port on the host machine, the system where Docker is running. It is the port to which you can connect from outside the Docker container to access the services running within the container. If you specify a port on the left side, Docker will bind that port on the host system to the container port specified on the right side.</p>
-</li>
-<li>
-<p><strong>Right side</strong> (<code>containerPort</code>):</p>
-<p>This is the port exposed within the Docker container. It is the port on which your application or service within the container is listening. When Docker starts the container, it will forward any traffic received on the host port (left side) to this port within the container.</p>
-</li>
-</ul>
-<p>For example, if you run a container with <code>-p 8080:80</code>, it means that port <code>80</code> inside the container will be accessible from port <code>8080</code> on the host machine. If you were to access <code>http://localhost:8080</code> on your host machine, Docker would forward that request to port <code>80</code> inside the container.</p>
-<p>This port mapping mechanism allows Docker containers to communicate with the outside world and for multiple containers to run on the same host without port conflicts.</p>
-</details>
-<details class="note">
-<summary>Listen services running on specific port <code>:8000</code> <code>:9000</code></summary>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># You can use the following commands to find out which processes are using these ports:</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:9000
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:8080
-</span></code></pre></div>
-<p>Once you identify the processes using these ports, you can decide whether to stop them or reconfigure them to use different ports. After ensuring that the ports are available, you can attempt to start the Nginx service again.</p>
-</details>
-<details class="note">
-<summary>Last things you need to remeber in Docker Dind</summary>
-<blockquote>
-<p>Host os:</p>
-</blockquote>
-<ol>
-<li>
-<p>Add <code>Jenkins</code> user to the <mark>Docker group</mark>:</p>
-<p><mark>On the host machine where Docker is installed</mark>, run the following command:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>jenkins
-</span></code></pre></div>
-<p>This command adds the Jenkins user to the docker group, granting it permission to interact with the Docker daemon.</p>
-</li>
-<li>
-<p><mark>Ensure permissions</mark> on the Docker socket:</p>
-<p>The Docker daemon socket (<code>/var/run/docker.sock</code>) should be <mark>readable</mark> and <mark>writable</mark> by <mark>members of the docker group</mark>. You can check and     adjust the permissions if needed with the following command:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
-</span></code></pre></div>
-</li>
-<li>
-<p><mark>Restart Jenkins</mark>:</p>
-<p>Restart the Jenkins service to apply the changes:</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>jenkins
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1"># or</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>docker<span class="w"> </span>restart<span class="w"> </span>&lt;container_id<span class="w"> </span>or<span class="w"> </span>container_name&gt;
-</span></code></pre></div>
-</li>
-</ol>
-<p>With these changes, the Jenkins user should now have the necessary permissions to execute Docker commands, and <code>you should no longer encounter permission denied errors when running Docker commands from Jenkins job scripts</code>. Make sure to test your Jenkins job again after applying these changes.</p>
 </details>
 <hr>
 <h2 id="zen-mode-in-visual-studio">Zen Mode in Visual Studio</h2>
