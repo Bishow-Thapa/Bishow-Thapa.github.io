@@ -1977,6 +1977,23 @@
 <p>Remember to replace <code>&lt;tag_name&gt;</code> with the name of your tag and <code>&lt;tagging_message&gt;</code> with a descriptive message for annotated tags.</p>
 </details>
 <hr>
+<div class="admonition note">
+<p class="admonition-title">git push branch to remote</p>
+<p>To push only a specific branch to a remote repository in Git, you would use the following command:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>push<span class="w"> </span>&lt;remote_name&gt;<span class="w"> </span>&lt;branch_name&gt;
+</span></code></pre></div>
+<p>Here's a breakdown:</p>
+<ul>
+<li><code>&lt;remote_name&gt;:</code> This is the name of the <code>remote</code> repository you want to push the branch to. For example, <code>origin</code> is the default name given to the remote repository you cloned from.</li>
+<li><code>&lt;branch_name&gt;:</code> This is the name of the branch you want to push to the <code>remote</code> repository.</li>
+</ul>
+<p>For example, if you want to push the branch named <code>my_branch</code> to the origin remote, you would use:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>my_branch
+</span></code></pre></div>
+<p>This command pushes only the <code>my_branch branch</code> to the origin remote repository.</p>
+<p>Make sure you have committed your changes to the branch before pushing it to the remote repository. If the branch doesn't exist on the remote repository, this command will create the branch on the remote repository and push the changes to it.</p>
+</div>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-use-the-git-log-graph-command">git log graph</a></li>
