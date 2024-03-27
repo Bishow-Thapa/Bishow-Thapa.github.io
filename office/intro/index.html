@@ -778,6 +778,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../documentation/mail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../documentation/sending-mail/" class="md-nav__link">
         
   
@@ -1320,27 +1341,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../vscode/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VS Code
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../draft/" class="md-nav__link">
         
   
@@ -1658,39 +1658,57 @@
   <h1>Introduction</h1>
 
 <div><h2 id="domain">Domain</h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
 <li>http://localhost:4200/</li>
 <li><a href="https://cqweb.info.com.np">cqweb.info.com.np - local</a></li>
 <li><a href="https://cqweb.ictc.com.np/#/">cqweb.ictc.com.np - main</a></li>
 </ul>
-<p><a href="http://gitserver.info.com.np/users/sign_in">Gitlab - gitserver.info.com.np</a></p>
-<h2 id="folder-structure">Folder Structure</h2>
-<blockquote>
-<p><code>cqnovelweb-develop</code></p>
-<blockquote>
-<p><code>src</code></p>
-<blockquote>
-<p><code>assets</code> : contains the image and svg files.</p>
-<p><code>components</code> : list of all the resuable components.</p>
-<p><code>hooks</code> : contains the useRoles hooks which is used to give the permission to only limited users.</p>
-<p><code>json</code> : has the caleder filter data.</p>
-<p><code>layouts</code> : contains the base layout of cqweb.</p>
-<p><code>services</code> : core redux - action, reducer, store</p>
-<p><code>styles</code> : contains the sass styles.</p>
-<p><code>utils</code> : list of reusable functions.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="installation">Installation</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ npm i --legacy-peer-deps
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ npm run product
-</span></code></pre></div>
 <hr>
-<h2 id="reference">Reference</h2>
+<p><a href="http://gitserver.info.com.np/users/sign_in">Gitlab - gitserver.info.com.np</a></p>
+</div>
+<h2 id="folder-structure">Folder Structure</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>src
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── assets
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── images
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   └── svgs
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── components
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── hooks
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   └── useRoles
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── json
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── layouts
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── services
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   ├── redux
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   └── store
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── views
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── styles
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>└── utils
+</span></code></pre></div>
+<p>Description</p>
 <ul>
-<li><a href=""></a></li>
-</ul></div>
+<li><code>assets</code> : contains the image and svg files.</li>
+<li><code>components</code> : list of all the resuable components.</li>
+<li><code>hooks</code> : contains the useRoles hooks which is used to give the permission to only limited users.</li>
+<li><code>json</code> : has the caleder filter data.</li>
+<li><code>layouts</code> : contains the base layout of cqweb.</li>
+<li><code>services</code> : core redux - action, reducer, store</li>
+<li><code>styles</code> : contains the sass styles.</li>
+<li><code>utils</code> : list of reusable functions.</li>
+</ul>
+</div>
+<h2 id="installation">Installation</h2>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>i<span class="w"> </span>--legacy-peer-deps
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>npm<span class="w"> </span>run<span class="w"> </span>product
+</span></code></pre></div>
+</div>
+<hr>
+<h2 id="reference">Reference</h2></div>
 
 
 

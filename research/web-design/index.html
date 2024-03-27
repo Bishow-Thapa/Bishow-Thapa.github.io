@@ -704,6 +704,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../office/documentation/mail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../office/documentation/sending-mail/" class="md-nav__link">
         
   
@@ -1234,27 +1255,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../office/vscode/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VS Code
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1833,6 +1833,99 @@
 </div>
 </div>
 </div>
+</details>
+<div class="admonition asbtract">
+<p class="admonition-title">project <code>vs</code> apps <code>guidelines</code></p>
+<p>Defining URL patterns in Django involves organizing them in a structured manner, both at the project level and the app level. Here are some guidelines and best practices for managing project URLs and app URLs:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Project URLs:</label><label for="__tabbed_5_2">App URLs:</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>1. Use <code>include()</code> for App URLs:</strong> Use Django's <code>include()</code> function to include URLs from individual apps in your project's <code>urls.py</code>. This keeps the project URLs modular and allows you to organize them by functionality.</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'myapp/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">'myapp.urls'</span><span class="p">)),</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="c1"># Other app URLs included here</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>2.Prefix App URLs:</strong> Prefix URLs for each app with a common path to avoid conflicts and provide clarity. For example, if you have an app for managing contacts, prefix its URLs with <code>contacts/</code>.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>1. Use Namespaced URLs:</strong> Use namespaced URLs within your app to avoid conflicts with other apps. Define a unique app_name in your app's <code>urls.py</code> and use it to namespace your URLs.</p>
+<div class="language-py highlight"><span class="filename">urls.py</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">app_name</span> <span class="o">=</span> <span class="s1">'myapp'</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'some-url/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">some_view</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'some_view'</span><span class="p">),</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="c1"># Other URLs...</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>2. Group URLs by Functionality:</strong> Organize URLs within your app's <code>urls.py</code> based on their functionality or resource. For example, group all user-related URLs together, all product-related URLs together, etc.</p>
+<p><strong>3. Use Class-based Views:</strong> Prefer using <code>class-based views</code> over <code>function-based views</code> as they provide better code organization and reuse. Use <strong>as_view()</strong> <mark>to convert class-based views to callable views in your URL patterns</mark>.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>General Tips:</p>
+<ul>
+<li>
+<p><strong>Comments and Documentation:</strong> Add comments and documentation to your URLs to explain their purpose, especially if the project is complex or involves multiple developers.</p>
+</li>
+<li>
+<p><strong>Consistency:</strong> Maintain consistency in URL naming conventions, URL structure, and URL organization across your project. Consistency makes it easier to understand and navigate the codebase.</p>
+</li>
+<li>
+<p><strong>Avoid Hardcoding URLs:</strong> Use Django's <code>reverse()</code> or <code>reverse_lazy()</code> functions to reverse-resolve URLs instead of hardcoding them. This makes your code more robust and easier to maintain if URLs change in the future.</p>
+</li>
+<li>
+<p><strong>Keep URLs Concise and Descriptive:</strong> Use concise yet descriptive URLs that clearly convey the purpose of the resource or view being accessed.</p>
+</li>
+</ul>
+<p>By following these guidelines and best practices, you can effectively manage and organize your project URLs, making your codebase more maintainable and understandable.</p>
+</div>
+<details class="example">
+<summary>What is Namespace URLS in <code>django</code> apps</summary>
+<p>Namespaced URLs in Django allow you <mark>to organize URLs within your app</mark> and avoid conflicts with URLs from other apps. Here's what it means and how to use it:</p>
+<p><strong>What are Namespaced URLs?</strong></p>
+<p>In Django, a namespace is a way to group a set of URL patterns under a common name. This is particularly useful when you have multiple apps in your project, each with its own set of URL patterns. By namespacing the URLs, you can ensure that URLs from different apps don't clash with each other.
+How to Use Namespaced URLs?</p>
+<p>To use namespaced URLs, you need to follow these steps:</p>
+<p><strong>1. Define an app_name in <code>urls.py</code>:</strong> In your app's <code>urls.py</code> file, define an <code>app_name</code> variable to specify the namespace for the URLs in that app.</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">app_name</span> <span class="o">=</span> <span class="s1">'myapp'</span>
+</span></code></pre></div>
+<p><strong>2. Specify Namespaced URLs:</strong> When defining URL patterns in your app's <code>urls.py</code>, use the <code>app_name</code> specified earlier as the namespace for the URLs.</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">app_name</span> <span class="o">=</span> <span class="s1">'myapp'</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'some-url/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">some_view</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'some_view'</span><span class="p">),</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="c1"># Other URLs...</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>3. Referencing Namespaced URLs:</strong> When referencing URLs in templates or views, use the <code>{% url %}</code> template tag or <code>reverse()</code> function, specifying the namespace along with the URL name.</p>
+<ul>
+<li>Using the <code>{% url %}</code> template tag:</li>
+</ul>
+<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'myapp:some_view' %}"</span><span class="p">&gt;</span>Some View<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<ul>
+<li>Using the <code>reverse()</code> function in views:</li>
+</ul>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">url</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">'myapp:some_view'</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>When to Use Namespaced URLs?</strong></p>
+<p>Namespaced URLs are particularly useful when:</p>
+<ul>
+<li>You have multiple apps in your Django project.</li>
+<li>Your project structure involves reusable apps that can be used in different projects.</li>
+<li>You want to organize URLs within each app and avoid conflicts between URL names.</li>
+</ul>
+<p>Namespaced URLs help keep your codebase organized, maintainable, and less error-prone, especially in larger projects with multiple apps. They also provide a clear and concise way to reference URLs within templates and views.</p>
+<hr>
 </details></div>
 
 
