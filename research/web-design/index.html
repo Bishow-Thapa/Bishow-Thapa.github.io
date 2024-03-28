@@ -1628,7 +1628,51 @@
 </ul>
 </details>
 <hr>
-<h2 id="draft">Draft</h2></div>
+<h2 id="draft">Draft</h2>
+<div class="admonition example">
+<p class="admonition-title">pip freeze</p>
+<p>If you want to freeze a newly installed package only to your <code>prod-requirements.txt</code> file and not the <code>dev-requirements.txt</code>, you can manually add it to <code>prod-requirements.txt</code> after installation. Here's how you can do it:</p>
+<ol>
+<li>
+<p>First, install the package using <strong>pip install <code>&lt;package_name&gt;</code></strong>.</p>
+</li>
+<li>
+<p>After installation, run <strong>pip freeze</strong> <mark>to see the list of installed packages</mark>.</p>
+</li>
+<li>
+<p>Identify the newly installed package in the output of <strong>pip freeze</strong>.</p>
+</li>
+<li>
+<p>Copy the line corresponding to the newly installed package, including its version, from the output of <strong>pip freeze</strong>.</p>
+</li>
+<li>
+<p>Open your <code>prod-requirements.txt</code> file in a text editor.</p>
+</li>
+<li>
+<p>Paste the copied line into your <code>prod-requirements.txt</code> file.</p>
+</li>
+<li>
+<p>Save the <code>prod-requirements.txt</code> file.</p>
+</li>
+</ol>
+<p>By following these steps, you're ensuring that the newly installed package is frozen only in your <code>prod-requirements.txt</code> file and not in your <code>dev-requirements.txt</code> file. This keeps the development and production environments separate and ensures that only production dependencies are specified in the <code>prod-requirements.txt</code>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Best WYSIWYG editor for website</p>
+<p><strong>1. <a href="https://www.tiny.cloud/">TinyMCE</a></strong></p>
+<p><strong>2. <a href="https://ckeditor.com/">CKEditor</a></strong></p>
+<hr>
+<ul>
+<li><a href="https://www.g2.com/categories/wysiwyg-editors">Best WYSIWYG Editors</a></li>
+<li><a href="https://blog.hubspot.com/website/best-wysiwyg-html-editor">20 Best WYSIWYG HTML Editors for 2024</a></li>
+<li><a href="https://www.reddit.com/r/webdev/comments/11jskmh/what_is_your_goto_wysiwyg_editor/">What is your goto WYSIWYG Editor? </a></li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>https://help.ubuntu.com/stable/ubuntu-help/shell-windows-switching.html.en</p>
+<p>https://code.visualstudio.com/docs/getstarted/userinterface</p>
+</div></div>
 
 
 
