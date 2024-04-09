@@ -2168,6 +2168,20 @@
 <li><a href="https://ccbv.co.uk/">Classy Class-Based Views.</a></li>
 </ul>
 <hr>
+<p>Django Category</p>
+<p>Static choices</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">class</span> <span class="nc">YourModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">CHOICES</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="p">(</span><span class="s1">'option1'</span><span class="p">,</span> <span class="s1">'Option 1'</span><span class="p">),</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="p">(</span><span class="s1">'option2'</span><span class="p">,</span> <span class="s1">'Option 2'</span><span class="p">),</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="p">(</span><span class="s1">'option3'</span><span class="p">,</span> <span class="s1">'Option 3'</span><span class="p">),</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="p">)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="n">your_field</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">CHOICES</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
 <h2 id="templates"><a href="https://docs.djangoproject.com/en/5.0/ref/templates/builtins/">templates</a></h2>
 <table>
 <thead>
@@ -2217,13 +2231,13 @@
 <p>Yes, that's correct. When using the <code>{% url %}</code> template tag in Django templates, you specify the name of the URL pattern, not the name of the view function or class-based view.</p>
 <p>The name parameter you provide in the URL pattern definition (<code>name='...'</code>) is what you use to refer to that URL pattern in the <code>{% url %}</code> template tag.</p>
 <p>Here's an example to clarify:</p>
-<div class="language-py highlight"><span class="filename">urls.py</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">my_view_function</span><span class="p">,</span> <span class="n">MyViewClass</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'home/'</span><span class="p">,</span> <span class="n">my_view_function</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'home_view_function'</span><span class="p">),</span>  <span class="c1"># Function-Based View</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'about/'</span><span class="p">,</span> <span class="n">MyViewClass</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'about_view_class'</span><span class="p">),</span>  <span class="c1"># Class-Based View</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">]</span>
+<div class="language-py highlight"><span class="filename">urls.py</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">my_view_function</span><span class="p">,</span> <span class="n">MyViewClass</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'home/'</span><span class="p">,</span> <span class="n">my_view_function</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'home_view_function'</span><span class="p">),</span>  <span class="c1"># Function-Based View</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'about/'</span><span class="p">,</span> <span class="n">MyViewClass</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'about_view_class'</span><span class="p">),</span>  <span class="c1"># Class-Based View</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>In the above <code>urls.py</code> example:</p>
 <ul>
@@ -2231,8 +2245,8 @@
 <li><code>about_view_class</code> is the name of the URL pattern associated with the <strong>class-based view</strong> <code>MyViewClass</code>.</li>
 </ul>
 <p>Now, when referencing these URL patterns in your templates using the <code>{% url %}</code> template tag, you would use their respective names:</p>
-<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'home_view_function' %}"</span><span class="p">&gt;</span>Link to Home (Function)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'about_view_class' %}"</span><span class="p">&gt;</span>Link to About (Class)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'home_view_function' %}"</span><span class="p">&gt;</span>Link to Home (Function)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'about_view_class' %}"</span><span class="p">&gt;</span>Link to About (Class)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>So, you specify the name of the URL pattern, not the name of the view function or <code>class-based view</code>.</p>
 </div>
