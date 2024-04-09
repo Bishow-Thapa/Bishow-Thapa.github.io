@@ -2087,6 +2087,87 @@
 <p>By following these steps, you're ensuring that the newly installed package is frozen only in your <code>prod-requirements.txt</code> file and not in your <code>dev-requirements.txt</code> file. This keeps the development and production environments separate and ensures that only production dependencies are specified in the <code>prod-requirements.txt</code>.</p>
 </div>
 <hr>
+<p><a class="glightbox" href="https://simpleisbetterthancomplex.com/media/2017/03/featured-views.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="FBV vs CBV" src="https://simpleisbetterthancomplex.com/media/2017/03/featured-views.jpg"></a></p>
+<p>Those are the main differences between <code>function-based views</code> and <code>class-based views</code>. Now, Django’s <strong>generic</strong> <code>class-based views</code> are a different story.</p>
+<div class="admonition tip">
+<p class="admonition-title">Generic Class-Based Views</p>
+<p>The generic <code>class-based-views was</code> introduced to address the common use cases in a Web application, such as creating new objects, form handling, list views, pagination, archive views and so on.</p>
+<ul>
+<li>They come in the Django core, and you can implement them from the module <code>django.views.generic</code>.</li>
+<li>They are great and can speed up the development process.</li>
+</ul>
+<p>Here is an overview of the available views:</p>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>GENERIC BASE</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/View/">View</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/TemplateView/">TemplateView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/RedirectView/">RedirectView</a></li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC DETAIL</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.detail/DetailView/">DetailView</a></li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC LIST</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.list/ListView/">ListView</a></li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC EDIT</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.edit/FormView/">FormView</a></li>
+<li>CreateView</li>
+<li>UpdateView</li>
+<li>DeleteView</li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC DATES</strong></p>
+<hr>
+<ul>
+<li>ArchiveIndexView</li>
+<li>YearArchiveView</li>
+<li>MonthArchiveView</li>
+<li>WeekArchiveView</li>
+<li>DayArchiveView</li>
+<li>TodayArchiveView</li>
+<li>DateDetailView</li>
+</ul>
+</li>
+<li>
+<p><strong>AUTH VIEWS</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/LoginView/">LoginView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/LogoutView/">LogoutView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordChangeDoneView/">PasswordChangeDoneView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordChangeView/">PasswordChangeView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetCompleteView/">PasswordResetCompleteView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetConfirmView/">PasswordResetConfirmView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetDoneView/">PasswordResetDoneView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetView/">PasswordResetView</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<ul>
+<li><a href="https://simpleisbetterthancomplex.com/article/2017/03/21/class-based-views-vs-function-based-views.html">Class-Based Views vs. Function-Based Views</a></li>
+<li><a href="https://ccbv.co.uk/">Classy Class-Based Views.</a></li>
+</ul>
+<hr>
 <h2 id="templates"><a href="https://docs.djangoproject.com/en/5.0/ref/templates/builtins/">templates</a></h2>
 <table>
 <thead>
