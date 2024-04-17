@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/02/01/understanding-javascript-array-methods-mutating-vs-non-mutating/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/04/17/managing-settings-for-multiple-environments-in-django/">
       
       
-        <link rel="prev" href="../../../01/29/understanding-the-impact-of-the-return-statement-in-javascripts-map-function/">
+        <link rel="prev" href="../../16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/">
       
-      
-        <link rel="next" href="../../../04/16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>Understanding JavaScript Array Methods: Mutating vs. Non-Mutating - Bishow Thapa</title>
+        <title>Managing settings for multiple environments in django - Bishow Thapa</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-javascript-array-methods-mutating-vs-non-mutating" class="md-skip">
+        <a href="#managing-settings-for-multiple-environments-in-django" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding JavaScript Array Methods: Mutating vs. Non-Mutating
+              Managing settings for multiple environments in django
             
           </span>
         </div>
@@ -1646,27 +1644,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mutating-array-methods" class="md-nav__link">
+  <a href="#local-environment-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Mutating Array Methods:
+      Local environment settings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#non-mutating-array-methods" class="md-nav__link">
+  <a href="#defining-environment-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Mutating Array Methods:
+      Defining environment variable
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#production-environment-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Production environment settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -1728,7 +1735,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-02-01 00:00:00" class="md-ellipsis">February 1, 2024</time>
+                        <time datetime="2024-04-17 00:00:00" class="md-ellipsis">April 17, 2024</time>
                       </div>
                     </li>
                     
@@ -1740,7 +1747,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -1772,6 +1779,15 @@
       <a href="../../../../../tags/#programming" class="md-tag md-tag-icon">Programming</a>
     
   
+    
+    
+      
+      
+    
+    
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
+    
+  
 </nav>
 
 
@@ -1779,65 +1795,96 @@
   
 
 
-<div><h1 id="understanding-javascript-array-methods-mutating-vs-non-mutating">Understanding JavaScript Array Methods: Mutating vs. Non-Mutating</h1>
-<p>When working with arrays in JavaScript, it's crucial to understand the distinction between <mark>mutating</mark> and <mark>non-mutating</mark> array methods. This differentiation plays a significant role in how arrays are manipulated and can greatly impact the behavior of your code.</p>
+<div><h1 id="managing-settings-for-multiple-environments-in-django">Managing settings for multiple environments in django</h1>
+<p>In real-world projects, you will have to deal with multiple environments. we have at least a local environment for development and a production environment for serving your application. </p>
+<p>we will use a base file that defines common settings, and a settings file per environment that overrides any necessary settings and defines additional ones.</p>
 <!-- more -->
 
-<h2 id="mutating-array-methods">Mutating Array Methods:</h2>
-<p>Mutating array methods are those that modify the original array directly. They alter the array's contents in place, without creating a new array.</p>
-<p>Some commonly used mutating array methods include:</p>
-<ol>
-<li>
-<p><code>push()</code> and <code>pop()</code>: These methods add and remove elements from the end of the array, respectively.</p>
-</li>
-<li>
-<p><code>shift()</code> and <code>unshift()</code>: They add and remove elements from the beginning of the array, respectively.</p>
-</li>
-<li>
-<p><code>splice()</code>: This method can add, remove, or replace elements at any position within the array.</p>
-</li>
-<li>
-<p><code>sort()</code> and <code>reverse()</code>: These methods reorder the elements of the array.</p>
-</li>
-<li>
-<p><code>fill()</code> and <code>copyWithin()</code>: They modify elements within the array based on specified criteria.</p>
-</li>
-<li>
-<p><code>forEach()</code>: It iterates over each element of the array and allows you to perform actions on them.</p>
-</li>
-</ol>
-<h2 id="non-mutating-array-methods">Non-Mutating Array Methods:</h2>
-<p>Non-mutating array methods, on the other hand, do not modify the original array. Instead, they return a new array with the desired modifications, leaving the original array unchanged.</p>
-<p>Some common non-mutating array methods include:</p>
-<ol>
-<li>
-<p><code>concat()</code>:
-    This method combines two or more arrays and returns a new array.</p>
-</li>
-<li>
-<p><code>slice()</code>:
-    It returns a portion of the array without modifying the original array (returns a new array).</p>
-</li>
-<li>
-<p><code>filter()</code> and <code>map()</code>:
-    These methods create new arrays based on specific criteria or transformations applied to the original array's elements.</p>
-</li>
-<li>
-<p><code>reduce()</code> and <code>reduceRight()</code>:
-    They reduce the array to a single value based on a provided function.</p>
-</li>
-<li>
-<p><code>some()</code> and <code>every()</code>:
-    These methods check if certain conditions are met by at least one or all elements in the array, respectively.</p>
-</li>
-<li>
-<p><code>indexOf()</code> and <code>lastIndexOf()</code>:
-    They find the index of a specified element within the array.</p>
-</li>
-</ol>
-<p>Understanding the difference between <code>mutating</code> and <code>non-mutating</code> array methods is crucial for writing efficient and bug-free JavaScript code. Choosing the appropriate method based on your requirements can lead to cleaner, more maintainable code and prevent unintended side effects.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>In summary, mutating array methods directly modify the original array, while non-mutating array methods return a new array without altering the original one. By leveraging these methods effectively, you can harness the full power of JavaScript arrays in your projects.</p>
+<p>Create a <code>settings/</code> directory next to the <code>settings.py</code> file of the your project. Rename the <code>settings.py</code> file to <code>base.py</code> and move it into the new <code>settings/</code> directory.</p>
+<p>Create the following additional files inside the <code>settings/</code> folder so that the new directory looks as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>settings/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    __init__.py
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    base.py
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    local.py
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    prod.py
+</span></code></pre></div>
+<p>These files are as follows:</p>
+<ul>
+<li><code>base.py</code>: The base settings file that contains common settings (<mark>previously</mark> <code>settings.py</code>)</li>
+<li><code>local.py</code>: Custom settings for your local environment</li>
+<li><code>prod.py</code>: Custom settings for the production environment</li>
+</ul>
+<p>You have moved the settings files to a directory one level below, so you need to update the <strong>BASE_DIR</strong> setting in the <code>settings/base.py</code> file to point to the main project directory.</p>
+<p>When handling multiple environments, create a base settings file and a settings file for each environment. Environment settings files should inherit the common settings and override environment-specific settings.</p>
+<p>Edit the <code>settings/base.py</code> file and replace the following line:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>BASE_DIR = Path(__file__).resolve().parent.parent
+</span></code></pre></div>
+<p><mark>with the following one:</mark></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>BASE_DIR = Path(__file__).resolve().parent.parent.parent
+</span></code></pre></div>
+<p>You point to one directory above by adding .parent to the BASE_DIR path. Let’s configure the settings for the local environment.</p>
+<hr>
+<h2 id="local-environment-settings">Local environment settings</h2>
+<p>Instead of using a default configuration for the <strong>DEBUG</strong> and <strong>DATABASES</strong> settings, you will define them for each environment explicitly. These settings will be environment specific. Edit the <code>settings/local.py</code> file and add the following lines:</p>
+<div class="language-py highlight"><span class="filename">local.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="s1">'ENGINE'</span><span class="p">:</span> <span class="s1">'django.db.backends.sqlite3'</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="s1">'NAME'</span><span class="p">:</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">'db.sqlite3'</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This is the settings file for your local environment. In this file, you import all settings defined in the <code>base.py</code> file, and you define the <strong>DEBUG</strong> and <strong>DATABASES</strong> settings for this environment. The <strong>DEBUG</strong> and <strong>DATABASES</strong> settings remain the same as you have been using for development.</p>
+<p><mark>Now remove the <strong>DATABASES</strong> and <strong>DEBUG</strong> settings from the <code>base.py</code> settings file.</mark></p>
+<p>Django management commands won’t automatically detect the settings file to use because the project settings file is not the default <code>settings.py</code> file. When running management commands, you need to indicate the <strong>settings module</strong> to use by adding a <code>--settings</code> <strong>option</strong>, as follows:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>runserver<span class="w"> </span>--settings<span class="o">=</span>educa.settings.local
+</span></code></pre></div>
+<p>Next, we are going to validate the project and the local environment configuration.</p>
+<hr>
+<h2 id="defining-environment-variable">Defining environment variable</h2>
+<p>If don’t want to pass the <code>--settings</code> option every time you run a management command, you can define the <strong>DJANGO_SETTINGS_MODULE</strong> environment variable. Django will use it to identify the settings module to use. </p>
+<p>If you are using <strong>Linux</strong> or <strong>macOS</strong>, you can define the environment variable by executing the following command in the shell:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export DJANGO_SETTINGS_MODULE=educa.settings.local
+</span></code></pre></div>
+<p>If you are using <strong>Windows</strong>, you can execute the following command in the shell:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>set DJANGO_SETTINGS_MODULE=educa.settings.local
+</span></code></pre></div>
+<p>Any management command you execute after will use the settings defined in the <strong>DJANGO_SETTINGS_MODULE</strong> environment variable.</p>
+<hr>
+<h2 id="production-environment-settings">Production environment settings</h2>
+<p>Let’s start by adding initial settings for the production environment. Edit the <code>settings/prod.py</code> file and make it look as follows:</p>
+<div class="language-py highlight"><span class="filename">prod.py</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">ADMINS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="p">(</span><span class="s1">'Antonio M'</span><span class="p">,</span> <span class="s1">'email@mydomain.com'</span><span class="p">),</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">]</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">]</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="p">}</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>These are the settings for the production environment:</p>
+<ul>
+<li><code>DEBUG</code>: Setting <strong>DEBUG</strong> to <strong>False</strong> is necessary for any production environment. Failing to do so will result in the traceback information and sensitive configuration data being exposed to everyone.</li>
+<li><code>ADMINS</code>: When DEBUG is False and a view raises an exception, all information will be sent by email to the people listed in the <strong>ADMINS</strong> setting. Make sure that you replace the name/email tuple with your own information.</li>
+<li><code>ALLOWED_HOSTS</code>: For security reasons, Django will only allow the hosts included in this list to serve the project. For now, you allow all hosts by using the asterisk symbol, <code>*</code>. You will limit the hosts that can be used for serving the project later.</li>
+<li><code>DATABASES</code>: You keep default database settings empty because you will configure the production database later.</li>
+</ul>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://djangostars.com/blog/configuring-django-settings-best-practices/">Configuring Django Settings: Best Practices </a></li>
+<li><a href="https://esketchers.com/configuring-django-settings-best-practices/">Configuring Django Settings: Best Practices: 2 </a></li>
+<li><a href="https://www.packtpub.com/product/django-4-by-example-fourth-edition/9781801813051">Django 4 By Example Fourth Edition: pg-672</a></li>
+</ul>
 <hr></div>
 
 
@@ -1933,7 +1980,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../01/29/understanding-the-impact-of-the-return-statement-in-javascripts-map-function/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding the Impact of the Return Statement in JavaScript&#39;s Map Function">
+          <a href="../../16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unveiling Python&#39;s Hidden Gems: Exploring the Secrets Module">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1943,27 +1990,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Understanding the Impact of the Return Statement in JavaScript's Map Function
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../../04/16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/" class="md-footer__link md-footer__link--next" aria-label="Next: Unveiling Python&#39;s Hidden Gems: Exploring the Secrets Module">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
                 Unveiling Python's Hidden Gems: Exploring the Secrets Module
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     

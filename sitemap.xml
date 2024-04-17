@@ -81,7 +81,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/02/01/understanding-javascript-array-methods-mutating-vs-non-mutating/</loc>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/01/understanding-javascript-array-methods-mutating-vs-non-mutating/</loc>
+         <lastmod>2024-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/17/managing-settings-for-multiple-environments-in-django/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
