@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/18/django-images-not-showing-in-the-cpanel-or-shared-hosting/</loc>
+         <lastmod>2024-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/06/drf-yasg-swagger/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
