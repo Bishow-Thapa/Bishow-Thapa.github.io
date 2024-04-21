@@ -56,7 +56,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/04/21/env-variable-in-ubuntu/</loc>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/19/env-variable-in-ubuntu/</loc>
          <lastmod>2024-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -92,6 +92,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/01/understanding-javascript-array-methods-mutating-vs-non-mutating/</loc>
+         <lastmod>2024-04-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/20/m-is-bigger-than-v-and-c/</loc>
          <lastmod>2024-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
