@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/23/strengthening-your-django-applications-with-defensive-programming/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/viewset-vs-apiview/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
@@ -87,6 +92,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/12/31/embracing-change-navigating-the-landscape-of-2023/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/23/enhancing-django-development-with-model-help_text/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -367,6 +377,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/3/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/page/4/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
