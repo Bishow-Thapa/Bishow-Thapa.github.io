@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/27/difference-between-templateview-listview-and-view/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/viewset-vs-apiview/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
@@ -131,6 +136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/24/how-to-handle-nullable--non-nullable-fields-in-django/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/04/automatically-set-bearer-token-in-global-variable-postman-after-login-api/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
@@ -167,6 +177,16 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/12/how-to-add-ssh-keys-to-your-github-account/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/25/a-peek-into-str-method-in-django/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/26/understanding-django-query-methods-objectsall-vs-get_object_or_404/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -402,6 +422,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/page/3/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/archive/2024/page/4/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
