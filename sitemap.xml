@@ -106,7 +106,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/04/20/m-is-bigger-than-v-and-c/</loc>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/20/m-is-bigger-than-v-and-c-in-django/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -152,6 +152,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/23/formsetfieldsvalue-vs-defaultvalue-in-react/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
