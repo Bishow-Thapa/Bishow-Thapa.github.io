@@ -1625,8 +1625,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#git-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      git tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      git log
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-to-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note to Self
+    </span>
+  </a>
   
 </li>
       
@@ -1839,8 +1866,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#git-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      git tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      git log
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-to-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note to Self
+    </span>
+  </a>
   
 </li>
       
@@ -1998,6 +2052,7 @@
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>$<span class="w"> </span>git<span class="w"> </span>cherry-pick<span class="w"> </span>&lt;commit&gt;
 </span></code></pre></div>
+<h3 id="git-tag">git tag</h3>
 <details class="example">
 <summary>git tags</summary>
 <p>To add a tag in Git, you have <mark>two main options</mark>: <strong>lightweight tags</strong> and <strong>annotated tags</strong>.</p>
@@ -2052,10 +2107,45 @@
 <p>Remember to replace <code>&lt;tag_name&gt;</code> with the name of your tag and <code>&lt;tagging_message&gt;</code> with a descriptive message for annotated tags.</p>
 </details>
 <hr>
+<h3 id="git-log">git log</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">## Oneline</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>git<span class="w"> </span>log<span class="w"> </span>—oneline
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1">## Decorating </span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--decorate
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="c1">##  Filtering the commit history</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="c1"># 1. By date </span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">"2020-15-05"</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">"2020-15-05"</span><span class="w"> </span>--before<span class="o">=</span><span class="s2">"2020-25-05"</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>git<span class="w"> </span>log<span class="w"> </span>--before<span class="o">=</span><span class="s2">"10 day ago"</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="c1"># 2. By author</span>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>git<span class="w"> </span>log<span class="w"> </span>--author<span class="o">=</span><span class="s2">"Srebalaji"</span>
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="c1">## diff between branches</span>
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>git<span class="w"> </span>log<span class="w"> </span>master..develop
+</span></code></pre></div>
+<hr>
+<blockquote>
+<p>Reference</p>
+</blockquote>
+<ul>
+<li><a href="https://hackernoon.com/ten-useful-git-log-tricks-7nt3yxy">Ten Useful Git Log Tricks </a></li>
+<li><a href="https://dev.to/shadid12/5-git-tricks-every-developer-should-know-1201">5 Git Tricks Every Developer Should Know </a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/git-log">Advanced Git log </a></li>
+<li><a href="https://blog.devgenius.io/git-log-tricks-you-might-not-know-4cf2b746d1b7">Git Log Tricks You Might Not Know</a></li>
+</ul>
+</div>
+<hr>
+<h2 id="note-to-self">Note to Self</h2>
 <div class="admonition note">
 <p class="admonition-title">git push branch to remote</p>
 <p>To push only a specific branch to a remote repository in Git, you would use the following command:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>push<span class="w"> </span>&lt;remote_name&gt;<span class="w"> </span>&lt;branch_name&gt;
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>push<span class="w"> </span>&lt;remote_name&gt;<span class="w"> </span>&lt;branch_name&gt;
 </span></code></pre></div>
 <p>Here's a breakdown:</p>
 <ul>
@@ -2063,7 +2153,7 @@
 <li><code>&lt;branch_name&gt;:</code> This is the name of the branch you want to push to the <code>remote</code> repository.</li>
 </ul>
 <p>For example, if you want to push the branch named <code>my_branch</code> to the origin remote, you would use:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>my_branch
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>my_branch
 </span></code></pre></div>
 <p>This command pushes only the <code>my_branch branch</code> to the origin remote repository.</p>
 <p>Make sure you have committed your changes to the branch before pushing it to the remote repository. If the branch doesn't exist on the remote repository, this command will create the branch on the remote repository and push the changes to it.</p>
