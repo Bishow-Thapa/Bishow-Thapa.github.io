@@ -181,6 +181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/29/exploring-static-and-dynamic-model-choices-in-django/</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/25/a-peek-into-str-method-in-django/</loc>
          <lastmod>2024-04-24</lastmod>
          <changefreq>daily</changefreq>
