@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/05/01/preventing-unintended-form-resubmission-in-web-applications/</loc>
+         <lastmod>2024-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/18/how-to-set-up-a-virtual-environment-in-python/</loc>
          <lastmod>2024-04-25</lastmod>
          <changefreq>daily</changefreq>
