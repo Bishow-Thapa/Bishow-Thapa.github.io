@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/05/02/ensuring-admin-access-control-in-django-models/</loc>
+         <lastmod>2024-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/22/how-to-check-the-react-version-in-your-project/</loc>
          <lastmod>2024-04-25</lastmod>
          <changefreq>daily</changefreq>
