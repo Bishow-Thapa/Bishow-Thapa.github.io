@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/05/06/django-with-ajax/</loc>
+         <lastmod>2024-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/03/blog-crud-application-using-drf--viewsets/</loc>
          <lastmod>2024-04-26</lastmod>
          <changefreq>daily</changefreq>
@@ -417,6 +422,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/4/</loc>
+         <lastmod>2024-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/page/5/</loc>
          <lastmod>2024-04-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
