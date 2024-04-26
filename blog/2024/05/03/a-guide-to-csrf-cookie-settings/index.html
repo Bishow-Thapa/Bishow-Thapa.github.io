@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/05/02/ensuring-admin-access-control-in-django-models/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/05/03/a-guide-to-csrf-cookie-settings/">
       
       
-        <link rel="prev" href="../../01/preventing-unintended-form-resubmission-in-web-applications/">
+        <link rel="prev" href="../../02/ensuring-admin-access-control-in-django-models/">
       
-      
-        <link rel="next" href="../../03/a-guide-to-csrf-cookie-settings/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>Ensuring Admin Access Control in Django Models - Bishow Thapa</title>
+        <title>A Guide to CSRF Cookie Settings - Bishow Thapa</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ensuring-admin-access-control-in-django-models" class="md-skip">
+        <a href="#a-guide-to-csrf-cookie-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ensuring Admin Access Control in Django Models
+              A Guide to CSRF Cookie Settings
             
           </span>
         </div>
@@ -1604,6 +1602,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#strengthening-django-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strengthening Django Security:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-csrf_cookie_secure-guarding-transmission" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. CSRF_COOKIE_SECURE: Guarding Transmission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-csrf_cookie_httponly-limiting-script-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. CSRF_COOKIE_HTTPONLY: Limiting Script Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
@@ -1668,7 +1693,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-02 00:00:00" class="md-ellipsis">May 2, 2024</time>
+                        <time datetime="2024-05-03 00:00:00" class="md-ellipsis">May 3, 2024</time>
                       </div>
                     </li>
                     
@@ -1712,15 +1737,6 @@
       <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
     
   
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#python" class="md-tag md-tag-icon">Python</a>
-    
-  
 </nav>
 
 
@@ -1728,56 +1744,38 @@
   
 
 
-<div><h1 id="ensuring-admin-access-control-in-django-models">Ensuring Admin Access Control in Django Models</h1>
-<p>In a Django project, managing access control to models within the admin interface is crucial for maintaining data integrity and security. While Django provides powerful tools for defining permissions, it's essential to customize these permissions to meet specific requirements.</p>
+<div><h1 id="a-guide-to-csrf-cookie-settings">A Guide to CSRF Cookie Settings</h1>
+<p>Django, a popular web framework for Python, comes equipped with robust measures to mitigate CSRF risks.</p>
 <!-- more -->
 
-<p>One common scenario is restricting access to certain models so that only superusers can add or modify instances. Let's take the example of a "Contact" model within our application.</p>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Contact</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span> <span class="nc">ContactAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">def</span> <span class="nf">has_add_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="c1"># Only superusers can add new contacts</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_superuser</span><span class="p">:</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            <span class="k">return</span> <span class="kc">True</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">return</span> <span class="kc">False</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">def</span> <span class="nf">has_change_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="c1"># Only superusers can change existing contacts</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_superuser</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="k">return</span> <span class="kc">True</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">return</span> <span class="kc">False</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Contact</span><span class="p">,</span> <span class="n">ContactAdmin</span><span class="p">)</span>
-</span></code></pre></div>
-<p>In the above code, we subclass the default admin class for the <code>Contact</code> model and override the <strong>has_add_permission</strong> and <strong>has_change_permission</strong> methods. By doing so, we ensure that only superusers have the ability to add or modify instances of the "Contact" model.</p>
-<p>This approach offers fine-grained control over access permissions, preventing unauthorized users from tampering with sensitive data. It's particularly useful when dealing with models containing confidential information or critical settings.</p>
-<p>By implementing custom access control logic at the model level, we enhance the overall security posture of our Django application. Administrators can confidently manage permissions, knowing that sensitive models are safeguarded against unauthorized modifications.</p>
-<hr>
-<div class="admonition success">
-<p class="admonition-title">Resuable Mixins</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">class</span> <span class="nc">SuperuserPermissionMixin</span><span class="p">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">def</span> <span class="nf">has_add_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="c1"># Only superusers can add new instances</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_superuser</span><span class="p">:</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="k">return</span> <span class="kc">True</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">return</span> <span class="kc">False</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="k">def</span> <span class="nf">has_change_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="c1"># Only superusers can change existing instances</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_superuser</span><span class="p">:</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="k">return</span> <span class="kc">True</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="k">return</span> <span class="kc">False</span>
+<h2 id="strengthening-django-security">Strengthening Django Security:</h2>
+<p>In the dynamic landscape of web development, security is paramount. Django, a powerful Python web framework, provides robust measures to fortify applications against threats like Cross-Site Request Forgery (CSRF). Let's explore how <mark>two critical</mark> CSRF cookie settings, <code>CSRF_COOKIE_SECURE</code> and <code>CSRF_COOKIE_HTTPONLY</code>, enhance security.</p>
+<h2 id="1-csrf_cookie_secure-guarding-transmission">1. <code>CSRF_COOKIE_SECURE</code>: Guarding Transmission</h2>
+<p>Consider a scenario where an attacker intercepts requests between a user and a Django application. Without encryption, sensitive data, including CSRF tokens, is vulnerable. Setting <code>CSRF_COOKIE_SECURE</code> to <code>True</code> ensures the CSRF cookie is transmitted solely over secure HTTPS connections.</p>
+<div class="admonition tip">
+<p class="admonition-title">SECURE</p>
+<div class="language-python highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">CSRF_COOKIE_SECURE</span> <span class="o">=</span> <span class="kc">True</span>
 </span></code></pre></div>
 </div>
-<hr>
+<p>By enforcing HTTPS, Django shields the CSRF token from interception during transit. This simple setting bolsters the integrity of the CSRF protection mechanism, enhancing overall security.</p>
+<h2 id="2-csrf_cookie_httponly-limiting-script-access">2. <code>CSRF_COOKIE_HTTPONLY</code>: Limiting Script Access</h2>
+<p>Now, imagine a malicious script injected into a page, aiming to hijack user sessions. Without proper safeguards, the script could access and manipulate the CSRF token, enabling unauthorized actions. By setting <code>CSRF_COOKIE_HTTPONLY</code> to <code>True</code>, Django restricts access to the CSRF cookie from client-side scripts.</p>
+<div class="admonition tip">
+<p class="admonition-title">HTTPONLY</p>
+<div class="language-python highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">CSRF_COOKIE_HTTPONLY</span> <span class="o">=</span> <span class="kc">True</span>
+</span></code></pre></div>
+</div>
+<p>This precaution mitigates Cross-Site Scripting (XSS) attacks, preserving user session integrity and thwarting unauthorized requests.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>In conclusion, Django's flexibility empowers developers to tailor access control mechanisms to suit specific project requirements. By leveraging custom admin permissions, we can enforce strict access controls, promoting data integrity and enhancing overall security.</p>
-<p>In Django projects, always remember to carefully evaluate access requirements for each model and implement appropriate permission settings to mitigate risks effectively.</p>
-<hr></div>
+<p>In conclusion, configuring CSRF cookie settings in Django is essential for bolstering application security. By enabling CSRF_COOKIE_SECURE and CSRF_COOKIE_HTTPONLY, developers fortify their defenses against CSRF and XSS attacks, safeguarding user interactions and data confidentiality.</p>
+<p>```python title="python"</p>
+<h1 id="settingspy">settings.py</h1>
+<p>CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+``</p>
+<p>As stewards of digital trust, let's prioritize security, ensuring Django applications provide users with a safe and resilient online experience.</p></div>
 
 
 
@@ -1872,7 +1870,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../01/preventing-unintended-form-resubmission-in-web-applications/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Preventing Unintended Form Resubmission in Web Applications">
+          <a href="../../02/ensuring-admin-access-control-in-django-models/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ensuring Admin Access Control in Django Models">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1882,27 +1880,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Preventing Unintended Form Resubmission in Web Applications
+                Ensuring Admin Access Control in Django Models
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../03/a-guide-to-csrf-cookie-settings/" class="md-footer__link md-footer__link--next" aria-label="Next: A Guide to CSRF Cookie Settings">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                A Guide to CSRF Cookie Settings
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
