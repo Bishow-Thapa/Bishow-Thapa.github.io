@@ -16,47 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/22/how-to-check-the-react-version-in-your-project/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/25/a-guide-to-secure-your-commits-with-gpg-keys/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/05/10/django-image-manipulation/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/04/19/env-variable-in-ubuntu/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2023/01/31/embarking-on-a-tech-odyssey/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/giscus-comment-system/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/17/mastering-collaboration-a-guide-to-git-branching-strategies/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/15/how-to-pull-all-branches-from-a-remote-repository-in-github-/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/15/mastering-git-understanding---track-and---set-upstream/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -71,52 +36,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/04/01/understanding-javascript-array-methods-mutating-vs-non-mutating/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/09/adding-syntax-hightlighting-in-the-material/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/21/managing-multiple-ssh-keys-for-secure-and-efficient-remote-access/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/04/automatically-set-bearer-token-in-global-variable-postman-after-login-api/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/18/react-router-v6-guide/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/29/understanding-the-impact-of-the-return-statement-in-javascripts-map-function/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/04/23/formsetfieldsvalue-vs-defaultvalue-in-react/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/12/how-to-add-ssh-keys-to-your-github-account/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/01/23/understanding-the-ssh-agent-why-it-matters-in-managing-ssh-keys/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -312,21 +237,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/page/3/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/archive/2024/page/2/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
