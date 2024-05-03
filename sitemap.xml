@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/05/10/django-image-manipulation/</loc>
+         <lastmod>2024-05-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/19/env-variable-in-ubuntu/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
@@ -312,6 +317,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
+         <lastmod>2024-05-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/page/3/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
