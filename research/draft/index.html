@@ -1627,15 +1627,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-a-password-reset-feature-in-django" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding a password reset feature in django
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1968,48 +1959,6 @@
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>By including these packages, you can leverage their functionality in your Django project without having to build everything from scratch.</p>
-<hr>
-<h2 id="adding-a-password-reset-feature-in-django"><a href="https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#adding-a-password-reset-feature">Adding a password reset feature</a> in django</h2>
-<p>You can add a password reset feature to the admin site by adding a few lines to your <strong>URLconf</strong>. Specifically, add these ==four patterns=:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">views</span> <span class="k">as</span> <span class="n">auth_views</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">path</span><span class="p">(</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="s2">"admin/password_reset/"</span><span class="p">,</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">auth_views</span><span class="o">.</span><span class="n">PasswordResetView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="n">extra_context</span><span class="o">=</span><span class="p">{</span><span class="s2">"site_header"</span><span class="p">:</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">site_header</span><span class="p">}</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="p">),</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"admin_password_reset"</span><span class="p">,</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">),</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">path</span><span class="p">(</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="s2">"admin/password_reset/done/"</span><span class="p">,</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">auth_views</span><span class="o">.</span><span class="n">PasswordResetDoneView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>        <span class="n">extra_context</span><span class="o">=</span><span class="p">{</span><span class="s2">"site_header"</span><span class="p">:</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">site_header</span><span class="p">}</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="p">),</span>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_done"</span><span class="p">,</span>
-</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="p">),</span>
-</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">path</span><span class="p">(</span>
-</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="s2">"reset/&lt;uidb64&gt;/&lt;token&gt;/"</span><span class="p">,</span>
-</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>    <span class="n">auth_views</span><span class="o">.</span><span class="n">PasswordResetConfirmView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span>
-</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>        <span class="n">extra_context</span><span class="o">=</span><span class="p">{</span><span class="s2">"site_header"</span><span class="p">:</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">site_header</span><span class="p">}</span>
-</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>    <span class="p">),</span>
-</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_confirm"</span><span class="p">,</span>
-</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="p">),</span>
-</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="n">path</span><span class="p">(</span>
-</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>    <span class="s2">"reset/done/"</span><span class="p">,</span>
-</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>    <span class="n">auth_views</span><span class="o">.</span><span class="n">PasswordResetCompleteView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span>
-</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>        <span class="n">extra_context</span><span class="o">=</span><span class="p">{</span><span class="s2">"site_header"</span><span class="p">:</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">site_header</span><span class="p">}</span>
-</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>    <span class="p">),</span>
-</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_complete"</span><span class="p">,</span>
-</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="p">),</span>
-</span></code></pre></div>
-<p>(This assumes you’ve added the admin at <code>admin/</code> and requires that you put the URLs starting with <code>^admin/</code> before the line that includes the admin app itself).</p>
-<p>The presence of the <code>admin_password_reset</code> named URL will cause a “forgotten your password?” link to appear on the default admin log-in page under the password box.</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password">django reset password only in admin: stackoverflow</a></li>
-<li><a href="https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#adding-a-password-reset-feature">password reset: django 3.2</a></li>
-<li><a href="https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#adding-a-password-reset-feature">password reset: django 5.0</a></li>
-</ul>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
