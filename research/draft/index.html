@@ -1600,42 +1600,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication Views
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-contenttypes-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      The contenttypes framework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#djangocontrib" class="md-nav__link">
-    <span class="md-ellipsis">
-      django.contrib
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#django-environ" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django environ
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1891,90 +1855,6 @@
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">"This is a protected POST request."</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In summary, you should use the dispatch method whenever you need to customize or extend the default request-handling behavior of class-based views in Django. It provides a centralized hook for implementing various request-processing features, making it a powerful tool for building flexible and feature-rich web applications.</p>
-<hr>
-<h2 id="authentication-views"><a href="https://docs.djangoproject.com/en/5.0/topics/auth/default/#module-django.contrib.auth.views">Authentication Views</a></h2>
-<p>Django provides several views that you can use for handling login, logout, and password management. </p>
-<p>Django provides no default template for the authentication views. You should create your own templates for the views you want to use. The template context is documented in each view, see All authentication views.</p>
-<blockquote>
-<p>Using the views</p>
-</blockquote>
-<p>There are different methods to implement these views in your project. The easiest way is to include the provided URLconf in <code>django.contrib.auth.urls</code> in your own **URLconf, for example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">"accounts/"</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">"django.contrib.auth.urls"</span><span class="p">)),</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">]</span>
-</span></code></pre></div>
-<p>This will include the following URL patterns:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>accounts/login/ [name='login']
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>accounts/logout/ [name='logout']
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>accounts/password_change/ [name='password_change']
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>accounts/password_change/done/ [name='password_change_done']
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>accounts/password_reset/ [name='password_reset']
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>accounts/password_reset/done/ [name='password_reset_done']
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>accounts/reset/&lt;uidb64&gt;/&lt;token&gt;/ [name='password_reset_confirm']
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>accounts/reset/done/ [name='password_reset_complete']
-</span></code></pre></div>
-<ul>
-<li>Reference</li>
-<li><a href="https://docs.djangoproject.com/en/5.0/topics/auth/default/#module-django.contrib.auth.views">Authentication Views</a></li>
-<li><a href="https://learndjango.com/tutorials/django-login-and-logout-tutorial">learndjango auth</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication">Django Authentication</a></li>
-<li><a href="https://docs.djangoproject.com/en/5.0/topics/auth/">Django auth: official</a></li>
-</ul>
-<hr>
-<h2 id="the-contenttypes-framework"><a href="https://docs.djangoproject.com/en/5.0/ref/contrib/contenttypes/">The contenttypes framework</a></h2>
-<p>Django includes a contenttypes application that can track all of the models installed in your Django-powered project, providing a high-level, generic interface for working with your models.</p>
-<p><code>django.contrib.contenttypes</code> is a Django app that provides a framework for content types. It allows you to create relationships between different models without having to hardcode the model classes. Instead of directly referring to a model class, you can use the ContentType framework to get the model's metadata, such as the app label and the model's name. This is particularly useful for generic relationships where you want to associate an object with any type of model without specifying the model directly.</p>
-<p>For example, let's say you have a <code>Tag</code> model and you want to associate it with any other model in your project. You can use ContentType to create a generic foreign key:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">django.contrib.contenttypes.fields</span> <span class="kn">import</span> <span class="n">GenericForeignKey</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">from</span> <span class="nn">django.contrib.contenttypes.models</span> <span class="kn">import</span> <span class="n">ContentType</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">class</span> <span class="nc">TaggedItem</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">content_type</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">ContentType</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="n">object_id</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">PositiveIntegerField</span><span class="p">()</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="n">content_object</span> <span class="o">=</span> <span class="n">GenericForeignKey</span><span class="p">(</span><span class="s1">'content_type'</span><span class="p">,</span> <span class="s1">'object_id'</span><span class="p">)</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="n">tag</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="c1"># Other fields and methods</span>
-</span></code></pre></div>
-<p>With this setup, you can associate any model instance with a tag without explicitly defining a foreign key for each model.</p>
-<p><code>django.contrib.contenttypes</code> also provides utilities for working with content types programmatically, such as retrieving the model class for a given content type, getting all related objects for a given object, and so on. It's a powerful tool for building flexible and reusable Django applications.</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/20895429/how-exactly-do-django-content-types-work">how does django content types work? stackoverflow</a></li>
-</ul>
-<hr>
-<h2 id="djangocontrib">django.contrib</h2>
-<p>django.contrib is a package in Django that contains a collection of optional, reusable components contributed by the Django community. These components are maintained by the Django core team but are not essential to the core functionality of Django. Instead, they provide additional features that can be integrated into Django projects as needed.</p>
-<p>Some of the most commonly used packages within django.contrib include:</p>
-<ol>
-<li><strong>admin</strong>: Provides the Django administration site, which allows you to manage your site's data through a web interface.</li>
-<li><strong>auth</strong>: Provides user authentication and authorization functionality, including user management, permissions, and groups.</li>
-<li><strong>contenttypes</strong>: Provides a framework for content types, allowing you to create relationships between different models without hardcoding model classes.</li>
-<li><strong>sessions</strong>: Provides session management functionality for maintaining state across HTTP requests.</li>
-<li><strong>messages</strong>: Provides a way to display temporary messages (e.g., success messages, error messages) to users.</li>
-<li><strong>staticfiles</strong>: Provides utilities for managing static files (e.g., CSS, JavaScript) in Django projects.</li>
-<li><strong>gis</strong>: Provides geographic information system (GIS) functionality for working with spatial data.</li>
-</ol>
-<p>These packages can be included in your Django project by adding them to the INSTALLED_APPS setting in your project's settings.py file. For example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="o">...</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="s1">'django.contrib.admin'</span><span class="p">,</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="s1">'django.contrib.auth'</span><span class="p">,</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="s1">'django.contrib.contenttypes'</span><span class="p">,</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="s1">'django.contrib.sessions'</span><span class="p">,</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="s1">'django.contrib.messages'</span><span class="p">,</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="s1">'django.contrib.staticfiles'</span><span class="p">,</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="o">...</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">]</span>
-</span></code></pre></div>
-<p>By including these packages, you can leverage their functionality in your Django project without having to build everything from scratch.</p>
-<hr>
-<h2 id="django-environ">Django environ</h2>
-<ul>
-<li><a href="https://wellfire.co/learn/easier-12-factor-django/">12-Factor Pattern</a></li>
-<li><a href="https://django-environ.readthedocs.io/en/latest/">django-environ: readthedocs</a></li>
-<li><a href="https://github.com/joke2k/django-environ">django-environ: github</a></li>
-</ul>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
