@@ -1654,6 +1654,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDEAS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translating-our-static-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translating our static content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daintree-an-e-commerce-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daintree – an E-commerce Site
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Daintree – an E-commerce Site">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching-from-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching from Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2287,6 +2329,50 @@ Understanding AJAX in Django Views</p>
 <li><code>Object.getOwnPropertyNames(Object.getPrototypeOf(obj))</code>: Returns an array of properties on the object's prototype, which includes methods.</li>
 </ul>
 </div>
+<hr>
+<h2 id="ideas">IDEAS</h2>
+<p>Django Project </p>
+<ol>
+<li>Multi Mullingual Database (MMDB)</li>
+</ol>
+<h2 id="translating-our-static-content">Translating our static content</h2>
+<p>To translate strings that are used in templates, Django provides us with a <strong>trans</strong> template tag.</p>
+<h2 id="daintree-an-e-commerce-site"><code>Daintree</code> – an E-commerce Site</h2>
+<p>A basic <code>e-commerce</code> site has <strong>one main purpose</strong>: <mark>to help users find and buy products from the online store</mark>. Django alone can be used to build an e-commerce site quickly, using database queries to allow searches across product range, but this doesn't scale well. Databases are designed to quickly save and retrieve rows of data, but they are not optimized to search across the entire dataset (or a subset). Once the traffic of your site starts to increase, you'll see the search speed go down very quickly. On top of that, there are some features that are very difficult to build with a database.</p>
+<p>Instead, we will use a <strong>search server</strong>. A search server is very much like a database.You give it some data to store and then you can retrieve it later. It also has features specifically built to help you add searching to your applications. You might wonder that if a search server can store our data like a database, then can we not just get rid of the database? We can, but usually it's not recommended. Why? Well, because the search server is designed for a different use case. While it can store your data, a database provides a lot of guarantees about the storage that a search server usually doesn't. For example, a good database (such as MySQL or PostgreSQL) gives you a guarantee that if you try to save something and the database returns a successful response, your data will not be lost in case of a crash or power outage or some other problem. This is called durability. A search server does not provide this guarantee because that's not what they are designed for. It is usually a good idea to keep our data in a database and use the search server just to search across our data.</p>
+<p>For the application that we will develop in this chapter, we will be using <strong>Elasticsearch</strong>, one of the most popular and perhaps easy-to-use search servers available. It's also open source and available for free. So let's get started. This is going to be an exciting chapter!</p>
+<p>To load the test data, run the following command after the <code>migrate</code> command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>loaddata<span class="w"> </span>main/fixtures/initial.json
+</span></code></pre></div>
+<p>This should fill your database with a thousand sample products and give us enough data to play around with.</p>
+<h3 id="searching-from-python">Searching from Python</h3>
+<p>The library that we will be using here is <code>elasticsearch_dsl</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>pip<span class="w"> </span>install<span class="w"> </span>elasticsearch_dsl
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>&gt; python manage.py shell
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>&gt; from elasticsearch_dsl import Search
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>&gt; from elasticsearch_dsl.connections import connections
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>&gt; connections.create_connection(hosts=['localhost:9200'])
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>&lt;Elasticsearch([{u'host': u'localhost', u'port': 9200}])&gt;
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>&gt; Search(index='daintree').query('match', name='django').execute().
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>to_dict()
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>{   
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    u'_shards': {u'failed': 0, u'successful': 5, u'total': 5},
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    u'hits': {u'hits': [{u'_id': u'1',
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>    u'_index': u'daintree',
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    u'_score': 0.19178301,
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>    u'_source': {u'category': u'Book',
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>    u'name': u'Django Blueprints',
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>    u'price': 50,
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>    u'tags': [u'django', u'python', u'web applications']},
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>    u'_type': u'products'}],
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>    u'max_score': 0.19178301,
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>    u'total': 1},
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>    u'timed_out': False,
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>    u'took': 2
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>}
+</span></code></pre></div>
+<p>Let's take a look at each line. The first two lines simply import the library. The third line is important. It uses the <strong>create_connection</strong> <mark>method</mark> to define a default connection. This is the connection that will be used whenever we try to do a search using this library with the default settings.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
