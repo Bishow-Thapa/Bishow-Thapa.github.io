@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/05/18/css-media-queries/</loc>
+         <lastmod>2024-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/17/internationalization-and-localization-in-django-a-quick-guide/</loc>
          <lastmod>2024-05-17</lastmod>
          <changefreq>daily</changefreq>
