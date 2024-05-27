@@ -1600,6 +1600,16 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ajax-with-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajax with Django
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajax with Django">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#testing-active-link-ajax" class="md-nav__link">
     <span class="md-ellipsis">
       TESTING active link ajax
@@ -1607,8 +1617,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#conditonally-display-team-image" class="md-nav__link">
     <span class="md-ellipsis">
       Conditonally display Team Image
@@ -1616,8 +1626,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#django-ajax-view" class="md-nav__link">
     <span class="md-ellipsis">
       DJANGO AJAX VIEW
@@ -1625,13 +1635,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1660,9 +1675,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="IDEAS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#translating-our-static-content" class="md-nav__link">
     <span class="md-ellipsis">
       Translating our static content
@@ -1670,21 +1686,29 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#daintree-an-e-commerce-site" class="md-nav__link">
     <span class="md-ellipsis">
       Daintree – an E-commerce Site
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Daintree – an E-commerce Site">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#searching-from-python" class="md-nav__link">
     <span class="md-ellipsis">
       Searching from Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elasticsearch Django
     </span>
   </a>
   
@@ -1696,9 +1720,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#elasticsearch-django" class="md-nav__link">
+  <a href="#signals" class="md-nav__link">
     <span class="md-ellipsis">
-      Elasticsearch Django
+      Signals
     </span>
   </a>
   
@@ -1961,7 +1985,8 @@
 </span></code></pre></div>
 <p>In summary, you should use the dispatch method whenever you need to customize or extend the default request-handling behavior of class-based views in Django. It provides a centralized hook for implementing various request-processing features, making it a powerful tool for building flexible and feature-rich web applications.</p>
 <hr>
-<h2 id="testing-active-link-ajax">TESTING active link ajax</h2>
+<h2 id="ajax-with-django">Ajax with Django</h2>
+<h3 id="testing-active-link-ajax">TESTING active link ajax</h3>
 <p>To remove the <code>active</code> class from the previously clicked link <mark>before adding</mark> it to the currently <code>clicked link</code>, you can store a reference to the previously clicked link and remove the active class from it before adding it to the currently clicked link.</p>
 <div class="language-js highlight"><span class="filename">business.html</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">previousClickedLink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">  </span><span class="c1">// Reference to the previously clicked link</span>
@@ -2091,7 +2116,7 @@
 </span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s1">'Business Items'</span>
 </span></code></pre></div>
 <hr>
-<h2 id="conditonally-display-team-image">Conditonally display Team Image</h2>
+<h3 id="conditonally-display-team-image">Conditonally display Team Image</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Javascript</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2193,7 +2218,7 @@
 </div>
 </div>
 <hr>
-<h2 id="django-ajax-view">DJANGO AJAX VIEW</h2>
+<h3 id="django-ajax-view">DJANGO AJAX VIEW</h3>
 <p>The <code>{% if not request.is_ajax %}</code> line in a Django template is used to conditionally render content based on whether the request is an AJAX request or not. However, this syntax is not directly supported in Django templates out of the box. Instead, you typically handle AJAX requests in your views and use different templates or partial templates based on the request type.
 Understanding AJAX in Django Views</p>
 <p>To render different content based on whether the request is an AJAX request, you need to handle this logic in your Django view. Here's how you can achieve this:</p>
@@ -2312,7 +2337,7 @@ Understanding AJAX in Django Views</p>
 </div>
 </li>
 </ol>
-<h2 id="summary">Summary</h2>
+<h3 id="summary">Summary</h3>
 <ul>
 <li><strong>View</strong>: Handles both AJAX and non-AJAX requests, returning JSON for AJAX requests and rendering the full template for non-AJAX requests.</li>
 <li><strong>Template</strong>: Designed to display the necessary data without conditional AJAX checks.</li>
@@ -2344,9 +2369,9 @@ Understanding AJAX in Django Views</p>
 <ol>
 <li>Multi Mullingual Database (MMDB)</li>
 </ol>
-<h2 id="translating-our-static-content">Translating our static content</h2>
+<h3 id="translating-our-static-content">Translating our static content</h3>
 <p>To translate strings that are used in templates, Django provides us with a <strong>trans</strong> template tag.</p>
-<h2 id="daintree-an-e-commerce-site"><code>Daintree</code> – an E-commerce Site</h2>
+<h3 id="daintree-an-e-commerce-site"><code>Daintree</code> – an E-commerce Site</h3>
 <p>A basic <code>e-commerce</code> site has <strong>one main purpose</strong>: <mark>to help users find and buy products from the online store</mark>. Django alone can be used to build an e-commerce site quickly, using database queries to allow searches across product range, but this doesn't scale well. Databases are designed to quickly save and retrieve rows of data, but they are not optimized to search across the entire dataset (or a subset). Once the traffic of your site starts to increase, you'll see the search speed go down very quickly. On top of that, there are some features that are very difficult to build with a database.</p>
 <p>Instead, we will use a <strong>search server</strong>. A search server is very much like a database.You give it some data to store and then you can retrieve it later. It also has features specifically built to help you add searching to your applications. You might wonder that if a search server can store our data like a database, then can we not just get rid of the database? We can, but usually it's not recommended. Why? Well, because the search server is designed for a different use case. While it can store your data, a database provides a lot of guarantees about the storage that a search server usually doesn't. For example, a good database (such as MySQL or PostgreSQL) gives you a guarantee that if you try to save something and the database returns a successful response, your data will not be lost in case of a crash or power outage or some other problem. This is called durability. A search server does not provide this guarantee because that's not what they are designed for. It is usually a good idea to keep our data in a database and use the search server just to search across our data.</p>
 <p>For the application that we will develop in this chapter, we will be using <strong>Elasticsearch</strong>, one of the most popular and perhaps easy-to-use search servers available. It's also open source and available for free. So let's get started. This is going to be an exciting chapter!</p>
@@ -2383,7 +2408,7 @@ Understanding AJAX in Django Views</p>
 </span></code></pre></div>
 <p>Let's take a look at each line. The first two lines simply import the library. The third line is important. It uses the <strong>create_connection</strong> <mark>method</mark> to define a default connection. This is the connection that will be used whenever we try to do a search using this library with the default settings.</p>
 <hr>
-<h2 id="elasticsearch-django">Elasticsearch Django</h2>
+<h3 id="elasticsearch-django">Elasticsearch Django</h3>
 <p>watch this blog <a href="https://medium.com/geekculture/how-to-use-elasticsearch-with-django-ff49fe02b58d">How to Use ElasticSearch With Django: medium</a></p>
 <ul>
 <li><a href="https://elasticsearch-dsl.readthedocs.io/en/latest/index.html">Elasticsearch DSL: readthedocs</a></li>
@@ -2391,6 +2416,140 @@ Understanding AJAX in Django Views</p>
 <li><a href="https://sunscrapers.com/blog/how-to-use-elasticsearch-with-django/">How to Use Elasticsearch with Django?</a></li>
 <li><a href="https://medium.com/geekculture/how-to-use-elasticsearch-with-django-ff49fe02b58d">How to Use ElasticSearch With Django: medium</a></li>
 </ul>
+<hr>
+<h2 id="signals">Signals</h2>
+<div class="admonition example">
+<p class="admonition-title">Introduction</p>
+<p>There are 3 types of signals:</p>
+<ul>
+<li><strong>pre_save</strong>/<strong>post_save</strong>: This signal works before/after the method <code>save()</code>.</li>
+<li><strong>pre_delete</strong>/<strong>post_delete</strong>: This signal works before after deleting a model’s instance (method <code>delete()</code>) this signal is thrown.</li>
+<li><strong>pre_init</strong>/<strong>post_init</strong>: This signal is thrown before/after instantiating a model (<code>__init__()</code> method).</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Basic</label><label for="__tabbed_3_2">Intermediate</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr>
+<p><a href="https://www.geeksforgeeks.org/how-to-create-and-use-signals-in-django/">How to Create and Use Signals in Django ?</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Sure! Let’s walk through a simple example of using Django signals to automatically update a user profile's <code>post_count</code> field whenever a new <code>BlogPost</code> is created. This will demonstrate how to use Django signals in a real-world scenario.</p>
+<p>Step-by-Step Guide</p>
+<ol>
+<li>
+<p>Define the Models</p>
+<p>Create BlogPost and UserProfile models in your models.py file:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># models.py</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">class</span> <span class="nc">UserProfile</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">OneToOneField</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="n">post_count</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">PositiveIntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="k">class</span> <span class="nc">BlogPost</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>    <span class="n">created_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Create the Signal Handler</p>
+<p>Create a <code>signals.py</code> file in your app directory and define the signal handler to update the <code>post_count</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># signals.py</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kn">from</span> <span class="nn">django.db.models.signals</span> <span class="kn">import</span> <span class="n">post_save</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">BlogPost</span><span class="p">,</span> <span class="n">UserProfile</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="nd">@receiver</span><span class="p">(</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">BlogPost</span><span class="p">)</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="k">def</span> <span class="nf">update_post_count</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">created</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>    <span class="k">if</span> <span class="n">created</span><span class="p">:</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>        <span class="n">profile</span> <span class="o">=</span> <span class="n">UserProfile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">author</span><span class="p">)</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>        <span class="n">profile</span><span class="o">.</span><span class="n">post_count</span> <span class="o">=</span> <span class="n">BlogPost</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">author</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>        <span class="n">profile</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Connect the Signal</p>
+<p>Ensure that the signal handler is connected by modifying the <code>apps.py</code> file of your app to import the signal handlers when the app is ready:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># apps.py</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kn">from</span> <span class="nn">django.apps</span> <span class="kn">import</span> <span class="n">AppConfig</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="k">class</span> <span class="nc">YourAppConfig</span><span class="p">(</span><span class="n">AppConfig</span><span class="p">):</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s1">'your_app'</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="k">def</span> <span class="nf">ready</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>        <span class="kn">import</span> <span class="nn">your_app.signals</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Ensure UserProfile is Created</p>
+<p>Make sure that a <code>UserProfile</code> is created whenever a new <code>User</code> is created. You can do this by using another signal:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># signals.py (add this to the existing file)</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kn">from</span> <span class="nn">django.db.models.signals</span> <span class="kn">import</span> <span class="n">post_save</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">UserProfile</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nd">@receiver</span><span class="p">(</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">User</span><span class="p">)</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="k">def</span> <span class="nf">create_user_profile</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">created</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>    <span class="k">if</span> <span class="n">created</span><span class="p">:</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>        <span class="n">UserProfile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">instance</span><span class="p">)</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Migrate Your Database</p>
+<p>Run the migrations to apply the changes to your database:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Create and Save a Blog Post</p>
+<p>Now, create a new BlogPost instance and see the post_count update automatically:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Use the Django shell to test</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">shell</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">your_app.models</span> <span class="kn">import</span> <span class="n">BlogPost</span><span class="p">,</span> <span class="n">UserProfile</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="c1"># Create a user and profile</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">'testuser'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'password'</span><span class="p">)</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">user_profile</span> <span class="o">=</span> <span class="n">UserProfile</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="c1"># Create a new blog post</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">new_post</span> <span class="o">=</span> <span class="n">BlogPost</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'My First Post'</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">'This is the content of my first post.'</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="c1"># Check the updated post count</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">user_profile</span><span class="o">.</span><span class="n">refresh_from_db</span><span class="p">()</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">user_profile</span><span class="o">.</span><span class="n">post_count</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a><span class="mi">1</span>
+</span></code></pre></div>
+</li>
+</ol>
+<blockquote>
+<p>Summary</p>
+</blockquote>
+<ol>
+<li><strong>Models</strong>: Define BlogPost and UserProfile models in models.py.</li>
+<li><strong>Signal Handler</strong>: Create signal handlers in signals.py to update the post count and create user profiles.</li>
+<li><strong>App Configuration</strong>: Connect the signal in apps.py.</li>
+<li><strong>Database Migrations</strong>: Run migrations to apply model changes.</li>
+<li><strong>Usage</strong>: Create a BlogPost instance and observe the automatic update to the post_count.</li>
+</ol>
+<p>This example demonstrates how to use Django signals to perform an action (updating a profile’s post count) in response to an event (creating a new blog post).</p>
+</div>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
