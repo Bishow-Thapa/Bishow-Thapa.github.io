@@ -1750,6 +1750,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#django-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django widgets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Django widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Attributes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Methods:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2570,6 +2603,53 @@ Understanding AJAX in Django Views</p>
 <li><strong>Usage</strong>: Create a BlogPost instance and observe the automatic update to the post_count.</li>
 </ol>
 <p>This example demonstrates how to use Django signals to perform an action (updating a profile’s post count) in response to an event (creating a new blog post).</p>
+</div>
+<h2 id="django-widgets">Django widgets</h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Django widgets have several attributes and methods that can be utilized for customization and functionality</p>
+<h3 id="common-attributes">Common Attributes:</h3>
+<ul>
+<li>
+<p><strong>attrs</strong>: A dictionary containing HTML attributes to be rendered with the widget, such as <code>{'class': 'form-control', 'placeholder': 'Enter your name'}</code>.</p>
+</li>
+<li>
+<p><strong>template_name</strong>: Specifies the template used to render the widget. It allows you to customize the HTML markup of the widget.</p>
+</li>
+<li>
+<p><strong>is_hidden</strong>: A boolean attribute indicating whether the widget should be rendered as hidden or not.</p>
+</li>
+<li>
+<p><strong>choices</strong>: For choice-based widgets (like Select), it specifies the choices available for selection.</p>
+</li>
+<li>
+<p><strong>required</strong>: Specifies whether the field is required or not.</p>
+</li>
+</ul>
+<h3 id="common-methods">Common Methods:</h3>
+<ul>
+<li>
+<p><strong>render</strong>: Renders the HTML markup of the widget. This method is called automatically when the widget is rendered in a template.</p>
+</li>
+<li>
+<p><strong>value_from_datadict(data, files, name)</strong>: Retrieves the value of the widget from the data dictionary.</p>
+</li>
+<li>
+<p><strong>format_value(value)</strong>: Formats the value of the widget before rendering.</p>
+</li>
+<li>
+<p><strong>get_context(name, value, attrs)</strong>: Returns a dictionary containing the context data used for rendering the widget template.</p>
+</li>
+<li>
+<p><strong>id_for_label(id_)</strong>: Returns the ID to be used for the <label> element associated with the widget.</label></p>
+</li>
+<li>
+<p><strong>use_required_attribute(initial)</strong>: Determines whether the widget should use the HTML required attribute based on the initial value.</p>
+</li>
+<li>
+<p><strong>build_attrs(base_attrs, extra_attrs=None)</strong>: Combines the base attributes with any extra attributes specified and returns a dictionary of HTML attributes.</p>
+</li>
+</ul>
 </div>
 <hr>
 <h2 id="reference">Reference</h2>
