@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/09/handling-json-parsing-errors-in-javascript-a-practical-approach/</loc>
+         <lastmod>2024-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/09/gthumb-lightweight-image-editor-in-ubuntu/</loc>
          <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
@@ -257,6 +262,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
+         <lastmod>2024-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
          <lastmod>2024-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
