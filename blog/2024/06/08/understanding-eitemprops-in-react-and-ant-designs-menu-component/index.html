@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/06/05/mysqlclient-installation-with-error-in-ubuntu-solved/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/06/08/understanding-eitemprops-in-react-and-ant-designs-menu-component/">
       
       
-        <link rel="prev" href="../../03/checking-nodejs-versions-in-react-projects/">
+        <link rel="prev" href="../../05/mysqlclient-installation-with-error-in-ubuntu-solved/">
       
-      
-        <link rel="next" href="../../08/understanding-eitemprops-in-react-and-ant-designs-menu-component/">
       
       
       <link rel="icon" href="../../../../../images/bing.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>mysqlclient installation with error in ubuntu solved - Bishow Thapa</title>
+        <title>Understanding e.item.props in React and Ant Design's Menu Component - Bishow Thapa</title>
       
     
     
@@ -85,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mysqlclient-installation-with-error-in-ubuntu-solved" class="md-skip">
+        <a href="#understanding-eitemprops-in-react-and-ant-designs-menu-component" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              mysqlclient installation with error in ubuntu solved
+              Understanding e.item.props in React and Ant Design's Menu Component
             
           </span>
         </div>
@@ -1580,9 +1578,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#how-eitemprops-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      How e.item.props Works?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-eitemprops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use e.item.props?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
     </span>
   </a>
   
@@ -1644,7 +1660,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-06-05 00:00:00" class="md-ellipsis">June 5, 2024</time>
+                        <time datetime="2024-06-08 00:00:00" class="md-ellipsis">June 8, 2024</time>
                       </div>
                     </li>
                     
@@ -1656,7 +1672,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -1685,7 +1701,7 @@
       
     
     
-      <a href="../../../../../tags/#ubuntu" class="md-tag md-tag-icon">Ubuntu</a>
+      <a href="../../../../../tags/#react" class="md-tag md-tag-icon">react</a>
     
   
     
@@ -1694,16 +1710,7 @@
       
     
     
-      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#python" class="md-tag md-tag-icon">Python</a>
+      <a href="../../../../../tags/#js" class="md-tag md-tag-icon">js</a>
     
   
 </nav>
@@ -1713,28 +1720,61 @@
   
 
 
-<div><h1 id="mysqlclient-installation-with-error-in-ubuntu-solved">mysqlclient installation with error in ubuntu solved</h1>
+<div><h1 id="understanding-eitemprops-in-react-and-ant-designs-menu-component">Understanding <code>e.item.props</code> in React and Ant Design's Menu Component</h1>
+<p>In the context of Ant Design's Menu component, <code>e.item.props</code> refers to the properties of the Menu.Item component that triggered the click event. When a menu item is clicked, Ant Design provides an event object e that contains various details about the event. One of these details is <code>e.item</code>, which represents the <code>Menu.Item</code> that was clicked.</p>
 <!-- more -->
 
-<div class="admonition bug">
-<p class="admonition-title">Bug</p>
-<p><code>/bin/sh: 1</code>: pkg-config: not found </p>
-<p>Exception: Can not find valid pkg-config name.                                                                                                                                  <br>
-  Specify MYSQLCLIENT_CFLAGS and MYSQLCLIENT_LDFLAGS env vars manually</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Install build dependencies</p>
-<blockquote>
-<p>Install build dependencies ( specially - pkg-config )</p>
-</blockquote>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-dev<span class="w"> </span>default-libmysqlclient-dev<span class="w"> </span>build-essential<span class="w"> </span>pkg-config
+<h2 id="how-eitemprops-works">How <code>e.item.props</code> Works?</h2>
+<p>When you create a Menu in Ant Design, each Menu.Item can have its own properties. These properties are similar to the props you would pass to any React component. For instance, you might pass a <code>key</code>, <code>title</code>, or <code>custom data-*</code> attributes to a Menu.Item.</p>
+<div class="admonition tip">
+<p class="admonition-title">Example</p>
+<div class="language-jsx highlight"><span class="filename">React</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Menu</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'antd'</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyMenuComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">menuData</span><span class="p">,</span><span class="w"> </span><span class="nx">handleMenuClick</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">selectedTitle</span><span class="p">,</span><span class="w"> </span><span class="nx">setSelectedTitle</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">clickedTitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">props</span><span class="p">[</span><span class="s1">'data-title'</span><span class="p">];</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nx">setSelectedTitle</span><span class="p">(</span><span class="nx">clickedTitle</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nx">handleMenuClick</span><span class="p">(</span><span class="nx">clickedTitle</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClick</span><span class="p">}</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">256</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="na">mode</span><span class="o">=</span><span class="s">"inline"</span><span class="p">&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="p">{</span><span class="nx">menuData</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                </span><span class="na">data-title</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">                </span><span class="p">&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;{</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">}.</span><span class="w"> </span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="p">&gt;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">            </span><span class="p">))}</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">};</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">MyMenuComponent</span><span class="p">;</span>
 </span></code></pre></div>
 </div>
-<hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://stackoverflow.com/questions/76533384/docker-alpine-build-fails-on-mysqlclient-installation-with-error-exception-can">mysqlclient installation with error: Exception: Can not find valid pkg-config name</a></li>
-</ul>
+<h2 id="why-use-eitemprops">Why Use e.item.props?</h2>
+<p>Using <code>e.item.props</code> is beneficial for several reasons:</p>
+<ol>
+<li>
+<p>Dynamic Data Access:</p>
+<p>It allows you to dynamically access data associated with a menu item, such as titles, IDs, or custom attributes.</p>
+</li>
+<li>
+<p>Simplified Event Handling:</p>
+<p>Instead of setting up additional state or context to manage menu item data, you can directly access the properties within the event handler.</p>
+</li>
+<li>
+<p>Enhanced Flexibility:</p>
+<p>You can pass any data you need via custom attributes, making your components more flexible and easier to manage.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Whether you're building a sidebar menu or any other interactive component, understanding how to use <code>e.item.props</code> effectively will enhance your React development experience.</p>
 <hr></div>
 
 
@@ -1830,7 +1870,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../03/checking-nodejs-versions-in-react-projects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Checking Node.js Versions in React Projects">
+          <a href="../../05/mysqlclient-installation-with-error-in-ubuntu-solved/" class="md-footer__link md-footer__link--prev" aria-label="Previous: mysqlclient installation with error in ubuntu solved">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1840,27 +1880,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Checking Node.js Versions in React Projects
+                mysqlclient installation with error in ubuntu solved
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../08/understanding-eitemprops-in-react-and-ant-designs-menu-component/" class="md-footer__link md-footer__link--next" aria-label="Next: Understanding e.item.props in React and Ant Design&#39;s Menu Component">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Understanding e.item.props in React and Ant Design's Menu Component
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
