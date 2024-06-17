@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/18/history-api/</loc>
+         <lastmod>2024-06-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/09/gthumb-lightweight-image-editor-in-ubuntu/</loc>
          <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
@@ -277,6 +282,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
+         <lastmod>2024-06-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/archive/2024/page/2/</loc>
          <lastmod>2024-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
