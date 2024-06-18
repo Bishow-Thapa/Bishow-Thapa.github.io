@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/20/handling-boolean-environment-variables-in-django-settings/</loc>
+         <lastmod>2024-06-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/09/handling-json-parsing-errors-in-javascript-a-practical-approach/</loc>
          <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
