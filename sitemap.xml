@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/21/installation-django/</loc>
+         <lastmod>2024-06-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/09/adding-syntax-hightlighting-in-the-material/</loc>
          <lastmod>2024-06-21</lastmod>
          <changefreq>daily</changefreq>
