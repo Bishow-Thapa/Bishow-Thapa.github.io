@@ -2,347 +2,357 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bishow-thapa.github.io/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/tags/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/03/checking-nodejs-versions-in-react-projects/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/18/css-media-queries/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/17/dumping-data-from-django-database/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/08/understanding-eitemprops-in-react-and-ant-designs-menu-component/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/01/31/embarking-on-a-tech-odyssey/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/giscus-comment-system/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/12/31/embracing-change-navigating-the-landscape-of-2023/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/20/handling-boolean-environment-variables-in-django-settings/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/09/handling-json-parsing-errors-in-javascript-a-practical-approach/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/18/history-api/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/09/gthumb-lightweight-image-editor-in-ubuntu/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/21/installation-django/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/24/managing-multiple-python-versions-with-pyenv/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/09/adding-syntax-hightlighting-in-the-material/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/21/pipenv/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/19/prettier-formatter-for-visual-studio-code/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/20/removing-tracked-files-and-directories-in-git/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/22/the-restful-api-architecture/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/24/secret_key-in-django/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/05/mysqlclient-related-errors-in-ubuntu/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/23/using-sqlite-with-django/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/23/phantomjs-headless-browser/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/draft/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/intro/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/misc/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/secret/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/01-replychatbox/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/circular-planning/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/compose-email-drawer/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/dashboard-module/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/dashboard-today-task/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/mail-reply-bug/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/mail-tender-loader/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/modes-of-communication/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/redux-actions/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/redux-add-upate/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/tender-mail-circular/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/clickup/tender-mail/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/components/HTMLRenderer/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/components/JSON-stringify/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/components/old/internalMNew/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/architecture/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/blog/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/excel-api-data/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/fingerprint/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/internal-message/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/login/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/mail/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/public-events/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/redux-action-advanced/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/reference-project-circular/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/reference-tender-circular/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/sending-im/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/sending-mail/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/sisco-view/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/tutorial-listing/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/primesales/intro/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/codesnap/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/docker/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/draft/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/3/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/page/2/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/archive/2024/page/3/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/tags/</loc>
-         <lastmod>2024-06-24</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

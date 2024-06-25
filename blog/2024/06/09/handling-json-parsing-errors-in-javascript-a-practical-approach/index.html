@@ -1760,12 +1760,26 @@
 <p>The error typically occurs when the input string is not a valid JSON format. For instance, when the input string is plain text or improperly formatted JSON, attempting to parse it will result in a syntax error. To address this, we need to ensure the input is a valid JSON string before parsing it.</p>
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">TypeError: cyclic object value in React</label><label for="__tabbed_1_2">TypeError: o is undefined</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Error parsing JSON: SyntaxError: Unexpected token 's', "string" is not valid JSON</p>
 <hr>
 <ul>
 <li><a href="https://stackoverflow.com/questions/14432165/error-uncaught-syntaxerror-unexpected-token-with-json-parse">Error "Uncaught SyntaxError: Unexpected token with JSON.parse"</a></li>
 <li><a href="https://support.stripe.com/questions/how-to-fix-syntaxerror-unexpected-token-in-json-at-position-0">How to Fix SyntaxError: Unexpected token &lt; in JSON at position 0</a></li>
+<li><a href="https://www.geeksforgeeks.org/javascript-typeerror-cyclic-object-value/">JavaScript TypeError – Cyclic object value</a></li>
+<li><a href="https://stackoverflow.com/questions/50965551/typeerror-cyclic-object-value-in-react">TypeError: cyclic object value in React</a></li>
 </ul>
+</div>
+<div class="tabbed-block">
+<hr>
+<ul>
+<li><a href="https://stackoverflow.com/questions/68976975/typeerror-cannot-read-property-0-of-undefined-in-react">TypeError: Cannot read property '0' of undefined in react</a></li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <hr>
 <h2 id="the-solution">The Solution</h2>
@@ -1786,7 +1800,7 @@
 </ol>
 <div class="admonition success">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">explain</label><label for="__tabbed_1_2">clean code</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">explain</label><label for="__tabbed_2_2">clean code</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">render</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
