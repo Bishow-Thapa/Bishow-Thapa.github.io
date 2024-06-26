@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/27/reverse-in-django/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/24/secret_key-in-django/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
