@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/06/26/class-based-views-are-not-always-class-based-generic-views/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/03/checking-nodejs-versions-in-react-projects/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
