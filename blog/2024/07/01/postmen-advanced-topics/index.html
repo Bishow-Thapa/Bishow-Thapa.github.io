@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/07/01/postmen-avanced-topics/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/07/01/postmen-advanced-topics/">
       
       
         <link rel="prev" href="../../../06/30/python---magic-or-dunder-methods/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Postmen Avanced Topics - Bishow Thapa</title>
+        <title>Postmen Advanced Topics - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#postmen-avanced-topics" class="md-skip">
+        <a href="#postmen-advanced-topics" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Postmen Avanced Topics
+              Postmen Advanced Topics
             
           </span>
         </div>
@@ -1677,7 +1677,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -1725,7 +1725,8 @@
   
 
 
-<div><h1 id="postmen-avanced-topics">Postmen Avanced Topics</h1>
+<div><h1 id="postmen-advanced-topics">Postmen Advanced Topics</h1>
+<p>In Postman, <code>pm</code> is a <mark>global object</mark> that provides various functions and methods to interact with the Postman sandbox environment. This object allows you to write scripts to manipulate the request and response, set and get variables, and perform assertions. The pm object is available in both Pre-request Scripts and Test Scripts.</p>
 <!-- more -->
 
 <p>Here are some advanced topics in Postman to help you level up your API testing and automation:</p>
@@ -1834,12 +1835,68 @@
 </ol>
 <p>These advanced features of Postman help you perform more thorough and efficient API testing and automation, improving your overall development and testing workflows.</p>
 <hr>
+<details class="abstract" open="open">
+<summary>pm Methods and Attributes</summary>
+<p>The pm object in Postman provides a comprehensive set of methods and attributes to interact with the Postman runtime environment. Here is a detailed list of the main methods and attributes available within the pm object:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Variables</label><label for="__tabbed_1_2">Environment</label><label for="__tabbed_1_3">Request and Response</label><label for="__tabbed_1_4">Assertions and Tests</label><label for="__tabbed_1_5">Sending Requests</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>pm.variables</strong>: Methods to interact with the variable scope (local, environment, global, data).</p>
+<ul>
+<li><code>pm.variables.get(variableName)</code>: Get the value of a variable from the current scope.</li>
+<li><code>pm.variables.set(variableName, variableValue)</code>: Set the value of a variable in the current scope.</li>
+</ul>
+<p><strong>pm.environment</strong>: Methods to interact with environment variables.</p>
+<ul>
+<li><code>pm.environment.get(variableName)</code>: Get the value of an environment variable.</li>
+<li><code>pm.environment.set(variableName, variableValue)</code>: Set the value of an environment variable.</li>
+<li><code>pm.environment.unset(variableName)</code>: Remove an environment variable.</li>
+<li><code>pm.environment.clear()</code>: Clear all environment variables.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<blockquote>
+<p>Methods to manage environment variables.</p>
+</blockquote>
+<ul>
+<li><code>pm.environment.set(variableName, variableValue)</code>: Set an environment variable.</li>
+<li><code>pm.environment.get(variableName)</code>: Get an environment variable.</li>
+<li><code>pm.environment.unset(variableName)</code>: Unset an environment variable.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>pm.request</strong>: Methods to interact with the request object.</p>
+<ul>
+<li><code>pm.request.url</code>: Get or set the request URL.</li>
+<li>
+<p><code>pm.request.headers</code>: Access the request headers.</p>
+<ul>
+<li><code>pm.request.headers.add(headerObject)</code>: Add a header to the request.</li>
+<li><code>pm.request.headers.remove(headerName)</code>: Remove a header from the request.</li>
+</ul>
+</li>
+</ul>
+<p><strong>pm.response</strong>: Methods to interact with the response object.</p>
+<ul>
+<li><code>pm.response.json()</code>: Parse the response as JSON.</li>
+<li><code>pm.response.text()</code>: Get the response body as plain text.</li>
+<li><code>pm.response.code</code>: Get the response status code.</li>
+<li><code>pm.response.headers</code>: Access the response headers.</li>
+<li><code>pm.response.time()</code>: Get the response time.</li>
+</ul>
+</div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+</details>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-examples/">postman docs</a></li>
 <li><a href="https://www.javatpoint.com/variables-in-postman">postman tutorial: javatpoint</a></li>
 <li><a href="https://www.geeksforgeeks.org/postman-mock-server/">post mock server: geeksforgeeks</a></li>
-<li><a href="https://www.tutorialspoint.com/postman/postman_run_collections_using_newman.htm"></a></li>
+<li><a href="https://www.tutorialspoint.com/postman/postman_run_collections_using_newman.htm">postman :tutorialspoint</a></li>
 </ul>
 <hr></div>
 
