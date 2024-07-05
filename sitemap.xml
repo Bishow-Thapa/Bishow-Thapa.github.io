@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/07/04/javascript-arrow-functions/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/24/managing-multiple-python-versions-with-pyenv/</loc>
          <lastmod>2024-07-05</lastmod>
          <changefreq>daily</changefreq>
@@ -302,6 +307,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/documentation/fingerprint/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/documentation/import-excel-file/</loc>
          <lastmod>2024-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
