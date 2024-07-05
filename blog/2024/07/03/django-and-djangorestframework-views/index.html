@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/07/02/customizing-the-reqest-and-response-in-drf/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/07/03/django-and-djangorestframework-views/">
       
       
-        <link rel="prev" href="../../01/postmen-advanced-topics/">
+        <link rel="prev" href="../../02/customizing-the-reqest-and-response-in-drf/">
       
-      
-        <link rel="next" href="../../03/django-and-djangorestframework-views/">
       
       
       <link rel="icon" href="../../../../../images/bing.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Customizing the Reqest and Response in DRF - Bishow Thapa</title>
+        <title>Django and djangorestframework views - Bishow Thapa</title>
       
     
     
@@ -85,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#customizing-the-reqest-and-response-in-drf" class="md-skip">
+        <a href="#django-and-djangorestframework-views" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Customizing the Reqest and Response in DRF
+              Django and djangorestframework views
             
           </span>
         </div>
@@ -1601,45 +1599,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#customizing-request-payload" class="md-nav__link">
+  <a href="#using-viewsets" class="md-nav__link">
     <span class="md-ellipsis">
-      Customizing Request Payload
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-response-payload" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing Response Payload
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware-for-advanced-customization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Middleware for Advanced Customization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
+      Using ViewSets
     </span>
   </a>
   
@@ -1701,7 +1663,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-07-02 00:00:00" class="md-ellipsis">July 2, 2024</time>
+                        <time datetime="2024-07-03 00:00:00" class="md-ellipsis">July 3, 2024</time>
                       </div>
                     </li>
                     
@@ -1751,7 +1713,7 @@
       
     
     
-      <a href="../../../../../tags/#management" class="md-tag md-tag-icon">management</a>
+      <a href="../../../../../tags/#drf" class="md-tag md-tag-icon">drf</a>
     
   
 </nav>
@@ -1761,224 +1723,339 @@
   
 
 
-<div><h1 id="customizing-the-reqest-and-response-in-drf">Customizing the Reqest and Response in DRF</h1>
-<p>Customizing the request and response JSON payload in Django Rest Framework (DRF) involves utilizing serializers, views, and potentially middleware to tailor how data is structured and presented in your API. Here's a comprehensive guide on how to achieve this customization:</p>
+<div><h1 id="django-and-djangorestframework-views">Django and djangorestframework <code>views</code></h1>
+<p>Django views are versatile for rendering web pages, while DRF generic views streamline API development with standardized CRUD operations and serialization support.</p>
 <!-- more -->
 
-<h2 id="customizing-request-payload">Customizing Request Payload</h2>
-<ol>
-<li>
-<p>Serializer Definition</p>
-<p>To customize how incoming data is processed and validated, you define serializers for your models:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span> <span class="nc">MyModelSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">]</span>  <span class="c1"># Define fields to include in request and response</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">def</span> <span class="nf">validate_field1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="c1"># Custom validation logic for field1</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s2">"field1 must be non-negative."</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="k">return</span> <span class="n">value</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="c1"># Custom creation logic</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">validated_data</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="k">return</span> <span class="n">instance</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="c1"># Custom update logic</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="n">instance</span><span class="o">.</span><span class="n">field1</span> <span class="o">=</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'field1'</span><span class="p">,</span> <span class="n">instance</span><span class="o">.</span><span class="n">field1</span><span class="p">)</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="n">instance</span><span class="o">.</span><span class="n">field2</span> <span class="o">=</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'field2'</span><span class="p">,</span> <span class="n">instance</span><span class="o">.</span><span class="n">field2</span><span class="p">)</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="n">instance</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        <span class="k">return</span> <span class="n">instance</span>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Class-Based API Views</label><label for="__tabbed_1_2">Generic API Views</label><label for="__tabbed_1_3">Combining</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>These are Python classes that provide more structure and reusability.</p>
+<p>from <strong>rest_framework.views</strong> import APIView</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">status</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">class</span> <span class="nc">BookList</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">books</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">BookSerializer</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">BookSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
 </span></code></pre></div>
-</li>
+</div>
+<div class="tabbed-block">
+<p>Generic API views abstract common patterns to make view development easier and faster. DRF provides a set of built-in generic views for common tasks, such as listing, creating, retrieving, updating, and deleting objects.</p>
+<p>from <strong>rest_framework.generics</strong> import ListAPIView</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">ListAPIView</label><label for="__tabbed_2_2">CreateAPIView</label><label for="__tabbed_2_3">RetrieveAPIView</label><label for="__tabbed_2_4">UpdateAPIView</label><label for="__tabbed_2_5">DestroyAPIView</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
 <li>
-<p>View Definition</p>
-<p>In your view, specify the serializer class and customize further as needed:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">viewsets</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">MyModelSerializer</span>
+<p>Used to retrieve a list of objects.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">ListAPIView</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span> <span class="nc">MyModelViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">MyModelSerializer</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="c1"># Customize queryset, permissions, authentication, etc.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span> <span class="nc">BookListView</span><span class="p">(</span><span class="n">ListAPIView</span><span class="p">):</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
 </span></code></pre></div>
 </li>
-</ol>
-<hr>
-<h2 id="customizing-response-payload">Customizing Response Payload</h2>
-<ol>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
 <li>
-<p>Serializer Customization</p>
-<p>To tailor the structure and content of the response JSON:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">MyModelSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">field1_times_two</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">SerializerMethodField</span><span class="p">()</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">,</span> <span class="s1">'field1_times_two'</span><span class="p">]</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">def</span> <span class="nf">get_field1_times_two</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">field1</span> <span class="o">*</span> <span class="mi">2</span>
+<p>Used to create a new object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">CreateAPIView</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">class</span> <span class="nc">BookCreateView</span><span class="p">(</span><span class="n">CreateAPIView</span><span class="p">):</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
 </span></code></pre></div>
 </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
 <li>
-<p>Custom Response Formatting</p>
-<p>Use <code>Response</code> objects or customize <code>list</code> and <code>retrieve</code> methods in views:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">class</span> <span class="nc">MyModelList</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="n">queryset</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">MyModelSerializer</span><span class="p">(</span><span class="n">queryset</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            <span class="s1">'custom_key'</span><span class="p">:</span> <span class="n">serializer</span><span class="o">.</span><span class="n">data</span>  <span class="c1"># Custom key in response JSON</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="p">})</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">MyModelSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span><span class="p">)</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+<p>Used to retrieve a single object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">RetrieveAPIView</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">class</span> <span class="nc">BookDetailView</span><span class="p">(</span><span class="n">RetrieveAPIView</span><span class="p">):</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
 </span></code></pre></div>
 </li>
-</ol>
-<hr>
-<h2 id="middleware-for-advanced-customization">Middleware for Advanced Customization</h2>
-<ol>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
 <li>
-<p>Middleware Definition</p>
-<p><mark>For <code>low-level</code> customization, <code>use</code> middleware</mark>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">MyCustomMiddleware</span><span class="p">:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_response</span><span class="p">):</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_response</span> <span class="o">=</span> <span class="n">get_response</span>
+<p>Used to update an existing object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">UpdateAPIView</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="c1"># Modify request data here</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="c1"># Modify response data here</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="k">return</span> <span class="n">response</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">class</span> <span class="nc">BookUpdateView</span><span class="p">(</span><span class="n">UpdateAPIView</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
 </span></code></pre></div>
 </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
 <li>
-<p>Integration with Django Middleware</p>
-<p>Include middleware in <code>settings.py</code>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="c1"># Other middleware</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="s1">'myapp.middleware.MyCustomMiddleware'</span><span class="p">,</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">]</span>
+<p>Used to delete an existing object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">DestroyAPIView</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">class</span> <span class="nc">BookDeleteView</span><span class="p">(</span><span class="n">DestroyAPIView</span><span class="p">):</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
 </span></code></pre></div>
 </li>
-</ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>Customizing the request and response JSON payload in Django Rest Framework involves utilizing serializers for data validation and customization, defining views to handle CRUD operations and format responses, and optionally using middleware for lower-level adjustments. This approach allows developers to tailor API behavior and structure data to meet specific application requirements effectively. By understanding and leveraging these customization techniques, developers can build robust and flexible APIs tailored to their project's needs.</p>
-<hr>
-<details class="abstract">
-<summary>Usage in <code>create</code> and <code>update</code> Methods?</summary>
-<p>In Django Rest Framework (DRF), validated_data is a dictionary containing the deserialized and validated data after the serializer has processed the incoming request data. This dictionary typically represents the cleaned and validated data that is ready to be used for creating or updating an object.</p>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
 <blockquote>
-<p>Usage in create and update Methods</p>
+<p>Combining Multiple Generic API Views</p>
 </blockquote>
-<p><mark>In DRF serializers</mark>, such as <code>ModelSerializer</code>, you often define create and update methods to customize how objects are created or updated in the database. Here's how <code>validated_data</code> is used in these methods:</p>
+<p>For more complex workflows, you can combine multiple generic views to handle different actions.</p>
+<div class="language-python highlight"><span class="filename">Combining List and Create Views</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">BookListView</span><span class="p">,</span> <span class="n">BookCreateView</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'books/'</span><span class="p">,</span> <span class="n">BookListView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'book-list'</span><span class="p">),</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'books/new/'</span><span class="p">,</span> <span class="n">BookCreateView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'book-create'</span><span class="p">),</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">]</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="using-viewsets">Using ViewSets</h2>
+<p>Viewsets combine the logic for multiple views into a single class. They are a more concise way to handle standard create, retrieve, update, and delete actions.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">viewsets</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">class</span> <span class="nc">BookViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">Router Configuration</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">rest_framework.routers</span> <span class="kn">import</span> <span class="n">DefaultRouter</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">BookViewSet</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">router</span> <span class="o">=</span> <span class="n">DefaultRouter</span><span class="p">()</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">router</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="sa">r</span><span class="s1">'books'</span><span class="p">,</span> <span class="n">BookViewSet</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">router</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">]</span>
+</span></code></pre></div>
+<hr>
+<h1 id="django-generic-views-and-generic-api-views">Django Generic Views and Generic API Views</h1>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">create Method</label><label for="__tabbed_1_2">update Method </label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">MyModelSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">]</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">validated_data</span><span class="p">)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="k">return</span> <span class="n">instance</span>
-</span></code></pre></div>
-<blockquote>
-<p>In the create method:</p>
-</blockquote>
-<ul>
-<li><code>validated_data</code> is a dictionary containing the cleaned and validated data extracted from the incoming request payload.</li>
-<li>It includes only the fields that are defined in the serializer's <code>Meta</code> class (<code>fields</code> attribute).</li>
-<li>You use <code>validated_data</code> to create a new instance of the <code>MyModel</code> model using <code>MyModel.objects.create(**validated_data)</code>.</li>
-</ul>
+<p class="admonition-title">Django Generic Views</p>
+<table>
+<thead>
+<tr>
+<th><strong>View Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example Usage</strong></th>
+<th><strong>Import</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ListView</td>
+<td>Displays a list of objects.</td>
+<td><code>class BookListView(ListView)</code></td>
+<td><code>from django.views.generic import ListView</code></td>
+</tr>
+<tr>
+<td>DetailView</td>
+<td>Displays a single object.</td>
+<td><code>class BookDetailView(DetailView)</code></td>
+<td><code>from django.views.generic import DetailView</code></td>
+</tr>
+<tr>
+<td>CreateView</td>
+<td>Displays a form for creating a new object and handles form submission.</td>
+<td><code>class BookCreateView(CreateView)</code></td>
+<td><code>from django.views.generic import CreateView</code></td>
+</tr>
+<tr>
+<td>UpdateView</td>
+<td>Displays a form for updating an existing object and handles form submission.</td>
+<td><code>class BookUpdateView(UpdateView)</code></td>
+<td><code>from django.views.generic import UpdateView</code></td>
+</tr>
+<tr>
+<td>DeleteView</td>
+<td>Displays a confirmation page and deletes an existing object.</td>
+<td><code>class BookDeleteView(DeleteView)</code></td>
+<td><code>from django.views.generic import DeleteView</code></td>
+</tr>
+<tr>
+<td>TemplateView</td>
+<td>Renders a template.</td>
+<td><code>class MyTemplateView(TemplateView)</code></td>
+<td><code>from django.views.generic import TemplateView</code></td>
+</tr>
+<tr>
+<td>RedirectView</td>
+<td>Redirects to a given URL.</td>
+<td><code>class MyRedirectView(RedirectView)</code></td>
+<td><code>from django.views.generic import RedirectView</code></td>
+</tr>
+<tr>
+<td>FormView</td>
+<td>Displays a form and handles form submission.</td>
+<td><code>class MyFormView(FormView)</code></td>
+<td><code>from django.views.generic import FormView</code></td>
+</tr>
+<tr>
+<td>ArchiveIndexView</td>
+<td>Displays an archive index of date-based items.</td>
+<td><code>class MyArchiveIndexView(ArchiveIndexView)</code></td>
+<td><code>from django.views.generic.dates import ArchiveIndexView</code></td>
+</tr>
+<tr>
+<td>YearArchiveView</td>
+<td>Displays an archive of items for a specific year.</td>
+<td><code>class MyYearArchiveView(YearArchiveView)</code></td>
+<td><code>from django.views.generic.dates import YearArchiveView</code></td>
+</tr>
+<tr>
+<td>MonthArchiveView</td>
+<td>Displays an archive of items for a specific month.</td>
+<td><code>class MyMonthArchiveView(MonthArchiveView)</code></td>
+<td><code>from django.views.generic.dates import MonthArchiveView</code></td>
+</tr>
+<tr>
+<td>WeekArchiveView</td>
+<td>Displays an archive of items for a specific week.</td>
+<td><code>class MyWeekArchiveView(WeekArchiveView)</code></td>
+<td><code>from django.views.generic.dates import WeekArchiveView</code></td>
+</tr>
+<tr>
+<td>DayArchiveView</td>
+<td>Displays an archive of items for a specific day.</td>
+<td><code>class MyDayArchiveView(DayArchiveView)</code></td>
+<td><code>from django.views.generic.dates import DayArchiveView</code></td>
+</tr>
+<tr>
+<td>TodayArchiveView</td>
+<td>Displays an archive of items for today.</td>
+<td><code>class MyTodayArchiveView(TodayArchiveView)</code></td>
+<td><code>from django.views.generic.dates import TodayArchiveView</code></td>
+</tr>
+<tr>
+<td>DateDetailView</td>
+<td>Displays a single object for a specific date.</td>
+<td><code>class MyDateDetailView(DateDetailView)</code></td>
+<td><code>from django.views.generic.dates import DateDetailView</code></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span> <span class="nc">MyModelSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">]</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="n">instance</span><span class="o">.</span><span class="n">field1</span> <span class="o">=</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'field1'</span><span class="p">,</span> <span class="n">instance</span><span class="o">.</span><span class="n">field1</span><span class="p">)</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="n">instance</span><span class="o">.</span><span class="n">field2</span> <span class="o">=</span> <span class="n">validated_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'field2'</span><span class="p">,</span> <span class="n">instance</span><span class="o">.</span><span class="n">field2</span><span class="p">)</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="n">instance</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        <span class="k">return</span> <span class="n">instance</span>
-</span></code></pre></div>
-<blockquote>
-<p>In the update method:</p>
-</blockquote>
-<ul>
-<li><code>instance</code> refers to the existing instance of <code>MyModel</code> that is being updated.</li>
-<li><code>validated_data</code> contains the cleaned and validated data extracted from the incoming request payload.</li>
-<li>You update the fields of <code>instance</code> with values from validated_data.</li>
-<li>Finally, you save the instance (<code>instance.save()</code>) and return the updated instance.</li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">DRF Generic API Views</p>
+<table>
+<thead>
+<tr>
+<th><strong>View Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example Usage</strong></th>
+<th><strong>Import</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ListAPIView</td>
+<td>Used for read-only endpoints to represent a collection of model instances.</td>
+<td><code>class BookListView(ListAPIView)</code></td>
+<td><code>from rest_framework.generics import ListAPIView</code></td>
+</tr>
+<tr>
+<td>CreateAPIView</td>
+<td>Used for create-only endpoints.</td>
+<td><code>class BookCreateView(CreateAPIView)</code></td>
+<td><code>from rest_framework.generics import CreateAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveAPIView</td>
+<td>Used for read-only endpoints to represent a single model instance.</td>
+<td><code>class BookDetailView(RetrieveAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveAPIView</code></td>
+</tr>
+<tr>
+<td>UpdateAPIView</td>
+<td>Used for update-only endpoints for a single model instance.</td>
+<td><code>class BookUpdateView(UpdateAPIView)</code></td>
+<td><code>from rest_framework.generics import UpdateAPIView</code></td>
+</tr>
+<tr>
+<td>DestroyAPIView</td>
+<td>Used for delete-only endpoints for a single model instance.</td>
+<td><code>class BookDeleteView(DestroyAPIView)</code></td>
+<td><code>from rest_framework.generics import DestroyAPIView</code></td>
+</tr>
+<tr>
+<td>ListCreateAPIView</td>
+<td>Used for read-write endpoints to represent a collection of model instances.</td>
+<td><code>class BookListCreateView(ListCreateAPIView)</code></td>
+<td><code>from rest_framework.generics import ListCreateAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveUpdateAPIView</td>
+<td>Used for read or update endpoints to represent a single model instance.</td>
+<td><code>class BookRetrieveUpdateView(RetrieveUpdateAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveUpdateAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveDestroyAPIView</td>
+<td>Used for read or delete endpoints to represent a single model instance.</td>
+<td><code>class BookRetrieveDestroyView(RetrieveDestroyAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveDestroyAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveUpdateDestroyAPIView</td>
+<td>Used for read, update or delete endpoints to represent a single model instance.</td>
+<td><code>class BookRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveUpdateDestroyAPIView</code></td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-</div>
-</div>
-<hr>
-<blockquote>
-<p>Purpose of validated_data</p>
-</blockquote>
-<ul>
-<li>
-<p>Data Validation: Before reaching the <code>create</code> or <code>update</code> method, DRF serializers perform validation on incoming data based on serializer field definitions (e.g., required fields, field types, validation rules).</p>
-</li>
-<li>
-<p>Serialization: After validation passes, <code>validated_data</code> contains the sanitized and processed data ready for database operations.</p>
-</li>
-<li>
-<p>Simplifies Business Logic: By using <code>validated_data</code>, you ensure that only valid and cleaned data is used for database operations, thus maintaining data integrity and consistency.</p>
-</li>
-</ul>
-<blockquote>
-<p>Conclusion</p>
-</blockquote>
-<p><code>validated_data</code> in DRF serializers encapsulates the cleaned, validated, and ready-to-use data extracted from incoming requests. It plays a crucial role in ensuring that your application handles data securely and accurately, adhering to defined validation rules and business logic. Understanding how to utilize <code>validated_data</code> effectively allows developers to build robust and reliable APIs using Django Rest Framework.</p>
-</details>
-<hr>
-<details class="example" open="open">
-<summary>Methods</summary>
-<p>Django Rest Framework (DRF) serializers offer several other methods that are commonly used to customize behavior and handle various aspects of data serialization and validation. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Serializers Methods</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>to_representation()</li>
-<li>to_internal_value()</li>
-</ul>
-</div>
-</div>
-</div>
-</details>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://testdriven.io/blog/drf-serializers/">drf-serializers</a></li>
-<li><a href="https://www.scaler.com/topics/django/serializers-in-django/">serializers in django</a></li>
-</ul>
-<hr></div>
+<li><a href=""></a></li>
+</ul></div>
 
 
 
@@ -2073,7 +2150,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../01/postmen-advanced-topics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Postmen Advanced Topics">
+          <a href="../../02/customizing-the-reqest-and-response-in-drf/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing the Reqest and Response in DRF">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2083,27 +2160,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Postmen Advanced Topics
+                Customizing the Reqest and Response in DRF
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../03/django-and-djangorestframework-views/" class="md-footer__link md-footer__link--next" aria-label="Next: Django and djangorestframework views">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Django and djangorestframework views
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
