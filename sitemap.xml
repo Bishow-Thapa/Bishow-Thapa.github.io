@@ -21,11 +21,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/06/03/checking-nodejs-versions-in-react-projects/</loc>
-         <lastmod>2024-07-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/18/css-media-queries/</loc>
          <lastmod>2024-07-08</lastmod>
          <changefreq>daily</changefreq>
@@ -91,27 +86,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/06/09/handling-json-parsing-errors-in-javascript-a-practical-approach/</loc>
-         <lastmod>2024-07-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/06/18/history-api/</loc>
-         <lastmod>2024-07-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/09/gthumb-lightweight-image-editor-in-ubuntu/</loc>
          <lastmod>2024-07-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/21/installation-django/</loc>
-         <lastmod>2024-07-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/04/javascript-arrow-functions/</loc>
          <lastmod>2024-07-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -142,11 +122,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/07/01/postmen-advanced-topics/</loc>
-         <lastmod>2024-07-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/06/19/prettier-formatter-for-visual-studio-code/</loc>
          <lastmod>2024-07-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -432,11 +407,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/page/3/</loc>
-         <lastmod>2024-07-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/archive/2024/page/4/</loc>
          <lastmod>2024-07-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
