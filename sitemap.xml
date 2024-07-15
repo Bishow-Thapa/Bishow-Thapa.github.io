@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/07/03/exploring-objectprototype-in-javascript/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2023/01/31/embarking-on-a-tech-odyssey/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
@@ -42,6 +47,11 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/12/31/embracing-change-navigating-the-landscape-of-2023/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/07/04/handling-circular-references-in-javascript-avoiding-typeerror-cyclic-object-value-in-jsonstringify/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -77,6 +87,16 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/28/saving-base64-data-into-an-excel-file-in-a-react-application/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/07/05/how-to-send-multipartform-data-request-file/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/07/04/unveiling-static-and-prototype-methods-in-javascript-built-in-objects/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>

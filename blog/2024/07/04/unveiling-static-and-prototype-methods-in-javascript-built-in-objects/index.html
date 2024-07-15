@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/tags/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/07/04/unveiling-static-and-prototype-methods-in-javascript-built-in-objects/">
       
       
+        <link rel="prev" href="../../03/exploring-objectprototype-in-javascript/">
       
       
-      <link rel="icon" href="../images/bing.ico">
+        <link rel="next" href="../handling-circular-references-in-javascript-avoiding-typeerror-cyclic-object-value-in-jsonstringify/">
+      
+      
+      <link rel="icon" href="../../../../../images/bing.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Tags - Bishow Thapa</title>
+        <title>Unveiling Static and Prototype Methods in JavaScript Built-in Objects - Bishow Thapa</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -62,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -81,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tags" class="md-skip">
+        <a href="#unveiling-static-and-prototype-methods-in-javascript-built-in-objects" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +99,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bing" viewBox="0 0 16 16">
@@ -119,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tags
+              Unveiling Static and Prototype Methods in JavaScript Built-in Objects
             
           </span>
         </div>
@@ -224,11 +228,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
           
   
   Blog
@@ -246,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../office/intro/" class="md-tabs__link">
+        <a href="../../../../../office/intro/" class="md-tabs__link">
           
   
   Office
@@ -264,7 +270,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../research/docker/" class="md-tabs__link">
+        <a href="../../../../../research/docker/" class="md-tabs__link">
           
   
   Research
@@ -286,7 +292,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -297,7 +305,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bing" viewBox="0 0 16 16">
@@ -328,8 +336,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -338,12 +348,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -357,7 +367,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -368,12 +378,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -433,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/archive/2023/" class="md-nav__link">
+      <a href="../../../../archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/intro/" class="md-nav__link">
+      <a href="../../../../../office/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/architecture/" class="md-nav__link">
+      <a href="../../../../../office/documentation/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/internal-message/" class="md-nav__link">
+      <a href="../../../../../office/documentation/internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/redux-action-advanced/" class="md-nav__link">
+      <a href="../../../../../office/documentation/redux-action-advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/tutorial-listing/" class="md-nav__link">
+      <a href="../../../../../office/documentation/tutorial-listing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/public-events/" class="md-nav__link">
+      <a href="../../../../../office/documentation/public-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/mail/" class="md-nav__link">
+      <a href="../../../../../office/documentation/mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/blog/" class="md-nav__link">
+      <a href="../../../../../office/documentation/blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/sisco-view/" class="md-nav__link">
+      <a href="../../../../../office/documentation/sisco-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/sending-mail/" class="md-nav__link">
+      <a href="../../../../../office/documentation/sending-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -779,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/sending-im/" class="md-nav__link">
+      <a href="../../../../../office/documentation/sending-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -800,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/reference-tender-circular/" class="md-nav__link">
+      <a href="../../../../../office/documentation/reference-tender-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/reference-project-circular/" class="md-nav__link">
+      <a href="../../../../../office/documentation/reference-project-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/login/" class="md-nav__link">
+      <a href="../../../../../office/documentation/login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/excel-api-data/" class="md-nav__link">
+      <a href="../../../../../office/documentation/excel-api-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -884,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/documentation/fingerprint/" class="md-nav__link">
+      <a href="../../../../../office/documentation/fingerprint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/components/HTMLRenderer/" class="md-nav__link">
+      <a href="../../../../../office/components/HTMLRenderer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/components/JSON-stringify/" class="md-nav__link">
+      <a href="../../../../../office/components/JSON-stringify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/components/old/internalMNew/" class="md-nav__link">
+      <a href="../../../../../office/components/old/internalMNew/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/01-replychatbox/" class="md-nav__link">
+      <a href="../../../../../office/clickup/01-replychatbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1124,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/redux-actions/" class="md-nav__link">
+      <a href="../../../../../office/clickup/redux-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/dashboard-today-task/" class="md-nav__link">
+      <a href="../../../../../office/clickup/dashboard-today-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/redux-add-upate/" class="md-nav__link">
+      <a href="../../../../../office/clickup/redux-add-upate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1187,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/dashboard-module/" class="md-nav__link">
+      <a href="../../../../../office/clickup/dashboard-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/tender-mail/" class="md-nav__link">
+      <a href="../../../../../office/clickup/tender-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1229,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/mail-tender-loader/" class="md-nav__link">
+      <a href="../../../../../office/clickup/mail-tender-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/modes-of-communication/" class="md-nav__link">
+      <a href="../../../../../office/clickup/modes-of-communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/circular-planning/" class="md-nav__link">
+      <a href="../../../../../office/clickup/circular-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1292,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/tender-mail-circular/" class="md-nav__link">
+      <a href="../../../../../office/clickup/tender-mail-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/mail-reply-bug/" class="md-nav__link">
+      <a href="../../../../../office/clickup/mail-reply-bug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/compose-email-drawer/" class="md-nav__link">
+      <a href="../../../../../office/clickup/compose-email-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1355,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
+      <a href="../../../../../office/clickup/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1376,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/clickup/dashboard-noticeboard-after-4pm/" class="md-nav__link">
+      <a href="../../../../../office/clickup/dashboard-noticeboard-after-4pm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/primesales/intro/" class="md-nav__link">
+      <a href="../../../../../office/primesales/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1471,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/draft/" class="md-nav__link">
+      <a href="../../../../../office/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1492,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office/misc/" class="md-nav__link">
+      <a href="../../../../../office/misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1560,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/docker/" class="md-nav__link">
+      <a href="../../../../../research/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/package/" class="md-nav__link">
+      <a href="../../../../../research/package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1610,6 +1622,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1622,6 +1636,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-using-developer-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Using Developer Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Using Developer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-static-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Static Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-constructor-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Constructor Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-using-javascript-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Using JavaScript Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Using JavaScript Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-static-methods-and-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      List All Static Methods and Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-prototype-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      List All Prototype Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-consulting-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Consulting Documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1629,125 +1726,247 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-  
-  
-
-
-<div><h1 id="tags">Tags</h1>
-<ul>
-<li><a href="#programming">Programming</a></li>
-<li><a href="#web-development">Web Development</a></li>
-<li><a href="#design">Design</a></li>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#database">Database</a></li>
-</ul>
-<h1 id="frameworks">Frameworks</h1>
-<ul>
-<li><a href="#django">Django</a></li>
-<li><a href="#drf">Drf</a></li>
-<li><a href="#react">React</a></li>
-<li><a href="#jest">Jest</a></li>
-</ul>
-<h1 id="language">Language</h1>
-<ul>
-<li><a href="#python">Python</a></li>
-<li><a href="#js">JavaScript</a></li>
-</ul>
-<h1 id="tools">Tools</h1>
-<ul>
-<li><a href="#vim">Vim</a></li>
-<li><a href="#git">Git</a></li>
-<li><a href="#github">Github</a></li>
-<li><a href="#ssh">SSH</a></li>
-</ul>
-<h1 id="misc">Misc</h1>
-<ul>
-<li><a href="#personal">Personal</a></li>
-<li><a href="#postman">Postman</a></li>
-<li><a href="#redis">Redis</a></li>
-<li><a href="#rabbitmq">RabbitMQ</a></li>
-<li><a href="#simplejwt">SimpleJWT</a></li>
-</ul>
-<hr>
-<h2 id="linux"><span class="md-tag md-tag-icon">Linux</span></h2>
-<ul>
-<li><a href="../blog/2024/05/09/gthumb-lightweight-image-editor-in-ubuntu/">gThumb lightweight image editor in ubuntu</a></li>
-</ul>
-<h2 id="personal"><span class="md-tag md-tag-icon">Personal</span></h2>
-<ul>
-<li><a href="../blog/2023/01/31/embarking-on-a-tech-odyssey/">Embarking on a Tech Odyssey</a></li>
-<li><a href="../blog/2023/12/31/embracing-change-navigating-the-landscape-of-2023/">Embracing Change: Navigating the Landscape of 2023</a></li>
-<li><a href="../blog/2024/01/01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/">Elevating My Craft: Unveiling the 2024 Resolutions of a React Developer</a></li>
-</ul>
-<h2 id="python"><span class="md-tag md-tag-icon">Python</span></h2>
-<ul>
-<li><a href="../blog/2024/01/09/adding-syntax-hightlighting-in-the-material/">Adding Syntax hightlighting in the material</a></li>
-</ul>
-<h2 id="api"><span class="md-tag md-tag-icon">api</span></h2>
-<ul>
-<li><a href="../blog/2024/07/01/postmen-advanced-topics/">Postmen Advanced Topics</a></li>
-</ul>
-<h2 id="base64"><span class="md-tag md-tag-icon">base64</span></h2>
-<ul>
-<li><a href="../blog/2024/06/29/encoding-and-decoding/">Encoding and Decoding</a></li>
-<li><a href="../blog/2024/06/28/saving-base64-data-into-an-excel-file-in-a-react-application/">Saving base64 data into an Excel file in a React application</a></li>
-</ul>
-<h2 id="css"><span class="md-tag md-tag-icon">css</span></h2>
-<ul>
-<li><a href="../blog/2024/05/18/css-media-queries/">CSS Media Queries</a></li>
-</ul>
-<h2 id="git"><span class="md-tag md-tag-icon">git</span></h2>
-<ul>
-<li><a href="../blog/2024/06/20/removing-tracked-files-and-directories-in-git/">Removing Tracked Files and Directories in Git</a></li>
-</ul>
-<h2 id="html"><span class="md-tag md-tag-icon">html</span></h2>
-<ul>
-<li><a href="../blog/2024/05/18/css-media-queries/">CSS Media Queries</a></li>
-</ul>
-<h2 id="js"><span class="md-tag md-tag-icon">js</span></h2>
-<ul>
-<li><a href="../blog/2024/06/08/understanding-eitemprops-in-react-and-ant-designs-menu-component/">Understanding e.item.props in React and Ant Design's Menu Component</a></li>
-<li><a href="../blog/2024/07/03/exploring-objectprototype-in-javascript/">Exploring Object.prototype in JavaScript</a></li>
-<li><a href="../blog/2024/07/04/handling-circular-references-in-javascript-avoiding-typeerror-cyclic-object-value-in-jsonstringify/">Handling Circular References in JavaScript: Avoiding 'TypeError: cyclic object value' in JSON.stringify</a></li>
-<li><a href="../blog/2024/07/02/js-objects/">JS objects</a></li>
-<li><a href="../blog/2024/07/05/how-to-send-multipartform-data-request-file/">How to send multipart/form-data request file</a></li>
-<li><a href="../blog/2024/07/04/unveiling-static-and-prototype-methods-in-javascript-built-in-objects/">Unveiling Static and Prototype Methods in JavaScript Built-in Objects</a></li>
-</ul>
-<h2 id="postment"><span class="md-tag md-tag-icon">postment</span></h2>
-<ul>
-<li><a href="../blog/2024/07/01/postmen-advanced-topics/">Postmen Advanced Topics</a></li>
-</ul>
-<h2 id="react"><span class="md-tag md-tag-icon">react</span></h2>
-<ul>
-<li><a href="../blog/2024/06/08/understanding-eitemprops-in-react-and-ant-designs-menu-component/">Understanding e.item.props in React and Ant Design's Menu Component</a></li>
-<li><a href="../blog/2024/06/29/encoding-and-decoding/">Encoding and Decoding</a></li>
-<li><a href="../blog/2024/06/28/saving-base64-data-into-an-excel-file-in-a-react-application/">Saving base64 data into an Excel file in a React application</a></li>
-</ul>
-<h2 id="tracking"><span class="md-tag md-tag-icon">tracking</span></h2>
-<ul>
-<li><a href="../blog/2024/06/20/removing-tracked-files-and-directories-in-git/">Removing Tracked Files and Directories in Git</a></li>
-</ul></div>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
             </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-04 00:00:00" class="md-ellipsis">July 4, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../../tags/#js" class="md-tag md-tag-icon">js</a>
+    
+  
+</nav>
+
+
+  
+  
+
+
+<div><h1 id="unveiling-static-and-prototype-methods-in-javascript-built-in-objects">Unveiling Static and Prototype Methods in JavaScript Built-in Objects</h1>
+<p>To thoroughly understand and see the <mark>static methods</mark> and <mark>constructor methods</mark> in JavaScript built-in objects, you can use a combination of developer tools, documentation, and JavaScript code. Here’s a detailed guide:</p>
+<!-- more -->
+
+<h2 id="1-using-developer-tools">1. Using Developer Tools</h2>
+<p>In a Browser Console</p>
+<ol>
+<li>Open Developer Tools: You can usually open this by pressing <code>F12</code>, <code>Ctrl+Shift+I</code>, or <code>Cmd+Option+I</code>.</li>
+<li>Go to the Console Tab: Here you can execute JavaScript code.</li>
+</ol>
+<h3 id="viewing-static-methods">Viewing Static Methods</h3>
+<p>Static methods are functions that are called on the class itself, not on instances of the class. For example, <code>Array.from()</code> is a static method on the <code>Array</code> constructor.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nb">Array</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nb">Object</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nb">Math</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="viewing-constructor-methods">Viewing Constructor Methods</h3>
+<p>Constructor methods (or prototype methods) are functions that are available on the instances of the objects. For example, <code>Array.prototype.push()</code> is a constructor method.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+</span></code></pre></div>
+<hr>
+<h2 id="2-using-javascript-code">2. Using JavaScript Code</h2>
+<h3 id="list-all-static-methods-and-properties">List All Static Methods and Properties</h3>
+<p>To list all static methods and properties of a built-in object, you can use the following code snippet:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">listStaticMethods</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">getOwnPropertyNames</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">filter</span><span class="p">(</span><span class="nx">prop</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'function'</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">listStaticMethods</span><span class="p">(</span><span class="nb">Array</span><span class="p">));</span><span class="w"> </span><span class="c1">// List static methods of Array</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">listStaticMethods</span><span class="p">(</span><span class="nb">Object</span><span class="p">));</span><span class="w"> </span><span class="c1">// List static methods of Object</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">listStaticMethods</span><span class="p">(</span><span class="nb">Math</span><span class="p">));</span><span class="w">   </span><span class="c1">// List static methods of Math</span>
+</span></code></pre></div>
+<h3 id="list-all-prototype-methods">List All Prototype Methods</h3>
+<p>To list all prototype methods of a built-in object, you can use the following code snippet:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">listPrototypeMethods</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">getOwnPropertyNames</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">prototype</span><span class="p">).</span><span class="nx">filter</span><span class="p">(</span><span class="nx">prop</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">obj</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'function'</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">listPrototypeMethods</span><span class="p">(</span><span class="nb">Array</span><span class="p">));</span><span class="w"> </span><span class="c1">// List prototype methods of Array</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">listPrototypeMethods</span><span class="p">(</span><span class="nb">Object</span><span class="p">));</span><span class="w"> </span><span class="c1">// List prototype methods of Object</span>
+</span></code></pre></div>
+<hr>
+<h2 id="3-consulting-documentation">3. Consulting Documentation</h2>
+<p>Refer to the official JavaScript documentation for comprehensive details on built-in objects, their static methods, and prototype methods:</p>
+<ul>
+<li>
+<p>MDN Web Docs: This is a highly recommended resource for in-depth information on JavaScript built-in objects. For example:</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></p>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></li>
+</ul>
+<details class="example">
+<summary>Example Output</summary>
+<p>When you run the provided code snippets, you will get lists of methods:</p>
+<blockquote>
+<p>Static Methods of Array:</p>
+</blockquote>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span><span class="s2">"from"</span><span class="p">,</span><span class="w"> </span><span class="s2">"isArray"</span><span class="p">,</span><span class="w"> </span><span class="s2">"of"</span><span class="p">]</span>
+</span></code></pre></div>
+<blockquote>
+<p>Prototype Methods of Array:</p>
+</blockquote>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">[</span><span class="s2">"constructor"</span><span class="p">,</span><span class="w"> </span><span class="s2">"copyWithin"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fill"</span><span class="p">,</span><span class="w"> </span><span class="s2">"find"</span><span class="p">,</span><span class="w"> </span><span class="s2">"findIndex"</span><span class="p">,</span><span class="w"> </span><span class="s2">"keys"</span><span class="p">,</span><span class="w"> </span><span class="s2">"entries"</span><span class="p">,</span><span class="w"> </span><span class="s2">"values"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pop"</span><span class="p">,</span><span class="w"> </span><span class="s2">"push"</span><span class="p">,</span><span class="w"> </span><span class="s2">"concat"</span><span class="p">,</span><span class="w"> </span><span class="s2">"join"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reverse"</span><span class="p">,</span><span class="w"> </span><span class="s2">"shift"</span><span class="p">,</span><span class="w"> </span><span class="s2">"unshift"</span><span class="p">,</span><span class="w"> </span><span class="s2">"slice"</span><span class="p">,</span><span class="w"> </span><span class="s2">"splice"</span><span class="p">,</span><span class="w"> </span><span class="s2">"sort"</span><span class="p">,</span><span class="w"> </span><span class="s2">"indexOf"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lastIndexOf"</span><span class="p">,</span><span class="w"> </span><span class="s2">"every"</span><span class="p">,</span><span class="w"> </span><span class="s2">"some"</span><span class="p">,</span><span class="w"> </span><span class="s2">"forEach"</span><span class="p">,</span><span class="w"> </span><span class="s2">"map"</span><span class="p">,</span><span class="w"> </span><span class="s2">"filter"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reduce"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reduceRight"</span><span class="p">,</span><span class="w"> </span><span class="s2">"includes"</span><span class="p">,</span><span class="w"> </span><span class="s2">"flat"</span><span class="p">,</span><span class="w"> </span><span class="s2">"flatMap"</span><span class="p">,</span><span class="w"> </span><span class="s2">"at"</span><span class="p">,</span><span class="w"> </span><span class="s2">"toLocaleString"</span><span class="p">,</span><span class="w"> </span><span class="s2">"toString"</span><span class="p">,</span><span class="w"> </span><span class="s2">"length"</span><span class="p">]</span>
+</span></code></pre></div>
+<p>By using these methods, you can thoroughly explore and understand the static and prototype methods available in JavaScript <code>built-in</code> objects.</p>
+</details></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Bishow-Thapa/github-comments"
+  data-repo-id="R_kgDOK_Y_Kw"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOK_Y_K84CcG6C"
+  data-mapping="blog"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  // Set palette on initial load
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+    // Instruct Giscus to set theme
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  // Register event handlers after documented loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme =
+          palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+        // Instruct Giscus to change theme
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1762,6 +1981,46 @@
       
         <footer class="md-footer">
   
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../03/exploring-objectprototype-in-javascript/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exploring Object.prototype in JavaScript">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Exploring Object.prototype in JavaScript
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../handling-circular-references-in-javascript-avoiding-typeerror-cyclic-object-value-in-jsonstringify/" class="md-footer__link md-footer__link--next" aria-label="Next: Handling Circular References in JavaScript: Avoiding &#39;TypeError: cyclic object value&#39; in JSON.stringify">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Handling Circular References in JavaScript: Avoiding 'TypeError: cyclic object value' in JSON.stringify
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1804,10 +2063,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
