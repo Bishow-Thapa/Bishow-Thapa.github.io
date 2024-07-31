@@ -1601,6 +1601,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../office/package/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../office/draft/" class="md-nav__link">
         
   
@@ -1860,6 +1881,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-pass-password-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using pass (Password Store)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using pass (Password Store)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing-a-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storing a Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-a-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving a Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-passwords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Passwords
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1982,6 +2063,66 @@
   <a href="#common-uses-of-hocs" class="md-nav__link">
     <span class="md-ellipsis">
       Common Uses of HOCs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-pass-password-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using pass (Password Store)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using pass (Password Store)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing-a-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storing a Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-a-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving a Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-passwords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Passwords
     </span>
   </a>
   
@@ -2208,6 +2349,94 @@
 </ul>
 </li>
 </ol>
+<hr>
+<h2 id="using-pass-password-store">Using <code>pass</code> (Password Store)</h2>
+<p>The <code>pass</code> <mark>utility</mark> is a password manager for Unix systems. It uses GPG for encryption.</p>
+<h3 id="installation">Installation</h3>
+<ul>
+<li>
+<p>Install <code>pass</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pass
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<details class="tips" open="open">
+<summary>Tips</summary>
+<ul>
+<li>
+<p>Initialize the password store:</p>
+<p>You need to initialize <code>pass</code> with a GPG key. If you don't have a GPG key, you can generate one:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gpg<span class="w"> </span>--full-generate-key
+</span></code></pre></div>
+<p>Follow the prompts to generate your key. Once you have a GPG key, initialize the password store with the key ID (replace <code>GPG_ID</code> with your actual key ID, which you can find using <code>gpg --list-keys</code>):</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pass<span class="w"> </span>init<span class="w"> </span><span class="s2">"GPG_ID"</span>
+</span></code></pre></div>
+</li>
+</ul>
+</details>
+<h3 id="storing-a-password">Storing a Password</h3>
+<details class="example" open="open">
+<summary>Example</summary>
+<ul>
+<li>
+<p>Store a password:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pass<span class="w"> </span>insert<span class="w"> </span>path/to/your/password
+</span></code></pre></div>
+<p>For example:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pass<span class="w"> </span>insert<span class="w"> </span>email/github
+</span></code></pre></div>
+<p>You will be prompted to enter and confirm the password.</p>
+</li>
+</ul>
+</details>
+<h3 id="retrieving-a-password">Retrieving a Password</h3>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<ul>
+<li>
+<p>Retrieve a password:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pass<span class="w"> </span>path/to/your/password
+</span></code></pre></div>
+<p>For example:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pass<span class="w"> </span>email/github
+</span></code></pre></div>
+<p>This command will display the stored password.</p>
+</li>
+</ul>
+</details>
+<h3 id="managing-passwords">Managing Passwords</h3>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<ul>
+<li>
+<p>List all stored passwords:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pass
+</span></code></pre></div>
+</li>
+<li>
+<p>Edit an existing password::</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pass<span class="w"> </span>edit<span class="w"> </span>path/to/your/password
+</span></code></pre></div>
+<p>For example:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pass<span class="w"> </span>edit<span class="w"> </span>email/github
+</span></code></pre></div>
+</li>
+<li>
+<p>Remove a stored password::</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pass<span class="w"> </span>rm<span class="w"> </span>path/to/your/password
+</span></code></pre></div>
+<p>For example:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pass<span class="w"> </span>rm<span class="w"> </span>email/github
+</span></code></pre></div>
+</li>
+</ul>
+</details>
+<hr>
+<ul>
+<li><a href="https://opensource.com/article/22/1/manage-passwords-linux-terminal">Manage your passwords in the Linux terminal</a></li>
+<li><a href="https://medium.com/@johnnymatthews/terminal-based-password-manager-ab82fd8f856a">Terminal Based Password Manager</a></li>
+</ul>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
