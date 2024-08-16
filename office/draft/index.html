@@ -1788,6 +1788,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dropdown-issue-in-antd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropdown Issue in antd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dropdown Issue in antd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-3-passing-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution 3 passing value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2084,6 +2126,48 @@
       Insightfull code 2
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropdown-issue-in-antd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropdown Issue in antd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dropdown Issue in antd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-3-passing-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution 3 passing value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2612,6 +2696,235 @@
 </div>
 </div>
 </div>
+<hr>
+<h2 id="dropdown-issue-in-antd">Dropdown Issue in <code>antd</code></h2>
+<details class="bug" open="open">
+<summary>Bug</summary>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DownOutlined</span><span class="p">,</span><span class="w"> </span><span class="nx">SmileOutlined</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@ant-design/icons'</span><span class="p">;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Dropdown</span><span class="p">,</span><span class="w"> </span><span class="nx">Space</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'antd'</span><span class="p">;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">'1'</span><span class="p">,</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.antgroup.com"</span><span class="p">&gt;</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">        </span><span class="mf">1</span><span class="nx">st</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">'2'</span><span class="p">,</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.aliyun.com"</span><span class="p">&gt;</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">        </span><span class="mi">2n</span><span class="nx">d</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="p">(</span><span class="nx">disabled</span><span class="p">)</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="nx">icon</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">SmileOutlined</span><span class="w"> </span><span class="p">/&gt;,</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">    </span><span class="nx">disabled</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">'3'</span><span class="p">,</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.luohanacademy.com"</span><span class="p">&gt;</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">        </span><span class="mf">3</span><span class="nx">rd</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="p">(</span><span class="nx">disabled</span><span class="p">)</span>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">    </span><span class="nx">disabled</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-16-33"><a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">'4'</span><span class="p">,</span>
+</span><span id="__span-16-34"><a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a><span class="w">    </span><span class="nx">danger</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-16-35"><a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'a danger item'</span><span class="p">,</span>
+</span><span id="__span-16-36"><a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-16-37"><a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="p">];</span>
+</span><span id="__span-16-38"><a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a><span class="kd">const</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-39"><a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a><span class="w">  </span><span class="p">&lt;</span><span class="nt">Dropdown</span>
+</span><span id="__span-16-40"><a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a><span class="w">    </span><span class="na">menu</span><span class="o">=</span><span class="p">{{</span>
+</span><span id="__span-16-41"><a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="w">      </span><span class="nx">items</span><span class="p">,</span>
+</span><span id="__span-16-42"><a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a><span class="w">    </span><span class="p">}}</span>
+</span><span id="__span-16-43"><a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="w">  </span><span class="p">&gt;</span>
+</span><span id="__span-16-44"><a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()}&gt;</span>
+</span><span id="__span-16-45"><a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Space</span><span class="p">&gt;</span>
+</span><span id="__span-16-46"><a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a><span class="w">        </span><span class="nx">Hover</span><span class="w"> </span><span class="nx">me</span>
+</span><span id="__span-16-47"><a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">DownOutlined</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-16-48"><a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">Space</span><span class="p">&gt;</span>
+</span><span id="__span-16-49"><a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-16-50"><a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">Dropdown</span><span class="p">&gt;</span>
+</span><span id="__span-16-51"><a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="p">);</span>
+</span><span id="__span-16-52"><a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
+<h3 id="solution-1">Solution 1</h3>
+<p>The issue in your code is that you are passing <code>menuItem</code> inside the <code>menu</code> prop as an object, but it should be passed as an array of menu items directly to the <code>menu</code> prop. In the Ant Design <code>Dropdown</code> component, the <code>menu</code> prop <mark>expects</mark> a <code>Menu</code> component or a configuration object for the <code>Menu</code> component, not just an array of menu items.</p>
+<p>Here's how you can fix it:</p>
+<ul>
+<li>Import the <code>Menu</code> component from Ant Design.</li>
+<li>Use the <code>Menu</code> component to wrap your <code>menu</code> items.</li>
+<li>Pass the <code>Menu</code> component as the <code>menu</code> prop of Dropdown.</li>
+</ul>
+<div class="language-jsx highlight"><span class="filename">Here's the corrected code:</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Dropdown</span><span class="p">,</span><span class="w"> </span><span class="nx">Menu</span><span class="p">,</span><span class="w"> </span><span class="nx">Button</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'antd'</span><span class="p">;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="w"> </span><span class="na">key</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.antgroup.com"</span><span class="p">&gt;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">        </span><span class="mf">1</span><span class="nx">st</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="p">&gt;</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="w"> </span><span class="na">key</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.aliyun.com"</span><span class="p">&gt;</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="w">        </span><span class="mi">2n</span><span class="nx">d</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="p">&gt;</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="p">);</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="kd">const</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">  </span><span class="p">&lt;</span><span class="nt">Dropdown</span><span class="w"> </span><span class="na">overlay</span><span class="o">=</span><span class="p">{</span><span class="nx">menu</span><span class="p">}&gt;</span>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Button</span><span class="p">&gt;</span><span class="nx">bottomLeft</span><span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">Dropdown</span><span class="p">&gt;</span>
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="p">);</span>
+</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>
+</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
+</span></code></pre></div>
+<p>In this updated code:</p>
+<ul>
+<li><code>Menu</code> component is used to create a menu with <code>Menu.Item</code> elements.</li>
+<li>The <code>menu</code> variable now holds the <code>Menu</code> component, which is passed to the <code>overlay</code> prop of the Dropdown component.</li>
+</ul>
+<p>This should resolve the error and render the dropdown menu correctly.</p>
+<hr>
+<h3 id="solution-2">Solution 2</h3>
+<p>It looks like there might be a misunderstanding or an outdated example in the documentation. The Ant Design <code>Dropdown</code> component's menu prop should indeed be passed a <code>Menu</code> component, as it expects a React node that represents the menu.</p>
+<p>Here’s a clarification on how you should typically use the <code>Dropdown</code> and <code>Menu</code> components together:</p>
+<ol>
+<li>
+<p><strong>Using <code>Menu</code> with Dropdown</strong>: You use the <code>Menu</code> component to define the menu structure and then pass it to the <code>Dropdown</code> component's <code>overlay</code> prop (previously called menu in older versions).</p>
+</li>
+<li>
+<p><strong>Documentation Changes</strong>: Sometimes documentation or examples might be outdated or incorrect. Always cross-reference with the latest version of the library and check if there have been any changes in prop names or usage.</p>
+</li>
+</ol>
+<p>Here's a modern and correct approach based on current Ant Design practices:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Dropdown</span><span class="p">,</span><span class="w"> </span><span class="nx">Menu</span><span class="p">,</span><span class="w"> </span><span class="nx">Button</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'antd'</span><span class="p">;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="w"> </span><span class="na">key</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.antgroup.com"</span><span class="p">&gt;</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">        </span><span class="mf">1</span><span class="nx">st</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="p">&gt;</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="w"> </span><span class="na">key</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">a</span><span class="w"> </span><span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">"https://www.aliyun.com"</span><span class="p">&gt;</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">        </span><span class="mi">2n</span><span class="nx">d</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="nx">item</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="p">&gt;</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="p">);</span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="kd">const</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">  </span><span class="p">&lt;</span><span class="nt">Dropdown</span><span class="w"> </span><span class="na">overlay</span><span class="o">=</span><span class="p">{</span><span class="nx">menu</span><span class="p">}&gt;</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Button</span><span class="p">&gt;</span><span class="nx">bottomLeft</span><span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">Dropdown</span><span class="p">&gt;</span>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="p">);</span>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Key Points:</p>
+<ul>
+<li><strong><code>overlay</code> Prop</strong>: Use the <code>overlay</code> prop of <code>Dropdown</code> to pass the <code>Menu</code> component.</li>
+<li><strong><code>Menu</code> Component</strong>: Create a <code>Menu</code> with <code>Menu.Item</code> elements to define the dropdown items.</li>
+</ul>
+<p>If you’re seeing examples or documentation suggesting otherwise, it might be worth checking the version of Ant Design you're using or looking at the official Ant Design documentation for the version you're working with to ensure compatibility.</p>
+<h3 id="solution-3-passing-value">Solution 3 <code>passing value</code></h3>
+<p>To pass the <code>record</code> to the <code>onClick</code> handler inside the <code>Dropdown</code>'s <code>Menu</code> component, you'll need to dynamically create the <code>Menu</code> with access to the record from the <code>render</code> function. Since <code>menudailytask</code> is defined outside of the <code>render</code> function, it won't have access to the <code>record</code> variable.</p>
+<p>Here's how you can modify your code to achieve this:</p>
+<ol>
+<li>
+<p><strong>Move <code>Menu</code> Definition Inside <code>render</code></strong>: Define the <code>Menu</code> within the <code>render</code> method where the <code>record</code> is available.</p>
+</li>
+<li>
+<p><strong>Create a Function for the <code>Menu</code></strong>: Use a function to create the <code>Menu</code> items with the <code>record</code> passed to the click handlers.</p>
+</li>
+</ol>
+<div class="language-jsx highlight"><span class="filename">Here’s an updated version of your code:</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Dropdown</span><span class="p">,</span><span class="w"> </span><span class="nx">Menu</span><span class="p">,</span><span class="w"> </span><span class="nx">Tooltip</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'antd'</span><span class="p">;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">EyeOutlined</span><span class="p">,</span><span class="w"> </span><span class="nx">InteractionTwoTone</span><span class="p">,</span><span class="w"> </span><span class="nx">InteractionOutlined</span><span class="p">,</span><span class="w"> </span><span class="nx">MoreOutlined</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@ant-design/icons'</span><span class="p">;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ActionColumn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">record</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">  </span><span class="c1">// Function to create the Menu with access to record</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">createMenu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">        </span><span class="na">key</span><span class="o">=</span><span class="s">"1"</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">        </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"clicked"</span><span class="p">,</span><span class="w"> </span><span class="nx">record</span><span class="p">);</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">          </span><span class="c1">// You can add other logic here</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">        </span><span class="p">}}</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">      </span><span class="p">&gt;</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="w">        </span><span class="nx">Yesterday</span><span class="w"> </span><span class="nx">Task</span>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">.</span><span class="na">Item</span><span class="p">&gt;</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">Menu</span><span class="p">&gt;</span>
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="s2">"flex"</span><span class="w"> </span><span class="p">}}&gt;</span>
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span>
+</span><span id="__span-19-25"><a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="w">        </span><span class="na">className</span><span class="o">=</span><span class="s">"task-view-btn"</span>
+</span><span id="__span-19-26"><a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a><span class="w">        </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-27"><a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="w">          </span><span class="nx">setShowModalForTasKDetail</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-19-28"><a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="w">          </span><span class="nx">setTaskId</span><span class="p">(</span><span class="nx">record</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span><span id="__span-19-29"><a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a><span class="w">          </span><span class="nx">setTodoDetails</span><span class="p">(</span><span class="nx">record</span><span class="p">);</span>
+</span><span id="__span-19-30"><a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a><span class="w">          </span><span class="nx">setHideInternalMessage</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-19-31"><a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="w">          </span><span class="nx">setSmallChatHeight</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-19-32"><a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a><span class="w">          </span><span class="nx">setChatHeight</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-19-33"><a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="w">          </span><span class="nx">setchatBox</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-19-34"><a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="w">        </span><span class="p">}}</span>
+</span><span id="__span-19-35"><a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a><span class="w">      </span><span class="p">&gt;</span>
+</span><span id="__span-19-36"><a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">EyeOutlined</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-19-37"><a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-19-38"><a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a>
+</span><span id="__span-19-39"><a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Tooltip</span>
+</span><span id="__span-19-40"><a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a><span class="w">        </span><span class="na">title</span><span class="o">=</span><span class="p">{</span>
+</span><span id="__span-19-41"><a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a><span class="w">          </span><span class="nx">record</span><span class="o">?</span><span class="p">.</span><span class="nx">todoTransferToDailyTask</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span>
+</span><span id="__span-19-42"><a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a><span class="w">            </span><span class="o">?</span><span class="w"> </span><span class="s2">"Already moved"</span>
+</span><span id="__span-19-43"><a id="__codelineno-19-43" name="__codelineno-19-43" href="#__codelineno-19-43"></a><span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="s2">"Move to Daily Diary"</span>
+</span><span id="__span-19-44"><a id="__codelineno-19-44" name="__codelineno-19-44" href="#__codelineno-19-44"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-19-45"><a id="__codelineno-19-45" name="__codelineno-19-45" href="#__codelineno-19-45"></a><span class="w">      </span><span class="p">&gt;</span>
+</span><span id="__span-19-46"><a id="__codelineno-19-46" name="__codelineno-19-46" href="#__codelineno-19-46"></a><span class="w">        </span><span class="p">{</span><span class="nx">record</span><span class="o">?</span><span class="p">.</span><span class="nx">todoTransferToDailyTask</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-47"><a id="__codelineno-19-47" name="__codelineno-19-47" href="#__codelineno-19-47"></a><span class="w">          </span><span class="p">&lt;</span><span class="nt">InteractionTwoTone</span>
+</span><span id="__span-19-48"><a id="__codelineno-19-48" name="__codelineno-19-48" href="#__codelineno-19-48"></a><span class="w">            </span><span class="na">className</span><span class="o">=</span><span class="s">"move-to-dailydairy"</span>
+</span><span id="__span-19-49"><a id="__codelineno-19-49" name="__codelineno-19-49" href="#__codelineno-19-49"></a><span class="w">            </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">handleMovetoDiary</span><span class="p">(</span><span class="nx">record</span><span class="p">)}</span>
+</span><span id="__span-19-50"><a id="__codelineno-19-50" name="__codelineno-19-50" href="#__codelineno-19-50"></a><span class="w">          </span><span class="p">/&gt;</span>
+</span><span id="__span-19-51"><a id="__codelineno-19-51" name="__codelineno-19-51" href="#__codelineno-19-51"></a><span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-52"><a id="__codelineno-19-52" name="__codelineno-19-52" href="#__codelineno-19-52"></a><span class="w">          </span><span class="p">&lt;</span><span class="nt">InteractionOutlined</span>
+</span><span id="__span-19-53"><a id="__codelineno-19-53" name="__codelineno-19-53" href="#__codelineno-19-53"></a><span class="w">            </span><span class="na">className</span><span class="o">=</span><span class="s">"move-to-dailydairy"</span>
+</span><span id="__span-19-54"><a id="__codelineno-19-54" name="__codelineno-19-54" href="#__codelineno-19-54"></a><span class="w">            </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">handleMovetoDiary</span><span class="p">(</span><span class="nx">record</span><span class="p">)}</span>
+</span><span id="__span-19-55"><a id="__codelineno-19-55" name="__codelineno-19-55" href="#__codelineno-19-55"></a><span class="w">          </span><span class="p">/&gt;</span>
+</span><span id="__span-19-56"><a id="__codelineno-19-56" name="__codelineno-19-56" href="#__codelineno-19-56"></a><span class="w">        </span><span class="p">)}</span>
+</span><span id="__span-19-57"><a id="__codelineno-19-57" name="__codelineno-19-57" href="#__codelineno-19-57"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">Tooltip</span><span class="p">&gt;</span>
+</span><span id="__span-19-58"><a id="__codelineno-19-58" name="__codelineno-19-58" href="#__codelineno-19-58"></a>
+</span><span id="__span-19-59"><a id="__codelineno-19-59" name="__codelineno-19-59" href="#__codelineno-19-59"></a>
+</span><span id="__span-19-60"><a id="__codelineno-19-60" name="__codelineno-19-60" href="#__codelineno-19-60"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Main Code */</span><span class="p">}</span>
+</span><span id="__span-19-61"><a id="__codelineno-19-61" name="__codelineno-19-61" href="#__codelineno-19-61"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Dropdown</span><span class="w"> </span><span class="na">overlay</span><span class="o">=</span><span class="p">{</span><span class="nx">createMenu</span><span class="p">(</span><span class="nx">record</span><span class="p">)}&gt;</span>
+</span><span id="__span-19-62"><a id="__codelineno-19-62" name="__codelineno-19-62" href="#__codelineno-19-62"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">MoreOutlined</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">"move-to-dailydairy"</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-19-63"><a id="__codelineno-19-63" name="__codelineno-19-63" href="#__codelineno-19-63"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">Dropdown</span><span class="p">&gt;</span>
+</span><span id="__span-19-64"><a id="__codelineno-19-64" name="__codelineno-19-64" href="#__codelineno-19-64"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-19-65"><a id="__codelineno-19-65" name="__codelineno-19-65" href="#__codelineno-19-65"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-19-66"><a id="__codelineno-19-66" name="__codelineno-19-66" href="#__codelineno-19-66"></a><span class="p">};</span>
+</span><span id="__span-19-67"><a id="__codelineno-19-67" name="__codelineno-19-67" href="#__codelineno-19-67"></a>
+</span><span id="__span-19-68"><a id="__codelineno-19-68" name="__codelineno-19-68" href="#__codelineno-19-68"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">ActionColumn</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Key Points:</p>
+<ul>
+<li><strong><code>createMenu</code> Function</strong>: Defines the <code>Menu</code> component inside the <code>render</code> method and has access to the record.</li>
+<li><strong>Pass <code>record</code> to <code>createMenu</code></strong>: The <code>record</code> is passed to <code>createMenu</code> to make it available within the <code>Menu</code> items.</li>
+</ul>
+<p>By using this approach, you ensure that each <code>Dropdown</code> instance gets its own <code>Menu</code> with the correct <code>record</code> information.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
