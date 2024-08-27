@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/01/05/giscus-comment-system/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/07/09/role-based-vs-permission-based-access-control-in-react/">
       
       
-        <link rel="prev" href="../../01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/">
+        <link rel="prev" href="../../08/how-to-connect-postgresql-database-in-django/">
       
       
-        <link rel="next" href="../../09/adding-syntax-hightlighting-in-the-material/">
+        <link rel="next" href="../../10/handling-multiple-api-calls-with-search-input-in-react-using-debouncing-and-axios/">
       
       
       <link rel="icon" href="../../../../../images/bing.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Giscus comment system - Bishow Thapa</title>
+        <title>Role-Based vs Permission-Based Access Control in React - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#giscus-comment-system" class="md-skip">
+        <a href="#role-based-vs-permission-based-access-control-in-react" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Giscus comment system
+              Role-Based vs Permission-Based Access Control in React
             
           </span>
         </div>
@@ -1811,9 +1811,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#1-role-based-access-control-rbac" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      1.  Role-Based Access Control (RBAC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-permission-based-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Permission-Based Access Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hybrid-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Hybrid Approach:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Approach:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      In summary:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question
     </span>
   </a>
   
@@ -1875,7 +1920,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-01-05 00:00:00" class="md-ellipsis">January 5, 2024</time>
+                        <time datetime="2024-07-09 00:00:00" class="md-ellipsis">July 9, 2024</time>
                       </div>
                     </li>
                     
@@ -1887,7 +1932,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              6 min read
                             
                           </span>
                         </div>
@@ -1905,105 +1950,373 @@
     <article class="md-content__inner md-typeset">
       
         
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../../tags/#databse" class="md-tag md-tag-icon">databse</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">django</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../../tags/#postgresql" class="md-tag md-tag-icon">postgresql</a>
+    
+  
+</nav>
+
 
   
   
 
 
-<div><h1 id="giscus-comment-system">Giscus comment system</h1>
-<p>A comments system powered by GitHub Discussions. GitHub discussions is a forum that can be enabled on every GitHub repository. It makes it easy for developers to discuss new features, get feedback from the community, create polls, make announcements, and more.</p>
+<div><h1 id="role-based-vs-permission-based-access-control-in-react">Role-Based vs Permission-Based Access Control in React</h1>
 <!-- more -->
 
-<p>GitHub Discussions is a one stop collaboration place for developers and community members.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&lt;</span><span class="nx">script</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">src</span><span class="o">=</span><span class="s2">"https://giscus.app/client.js"</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">=</span><span class="s2">"Bishow-Thapa/github-comments"</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">"your_id"</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">category</span><span class="o">=</span><span class="s2">"Announcements"</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">category</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">"your_category_id"</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="c1">// pathname is after your top-level domain url.</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="c1">// Example: bishow-thapa.github.io/blog</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="c1">// your data-mapping should be blog</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">mapping</span><span class="o">=</span><span class="s2">"blog"</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">strict</span><span class="o">=</span><span class="s2">"0"</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">reactions</span><span class="o">-</span><span class="nx">enabled</span><span class="o">=</span><span class="s2">"1"</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">emit</span><span class="o">-</span><span class="nx">metadata</span><span class="o">=</span><span class="s2">"0"</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">position</span><span class="o">=</span><span class="s2">"bottom"</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">theme</span><span class="o">=</span><span class="s2">"preferred_color_scheme"</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">lang</span><span class="o">=</span><span class="s2">"en"</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nx">crossorigin</span><span class="o">=</span><span class="s2">"anonymous"</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="k">async</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span></code></pre></div>
-<p>I'm using mkdocs, in mkdocks your should override the comment.html file. To overide the comments.html file, you should add <code>custom_dir</code> properties in the <code>mkdocs.yml</code> file. In the root folder (parent to docs folder) of your project, create a folder called <code>overrides</code>, inside overrides create a folder called <code>partials</code>. In the partials folder, create a <code>comments.html</code> file.</p>
-<p>After generating code for <a href="https://giscus.app/">here</a>, paste your code below <code>&lt;!-- Insert generated snippet here --&gt;</code>. Make sure to add the <code>pathname</code>.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">comments</span><span class="w"> </span><span class="o">%</span><span class="p">}</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&lt;</span><span class="nx">h2</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">"__comments"</span><span class="o">&gt;</span><span class="p">{{</span><span class="w"> </span><span class="nx">lang</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s2">"meta.comments"</span><span class="p">)</span><span class="w"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// &lt;!-- Insert generated snippet here --&gt;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">&lt;</span><span class="nx">script</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nx">src</span><span class="o">=</span><span class="s2">"https://giscus.app/client.js"</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">=</span><span class="s2">"Bishow-Thapa/github-comments"</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">"your_repo_id"</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">category</span><span class="o">=</span><span class="s2">"Announcements"</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">category</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">"your_category_id"</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">mapping</span><span class="o">=</span><span class="s2">"blog"</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">strict</span><span class="o">=</span><span class="s2">"0"</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">reactions</span><span class="o">-</span><span class="nx">enabled</span><span class="o">=</span><span class="s2">"1"</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">emit</span><span class="o">-</span><span class="nx">metadata</span><span class="o">=</span><span class="s2">"0"</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">position</span><span class="o">=</span><span class="s2">"bottom"</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">theme</span><span class="o">=</span><span class="s2">"preferred_color_scheme"</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nx">data</span><span class="o">-</span><span class="nx">lang</span><span class="o">=</span><span class="s2">"en"</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nx">crossorigin</span><span class="o">=</span><span class="s2">"anonymous"</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="k">async</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">Synchronize</span><span class="w"> </span><span class="nx">Giscus</span><span class="w"> </span><span class="nx">theme</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">palette</span><span class="w"> </span><span class="o">--&gt;</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">giscus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"script[src*=giscus]"</span><span class="p">);</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span><span class="c1">// Set palette on initial load</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__md_get</span><span class="p">(</span><span class="s2">"__palette"</span><span class="p">);</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">palette</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">palette</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"object"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">theme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">palette</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">scheme</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"slate"</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"transparent_dark"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">;</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="c1">// Instruct Giscus to set theme</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="nx">giscus</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"data-theme"</span><span class="p">,</span><span class="w"> </span><span class="nx">theme</span><span class="p">);</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">  </span><span class="c1">// Register event handlers after documented loaded</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"DOMContentLoaded"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"[data-md-component=palette]"</span><span class="p">);</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="nx">ref</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"change"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__md_get</span><span class="p">(</span><span class="s2">"__palette"</span><span class="p">);</span>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">palette</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">palette</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"object"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">theme</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">          </span><span class="nx">palette</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">scheme</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"slate"</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"transparent_dark"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">;</span>
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">        </span><span class="c1">// Instruct Giscus to change theme</span>
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".giscus-frame"</span><span class="p">);</span>
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">        </span><span class="nx">frame</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nx">giscus</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setConfig</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">theme</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">          </span><span class="s2">"https://giscus.app"</span>
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">        </span><span class="p">);</span>
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="p">});</span>
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">  </span><span class="p">});</span>
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="nx">endif</span><span class="w"> </span><span class="o">%</span><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h2 id="reference">Reference</h2>
+<details class="question" open="open">
+<summary>Role-Based vs Permission-Based Access Control in React: Which is Better for Displaying Elements?</summary>
+</details>
+<p>When deciding between permission-based or role-based access control (RBAC) for showing certain elements in a React application, both approaches have their pros and cons, depending on the complexity of your system. Here's a comparison to help decide which approach suits your needs:</p>
+<h2 id="1-role-based-access-control-rbac">1.  Role-Based Access Control (RBAC)</h2>
+<p>In RBAC, users are assigned roles, and each role has permissions to access certain features. For example, an "Admin" role might have access to more elements than a "User" role.</p>
+<details class="success" open="open">
+<summary>Pros:</summary>
 <ul>
-<li><a href="https://giscus.app/">giscus-app</a></li>
-<li><a href="https://www.brycewray.com/posts/2022/05/tips-using-giscus/">Tips for using giscus</a></li>
-<li><a href="https://github.com/giscus/giscus/issues/508">Pathname match : giscus issue</a></li>
-<li><a href="https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/">Adding a comment system</a></li>
-<li><a href="https://github.com/giscus/giscus-component">giscus pathmane demo</a></li>
-<li><a href="https://medium.com/codex/how-to-set-up-your-own-personal-blog-step-by-step-guide-d2835d65fff9">How to set your blog: step by step</a></li>
-<li><a href="https://www.freecodecamp.org/news/github-discussions-as-chat-system/">github discussion tutorial: freecodecamp</a></li>
-</ul></div>
+<li>Simpler to manage: Assign roles once, and permissions are derived from the role.</li>
+<li>Less configuration: You only need to define roles and check them, reducing complexity.</li>
+<li>Scalability: Easier to scale for smaller apps where roles are clearly defined (e.g., Admin, User, Guest).</li>
+</ul>
+</details>
+<details class="danger" open="open">
+<summary>Cons:</summary>
+<ul>
+<li>Limited granularity: You can't easily fine-tune permissions within roles (e.g., two Admins with different permissions).</li>
+</ul>
+</details>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userRole</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Admin'</span><span class="p">;</span><span class="w"> </span><span class="c1">// This would come from your state or API</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">AdminElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">Admin</span><span class="w"> </span><span class="nx">Content</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">UserElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">User</span><span class="w"> </span><span class="nx">Content</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">&lt;&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span><span class="nx">userRole</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'Admin'</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">AdminElement</span><span class="w"> </span><span class="p">/&gt;}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">{</span><span class="nx">userRole</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'User'</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">UserElement</span><span class="w"> </span><span class="p">/&gt;}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">&lt;/&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="2-permission-based-access-control">2. Permission-Based Access Control</h2>
+<p>In permission-based control, users are granted individual permissions directly (e.g., "canViewDashboard", "canEditProfile"). Permissions are more granular and allow for fine-tuning access control.</p>
+<details class="success" open="open">
+<summary>Pros:</summary>
+<ul>
+<li>More flexibility: Permissions can be applied to specific features regardless of roles, allowing fine-grained control.</li>
+<li>Complex scenarios: Suitable for larger apps with multiple permission needs across various features.</li>
+</ul>
+</details>
+<details class="danger" open="open">
+<summary>Cons:</summary>
+<ul>
+<li>Harder to manage: Managing individual permissions for every feature can become complex, especially as the app grows.</li>
+<li>Overhead: More API calls and logic to check each specific permission.</li>
+</ul>
+</details>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userPermissions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">'canViewDashboard'</span><span class="p">,</span><span class="w"> </span><span class="s1">'canEditProfile'</span><span class="p">];</span><span class="w"> </span><span class="c1">// Fetched from API or state</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">DashboardElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Dashboard</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">EditProfileElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Edit</span><span class="w"> </span><span class="nx">Profile</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="o">&lt;&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">{</span><span class="nx">userPermissions</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'canViewDashboard'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">DashboardElement</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">{</span><span class="nx">userPermissions</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'canEditProfile'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">EditProfileElement</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="3-hybrid-approach">3. Hybrid Approach:</h2>
+<p>Many systems use a hybrid of both methods, where roles define broad access and permissions are used for finer control.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userRole</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Admin'</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userPermissions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">'canViewSettings'</span><span class="p">];</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SettingsElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Settings</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="o">&lt;&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">{</span><span class="nx">userRole</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'Admin'</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">userPermissions</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'canViewSettings'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">SettingsElement</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">);</span>
+</span></code></pre></div>
+<p>This allows roles to handle major access control while permissions handle finer details.</p>
+<hr>
+<h2 id="choosing-the-right-approach">Choosing the Right Approach:</h2>
+<ul>
+<li><strong>Small apps</strong>: If your app has a clear set of predefined roles (e.g., Admin, Editor, Viewer), <mark>role-based</mark> access control is simpler and faster to implement.</li>
+<li><strong>Large apps or complex permission needs</strong>: For larger applications where users need fine-grained control over different features (e.g., granular permissions across multiple areas), <mark>permission-based</mark> control will be more flexible.</li>
+</ul>
+<hr>
+<h2 id="in-summary">In summary:</h2>
+<ul>
+<li><strong>Role-based</strong> control is good for simplicity and clear boundaries.</li>
+<li><strong>Permission-based</strong> control is good for complex systems with more granular needs.</li>
+</ul>
+<hr>
+<h2 id="question">Question</h2>
+<p>Access control is a critical aspect of web application security, ensuring that users only have access to the data and features they are authorized to use. There are several different types of access control mechanisms commonly used in web applications:</p>
+<ol>
+<li>
+<p><strong>Role-Based Access Control (RBAC)</strong></p>
+<p>In RBAC, access to resources and features is granted based on roles assigned to users. Each role has predefined permissions, and users are assigned roles depending on their responsibilities.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Roles like "Admin," "Editor," and "Viewer" are created.</li>
+<li>Users are assigned one or more roles.</li>
+<li>Permissions are attached to roles, not individual users.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>Admin can access all pages.</li>
+<li>Editor can modify content but not user settings.</li>
+<li>Viewer can only view content.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>Content Management Systems (CMS)</li>
+<li>Enterprise Resource Planning (ERP) systems</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Permission-Based Access Control</strong></p>
+<p>In Permission-Based control, permissions are granted to individual users or groups based on specific actions, rather than roles. Permissions allow more fine-grained control, often granting access to individual resources or features.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Users have explicit permissions like "canViewDashboard" or "canEditProfile."</li>
+<li>Permissions are more granular and provide better flexibility.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>A user might have permission to view the dashboard but not edit their profile.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>SaaS platforms with flexible access controls.</li>
+<li>Applications with complex permissions across features.</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Discretionary Access Control (DAC)</strong></p>
+<p>In DAC, the owner of the data or resource decides who can access it. The access control decision is made based on user identity and group membership. The resource owner can modify permissions, granting or restricting access to other users.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<p>The owner (user or admin) has full control over the access rights of others.
+Flexible but potentially less secure than mandatory access control.</p>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<p>A file owner can choose who can read or edit their file.</p>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<p>File-sharing systems.
+Personal data control in collaborative platforms.</p>
+</details>
+</li>
+<li>
+<p><strong>Mandatory Access Control (MAC)</strong></p>
+<p>In MAC, access control policies are enforced by the system and are not controlled by individual users. The system assigns security labels to users and data, and access decisions are made based on these labels.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Access is granted based on clearance levels.</li>
+<li>The system administrator defines the rules; users have no control over who can access the data.</li>
+</ul>
+</details>
+<p>???+ example "Example:</p>
+<div class="language-text highlight"><pre><span></span><code>-   Classified government systems where access is based on security clearances (e.g., Confidential, Secret, Top Secret).
+</code></pre></div>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>Military or governmental systems.</li>
+<li>High-security environments requiring strict controls.</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Attribute-Based Access Control (ABAC)</strong></p>
+<p>In ABAC, access decisions are made based on user attributes (e.g., department, job title, location), resource attributes, and environmental conditions (e.g., time of day). It allows for highly dynamic and context-aware access control.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Rules are based on attributes rather than predefined roles or permissions.</li>
+<li>Policies can specify who has access under certain conditions.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>Only employees in the "HR" department can access employee records during office hours.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>Dynamic systems like cloud services or IoT systems.</li>
+<li>Systems requiring granular and context-aware access control.</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Identity-Based Access Control (IBAC)</strong></p>
+<p>In IBAC, access is determined by the individual identity of the user. Each user has specific access to certain resources based on their personal identification.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Personalized access control for each user.</li>
+<li>Access control decisions are made based on the user's identity.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>A specific user has access to their own documents but not others'.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>Personalized dashboards.</li>
+<li>Applications where each user manages their own data.</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Token-Based Access Control (e.g., OAuth, JWT)</strong></p>
+<p>Token-Based Access Control is widely used in modern web applications where users are authenticated via tokens (like JWT). The token carries information about the user’s permissions and is used to verify access.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Stateless authentication where tokens are passed with each request.</li>
+<li>Can be used for Single Sign-On (SSO) and third-party API access.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>OAuth tokens grant access to resources on behalf of users.</li>
+<li>JWT tokens are used to authenticate and authorize users in a web app.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>RESTful APIs.</li>
+<li>Single Sign-On (SSO) systems.</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Context-Based Access Control (CBAC)</strong></p>
+<p>In CBAC, access control is based on the context of the request, including factors like the user's location, device, and time of access.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Highly dynamic access control, taking into account external factors.</li>
+<li>Context can change access permissions in real time.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>A user can access a system only during working hours and from an approved device.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>Enterprise systems with location and time-based access controls.</li>
+<li>IoT systems with real-time environmental conditions.</li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Rule-Based Access Control</strong></p>
+<p>Rule-Based Access Control defines access rules that the system follows. These rules determine who has access to which resources and under what conditions.</p>
+<details class="info" open="open">
+<summary>Characteristics:</summary>
+<ul>
+<li>Rules are predefined based on specific conditions.</li>
+<li>Offers flexibility, as rules can be customized for various situations.</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Example:</summary>
+<ul>
+<li>A user can access a report if they have completed a mandatory training course.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Common Use Cases:</summary>
+<ul>
+<li>Automated systems requiring complex rules.</li>
+<li>Security systems with specific conditional access requirements.</li>
+</ul>
+</details>
+</li>
+</ol>
+<details class="quotes" open="open">
+<summary>Conclusion:</summary>
+<ul>
+<li><strong>RBAC</strong> is simple and widely used for role-based access across different user types.</li>
+<li><strong>Permission-Based</strong> control offers more flexibility with finer control over resources.</li>
+<li><strong>ABAC</strong> is best for dynamic, attribute-driven environments like cloud or IoT.</li>
+<li><strong>Token-Based</strong> control is essential for stateless systems and API access.</li>
+</ul>
+</details>
+<p>Choose the model based on the complexity and security needs of your application!</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Summary
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>RBAC: Based on roles.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Permission-Based: Based on specific permissions.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>DAC: Resource owners define access.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>MAC: System-enforced access policies.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>ABAC: Based on attributes like department or time.
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>IBAC: Based on user identity.
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Token-Based: Uses tokens (e.g., JWT) for stateless authentication.
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>CBAC: Access based on context like location or time.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Rule-Based: Rules define access criteria.
+</span></code></pre></div>
+<hr></div>
 
 
 
@@ -2098,7 +2411,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Elevating My Craft: Unveiling the 2024 Resolutions of a React Developer">
+          <a href="../../08/how-to-connect-postgresql-database-in-django/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to Connect PostgreSQL Database in Django&#34;">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2108,20 +2421,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Elevating My Craft: Unveiling the 2024 Resolutions of a React Developer
+                How to Connect PostgreSQL Database in Django"
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../09/adding-syntax-hightlighting-in-the-material/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding Syntax hightlighting in the material">
+          <a href="../../10/handling-multiple-api-calls-with-search-input-in-react-using-debouncing-and-axios/" class="md-footer__link md-footer__link--next" aria-label="Next: Handling Multiple API Calls with Search Input in React using Debouncing and Axios">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Adding Syntax hightlighting in the material
+                Handling Multiple API Calls with Search Input in React using Debouncing and Axios
               </div>
             </div>
             <div class="md-footer__button md-icon">
