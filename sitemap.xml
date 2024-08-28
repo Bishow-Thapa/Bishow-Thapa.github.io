@@ -16,27 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/12/conditional-rendering-in-react/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/18/css-media-queries/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/06/08/understanding-eitemprops-in-react-and-ant-designs-menu-component/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/29/encoding-and-decoding/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/03/exploring-objectprototype-in-javascript/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -56,22 +41,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/04/handling-circular-references-in-javascript-avoiding-typeerror-cyclic-object-value-in-jsonstringify/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/10/handling-multiple-api-calls-with-search-input-in-react-using-debouncing-and-axios/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/05/09/gthumb-lightweight-image-editor-in-ubuntu/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/02/js-objects/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -92,26 +62,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/06/20/removing-tracked-files-and-directories-in-git/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/09/role-based-vs-permission-based-access-control-in-react/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/06/28/saving-base64-data-into-an-excel-file-in-a-react-application/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/04/unveiling-static-and-prototype-methods-in-javascript-built-in-objects/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/07/07/useful-react-libraries-for-projects/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -372,16 +322,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/archive/2024/page/2/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
