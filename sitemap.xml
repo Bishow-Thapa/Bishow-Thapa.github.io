@@ -16,16 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/08/04/advanced-tips-tricks-antd-design-table/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/08/01/deep-dive-into-map/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2023/01/31/embarking-on-a-tech-odyssey/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -41,32 +31,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/08/03/optimizing-javascript-object-manipulation-with-destructuring/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/08/05/mastering-object-destructuring-rest-and-spread-operators-in-javascript/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/09/adding-syntax-hightlighting-in-the-material/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/08/02/efficiently-removing-a-property-from-an-object-while-retaining-its-value/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/2024/08/06/understanding-asyncawait/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -417,11 +387,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
-         <lastmod>2024-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
