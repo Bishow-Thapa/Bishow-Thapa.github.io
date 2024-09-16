@@ -1450,6 +1450,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../components/old/useReducer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useReducer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2306,6 +2327,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvement
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2369,6 +2399,48 @@
   
   <span class="md-ellipsis">
     Circular Planning Tab Added
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../circular-planning-select-value-debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circular Planning Select Debug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resuable-component-tooltip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resuable
   </span>
   
 
@@ -2764,6 +2836,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvement
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2847,6 +2928,50 @@
 </li>
 </ul>
 <p>By addressing these points and ensuring that all values and functions used in the useEffect are correctly defined and handled, you should be able to avoid bugs and ensure the effect works as intended. If you encounter any specific issues, providing additional details or error messages can help in further diagnosing the problem.</p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="improvement">Improvement</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Example</label><label for="__tabbed_2_2">Using Moment</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><span class="filename">Companies.js</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tooltipMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="o">!</span><span class="nx">getDetails</span><span class="o">?</span><span class="p">.</span><span class="nx">isCircularPlanningApprovalRequestSent</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="s2">"Not Sent"</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="nx">getDetails</span><span class="o">?</span><span class="p">.</span><span class="nx">circularPlanningApprovedStatusDto</span><span class="o">?</span><span class="p">.</span><span class="nx">isApproved</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="sb">`Approved by </span><span class="si">${</span><span class="nx">getDetails</span><span class="p">.</span><span class="nx">circularPlanningApprovedStatusDto</span><span class="p">.</span><span class="nx">approverName</span><span class="si">}</span><span class="sb"> on </span><span class="si">${</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">getDetails</span><span class="p">.</span><span class="nx">circularPlanningApprovedStatusDto</span><span class="p">.</span><span class="nx">approveDate</span><span class="p">).</span><span class="nx">toLocaleDateString</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="s1">'Not yet approved'</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isButtonDisabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getDetails</span><span class="o">?</span><span class="p">.</span><span class="nx">isCircularPlanningApprovalRequestSent</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">&lt;&gt;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Tooltip</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">            </span><span class="na">title</span><span class="o">=</span><span class="p">{</span><span class="nx">tooltipMessage</span><span class="p">}</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="p">&gt;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">Button</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">                </span><span class="na">type</span><span class="o">=</span><span class="s">"primary"</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">                </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setIsCircularModalOpen</span><span class="p">(</span><span class="kc">true</span><span class="p">)}</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">                </span><span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">isButtonDisabled</span><span class="p">}</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="p">&gt;</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">                </span><span class="nx">Send</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">Approval</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="p">&lt;/</span><span class="nt">Button</span><span class="p">&gt;</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">Tooltip</span><span class="p">&gt;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="p">&lt;/&gt;</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'moment'</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import moment</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tooltipMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">getDetails</span><span class="o">?</span><span class="p">.</span><span class="nx">isCircularPlanningApprovalRequestSent</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="s2">"Not Sent"</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="nx">getDetails</span><span class="o">?</span><span class="p">.</span><span class="nx">circularPlanningApprovedStatusDto</span><span class="o">?</span><span class="p">.</span><span class="nx">isApproved</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="sb">`Approved by </span><span class="si">${</span><span class="nx">getDetails</span><span class="p">.</span><span class="nx">circularPlanningApprovedStatusDto</span><span class="p">.</span><span class="nx">approverName</span><span class="si">}</span><span class="sb"> on </span><span class="si">${</span><span class="nx">moment</span><span class="p">(</span><span class="nx">getDetails</span><span class="p">.</span><span class="nx">circularPlanningApprovedStatusDto</span><span class="p">.</span><span class="nx">approveDate</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s1">'MMMM D, YYYY'</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="s1">'Not yet approved'</span><span class="p">;</span>
+</span></code></pre></div>
 </div>
 </div>
 </div></div>
