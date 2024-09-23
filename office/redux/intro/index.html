@@ -14,7 +14,7 @@
         <link rel="prev" href="../../primesales/intro/">
       
       
-        <link rel="next" href="../codesnap/">
+        <link rel="next" href="../zustland/">
       
       
       <link rel="icon" href="../../../images/bing.ico">
@@ -83,6 +83,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#heres-a-breakdown-of-the-category-and-type-of-redux-pattern" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -2765,6 +2770,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2775,6 +2791,92 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heres-a-breakdown-of-the-category-and-type-of-redux-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here's a breakdown of the category and type of Redux pattern:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redux-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redux Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immer-redux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immer &amp; Redux
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zustland/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zustland
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zustland-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zustland Store
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2944,6 +3046,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heres-a-breakdown-of-the-category-and-type-of-redux-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here's a breakdown of the category and type of Redux pattern:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redux-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redux Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immer-redux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immer &amp; Redux
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2962,7 +3099,305 @@
 
   <h1>Intro</h1>
 
-<p>intro</p>
+<div><p>intro</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Daily Diay</label><label for="__tabbed_1_2">Mail</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">services</span><span class="o">/</span><span class="nx">reudx</span><span class="o">/</span><span class="nx">dailyDiary</span><span class="o">/</span><span class="nx">action</span><span class="p">.</span><span class="nx">js</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// updated</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">updateDailyDiaryReducer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">GET_PAGINATION_DAILY_DIARY_UPDATE</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w">  </span><span class="nx">DAILY_DAIRY</span><span class="p">.</span><span class="nx">GET_PAGINATION_DAILY_DIARY_UPDATE</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// status</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">changeDailyDiaryStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nx">DAILY_DAIRY</span><span class="p">.</span><span class="nx">GET_PAGIGATION_DAILY_DIARY_STATUS</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">updateDailyDiaryReducer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"services/redux/dailyDairy/action"</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">toDoMarkAsComplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">TODO_TYPES</span><span class="p">.</span><span class="nx">TODO_COMPLETE</span><span class="p">));</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">toDoListService</span><span class="p">.</span><span class="nx">toDoMarkAsComplete</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">TODO_TYPES</span><span class="p">.</span><span class="nx">TODO_COMPLETE</span><span class="p">));</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">success</span><span class="p">(</span><span class="nx">TODO_TYPES</span><span class="p">.</span><span class="nx">TODO_COMPLETE</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="c1">// dispatch(getTodoEventsPagination(`maxResultCount=10&amp;skipCount=0`));</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">markItOff</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"complete"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"incomplete"</span><span class="p">;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nx">message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="sb">`Todo status updated successfully`</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="c1">// added</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="c1">// console.log("ACTION response: ", response.data);</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="c1">// ****************************************************************</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">updateDailyDiaryReducer</span><span class="p">(</span><span class="nx">DAILY_DAIRY</span><span class="p">.</span><span class="nx">GET_PAGINATION_DAILY_DIARY_UPDATE</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">};</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// update in mail</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">GET_CIRCULAR_REFERENCE_TEMPLATE_UPDATE</span><span class="o">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">updatedTemplateMail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">state</span><span class="o">?</span><span class="p">.</span><span class="nx">singleCircularReferenceTemplateResponse</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">singleCircularReferenceTemplateResponse</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">id</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">singleCircularReferenceTemplateResponse</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nx">singleCircularReferenceTemplateLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nx">singleCircularReferenceTemplateResponse</span><span class="o">:</span><span class="w"> </span><span class="nx">updatedTemplateMail</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionForAddUpdateReferenceTemplate</span><span class="p">(</span><span class="nx">updateApiData</span><span class="p">));</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">origin</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"mail"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">apiPayload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">                </span><span class="p">...</span><span class="nx">updateApiData</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">                </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">updateApiData</span><span class="o">?</span><span class="p">.</span><span class="nx">referenceTemplateId</span><span class="p">,</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">            </span><span class="ow">delete</span><span class="w"> </span><span class="nx">apiData</span><span class="o">?</span><span class="p">.</span><span class="nx">referenceId</span><span class="p">;</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">            </span><span class="ow">delete</span><span class="w"> </span><span class="nx">apiData</span><span class="o">?</span><span class="p">.</span><span class="nx">referenceTemplateId</span><span class="p">;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">            </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionForUpdateTemplate</span><span class="p">(</span><span class="nx">apiPayload</span><span class="p">))</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">            </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionForGetReferenceTemplateGetDetailsById</span><span class="p">(</span><span class="nx">referenceId</span><span class="p">));</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionForAddUpdateReferenceTemplate</span><span class="p">(</span><span class="nx">apiData</span><span class="p">));</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Error: "</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="heres-a-breakdown-of-the-category-and-type-of-redux-pattern">Here's a breakdown of the category and type of Redux pattern:</h2>
+<ol>
+<li>Asynchronous Actions (Async Actions)</li>
+<li>Thunk Middleware</li>
+<li>Action Chaining (Dispatching Multiple Actions)</li>
+</ol>
+<details class="example" open="open">
+<summary>Category Breakdown</summary>
+<ul>
+<li><strong>Middleware-enhanced Redux</strong>: This falls under Redux with middleware enhancement because of the use of <code>redux-thunk</code>.</li>
+<li><strong>Async Workflow</strong>: This approach is used when handling asynchronous workflows in your Redux actions.</li>
+<li><strong>Action Chaining</strong>: It uses chained actions where you dispatch multiple actions from a single action creator, often in response to an async operation.</li>
+</ul>
+</details>
+<hr>
+<h2 id="redux-tips">Redux Tips</h2>
+<p>Here are techniques for managing adding, updating, and deleting items in Redux:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Adding Items</label><label for="__tabbed_2_2">Updating Items</label><label for="__tabbed_2_3">Deleting Items</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Check for Existence</strong>: Use <code>some</code> to determine if the item already exists before adding.</li>
+<li><strong>Spread Operator</strong>: Use the spread operator to create a new array that includes the new item.</li>
+<li><strong>Immutable Updates</strong>: Ensure state is updated immutably to avoid side effects.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Map Function</strong>: Use <code>map</code> to create a new array, replacing the item when it matches the ID.</li>
+<li><strong>Conditionally Update</strong>: Use conditional logic to check if the item should be updated based on the action payload.</li>
+<li><strong>Preserve Other Items</strong>: Keep existing items unchanged while updating the specific item.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Filter Function</strong>: Use <code>filter</code> to create a new array excluding the item to be deleted.</li>
+<li><strong>Identify by ID</strong>: Identify the item to delete using its unique ID.</li>
+<li><strong>Immutable State Update</strong>: Ensure the state is updated immutably to maintain Redux principles.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>These techniques will help you maintain a clean and efficient Redux codebase for managing items effectively.</p>
+<hr>
+<details class="quote" open="open">
+<summary>Using libraries in a Redux codebase</summary>
+<p>Using libraries in a Redux codebase can enhance functionality and simplify certain tasks, but they aren't strictly necessary. Here are some libraries commonly used in conjunction with Redux, along with their benefits:</p>
+<ol>
+<li>
+<p><strong>Redux Toolkit</strong></p>
+<ul>
+<li>Purpose: Simplifies Redux setup and reduces boilerplate code.</li>
+<li>
+<p>Features:</p>
+<ul>
+<li>Built-in functions for creating slices (reducers and actions).</li>
+<li>Built-in middleware for handling asynchronous logic (like <code>createAsyncThunk</code>).</li>
+<li>Includes utilities for immutable updates.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Immer</strong></p>
+<ul>
+<li>Purpose: Makes immutable state updates easier and more readable.</li>
+<li>
+<p>Benefits:</p>
+<ul>
+<li>Allows you to write "mutable" code that gets converted to immutable updates.</li>
+<li>Reduces the complexity of deeply nested updates.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lodash</strong></p>
+<ul>
+<li>Purpose: Provides utility functions for common tasks like sorting and filtering.</li>
+<li>
+<p>Benefits:</p>
+<ul>
+<li>Simplifies array and object manipulation (e.g., <code>_.sortBy</code>, <code>_.find</code>, <code>_.filter</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>React-Redux</strong></p>
+<ul>
+<li>Purpose: Connects React components to the Redux store.</li>
+<li>
+<p>Benefits:</p>
+<ul>
+<li>Provides hooks like <code>useSelector</code> and <code>useDispatch</code> for accessing state and dispatching actions easily.</li>
+<li>Ensures efficient rendering by only re-rendering components when necessary.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Redux-Saga or Redux-Thunk</strong></p>
+<ul>
+<li>Purpose: Middleware for handling side effects in Redux.</li>
+<li>
+<p>Benefits:</p>
+<ul>
+<li>Redux-Saga: Uses generator functions to handle complex asynchronous flows.</li>
+<li>Redux-Thunk: Allows action creators to return functions for handling asynchronous logic.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Conclusion</p>
+</blockquote>
+<p>While you can build a Redux application without any additional libraries, using them can significantly improve development efficiency, readability, and maintainability. <mark>For most applications</mark>, <a href="#">Redux Toolkit</a> is highly recommended as it encapsulates many best practices and simplifies the development process.</p>
+</details>
+<hr>
+<h2 id="immer-redux">Immer &amp; Redux</h2>
+<p>Using <code>Immer</code> with <code>Redux</code> in the same project is a common practice and can be very beneficial. Here's how they can complement each other, along with standard practices:</p>
+<details class="tip" open="open">
+<summary>Using Immer with Redux</summary>
+<ol>
+<li>
+<p><strong>State Management Simplification</strong>:</p>
+<ul>
+<li><a href="#">Immer</a> allows you to write "mutable" code when updating state, which can make your reducers much more readable.</li>
+<li>Instead of returning new state objects with the spread operator or using methods like <code>map</code>, <code>filter</code>, or <code>reduce</code>, you can mutate a draft state directly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integration with Redux Toolkit</strong>:</p>
+<ul>
+<li><a href="#">Redux Toolkit</a> <mark>already uses Immer under the hood</mark> for its <code>createSlice</code> method. This means you can write reducers that look mutable, but they are actually producing immutable updates.</li>
+<li>This allows you to leverage both libraries seamlessly, especially when using the Toolkit.</li>
+</ul>
+</li>
+</ol>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Example</label><label for="__tabbed_3_2">Standard Practices</label><label for="__tabbed_3_3">Conclusion</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createSlice</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@reduxjs/toolkit"</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">itemsSlice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlice</span><span class="p">({</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"items"</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">initialState</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nx">reducers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="nx">addItem</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="nx">state</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mutative update, thanks to Immer</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="nx">updateItem</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">index</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">                </span><span class="nx">state</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">;</span><span class="w"> </span><span class="c1">// Mutative update</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="nx">deleteItem</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"> </span><span class="c1">// Non-mutative, but still concise</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">});</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">addItem</span><span class="p">,</span><span class="w"> </span><span class="nx">updateItem</span><span class="p">,</span><span class="w"> </span><span class="nx">deleteItem</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">itemsSlice</span><span class="p">.</span><span class="nx">actions</span><span class="p">;</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">itemsSlice</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Use Redux Toolkit:</p>
+<ul>
+<li>Start with Redux Toolkit for setting up Redux. It simplifies the Redux setup and integrates well with Immer.</li>
+</ul>
+</li>
+<li>
+<p>Leverage Immer for Reducers:</p>
+<ul>
+<li>Use Immer's mutability in reducers when you need more complex state updates. This can reduce boilerplate code and improve clarity.</li>
+</ul>
+</li>
+<li>
+<p>Keep State Management Concise:</p>
+<ul>
+<li>Use Immer to handle nested state updates easily without the need for deep cloning or complex logic.</li>
+</ul>
+</li>
+<li>
+<p>Evaluate Needs:</p>
+<ul>
+<li>While Immer is very useful, consider your project's complexity. For simple state updates, the standard Redux pattern may suffice without needing Immer.</li>
+</ul>
+</li>
+<li>
+<p>Documentation and Consistency:</p>
+<ul>
+<li>Document your use of these libraries in your codebase to ensure all team members understand the patterns being used.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Combining <code>Immer</code> and <code>Redux Toolkit</code> is a standard practice in modern Redux applications. It improves the developer experience by allowing clearer and more concise state management while maintaining the immutable nature of Redux.</p>
+</div>
+</div>
+</div>
+<hr></div>
 
 
 
@@ -3015,13 +3450,13 @@
         
         
           
-          <a href="../codesnap/" class="md-footer__link md-footer__link--next" aria-label="Next: Codesnap">
+          <a href="../zustland/" class="md-footer__link md-footer__link--next" aria-label="Next: Zustland">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Codesnap
+                Zustland
               </div>
             </div>
             <div class="md-footer__button md-icon">
