@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/04/01/react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/04/01/adding-a-loader-to-your-react-button-clicks/">
       
       
-        <link rel="prev" href="../../../01/09/adding-syntax-hightlighting-in-the-material/">
+        <link rel="prev" href="../react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/">
       
       
-        <link rel="next" href="../adding-a-loader-to-your-react-button-clicks/">
+        <link rel="next" href="../../03/understanding-the-render-function-in-table-components/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>React State Updates: When to Use Functional Patterns vs. Direct Assignments - Bishow Thapa</title>
+        <title>Adding a Loader to Your React Button Clicks - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#react-state-updates-when-to-use-functional-patterns-vs-direct-assignments" class="md-skip">
+        <a href="#adding-a-loader-to-your-react-button-clicks" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              React State Updates: When to Use Functional Patterns vs. Direct Assignments
+              Adding a Loader to Your React Button Clicks
             
           </span>
         </div>
@@ -3075,63 +3075,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-using-functional-update-setcontextrightclickidprevid-id" class="md-nav__link">
+  <a href="#why-use-loaders" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Using Functional Update: setContextRightClickId(prevId =&gt; id)
+      Why Use Loaders?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-using-direct-assignment-setcontextrightclickiddataid" class="md-nav__link">
+  <a href="#step-by-step-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Using Direct Assignment: setContextRightClickId(data?.id)
+      Step-by-Step Implementation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#which-to-use" class="md-nav__link">
+  <a href="#example-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Which to Use?
+      Example Code
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#recommendation" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Recommendation
+      Conclusion
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-in-context" class="md-nav__link">
+  <a href="#additional" class="md-nav__link">
     <span class="md-ellipsis">
-      Example in Context
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#main-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main Difference
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-each-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      When to Use Each Approach
+      Additional
     </span>
   </a>
   
@@ -3244,125 +3226,163 @@
   
 
 
-<div><h1 id="react-state-updates-when-to-use-functional-patterns-vs-direct-assignments">React State Updates: When to Use Functional Patterns vs. Direct Assignments</h1>
-<p>The difference between <code>setContextRightClickId(prevId =&gt; id)</code> and <code>setContextRightClickId(data?.id)</code> lies in how each approach updates the state.</p>
+<div><h1 id="adding-a-loader-to-your-react-button-clicks">Adding a Loader to Your React Button Clicks</h1>
+<p>In modern web applications, providing a smooth user experience is crucial. One effective way to enhance that experience is by implementing loaders during asynchronous actions. This blog will walk you through adding a loader to a button click in your React application, ensuring users know that their action is being processed.</p>
 <!-- more -->
 
 <hr>
-<h2 id="1-using-functional-update-setcontextrightclickidprevid-id">1. Using Functional Update: <code>setContextRightClickId(prevId =&gt; id)</code></h2>
-<ul>
-<li><strong>Description</strong>: This approach uses a functional update. It takes the previous state as an argument and returns the new state.</li>
-<li><strong>Use Case</strong>: It's beneficial when the new state depends on the previous state, such as when multiple updates might occur quickly in succession.</li>
-<li><strong>Standard Practice</strong>: This is often used for cases where you need to rely on the current state to compute the new state. It helps avoid potential issues with stale state.</li>
-</ul>
-<h2 id="2-using-direct-assignment-setcontextrightclickiddataid">2. Using Direct Assignment: <code>setContextRightClickId(data?.id)</code></h2>
-<ul>
-<li><strong>Description</strong>: This approach directly sets the state to a new value without depending on the previous state.</li>
-<li><strong>Use Case</strong>: It’s straightforward when you're simply updating the state based on an event or action that doesn't rely on the previous state.</li>
-<li><strong>Standard Practice</strong>: This is perfectly acceptable for many cases, especially when you're directly setting a value based on an event (like a click).</li>
-</ul>
-<h2 id="which-to-use">Which to Use?</h2>
-<ul>
+<div class="admonition question">
+<p class="admonition-title">Adding a Loader to Your React Button Clicks: A Simple Guide</p>
+</div>
+<h2 id="why-use-loaders">Why Use Loaders?</h2>
+<p>Loaders indicate to users that an action is in progress, helping to manage expectations. Without loaders, users may think the application is unresponsive, leading to frustration. Implementing loaders can significantly improve user satisfaction and engagement.</p>
+<h2 id="step-by-step-implementation">Step-by-Step Implementation</h2>
+<ol>
 <li>
-<p><strong>Use Functional Update</strong>: When you need to ensure the update is based on the latest state or when the update logic is more complex. For example, if you're incrementing a count or toggling a value based on the previous state.</p>
-</li>
-<li>
-<p><strong>Use Direct Assignment</strong>: When you simply want to set a state based on an event or static data, and there's no chance of multiple updates overlapping.</p>
-</li>
-</ul>
-<h2 id="recommendation">Recommendation</h2>
-<p>For your specific case of setting the context menu ID based on a right-click, either method will work. However, if you're confident that there will be no rapid state updates affecting this particular value, you can use <code>setContextRightClickId(data?.id)</code>. If you want to be extra cautious or if there's any complexity, prefer the functional update.</p>
-<h2 id="example-in-context">Example in Context</h2>
-<p>For setting the right-clicked ID, both approaches are valid, but typically:</p>
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// When directly using the ID from an event</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">setContextRightClickId</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"> </span><span class="c1">// Direct assignment</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// When you might have complex state logic or multiple updates</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">setContextRightClickId</span><span class="p">((</span><span class="nx">prevId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">id</span><span class="p">);</span><span class="w"> </span><span class="c1">// Functional update (not strictly necessary here)</span>
+<p><strong>Manage Loading State</strong>:</p>
+<p>Start by creating a state variable to track whether the loader should be displayed. In your React component, use <code>useState</code> to create an <code>isLoading</code> variable.</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">isLoading</span><span class="p">,</span><span class="w"> </span><span class="nx">setIsLoading</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
 </span></code></pre></div>
-<p>In many practical scenarios, developers tend to use direct assignments for simplicity unless state dependencies dictate otherwise.</p>
+</li>
+<li>
+<p><strong>Set the Loader State on Click</strong>:</p>
+<p>When the button is clicked, set the loading state to <code>true</code>. This indicates that the action has started.</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">handleClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="c1">// Your async action here</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">};</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Perform Your Action</strong>:</p>
+<p>Dispatch your action (e.g., a Redux action) inside the <code>handleClick</code> function. Use <code>try-catch</code> to handle any errors that may occur during the process.</p>
+</li>
+<li>
+<p><strong>Reset the Loader State</strong>:</p>
+<p>In the <code>finally</code> block of your <code>try-catch</code>, reset the loading state to <code>false</code> once the action completes, whether successful or not.</p>
+</li>
+<li>
+<p><strong>Render the Loader</strong>:</p>
+<p>Conditionally render a loader UI based on the <code>isLoading</code> state. You can use a simple text loader or a spinner.</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">isLoading</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">"loader"</span><span class="p">&gt;</span><span class="nx">Loading</span><span class="p">...&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="example-code">Example Code</h2>
+<p>Here’s a concise example of a button that shows a loader when clicked:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">YourComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">isLoading</span><span class="p">,</span><span class="w"> </span><span class="nx">setIsLoading</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatchYourAsyncAction</span><span class="p">();</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">button</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClick</span><span class="p">}</span><span class="w"> </span><span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">isLoading</span><span class="p">}&gt;</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="p">{</span><span class="nx">isLoading</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"Loading..."</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"Submit"</span><span class="p">}</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">      </span><span class="p">{</span><span class="nx">isLoading</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">"loader"</span><span class="p">&gt;</span><span class="nx">Loading</span><span class="p">...&lt;/</span><span class="nt">div</span><span class="p">&gt;}</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">};</span>
+</span></code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+<p>Implementing loaders in your React application enhances user experience by providing visual feedback during asynchronous operations. By following the steps outlined above, you can easily integrate a loader into your button clicks, ensuring your users stay informed and engaged. Remember, a smooth experience keeps users coming back!</p>
 <hr>
-<h2 id="main-difference">Main Difference</h2>
-<p>The main differences between using <code>setContextRightClickId(prevId =&gt; id)</code> (<mark>functional update</mark>) and <code>setContextRightClickId(data?.id)</code> (<mark>direct assignment</mark>) are:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">1. Context of Use</label><label for="__tabbed_1_2">2. Concurrency Handling</label><label for="__tabbed_1_3">3. Readability and Complexity</label></div>
+<h2 id="additional">Additional</h2>
+<p>To implement a loader after clicking a button in your React application, you can follow these steps:</p>
+<ol>
+<li>
+<p><strong>Manage Loading State</strong>: Use a state variable to track whether the loader should be displayed.</p>
+</li>
+<li>
+<p><strong>Set the Loader State</strong>: Set the loader state to <code>true</code> when the button is clicked and reset it when the asynchronous action completes.</p>
+</li>
+<li>
+<p><strong>Display the Loader</strong>: Conditionally render the loader based on the loading state.</p>
+</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Example Implementation</label><label for="__tabbed_1_2">Key Steps Explained</label><label for="__tabbed_1_3">Notes</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ul>
+<p>Here’s a complete example based on your code snippet:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useDispatch</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react-redux'</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">instanceChatAdd</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'yourActions'</span><span class="p">;</span><span class="w"> </span><span class="c1">// adjust the import according to your setup</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">YourComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">formType</span><span class="p">,</span><span class="w"> </span><span class="nx">module</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">isDashbord</span><span class="p">,</span><span class="w"> </span><span class="nx">setInternalVisible</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">dispatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useDispatch</span><span class="p">();</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">isLoading</span><span class="p">,</span><span class="w"> </span><span class="nx">setIsLoading</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Step 1: Loader state</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Step 2: Show loader</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"trying....."</span><span class="p">);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">formType</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">"newCutting"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">"Circular_Planning"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">                </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">instanceChatAdd</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">isDashbord</span><span class="p">,</span><span class="w"> </span><span class="nx">setInternalVisible</span><span class="p">));</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">module</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"Circular_Planning"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="nx">circulayPayload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                    </span><span class="p">...</span><span class="nx">body</span><span class="p">,</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                    </span><span class="nx">IsCircularPlanningRequestForApproval</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">                </span><span class="p">};</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">                </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">instanceChatAdd</span><span class="p">(</span><span class="nx">circulayPayload</span><span class="p">,</span><span class="w"> </span><span class="nx">isDashbord</span><span class="p">,</span><span class="w"> </span><span class="nx">setInternalVisible</span><span class="p">));</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">            </span><span class="c1">// Handle the error (e.g., show a notification)</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">            </span><span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Step 3: Hide loader after the action</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">button</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClick</span><span class="p">}</span><span class="w"> </span><span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">isLoading</span><span class="p">}&gt;</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">                </span><span class="p">{</span><span class="nx">isLoading</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">'Loading...'</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">'Submit'</span><span class="p">}</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">            </span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">            </span><span class="p">{</span><span class="nx">isLoading</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">"loader"</span><span class="p">&gt;</span><span class="nx">Loading</span><span class="p">...&lt;/</span><span class="nt">div</span><span class="p">&gt;}</span><span class="w"> </span><span class="p">{</span><span class="cm">/* Step 4: Loader UI */</span><span class="p">}</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="p">};</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">YourComponent</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
 <li>
-<p><strong>Functional Update (<code>prevId =&gt; id</code>)</strong>:</p>
-<ul>
-<li>Utilizes the previous state to calculate the new state.</li>
-<li>Essential when the new state depends on the old state, especially in scenarios with potential concurrent updates.</li>
-</ul>
+<p><strong>Loader State</strong>: <code>const [isLoading, setIsLoading] = useState(false);</code> initializes a state variable to manage the loading state.</p>
 </li>
 <li>
-<p><strong>Direct Assignment (<code>data?.id</code>)</strong>:</p>
-<ul>
-<li>Sets the state directly to a specific value based on external input (like an event).</li>
-<li>Simplifies the logic when you don't need to consider the previous state.</li>
-</ul>
+<p><strong>Handle Click</strong>: In the <code>handleClick</code> function, <code>setIsLoading(true);</code> shows the loader when the button is clicked. The asynchronous action is dispatched using <code>await</code>.</p>
 </li>
-</ul>
+<li>
+<p><strong>Error Handling</strong>: If an error occurs, it is logged, and you can also implement additional error handling as needed.</p>
+</li>
+<li>
+<p><strong>Loader UI</strong>: The loader is conditionally rendered based on the <code>isLoading</code> state. You can customize the loader’s appearance with CSS.</p>
+</li>
+</ol>
 </div>
 <div class="tabbed-block">
 <ul>
-<li>
-<p><strong>Functional Update</strong>:</p>
-<ul>
-<li>Safer in scenarios where multiple state updates may occur quickly or simultaneously. It ensures you're working with the most up-to-date state.</li>
-</ul>
-</li>
-<li>
-<p><strong>Direct Assignment</strong>:</p>
-<ul>
-<li>May lead to stale state issues if there are rapid updates, as it does not consider the current state when setting the new value.</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>
-<p><strong>Functional Update</strong>:</p>
-<ul>
-<li>Can be more verbose, which may be helpful in complex scenarios, but could add unnecessary complexity if the previous state is not needed.</li>
-</ul>
-</li>
-<li>
-<p><strong>Direct Assignment</strong>:</p>
-<ul>
-<li>More concise and easier to read when the new value does not depend on the previous state.</li>
-</ul>
-</li>
+<li>Ensure your action creators (like <code>instanceChatAdd</code>) return a promise if you want to use <code>await</code>.</li>
+<li>You may want to add more robust error handling and user feedback for a better user experience.</li>
 </ul>
 </div>
 </div>
 </div>
-<h2 id="when-to-use-each-approach">When to Use Each Approach</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Use Functional Update</label><label for="__tabbed_2_2">Use Direct Assignment</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>When the next state depends on the current state.</li>
-<li>When dealing with updates that may occur rapidly or in quick succession.</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>When you're directly assigning a value that doesn't depend on the previous state.</li>
-<li>When you want clearer, simpler code and are certain about the context.</li>
-</ul>
-</div>
-</div>
-</div>
-<details class="tip" open="open">
-<summary>Summary</summary>
-<ul>
-<li><strong>Functional Update</strong> is more robust and safe for scenarios where the new state depends on the previous state.</li>
-<li><strong>Direct Assignment</strong> is simpler and works well when you have a straightforward update.</li>
-</ul>
-</details>
-<p>In your specific case of setting an ID on right-click, either can work, but if you don't anticipate rapid updates or dependencies, the direct assignment is often the preferred choice for its simplicity.</p>
 <hr></div>
 
 
@@ -3458,7 +3478,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../01/09/adding-syntax-hightlighting-in-the-material/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding Syntax hightlighting in the material">
+          <a href="../react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/" class="md-footer__link md-footer__link--prev" aria-label="Previous: React State Updates: When to Use Functional Patterns vs. Direct Assignments">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3468,20 +3488,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Adding Syntax hightlighting in the material
+                React State Updates: When to Use Functional Patterns vs. Direct Assignments
               </div>
             </div>
           </a>
         
         
           
-          <a href="../adding-a-loader-to-your-react-button-clicks/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding a Loader to Your React Button Clicks">
+          <a href="../../03/understanding-the-render-function-in-table-components/" class="md-footer__link md-footer__link--next" aria-label="Next: Understanding the render Function in Table Components">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Adding a Loader to Your React Button Clicks
+                Understanding the render Function in Table Components
               </div>
             </div>
             <div class="md-footer__button md-icon">

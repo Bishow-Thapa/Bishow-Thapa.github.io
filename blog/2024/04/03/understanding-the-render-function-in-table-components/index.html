@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/04/01/react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/04/03/understanding-the-render-function-in-table-components/">
       
       
-        <link rel="prev" href="../../../01/09/adding-syntax-hightlighting-in-the-material/">
+        <link rel="prev" href="../../01/adding-a-loader-to-your-react-button-clicks/">
       
-      
-        <link rel="next" href="../adding-a-loader-to-your-react-button-clicks/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>React State Updates: When to Use Functional Patterns vs. Direct Assignments - Bishow Thapa</title>
+        <title>Understanding the render Function in Table Components - Bishow Thapa</title>
       
     
     
@@ -85,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#react-state-updates-when-to-use-functional-patterns-vs-direct-assignments" class="md-skip">
+        <a href="#understanding-the-render-function-in-table-components" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              React State Updates: When to Use Functional Patterns vs. Direct Assignments
+              Understanding the render Function in Table Components
             
           </span>
         </div>
@@ -3075,63 +3073,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-using-functional-update-setcontextrightclickidprevid-id" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Using Functional Update: setContextRightClickId(prevId =&gt; id)
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-render-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the render Function?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-using-direct-assignment-setcontextrightclickiddataid" class="md-nav__link">
+  <a href="#predefined-parameter-in-render-function" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Using Direct Assignment: setContextRightClickId(data?.id)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-to-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      Which to Use?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recommendation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-in-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example in Context
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#main-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main Difference
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-each-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      When to Use Each Approach
+      Predefined Parameter in render function
     </span>
   </a>
   
@@ -3193,7 +3188,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-04-01 00:00:00" class="md-ellipsis">April 1, 2024</time>
+                        <time datetime="2024-04-03 00:00:00" class="md-ellipsis">April 3, 2024</time>
                       </div>
                     </li>
                     
@@ -3205,7 +3200,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -3244,125 +3239,203 @@
   
 
 
-<div><h1 id="react-state-updates-when-to-use-functional-patterns-vs-direct-assignments">React State Updates: When to Use Functional Patterns vs. Direct Assignments</h1>
-<p>The difference between <code>setContextRightClickId(prevId =&gt; id)</code> and <code>setContextRightClickId(data?.id)</code> lies in how each approach updates the state.</p>
+<div><h1 id="understanding-the-render-function-in-table-components">Understanding the <code>render</code> Function in Table Components</h1>
+<p>When building user interfaces with libraries like Ant Design or similar, you often work with table components to display data in a structured format. A key feature of these tables is the <code>render</code> function, which allows you to customize how data is displayed in each cell.</p>
 <!-- more -->
 
+<h2 id="overview">Overview</h2>
 <hr>
-<h2 id="1-using-functional-update-setcontextrightclickidprevid-id">1. Using Functional Update: <code>setContextRightClickId(prevId =&gt; id)</code></h2>
-<ul>
-<li><strong>Description</strong>: This approach uses a functional update. It takes the previous state as an argument and returns the new state.</li>
-<li><strong>Use Case</strong>: It's beneficial when the new state depends on the previous state, such as when multiple updates might occur quickly in succession.</li>
-<li><strong>Standard Practice</strong>: This is often used for cases where you need to rely on the current state to compute the new state. It helps avoid potential issues with stale state.</li>
-</ul>
-<h2 id="2-using-direct-assignment-setcontextrightclickiddataid">2. Using Direct Assignment: <code>setContextRightClickId(data?.id)</code></h2>
-<ul>
-<li><strong>Description</strong>: This approach directly sets the state to a new value without depending on the previous state.</li>
-<li><strong>Use Case</strong>: It’s straightforward when you're simply updating the state based on an event or action that doesn't rely on the previous state.</li>
-<li><strong>Standard Practice</strong>: This is perfectly acceptable for many cases, especially when you're directly setting a value based on an event (like a click).</li>
-</ul>
-<h2 id="which-to-use">Which to Use?</h2>
+<h3 id="what-is-the-render-function">What is the <code>render</code> Function?</h3>
+<p>The <code>render</code> function is a powerful tool that lets you define how each cell in a table should appear. It takes several parameters, but the most commonly used are:</p>
 <ul>
 <li>
-<p><strong>Use Functional Update</strong>: When you need to ensure the update is based on the latest state or when the update logic is more complex. For example, if you're incrementing a count or toggling a value based on the previous state.</p>
+<p><strong>text</strong>: This represents the value of the specific cell being rendered. For instance, if your column is for "creationTime," the <code>text</code> parameter will hold the corresponding creation time for that row.</p>
 </li>
 <li>
-<p><strong>Use Direct Assignment</strong>: When you simply want to set a state based on an event or static data, and there's no chance of multiple updates overlapping.</p>
+<p><strong>record</strong>: This parameter provides access to the entire row of data. This is useful when you want to reference other fields in the same row or need context beyond just the cell value.</p>
 </li>
 </ul>
-<h2 id="recommendation">Recommendation</h2>
-<p>For your specific case of setting the context menu ID based on a right-click, either method will work. However, if you're confident that there will be no rapid state updates affecting this particular value, you can use <code>setContextRightClickId(data?.id)</code>. If you want to be extra cautious or if there's any complexity, prefer the functional update.</p>
-<h2 id="example-in-context">Example in Context</h2>
-<p>For setting the right-clicked ID, both approaches are valid, but typically:</p>
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// When directly using the ID from an event</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">setContextRightClickId</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"> </span><span class="c1">// Direct assignment</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// When you might have complex state logic or multiple updates</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">setContextRightClickId</span><span class="p">((</span><span class="nx">prevId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">id</span><span class="p">);</span><span class="w"> </span><span class="c1">// Functional update (not strictly necessary here)</span>
+<h3 id="example-usage">Example Usage</h3>
+<p>Let's look at a practical example. Imagine you have a column that displays the creation time of entries. You want to format this time to include both date and time, displaying the time in red. Here’s how you might set that up:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Example</label><label for="__tabbed_1_2">Why Use the render Function?</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">"Creation Time"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">"creationTime"</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">"creationTime"</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">render</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">formattedDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nx">text</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">"YYYY-MM-DD"</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">formattedTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nx">text</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">"hh:mm A"</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                </span><span class="p">{</span><span class="nx">formattedDate</span><span class="p">}</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'red'</span><span class="w"> </span><span class="p">}}&gt;{</span><span class="nx">formattedTime</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>In many practical scenarios, developers tend to use direct assignments for simplicity unless state dependencies dictate otherwise.</p>
+<p>In this example, the <code>render</code> function formats the creation time using the <code>moment</code> library to ensure it is displayed correctly. The date is presented in a standard format, while the time is shown in a 12-hour format with AM/PM, colored red for emphasis.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p><strong>Customization</strong>: It gives you the flexibility to format data as needed, adding styles or additional elements, like icons or buttons.</p>
+</li>
+<li>
+<p><strong>Conditional Rendering</strong>: You can use the <code>render</code> function to conditionally display content based on the cell’s value or the row’s data.</p>
+</li>
+<li>
+<p><strong>Enhanced Readability</strong>: Proper formatting improves the readability of your data, making it easier for users to interpret.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="conclusion">Conclusion</h3>
+<p>The <code>render</code> function is an essential feature for anyone working with table components in modern UI libraries. By understanding how to leverage parameters like <code>text</code> and <code>record</code>, you can create more dynamic and user-friendly interfaces that present data clearly and attractively. Whether you're formatting dates, adding styles, or implementing complex logic, the <code>render</code> function empowers you to customize the display of your data effectively.</p>
 <hr>
-<h2 id="main-difference">Main Difference</h2>
-<p>The main differences between using <code>setContextRightClickId(prevId =&gt; id)</code> (<mark>functional update</mark>) and <code>setContextRightClickId(data?.id)</code> (<mark>direct assignment</mark>) are:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">1. Context of Use</label><label for="__tabbed_1_2">2. Concurrency Handling</label><label for="__tabbed_1_3">3. Readability and Complexity</label></div>
+<h2 id="additional">Additional</h2>
+<p><strong>Example of Conditional Rendering in the <code>render</code> Function</strong></p>
+<p>Conditional rendering in the render function allows you to display different content based on certain conditions. Here’s a simple example that demonstrates how to use conditional rendering to display a status message:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Basic Example</label><label for="__tabbed_2_2">Complex Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">"Status"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nx">render</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="c1">// Assume text is a status string like "active" or "inactive"</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="p">{</span><span class="nx">text</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"active"</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'green'</span><span class="w"> </span><span class="p">}}&gt;</span><span class="nx">Active</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'red'</span><span class="w"> </span><span class="p">}}&gt;</span><span class="nx">Inactive</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="p">)}</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="p">);</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<details class="note">
+<summary>Explanation</summary>
 <ul>
-<li>
-<p><strong>Functional Update (<code>prevId =&gt; id</code>)</strong>:</p>
-<ul>
-<li>Utilizes the previous state to calculate the new state.</li>
-<li>Essential when the new state depends on the old state, especially in scenarios with potential concurrent updates.</li>
+<li><strong>Condition Check</strong>: The <code>render</code> function checks the value of <code>text</code> (which represents the <code>status</code>).</li>
+<li><strong>Ternary Operator</strong>: It uses a ternary operator to determine what to display:<ul>
+<li>If <code>text</code> is "active", it displays "Active" in green.</li>
+<li>If <code>text</code> is anything else (e.g., "inactive"), it displays "Inactive" in red.</li>
 </ul>
 </li>
-<li>
-<p><strong>Direct Assignment (<code>data?.id</code>)</strong>:</p>
-<ul>
-<li>Sets the state directly to a specific value based on external input (like an event).</li>
-<li>Simplifies the logic when you don't need to consider the previous state.</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>
-<p><strong>Functional Update</strong>:</p>
-<ul>
-<li>Safer in scenarios where multiple state updates may occur quickly or simultaneously. It ensures you're working with the most up-to-date state.</li>
-</ul>
-</li>
-<li>
-<p><strong>Direct Assignment</strong>:</p>
-<ul>
-<li>May lead to stale state issues if there are rapid updates, as it does not consider the current state when setting the new value.</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>
-<p><strong>Functional Update</strong>:</p>
-<ul>
-<li>Can be more verbose, which may be helpful in complex scenarios, but could add unnecessary complexity if the previous state is not needed.</li>
-</ul>
-</li>
-<li>
-<p><strong>Direct Assignment</strong>:</p>
-<ul>
-<li>More concise and easier to read when the new value does not depend on the previous state.</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<h2 id="when-to-use-each-approach">When to Use Each Approach</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Use Functional Update</label><label for="__tabbed_2_2">Use Direct Assignment</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>When the next state depends on the current state.</li>
-<li>When dealing with updates that may occur rapidly or in quick succession.</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>When you're directly assigning a value that doesn't depend on the previous state.</li>
-<li>When you want clearer, simpler code and are certain about the context.</li>
-</ul>
-</div>
-</div>
-</div>
-<details class="tip" open="open">
-<summary>Summary</summary>
-<ul>
-<li><strong>Functional Update</strong> is more robust and safe for scenarios where the new state depends on the previous state.</li>
-<li><strong>Direct Assignment</strong> is simpler and works well when you have a straightforward update.</li>
 </ul>
 </details>
-<p>In your specific case of setting an ID on right-click, either can work, but if you don't anticipate rapid updates or dependencies, the direct assignment is often the preferred choice for its simplicity.</p>
+</div>
+<div class="tabbed-block">
+<p>You can also incorporate more complex logic. For example, if you want to show different icons based on the status:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Icon</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'antd'</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">"Status"</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nx">render</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"active"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">                    </span><span class="p">&lt;</span><span class="nt">Icon</span><span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="s">"check-circle"</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'green'</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="p">/&gt;</span><span class="w"> </span><span class="nx">Active</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">                </span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="p">);</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"inactive"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">                    </span><span class="p">&lt;</span><span class="nt">Icon</span><span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="s">"close-circle"</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'red'</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="p">/&gt;</span><span class="w"> </span><span class="nx">Inactive</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">                </span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="p">);</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="nx">Unknown</span><span class="w"> </span><span class="nx">Status</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;;</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="p">}</span>
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Explanation</summary>
+<ul>
+<li><strong>Icon Usage</strong>: In this example, we use Ant Design's <code>Icon</code> component to visually indicate the status.</li>
+<li><strong>Multiple Conditions</strong>: The <code>render</code> function checks for "active" and "inactive" statuses, displaying different icons and colors accordingly. If the status is neither, it defaults to "Unknown Status".</li>
+</ul>
+</details>
+</div>
+</div>
+</div>
+<p><strong>Conclusion</strong></p>
+<p>Using conditional rendering in the <code>render</code> function allows you to create dynamic and informative table cells that enhance the user experience. You can leverage the <code>text</code> and <code>record</code> parameters to access the data you need and display it conditionally based on its value.</p>
+<hr>
+<h2 id="predefined-parameter-in-render-function">Predefined Parameter in <code>render</code> function</h2>
+<p>In Ant Design's table component, the <code>render</code> function can accept several predefined parameters. Here are the most commonly used ones:</p>
+<ol>
+<li>
+<p>text</p>
+<ul>
+<li>Description: The value of the cell for the current row and column.</li>
+<li>Usage: This is the primary parameter used to access the data you want to format or display.</li>
+</ul>
+</li>
+<li>
+<p>record</p>
+<ul>
+<li>Description: The entire data object for the current row.</li>
+<li>Usage: This allows you to access any other fields in the same row, making it useful for conditional rendering based on other column values.</li>
+</ul>
+</li>
+<li>
+<p>index</p>
+<ul>
+<li>Description: The index of the current row in the table.</li>
+<li>Usage: Useful when you need to reference the position of the row, such as for applying styles or tracking order.</li>
+</ul>
+</li>
+<li>
+<p>extra</p>
+<ul>
+<li>Description: Additional information about the current row, which may include context-specific data.</li>
+<li>Usage: Rarely used in typical scenarios but can provide extra context depending on how the table is set up.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of Using Multiple Parameters</strong></p>
+<p>Here’s an example that utilizes <code>text</code>, <code>record</code>, and <code>index</code> in the <code>render</code> function:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Example</label><label for="__tabbed_3_2">Explanation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">"Actions"</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">"actions"</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">"actions"</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">render</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">record</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">button</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">editRecord</span><span class="p">(</span><span class="nx">record</span><span class="p">)}&gt;</span><span class="nx">Edit</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">button</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">deleteRecord</span><span class="p">(</span><span class="nx">record</span><span class="p">.</span><span class="nx">id</span><span class="p">)}&gt;</span><span class="nx">Delete</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">span</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">marginLeft</span><span class="o">:</span><span class="w"> </span><span class="s1">'10px'</span><span class="w"> </span><span class="p">}}&gt;</span><span class="nx">Row</span><span class="w"> </span><span class="p">{</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="p">);</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Edit and Delete Buttons: The <code>render</code> function provides buttons for editing and deleting the current row's record.</li>
+<li>Using <code>record</code>: The <code>record</code> parameter allows access to the entire row's data for actions.</li>
+<li>Using <code>index</code>: The <code>index</code> parameter shows the position of the row, which can be useful for displaying row numbers or ordering.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Conclusion</strong></p>
+<p>Using these predefined parameters in the <code>render</code> function gives you great flexibility to customize how data is displayed in Ant Design tables. By combining <code>text</code>, <code>record</code>, and <code>index</code>, you can create highly interactive and user-friendly tables that enhance the overall user experience.</p>
 <hr></div>
 
 
@@ -3458,7 +3531,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../01/09/adding-syntax-hightlighting-in-the-material/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding Syntax hightlighting in the material">
+          <a href="../../01/adding-a-loader-to-your-react-button-clicks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding a Loader to Your React Button Clicks">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3468,27 +3541,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Adding Syntax hightlighting in the material
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../adding-a-loader-to-your-react-button-clicks/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding a Loader to Your React Button Clicks">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
                 Adding a Loader to Your React Button Clicks
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     
