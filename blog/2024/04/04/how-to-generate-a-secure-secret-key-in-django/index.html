@@ -3434,7 +3434,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -3483,11 +3483,13 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"</span>
 </span></code></pre></div>
 <p>This will output a secure random secret key.</p>
+<hr>
 <h2 id="method-2-using-python-with-secrets">Method 2: Using Python with <code>secrets</code></h2>
 <p>If you want to create a secret key manually using Python's <code>secrets</code> module, you can run:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import secrets; print(secrets.token_urlsafe(50))"</span>
 </span></code></pre></div>
 <p>This generates a secure random URL-safe text string that can be used as a secret key.</p>
+<hr>
 <h2 id="method-3-using-django-shell">Method 3: Using Django Shell</h2>
 <p>If you're already working within a Django project, you can also generate a secret key in the Django shell:</p>
 <ol>
@@ -3503,11 +3505,23 @@
 </span></code></pre></div>
 </li>
 </ol>
+<hr>
 <h2 id="adding-to-your-django-settings">Adding to Your Django Settings</h2>
 <p>Once you've generated a secret key, add it to your <code>settings.py</code> file:</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s1">'your_generated_secret_key_here'</span>
 </span></code></pre></div>
 <p>Make sure to keep this key secure and never expose it in public repositories!</p>
+<hr>
+<details class="tip" open="open">
+<summary>python -c</summary>
+<p>In the context of the <code>python -c</code> command, the <code>-c</code> option stands for "command." It tells the Python interpreter to execute the string of Python code that follows it as a command, rather than running a script from a file.</p>
+<p><strong>Summary</strong></p>
+<ul>
+<li><code>-c</code>: Short for "command."</li>
+<li><strong>Usage</strong>: Allows you to run Python code provided directly as a string.</li>
+</ul>
+<p>This feature is useful for executing quick, one-off snippets of Python code directly from the command line without the need to create a separate script file.</p>
+</details>
 <hr></div>
 
 
