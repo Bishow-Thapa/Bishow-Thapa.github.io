@@ -2,517 +2,537 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bishow-thapa.github.io/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/tags/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/01/adding-a-loader-to-your-react-button-clicks/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/01/31/embarking-on-a-tech-odyssey/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/01/react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/giscus-comment-system/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/12/31/embracing-change-navigating-the-landscape-of-2023/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/04/how-to-generate-a-secure-secret-key-in-django/</loc>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/09/adding-syntax-hightlighting-in-the-material/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/03/understanding-the-render-function-in-table-components/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/common-error/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/draft/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/intro/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/package/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/secret/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/01-replychatbox/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/circular-planning/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/compose-email-drawer/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/dashboard-module/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/dashboard-today-task/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/mail-reply-bug/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/mail-tender-loader/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/modes-of-communication/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/redux-actions/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/redux-add-upate/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/tender-mail-circular/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/tender-mail/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/reg-validation-in-mail/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/showing-button-on-condition/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/tender-module-task-edit-and-im/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/circular-planning-select-value-debug/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/companies-select-debug/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/company-email-model/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/conditional-rendering-button/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/converting-radio-to-select/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/css-scrolling-block-issue/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/mail-onFocus/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/need-text-editor-in-im/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/persist-storage-redux/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/persist-storage-tender-content/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/savebase64-excel-button/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/tab-circular-planing/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/task-module-set-tos-ccs/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/tender-pagination-isActive/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/architecture/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/blog/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/daily-dairy/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/excel-api-data/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/fingerprint/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/groupchat-internal-message/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/groupchat-module/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/import-excel-file/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/instance-and-internal-message/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/internal-message/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/login/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/mail/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/permisison-based-access-control/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/public-events/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/redux-action-advanced/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/reference-project-circular/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/reference-tender-circular/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/sending-im/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/sending-mail/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/setting-setValue-in-select/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/sisco-view/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/tutorial-listing/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/HTMLRenderer/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/JSON-stringify/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/internalMNew/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/reusable-component-tooltip/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/useDebouncedDispatch/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/useReducer/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/tenderModule/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/tenderModule/reusableComponents/intro/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/appuserid/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/debounce/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/draft/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/persist-local-storage/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/priority-listing-select/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/sorting-table-antd/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/table-rowid/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/refactor/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/refactor/function-update-setState/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/primesales/intro/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/codesnap/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/intro/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/zustland-store/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/zustland/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/docker/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/package/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/research/pwa/bff-question/</loc>
+         <lastmod>2024-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/research/pwa/bff/</loc>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/pwa/intro/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/research/pwa/postgress/</loc>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/storybook/intro/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/tags/</loc>
-         <lastmod>2024-09-27</lastmod>
+         <lastmod>2024-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
