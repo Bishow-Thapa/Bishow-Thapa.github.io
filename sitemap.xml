@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/blog/2024/04/07/canceling-api-calls-in-react-why-it-matters/</loc>
+         <lastmod>2024-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/06/customizing-error-handling-with-rejectwithvalue-in-redux-toolkit/</loc>
          <lastmod>2024-10-01</lastmod>
          <changefreq>daily</changefreq>
