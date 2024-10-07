@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/archive/2024/page/2/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2024/04/13/leveraging-env-files-for-scalable-react-development/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../12/understanding-naming-conventions-in-redux-toolkit/">
       
       
-        <link rel="next" href="../../../2023/">
+        <link rel="next" href="../../14/approach-to-loading-state-in-createslice-in-redux-toolkit/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>2024 - Bishow Thapa</title>
+        <title>Leveraging .env Files for Scalable React Development - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#leveraging-env-files-for-scalable-react-development" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Leveraging .env Files for Scalable React Development
             
           </span>
         </div>
@@ -288,7 +288,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -368,11 +370,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -391,21 +395,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -419,7 +421,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -432,19 +434,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +446,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -468,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2023/" class="md-nav__link">
+      <a href="../../../../archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3404,6 +3396,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -3416,6 +3410,146 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-api-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. API URLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Feature Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-authentication-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Authentication Secrets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-analytics-and-tracking-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Analytics and Tracking IDs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-environment-specific-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Environment Specific Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-static-file-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Static File Paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-timeout-and-retry-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Timeout and Retry Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-uiux-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. UI/UX Configurations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Server Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-other-third-party-service-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Other Third-party Service Configurations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3423,424 +3557,287 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-07 00:00:00">April 7, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-04-13 00:00:00" class="md-ellipsis">April 13, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="canceling-api-calls-in-react-why-it-matters"><a class="toclink" href="../../../../2024/04/07/canceling-api-calls-in-react-why-it-matters/">Canceling API Calls in React: Why It Matters</a></h2>
-<p>Yes, if you want to ensure that API requests can be canceled when a component unmounts, you should pass a cancel token for each request you want to be able to cancel.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/07/canceling-api-calls-in-react-why-it-matters/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-06 00:00:00">April 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-error-handling-with-rejectwithvalue-in-redux-toolkit"><a class="toclink" href="../../../../2024/04/06/customizing-error-handling-with-rejectwithvalue-in-redux-toolkit/">Customizing Error Handling with <code>rejectWithValue</code> in Redux Toolkit</a></h2>
-<p>The two code snippets you provided represent different approaches to handling asynchronous operations in a Redux slice using <code>createAsyncThunk</code>.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/06/customizing-error-handling-with-rejectwithvalue-in-redux-toolkit/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-06 00:00:00">April 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="using-rejectwithvalue-for-cancellation-tokens-in-rtk"><a class="toclink" href="../../../../2024/04/06/using-rejectwithvalue-for-cancellation-tokens-in-rtk/">Using <code>rejectWithValue</code> for cancellation tokens in rtk</a></h2>
-<p>The confusion seems to arise from how <code>createAsyncThunk</code> handles error scenarios and how cancellation tokens work with Axios.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/06/using-rejectwithvalue-for-cancellation-tokens-in-rtk/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#react" class="md-tag md-tag-icon">React</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-05 00:00:00">April 5, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="understanding-asyncawait-in-redux-thunks-and-react-components"><a class="toclink" href="../../../../2024/04/05/understanding-asyncawait-in-redux-thunks-and-react-components/">Understanding Async/Await in Redux Thunks and React Components</a></h2>
-<p>As modern web applications grow in complexity, managing asynchronous operations becomes crucial. When using Redux for state management, you might find yourself dealing with asynchronous actions using <code>createAsyncThunk</code> from Redux Toolkit.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/05/understanding-asyncawait-in-redux-thunks-and-react-components/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-04 00:00:00">April 4, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="difference-between-abstractuser-and-abstractbaseuser"><a class="toclink" href="../../../../2024/04/04/difference-between-abstractuser-and-abstractbaseuser/">Difference between AbstractUser and AbstractBaseUser</a></h2>
-<p>In summary, use <code>AbstractUser</code> for a simpler extension of the default user model, and <code>AbstractBaseUser</code> when you need to create a completely custom user model.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/04/difference-between-abstractuser-and-abstractbaseuser/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      <a href="../../../../../tags/#toolkit" class="md-tag md-tag-icon">Toolkit</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-04 00:00:00">April 4, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="how-to-generate-a-secure-secret-key-in-django"><a class="toclink" href="../../../../2024/04/04/how-to-generate-a-secure-secret-key-in-django/">How to Generate a Secure Secret Key in Django</a></h2>
-<p>To quickly generate a secret key for a Django project, you can use several methods. Here are a couple of easy ways to do it directly in your terminal or using Python:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/04/how-to-generate-a-secure-secret-key-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-03 00:00:00">April 3, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="understanding-the-render-function-in-table-components"><a class="toclink" href="../../../../2024/04/03/understanding-the-render-function-in-table-components/">Understanding the <code>render</code> Function in Table Components</a></h2>
-<p>When building user interfaces with libraries like Ant Design or similar, you often work with table components to display data in a structured format. A key feature of these tables is the <code>render</code> function, which allows you to customize how data is displayed in each cell.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/03/understanding-the-render-function-in-table-components/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-01 00:00:00">April 1, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="adding-a-loader-to-your-react-button-clicks"><a class="toclink" href="../../../../2024/04/01/adding-a-loader-to-your-react-button-clicks/">Adding a Loader to Your React Button Clicks</a></h2>
-<p>In modern web applications, providing a smooth user experience is crucial. One effective way to enhance that experience is by implementing loaders during asynchronous actions. This blog will walk you through adding a loader to a button click in your React application, ensuring users know that their action is being processed.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/01/adding-a-loader-to-your-react-button-clicks/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-04-01 00:00:00">April 1, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="react-state-updates-when-to-use-functional-patterns-vs-direct-assignments"><a class="toclink" href="../../../../2024/04/01/react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/">React State Updates: When to Use Functional Patterns vs. Direct Assignments</a></h2>
-<p>The difference between <code>setContextRightClickId(prevId =&gt; id)</code> and <code>setContextRightClickId(data?.id)</code> lies in how each approach updates the state.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/04/01/react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-01-09 00:00:00">January 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="adding-syntax-hightlighting-in-the-material"><a class="toclink" href="../../../../2024/01/09/adding-syntax-hightlighting-in-the-material/">Adding Syntax hightlighting in the material</a></h2>
-<p>Pygments is a generic syntax highlighter suitable for use in code hosting, forums, wikis or other applications that need to prettify source code.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/01/09/adding-syntax-hightlighting-in-the-material/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a>
+  
 </nav>
-        
+
+
+  
+  
+
+
+<div><h1 id="leveraging-env-files-for-scalable-react-development">Leveraging <code>.env</code> Files for Scalable React Development</h1>
+<p>In a large React codebase, there are several important things you might want to define in your <code>.env</code> file to manage configuration effectively.</p>
+<!-- more -->
+
+<hr>
+<div class="admonition question">
+<p class="admonition-title">Beyond Hardcoding: Leveraging <code>.env</code> Files for Scalable React Development</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Here are some key variables you should consider:</p>
+<h3 id="1-api-urls">1. API URLs</h3>
+<ul>
+<li><strong>Base URL for API Endpoints</strong>: This allows you to switch between different environments (development, staging, production).</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>REACT_APP_API_URL=https://api.yourapp.com
+</span></code></pre></div>
+<h3 id="2-feature-flags">2. Feature Flags</h3>
+<ul>
+<li><strong>Feature Toggles</strong>: Use environment variables to enable or disable certain features dynamically.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>REACT_APP_ENABLE_NEW_FEATURE=true
+</span></code></pre></div>
+<h3 id="3-authentication-secrets">3. Authentication Secrets</h3>
+<ul>
+<li><strong>API Keys or Tokens</strong>: If you are using third-party services (e.g., Stripe, Firebase), store your API keys or tokens securely.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_key
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>REACT_APP_FIREBASE_API_KEY=your_firebase_key
+</span></code></pre></div>
+<h3 id="4-analytics-and-tracking-ids">4. Analytics and Tracking IDs</h3>
+<ul>
+<li>Analytics IDs: Store any IDs for tracking services like Google Analytics or Mixpanel.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>REACT_APP_GOOGLE_ANALYTICS_ID=your_ga_id
+</span></code></pre></div>
+<h3 id="5-environment-specific-settings">5. Environment Specific Settings</h3>
+<ul>
+<li><strong>Environment Type</strong>: Define the environment type to make conditional logic easier in your code.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>REACT_APP_ENV=development
+</span></code></pre></div>
+<h3 id="6-static-file-paths">6. Static File Paths</h3>
+<ul>
+<li><strong>Base Paths for Assets</strong>: If you have a CDN or specific folder structure for static assets.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>REACT_APP_ASSET_BASE_URL=https://cdn.yourapp.com/assets/
+</span></code></pre></div>
+<h3 id="7-timeout-and-retry-settings">7. Timeout and Retry Settings</h3>
+<ul>
+<li><strong>Timeout Settings</strong>: Define how long your app should wait for a response before timing out.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>REACT_APP_API_TIMEOUT=5000
+</span></code></pre></div>
+<h3 id="8-uiux-configurations">8. UI/UX Configurations</h3>
+<ul>
+<li><strong>Theme or Layout Settings</strong>: Define settings related to UI themes or layouts.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>REACT_APP_DEFAULT_THEME=light
+</span></code></pre></div>
+<h3 id="9-server-configuration">9. Server Configuration</h3>
+<ul>
+<li><strong>Backend Server URL</strong>: If your app needs to interact with a backend service, define the server URL.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>REACT_APP_BACKEND_URL=http://localhost:5000
+</span></code></pre></div>
+<h3 id="10-other-third-party-service-configurations">10. Other Third-party Service Configurations</h3>
+<ul>
+<li><strong>Webhook URLs, Third-party service keys</strong>: Any additional services your app interacts with.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>REACT_APP_WEBHOOK_URL=https://your-webhook-url.com
+</span></code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li><strong>Prefix Variables</strong>: Always prefix your environment variables with <code>REACT_APP_</code> to make them accessible in a React app.</li>
+<li><strong>Secure Sensitive Information</strong>: Do not commit sensitive information to your version control. Use a <code>.gitignore</code> file to exclude <code>.env</code> files from being tracked.</li>
+<li><strong>Documentation</strong>: Document the environment variables and their purposes for easy reference for your team.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Organizing your environment variables in a <code>.env</code> file enhances the flexibility, security, and maintainability of your React application, especially as it grows in complexity.</p>
+<hr>
+<h2 id="additional">Additional</h2>
+<p>The requirement for environment variables to start with the <code>REACT_APP_</code> prefix is specific to Create React App (CRA) and similar React setups, rather than a general Node.js environment requirement. Here’s a bit more detail:</p>
+<ol>
+<li>
+<p><strong>Create React App Specific</strong></p>
+<ul>
+<li><strong>CRA Behavior</strong>: When using Create React App, the build process (which is based on Webpack) is configured to only expose environment variables that have the <code>REACT_APP_</code> prefix to the client-side code. This is a deliberate design choice to ensure that only explicitly intended variables are accessible in the browser.</li>
+</ul>
+</li>
+<li>
+<p><strong>Node.js Environment</strong></p>
+<ul>
+<li><strong>General Node.js</strong>: In a Node.js environment (for server-side applications), there are no such restrictions. You can define and access environment variables freely, and they do not need a specific prefix. You can access them using <code>process.env.VARIABLE_NAME</code> directly.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Summary</strong></p>
+<ul>
+<li><strong>For React (especially with CRA)</strong>: Use the <code>REACT_APP_</code> prefix for any environment variables you want to access in your React components.</li>
+<li><strong>For Node.js</strong>: There are no such restrictions, and you can define and access environment variables without any specific prefix.</li>
+</ul>
+<p>This distinction is important to keep in mind when working on full-stack applications that involve both server-side and client-side code.</p>
+<hr></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Bishow-Thapa/github-comments"
+  data-repo-id="R_kgDOK_Y_Kw"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOK_Y_K84CcG6C"
+  data-mapping="blog"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  // Set palette on initial load
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+    // Instruct Giscus to set theme
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  // Register event handlers after documented loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme =
+          palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+        // Instruct Giscus to change theme
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -3859,10 +3856,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../12/understanding-naming-conventions-in-redux-toolkit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding Naming Conventions in Redux Toolkit">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3872,20 +3871,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Understanding Naming Conventions in Redux Toolkit
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../2023/" class="md-footer__link md-footer__link--next" aria-label="Next: 2023">
+          <a href="../../14/approach-to-loading-state-in-createslice-in-redux-toolkit/" class="md-footer__link md-footer__link--next" aria-label="Next: Approach to loading state in createSlice in Redux Toolkit">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                2023
+                Approach to loading state in createSlice in Redux Toolkit
               </div>
             </div>
             <div class="md-footer__button md-icon">
