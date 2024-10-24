@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/redux-actions/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/research/storybook/redux-store-subscribe/">
       
       
-        <link rel="prev" href="../01-replychatbox/">
+        <link rel="prev" href="../redux-persist-purge/">
       
       
-        <link rel="next" href="../dashboard-today-task/">
+        <link rel="next" href="../app-ideas/">
       
       
-      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Multiple API Action - Bishow Thapa</title>
+        <title>Redux Store Subscribe - Bishow Thapa</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hitting-both-api-at-once" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multiple API Action
+              Redux Store Subscribe
             
           </span>
         </div>
@@ -228,10 +228,28 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../office/intro/" class="md-tabs__link">
+          
+  
+  Office
 
         </a>
       </li>
@@ -248,25 +266,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../../intro/" class="md-tabs__link">
-          
-  
-  Office
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../../research/docker/" class="md-tabs__link">
+        <a href="../../docker/" class="md-tabs__link">
           
   
   Research
@@ -299,7 +299,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -371,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../blog/archive/2023/" class="md-nav__link">
+      <a href="../../../blog/archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,8 +487,6 @@
       
   
   
-    
-  
   
   
     
@@ -499,12 +497,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -518,7 +516,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Office
@@ -532,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../intro/" class="md-nav__link">
+      <a href="../../../office/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,21 +548,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -578,7 +574,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Infocom Solution
@@ -592,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../package/" class="md-nav__link">
+      <a href="../../../office/ispl/package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/appuserid/" class="md-nav__link">
+      <a href="../../../office/ispl/important/appuserid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/priority-listing-select/" class="md-nav__link">
+      <a href="../../../office/ispl/important/priority-listing-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/sorting-table-antd/" class="md-nav__link">
+      <a href="../../../office/ispl/important/sorting-table-antd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -713,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/persist-local-storage/" class="md-nav__link">
+      <a href="../../../office/ispl/important/persist-local-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/table-rowid/" class="md-nav__link">
+      <a href="../../../office/ispl/important/table-rowid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/debounce/" class="md-nav__link">
+      <a href="../../../office/ispl/important/debounce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/draft/" class="md-nav__link">
+      <a href="../../../office/ispl/important/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/architecture/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -942,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/redux-action-advanced/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/redux-action-advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/tutorial-listing/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/tutorial-listing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -984,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/public-events/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/public-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/mail/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/blog/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1047,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/sisco-view/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sisco-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1068,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/sending-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sending-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1089,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/sending-im/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sending-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/reference-tender-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/reference-tender-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/reference-project-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/reference-project-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1152,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/login/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/excel-api-data/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/excel-api-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/import-excel-file/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/import-excel-file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1215,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/fingerprint/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/fingerprint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1278,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/groupchat-module/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/groupchat-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/daily-dairy/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/daily-dairy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1320,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1386,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/HTMLRenderer/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/HTMLRenderer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1407,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/JSON-stringify/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/JSON-stringify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1428,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/internalMNew/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/internalMNew/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1449,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1470,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1491,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/useReducer/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/useReducer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/tenderModule/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/tenderModule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1657,21 +1653,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
@@ -1685,7 +1679,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4">
             <span class="md-nav__icon md-icon"></span>
             Clickup
@@ -1696,21 +1690,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4_1" >
         
           
           <label class="md-nav__link" for="__nav_2_2_4_1" id="__nav_2_2_4_1_label" tabindex="0">
@@ -1724,7 +1716,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4_1">
             <span class="md-nav__icon md-icon"></span>
             2024 year
@@ -1735,21 +1727,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4_1_1" >
         
           
           <label class="md-nav__link" for="__nav_2_2_4_1_1" id="__nav_2_2_4_1_1_label" tabindex="0">
@@ -1763,7 +1753,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_4_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_4_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4_1_1">
             <span class="md-nav__icon md-icon"></span>
             Old Clickups
@@ -1777,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-replychatbox/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/01-replychatbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1795,28 +1785,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Multiple API Action
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/redux-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1825,51 +1797,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hitting-both-api-at-once" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hitting both api at once
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      ACTIONS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reducer" class="md-nav__link">
-    <span class="md-ellipsis">
-      REDUCER
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1882,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dashboard-today-task/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-today-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1903,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redux-add-upate/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/redux-add-upate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1924,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dashboard-module/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tender-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/tender-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1966,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-tender-loader/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/mail-tender-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1987,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modes-of-communication/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/modes-of-communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2008,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../circular-planning/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/circular-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2029,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tender-mail-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/tender-mail-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2050,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-reply-bug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/mail-reply-bug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2071,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../compose-email-drawer/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/compose-email-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2092,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../internal-message-only-system-to-show-in-tos/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2113,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dashboard-noticeboard-after-4pm/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2134,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../re-sent-outbox-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2200,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/showing-button-on-condition/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/showing-button-on-condition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/isCircular-conditionaly-rendering/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/reg-validation-in-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/reg-validation-in-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/tender-module-task-edit-and-im/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/tender-module-task-edit-and-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2305,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/dashboard-daily-task-table-sorting/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2326,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2392,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/persist-storage-redux/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/persist-storage-redux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2413,7 +2340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/persist-storage-tender-content/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/persist-storage-tender-content/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2434,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/company-email-model/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/company-email-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2455,7 +2382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/converting-radio-to-select/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/converting-radio-to-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2476,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/need-text-editor-in-im/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/need-text-editor-in-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2497,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/conditional-rendering-button/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/conditional-rendering-button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2518,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/savebase64-excel-button/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/savebase64-excel-button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2539,7 +2466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/css-scrolling-block-issue/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/css-scrolling-block-issue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2560,7 +2487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/tab-circular-planing/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/tab-circular-planing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2581,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/circular-planning-select-value-debug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/circular-planning-select-value-debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2602,7 +2529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/tender-pagination-isActive/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/tender-pagination-isActive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2623,7 +2550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/mail-onFocus/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/mail-onFocus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2644,7 +2571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/task-module-set-tos-ccs/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/task-module-set-tos-ccs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2710,7 +2637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../september/companies-select-debug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/companies-select-debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2792,7 +2719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2813,7 +2740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/Button/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/Button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2834,7 +2761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/function-update-setState/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/function-update-setState/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2855,7 +2782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/noticeboard/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/noticeboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2884,7 +2811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../common-error/" class="md-nav__link">
+      <a href="../../../office/common-error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2950,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../primesales/intro/" class="md-nav__link">
+      <a href="../../../office/primesales/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3016,7 +2943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/intro/" class="md-nav__link">
+      <a href="../../../office/redux/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3037,7 +2964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/zustland/" class="md-nav__link">
+      <a href="../../../office/redux/zustland/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3058,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/zustland-store/" class="md-nav__link">
+      <a href="../../../office/redux/zustland-store/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3079,7 +3006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/react-router/" class="md-nav__link">
+      <a href="../../../office/redux/react-router/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3145,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/codesnap/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/codesnap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3166,7 +3093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/slice/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/slice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3187,7 +3114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/improvement/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/improvement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3208,7 +3135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/axios-cancel/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/axios-cancel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3229,7 +3156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/loggin-in-react/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/loggin-in-react/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3250,7 +3177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/antd-modal/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/antd-modal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3271,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/antd-drawer/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/antd-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3292,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/router-dom/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/router-dom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3321,7 +3248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../draft/" class="md-nav__link">
+      <a href="../../../office/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3346,8 +3273,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -3356,12 +3285,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -3375,7 +3304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Research
@@ -3389,7 +3318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/docker/" class="md-nav__link">
+      <a href="../../docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3410,7 +3339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/package/" class="md-nav__link">
+      <a href="../../package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3468,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/intro/" class="md-nav__link">
+      <a href="../../pwa/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3489,7 +3418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/postgress/" class="md-nav__link">
+      <a href="../../pwa/postgress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3510,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/bff/" class="md-nav__link">
+      <a href="../../pwa/bff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3531,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/bff-question/" class="md-nav__link">
+      <a href="../../pwa/bff-question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3552,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/best-approach-rtk/" class="md-nav__link">
+      <a href="../../pwa/best-approach-rtk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3573,7 +3502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/react-image-gallery/" class="md-nav__link">
+      <a href="../../pwa/react-image-gallery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3594,7 +3523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/pwa/csr-sgr-ssr/" class="md-nav__link">
+      <a href="../../pwa/csr-sgr-ssr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3620,19 +3549,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -3646,7 +3577,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             StoryBook
@@ -3660,7 +3591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3681,7 +3612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/immer-example/" class="md-nav__link">
+      <a href="../immer-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3702,7 +3633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/axios-interceptors/" class="md-nav__link">
+      <a href="../axios-interceptors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3723,7 +3654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/reduxtoolkit-and-rtkquery/" class="md-nav__link">
+      <a href="../reduxtoolkit-and-rtkquery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3744,7 +3675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/redux-persist/" class="md-nav__link">
+      <a href="../redux-persist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3765,7 +3696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/redux-persist-purge/" class="md-nav__link">
+      <a href="../redux-persist-purge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3783,10 +3714,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/redux-store-subscribe/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Redux Store Subscribe
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3795,6 +3744,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-in-standard-redux-and-redux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage in Standard Redux and Redux Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-storesubscribe" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use store.subscribe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-you-might-use-storesubscribe-in-redux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      When You Might Use store.subscribe in Redux Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-in-redux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example in Redux Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3807,7 +3876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/storybook/app-ideas/" class="md-nav__link">
+      <a href="../app-ideas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3861,29 +3930,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hitting-both-api-at-once" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Hitting both api at once
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-in-standard-redux-and-redux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage in Standard Redux and Redux Toolkit
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#actions" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-storesubscribe" class="md-nav__link">
     <span class="md-ellipsis">
-      ACTIONS
+      When to Use store.subscribe
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reducer" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      REDUCER
+      Best Practices
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-you-might-use-storesubscribe-in-redux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      When You Might Use store.subscribe in Redux Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-in-redux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example in Redux Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3905,89 +4049,151 @@
   
 
 
-  <h1>Multiple API Action</h1>
+  <h1>Redux Store Subscribe</h1>
 
-<div><h2 id="hitting-both-api-at-once">Hitting both api at once</h2>
-<h2 id="actions">ACTIONS</h2>
-<blockquote>
-<p>ACTION: <code>services/redux/Reference/action.js</code></p>
-<blockquote>
-<p>Line number: <code>180</code></p>
-</blockquote>
-</blockquote>
-<div class="language-js highlight"><span class="filename">action.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// add company and remarks both</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ReferenceRemarksCompanyAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data1</span><span class="p">,</span><span class="w"> </span><span class="nx">data2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_COMPANY_MANUAL_ADD</span><span class="p">));</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">referencesService</span><span class="p">.</span><span class="nx">ReferenceCompanyManualAdd</span><span class="p">(</span><span class="nx">data1</span><span class="p">);</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_COMPANY_MANUAL_ADD</span><span class="p">));</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">          </span><span class="nx">message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">"Successfully updated company"</span><span class="p">);</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">          </span><span class="nx">dispatch</span><span class="p">(</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">              </span><span class="nx">success</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_COMPANY_MANUAL_ADD</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">          </span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">          </span><span class="c1">// added here</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">          </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="p">(</span><span class="nx">data2</span><span class="p">));</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">          </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">};</span>
+<div><h2 id="overview">Overview</h2>
+<p>In Redux, <code>store.subscribe</code> is a method that allows you to listen for changes in the Redux store. When the state in the store changes, any function you've subscribed will be called. This is a core part of how Redux works, enabling components or other parts of your application to react to state changes.</p>
+<h3 id="usage-in-standard-redux-and-redux-toolkit">Usage in Standard Redux and Redux Toolkit</h3>
+<p>Both standard Redux and Redux Toolkit (RTK) use <code>store.subscribe</code>. However, in RTK, you often interact with the store in a more abstracted way, utilizing hooks like <code>useSelector</code> and <code>useDispatch</code> that handle subscriptions under the hood.</p>
+<h3 id="when-to-use-storesubscribe">When to Use <code>store.subscribe</code></h3>
+<p>You generally use <code>store.subscribe</code> in the following scenarios:</p>
+<ol>
+<li>
+<p><strong>Non-React Applications</strong>: In non-React apps or plain JavaScript, you might directly use store.subscribe to listen for state changes.</p>
+</li>
+<li>
+<p><strong>Advanced Cases</strong>: If you need to perform side effects when the state changes, such as logging or syncing with an external API.</p>
+</li>
+<li>
+<p><strong>Custom Subscriptions</strong>: For situations where you want to trigger an update or calculation based on specific state changes that aren't easily handled through React components.</p>
+</li>
+</ol>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li>
+<p><strong>Unsubscribe</strong>: Always return a cleanup function from your subscription to avoid memory leaks. If your subscription is tied to a component's lifecycle, use it inside <code>useEffect</code> in React.</p>
+</li>
+<li>
+<p><strong>Keep It Simple</strong>: Use <code>store.subscribe</code> only when necessary. In React applications, using hooks like <code>useSelector</code> is often more straightforward and leads to better-optimized re-renders.</p>
+</li>
+<li>
+<p><strong>Limit Logic in Subscribers</strong>: Keep the logic within the subscription simple to avoid performance issues.</p>
+</li>
+</ol>
+<h3 id="real-example">Real Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Standard Redux</label><label for="__tabbed_1_2">Redux Toolkit Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'redux'</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// Reducer</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">action</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s1">'INCREMENT'</span><span class="o">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">state</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">};</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// Create store</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createStore</span><span class="p">(</span><span class="nx">counter</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">// Subscribe to store updates</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="kd">const</span><span class="w"> </span><span class="nx">unsubscribe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">store</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'State changed:'</span><span class="p">,</span><span class="w"> </span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">());</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">});</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1">// ReferencePartyRemarksHistoryAdd</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">apiData</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD</span><span class="p">));</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">referencesService</span><span class="p">.</span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="p">(</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="nx">apiData</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">      </span><span class="p">);</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD</span><span class="p">));</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="nx">message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">"Successfully added Remarks"</span><span class="p">);</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">          </span><span class="nx">success</span><span class="p">(</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">            </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD</span><span class="p">,</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">          </span><span class="p">)</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">        </span><span class="p">);</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">        </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="p">};</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1">// Dispatch actions</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">'INCREMENT'</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">'INCREMENT'</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1">// Unsubscribe when no longer needed</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nx">unsubscribe</span><span class="p">();</span>
 </span></code></pre></div>
-<h2 id="reducer">REDUCER</h2>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Line number: 298</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD_SUCCESS</span><span class="o">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">lastParty</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingResponse</span><span class="p">[</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingResponse</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">];</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">updatedLastParty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">...</span><span class="nx">lastParty</span><span class="p">,</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nx">remarks</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="o">?</span><span class="p">.</span><span class="nx">remarks</span><span class="p">,</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">updatedPartyListingResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">...</span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingResponse</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">),</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nx">updatedLastParty</span><span class="p">,</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="p">];</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="nx">referencePartyHistoryAddResponse</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">,</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nx">referencePartyHistoryAddLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="nx">referencePartyRemarksHistoryListingResponse</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="c1">// ...state.referencePartyRemarksHistoryListingResponse,</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">      </span><span class="p">...</span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingResponse</span><span class="p">,</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">      </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">,</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="nx">referencePartyListingResponse</span><span class="o">:</span><span class="w"> </span><span class="nx">updatedPartyListingResponse</span><span class="p">,</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="p">};</span>
-</span></code></pre></div></div>
+</div>
+<div class="tabbed-block">
+<p>In a React component using Redux Toolkit:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">configureStore</span><span class="p">,</span><span class="w"> </span><span class="nx">createSlice</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@reduxjs/toolkit'</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Create a slice</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">counterSlice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlice</span><span class="p">({</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'counter'</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nx">initialState</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nx">reducers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nx">increment</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">});</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">configureStore</span><span class="p">({</span><span class="w"> </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">counterSlice</span><span class="p">.</span><span class="nx">reducer</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1">// React component</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">unsubscribe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">store</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'State changed:'</span><span class="p">,</span><span class="w"> </span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">());</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">unsubscribe</span><span class="p">();</span><span class="w"> </span><span class="c1">// Cleanup on unmount</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">counterSlice</span><span class="p">.</span><span class="nx">actions</span><span class="p">.</span><span class="nx">increment</span><span class="p">());</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">button</span><span class="w"> </span><span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">increment</span><span class="p">}&gt;</span><span class="nx">Increment</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="p">};</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Counter</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><code>store.subscribe</code> is useful for listening to state changes in both standard Redux and Redux Toolkit.</li>
+<li>Prefer using hooks in React for easier management.</li>
+<li>Always manage subscriptions properly to avoid leaks and performance issues.</li>
+</ul>
+<hr>
+<h2 id="implementation">Implementation</h2>
+<p>You can use <code>store.subscribe</code> in both standard Redux and Redux Toolkit. However, in most cases with Redux Toolkit, you may not need to use it directly because of the built-in features and patterns that Redux Toolkit provides, such as slices and thunks.</p>
+<h3 id="when-you-might-use-storesubscribe-in-redux-toolkit">When You Might Use <code>store.subscribe</code> in Redux Toolkit</h3>
+<ol>
+<li>
+<p><strong>Side Effects</strong>: If you have specific side effects that need to occur in response to state changes and are not covered by the existing middleware or thunk patterns, <code>store.subscribe</code> can be useful.</p>
+</li>
+<li>
+<p><strong>External Libraries</strong>: If you need to update external libraries or components that aren't directly connected to your Redux store, subscribing to state changes can help.</p>
+</li>
+<li>
+<p><strong>Debugging</strong>: It can still be useful for logging state changes during development or debugging.</p>
+</li>
+</ol>
+<h3 id="example-in-redux-toolkit">Example in Redux Toolkit</h3>
+<p>Here's a simple example of using <code>store.subscribe</code> in a Redux Toolkit setup:</p>
+<div class="language-jsx highlight"><span class="filename">store.js</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">configureStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@reduxjs/toolkit"</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">rootReducer</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./rootReducer"</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">configureStore</span><span class="p">({</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">rootReducer</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">});</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">// Subscribe to store updates</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kd">const</span><span class="w"> </span><span class="nx">unsubscribe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">store</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"State updated:"</span><span class="p">,</span><span class="w"> </span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">());</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">});</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1">// Dispatch actions</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"SOME_ACTION"</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">// Unsubscribe when needed</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1">// unsubscribe();</span>
+</span></code></pre></div>
+<h3 id="conclusion">Conclusion</h3>
+<p>While you can use <code>store.subscribe</code> with <a href="#">Redux Toolkit</a>, <mark>it's often not necessary</mark> due to the framework's design that encourages using thunks and slices for handling side effects and state management. If your use case requires direct subscriptions, it's perfectly fine to use it as needed. Just remember to manage performance and memory properly.</p></div>
 
 
 
@@ -4023,7 +4229,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01-replychatbox/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ReplyChatbox.js">
+          <a href="../redux-persist-purge/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Redux Persist Purge">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4033,20 +4239,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                ReplyChatbox.js
+                Redux Persist Purge
               </div>
             </div>
           </a>
         
         
           
-          <a href="../dashboard-today-task/" class="md-footer__link md-footer__link--next" aria-label="Next: Dashboard Today Task">
+          <a href="../app-ideas/" class="md-footer__link md-footer__link--next" aria-label="Next: App Ideas">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Dashboard Today Task
+                App Ideas
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4098,10 +4304,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

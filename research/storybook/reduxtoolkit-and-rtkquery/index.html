@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -3774,6 +3774,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#clear-persist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Persist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -3803,6 +3812,69 @@
   
   <span class="md-ellipsis">
     Redux Persist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redux-persist-purge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redux Persist Purge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redux-store-subscribe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redux Store Subscribe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    App Ideas
   </span>
   
 
@@ -3930,6 +4002,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#clear-persist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Persist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -4001,7 +4082,7 @@
 </div>
 <p>Overall, using both together can lead to a more efficient and organized application structure.</p>
 <hr>
-<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*CLBjfVfrVoz-7yOyvtCoUw.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Persist" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*CLBjfVfrVoz-7yOyvtCoUw.png"></a></p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*CLBjfVfrVoz-7yOyvtCoUw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Persist" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*CLBjfVfrVoz-7yOyvtCoUw.png"></a></p>
 <h2 id="example-1-using-redux-toolkit-with-rtk-quer">Example 1: Using Redux Toolkit with RTK Quer</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">store.js</label><label for="__tabbed_2_2">apiSlice.js</label><label for="__tabbed_2_3">Posts.js</label></div>
 <div class="tabbed-content">
@@ -4230,6 +4311,14 @@
 <li><strong>RTK Query</strong>: It handles caching and persistence of API data automatically, but it doesn't persist data across sessions without additional setup.</li>
 </ul>
 <p>Thus, while both can handle data persistence, the methods and complexities involved are different.</p>
+<hr>
+<h2 id="clear-persist">Clear Persist</h2>
+<div class="admonition question">
+<p class="admonition-title">Is it standard practice to clear Redux Persist data on user logout?</p>
+</div>
+<p>The standard practice is indeed to clear the persisted state when a user logs out. This ensures that sensitive user data is not retained and prevents unauthorized access if a different user logs in afterward.</p>
+<p>To do this, you can use Redux Persist's <code>purge</code> method to clear the stored state in local storage or wherever it's persisted. This can be done in your logout action or in a middleware that listens for logout events.</p>
+<p>Overall, clearing the persisted state on logout is a good security measure and helps maintain a clean application state.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
