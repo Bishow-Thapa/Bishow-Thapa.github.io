@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/office/ispl/documentation/alldocs/redux-action-advanced/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/research/storybook/jwt/">
       
       
-        <link rel="prev" href="../internal-message/">
+        <link rel="prev" href="../pnpm/">
       
       
-        <link rel="next" href="../tutorial-listing/">
+        <link rel="next" href="../../rtkquery/intro/">
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Tender Communication Redux - Bishow Thapa</title>
+        <title>jwt package - Bishow Thapa</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#redux" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tender Communication Redux
+              jwt package
             
           </span>
         </div>
@@ -228,10 +228,28 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../office/intro/" class="md-tabs__link">
+          
+  
+  Office
 
         </a>
       </li>
@@ -248,25 +266,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../intro/" class="md-tabs__link">
-          
-  
-  Office
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../research/docker/" class="md-tabs__link">
+        <a href="../../docker/" class="md-tabs__link">
           
   
   Research
@@ -299,7 +299,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -371,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/archive/2023/" class="md-nav__link">
+      <a href="../../../blog/archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,8 +487,6 @@
       
   
   
-    
-  
   
   
     
@@ -499,12 +497,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -518,7 +516,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Office
@@ -532,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/" class="md-nav__link">
+      <a href="../../../office/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,21 +548,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -578,7 +574,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Infocom Solution
@@ -592,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/" class="md-nav__link">
+      <a href="../../../office/ispl/package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/appuserid/" class="md-nav__link">
+      <a href="../../../office/ispl/important/appuserid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/priority-listing-select/" class="md-nav__link">
+      <a href="../../../office/ispl/important/priority-listing-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/sorting-table-antd/" class="md-nav__link">
+      <a href="../../../office/ispl/important/sorting-table-antd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -713,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/persist-local-storage/" class="md-nav__link">
+      <a href="../../../office/ispl/important/persist-local-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/table-rowid/" class="md-nav__link">
+      <a href="../../../office/ispl/important/table-rowid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/debounce/" class="md-nav__link">
+      <a href="../../../office/ispl/important/debounce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/table-row-selection-customize/" class="md-nav__link">
+      <a href="../../../office/ispl/important/table-row-selection-customize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/error-boundary/" class="md-nav__link">
+      <a href="../../../office/ispl/important/error-boundary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -818,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../important/draft/" class="md-nav__link">
+      <a href="../../../office/ispl/important/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,21 +840,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
@@ -872,7 +866,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_3">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -886,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,21 +898,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2_3_2" id="__nav_2_2_3_2_label" tabindex="0">
@@ -932,7 +924,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             All Docs
@@ -946,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setting-setValue-in-select/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -985,30 +977,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Tender Communication Redux
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../office/ispl/documentation/alldocs/redux-action-advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,53 +989,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    <span class="md-ellipsis">
-      API
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    <span class="md-ellipsis">
-      ACTION
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reducer" class="md-nav__link">
-    <span class="md-ellipsis">
-      REDUCER
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1076,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial-listing/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/tutorial-listing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../public-events/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/public-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sisco-view/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sisco-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sending-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sending-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sending-im/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sending-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-tender-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/reference-tender-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-project-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/reference-project-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../login/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../excel-api-data/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/excel-api-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../import-excel-file/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/import-excel-file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fingerprint/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/fingerprint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groupchat-internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instance-and-internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../groupchat-module/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/groupchat-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daily-dairy/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/daily-dairy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../permisison-based-access-control/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1499,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../commonModule/HTMLRenderer/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/HTMLRenderer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1520,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../commonModule/JSON-stringify/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/JSON-stringify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1541,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../commonModule/internalMNew/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/internalMNew/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1562,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../commonModule/reusable-component-tooltip/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1583,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../commonModule/useDebouncedDispatch/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1604,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../commonModule/useReducer/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/useReducer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tenderModule/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/tenderModule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1728,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tenderModule/reusableComponents/intro/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1884,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/01-replychatbox/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/01-replychatbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1905,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/redux-actions/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/redux-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1926,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/dashboard-today-task/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-today-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1947,7 +1872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/redux-add-upate/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/redux-add-upate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1968,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/dashboard-module/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1989,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/tender-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/tender-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2010,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/mail-tender-loader/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/mail-tender-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2031,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/modes-of-communication/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/modes-of-communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/circular-planning/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/circular-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2073,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/tender-mail-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/tender-mail-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2094,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/mail-reply-bug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/mail-reply-bug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2115,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/compose-email-drawer/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/compose-email-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2136,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2157,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2178,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2244,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/showing-button-on-condition/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/showing-button-on-condition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2265,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/isCircular-conditionaly-rendering/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2286,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/reg-validation-in-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/reg-validation-in-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2307,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/tender-module-task-edit-and-im/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/tender-module-task-edit-and-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2349,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/dashboard-daily-task-table-sorting/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2370,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2436,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/persist-storage-redux/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/persist-storage-redux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2457,7 +2382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/persist-storage-tender-content/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/persist-storage-tender-content/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2478,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/company-email-model/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/company-email-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2499,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/converting-radio-to-select/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/converting-radio-to-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2520,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/need-text-editor-in-im/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/need-text-editor-in-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2541,7 +2466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/conditional-rendering-button/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/conditional-rendering-button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2562,7 +2487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/savebase64-excel-button/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/savebase64-excel-button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2583,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/css-scrolling-block-issue/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/css-scrolling-block-issue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2604,7 +2529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/tab-circular-planing/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/tab-circular-planing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2625,7 +2550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/circular-planning-select-value-debug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/circular-planning-select-value-debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2646,7 +2571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/tender-pagination-isActive/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/tender-pagination-isActive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2667,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/mail-onFocus/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/mail-onFocus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2688,7 +2613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/task-module-set-tos-ccs/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/task-module-set-tos-ccs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2754,7 +2679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/november/mail-mulitple-reference-issue/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/mail-mulitple-reference-issue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2775,7 +2700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/november/adding-hyperlink-in-internal-toolbar/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/adding-hyperlink-in-internal-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2796,7 +2721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/november/added-loader-in-business-model/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/added-loader-in-business-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2862,7 +2787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../clickup/2024/september/companies-select-debug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/companies-select-debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2944,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../refactor/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2965,7 +2890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../refactor/Button/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/Button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2986,7 +2911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../refactor/function-update-setState/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/function-update-setState/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3007,7 +2932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../refactor/noticeboard/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/noticeboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3036,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../common-error/" class="md-nav__link">
+      <a href="../../../office/common-error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3102,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../primesales/intro/" class="md-nav__link">
+      <a href="../../../office/primesales/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3168,7 +3093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../redux/intro/" class="md-nav__link">
+      <a href="../../../office/redux/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3189,7 +3114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../redux/zustland/" class="md-nav__link">
+      <a href="../../../office/redux/zustland/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3210,7 +3135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../redux/zustland-store/" class="md-nav__link">
+      <a href="../../../office/redux/zustland-store/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3231,7 +3156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../redux/react-router/" class="md-nav__link">
+      <a href="../../../office/redux/react-router/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3297,7 +3222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/codesnap/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/codesnap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3318,7 +3243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/slice/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/slice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3339,7 +3264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/improvement/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/improvement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3360,7 +3285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/axios-cancel/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/axios-cancel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3381,7 +3306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/loggin-in-react/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/loggin-in-react/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3402,7 +3327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/antd-modal/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/antd-modal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3423,7 +3348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/antd-drawer/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/antd-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3444,7 +3369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codesnapshot/router-dom/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/router-dom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3473,7 +3398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../draft/" class="md-nav__link">
+      <a href="../../../office/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3498,8 +3423,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -3508,12 +3435,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -3527,7 +3454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Research
@@ -3541,7 +3468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/docker/" class="md-nav__link">
+      <a href="../../docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3562,7 +3489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/package/" class="md-nav__link">
+      <a href="../../package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3583,7 +3510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/license-doc/" class="md-nav__link">
+      <a href="../../license-doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3641,7 +3568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/pwa/intro/" class="md-nav__link">
+      <a href="../../pwa/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3662,7 +3589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/pwa/bff/" class="md-nav__link">
+      <a href="../../pwa/bff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3683,7 +3610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/pwa/bff-question/" class="md-nav__link">
+      <a href="../../pwa/bff-question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3709,19 +3636,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -3735,7 +3664,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             StoryBook
@@ -3749,7 +3678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/storybook/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3770,7 +3699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/storybook/app-ideas/" class="md-nav__link">
+      <a href="../app-ideas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3791,7 +3720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/storybook/pnpm/" class="md-nav__link">
+      <a href="../pnpm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3809,10 +3738,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../research/storybook/jwt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    jwt package
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3821,6 +3768,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-jwt-decoding-without-redux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative (JWT Decoding without Redux):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3878,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/rtkquery/intro/" class="md-nav__link">
+      <a href="../../rtkquery/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3899,7 +3900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/rtkquery/react-architecture/" class="md-nav__link">
+      <a href="../../rtkquery/react-architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3920,7 +3921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/rtkquery/rtkadvanced/" class="md-nav__link">
+      <a href="../../rtkquery/rtkadvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3941,7 +3942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/rtkquery/topic/" class="md-nav__link">
+      <a href="../../rtkquery/topic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3962,7 +3963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../research/rtkquery/tools/" class="md-nav__link">
+      <a href="../../rtkquery/tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4008,8 +4009,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4018,27 +4017,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      API
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
-      ACTION
+      Steps:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reducer" class="md-nav__link">
+  <a href="#alternative-jwt-decoding-without-redux" class="md-nav__link">
     <span class="md-ellipsis">
-      REDUCER
+      Alternative (JWT Decoding without Redux):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion:
     </span>
   </a>
   
@@ -4062,205 +4070,172 @@
   
 
 
-<div><h1 id="redux">Redux</h1>
-<p>Adding and updating with two api at once.</p>
-<h2 id="api">API</h2>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<blockquote>
-<p><code>services/redux/Reference/api.js</code></p>
-</blockquote>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// ReferencePartyRemarksHistoryAdd</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">referencePartyRemarksHistoryAdd</span><span class="p">(</span><span class="nx">apiData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">appBaseUrl</span><span class="si">}</span><span class="sb">/referenceManagement/referencePartyRemarksHistoryAdd`</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">postService</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">apiData</span><span class="p">);</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+  <h1>jwt package</h1>
+
+<div><h2 id="overview">Overview</h2>
+<p>Decoding a JWT token in a React application using TypeScript, Redux Toolkit, and Axios can be done in a few steps. Here is the best approach to decoding JWT tokens in your application:</p>
+<p><a class="glightbox" href="https://fusionauth.io/img/shared/json-web-token.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="json web token" src="https://fusionauth.io/img/shared/json-web-token.png"></a></p>
+<hr>
+<h2 id="steps">Steps:</h2>
+<ol>
+<li><strong>Install JWT library</strong>: To decode the JWT token, you can use a library like <a href="#">jsonwebtoken</a> or <a href="#">jwt-decode</a>. These libraries help decode JWT tokens without needing to manually parse the payload.</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>jwt-decode
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Reference remarks history listing</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">referencePartyRemarksHistoryListing</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">queryString</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">appBaseUrl</span><span class="si">}</span><span class="sb">/referenceManagement/referencePartyRemarksHistoryListing?</span><span class="si">${</span><span class="nx">query</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getService</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+<p>Or, you can use the <a href="#">jsonwebtoken</a> library (though it's heavier and more feature-rich, including encoding/decoding and verifying tokens).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>install<span class="w"> </span>jsonwebtoken
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// reference company manual add</span>
+<p><mark>For simplicity</mark>, <strong>jwt-decode</strong> <mark>is the most common choice for decoding</mark>, as it’s lightweight and easy to use.</p>
+<ol>
+<li><strong>Create a utility function for decoding the JWT</strong>:</li>
+</ol>
+<p>You can create a utility file where you define your JWT decoding function.</p>
+<div class="language-ts highlight"><span class="filename">utils/jwtDecode.ts</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">jwtDecode</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"jwt-decode"</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">ReferenceCompanyManualAdd</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">queryString</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">q</span><span class="p">);</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">appBaseUrl</span><span class="si">}</span><span class="sb">/referenceManagement/referenceCompanyManualAdd?</span><span class="si">${</span><span class="nx">query</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getService</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">DecodedToken</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nx">exp</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nx">iat</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">[</span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">decodeToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">DecodedToken</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">decoded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jwtDecode</span><span class="o">&lt;</span><span class="nx">DecodedToken</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">decoded</span><span class="p">;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Invalid token:"</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">};</span>
 </span></code></pre></div>
-</div>
-<h2 id="action">ACTION</h2>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<blockquote>
-<p><code>services/redux/Reference/action.js</code></p>
-</blockquote>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// add company and remarks both</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ReferenceRemarksCompanyAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data1</span><span class="p">,</span><span class="w"> </span><span class="nx">data2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_COMPANY_MANUAL_ADD</span><span class="p">));</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">referencesService</span><span class="p">.</span><span class="nx">ReferenceCompanyManualAdd</span><span class="p">(</span><span class="nx">data1</span><span class="p">);</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_COMPANY_MANUAL_ADD</span><span class="p">));</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">"Successfully updated company"</span><span class="p">);</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nx">success</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_COMPANY_MANUAL_ADD</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="p">);</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="c1">// hitting another ACTION</span>
+<p>This utility will take in a JWT string and return the decoded payload, or <code>null</code> if the token is invalid.</p>
+<ol>
+<li><strong>Integrating the decoding into Redux state:</strong></li>
+</ol>
+<p>If you need to store the decoded token (or certain parts of it, like user information or expiration) in your Redux store, you can use Redux Toolkit to store and manage the JWT data.</p>
+<div class="language-ts highlight"><span class="filename">redux/slices/authSlice.ts</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createSlice</span><span class="p">,</span><span class="w"> </span><span class="nx">PayloadAction</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@reduxjs/toolkit"</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">decodeToken</span><span class="p">,</span><span class="w"> </span><span class="nx">DecodedToken</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../utils/jwtDecode"</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">interface</span><span class="w"> </span><span class="nx">AuthState</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">decodedToken</span><span class="o">:</span><span class="w"> </span><span class="kt">DecodedToken</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">isAuthenticated</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">initialState</span><span class="o">:</span><span class="w"> </span><span class="kt">AuthState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="kt">null</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nx">decodedToken</span><span class="o">:</span><span class="w"> </span><span class="kt">null</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="nx">isAuthenticated</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">};</span>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="p">(</span><span class="nx">data2</span><span class="p">));</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">};</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="kd">const</span><span class="w"> </span><span class="nx">authSlice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlice</span><span class="p">({</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"auth"</span><span class="p">,</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="nx">initialState</span><span class="p">,</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">  </span><span class="nx">reducers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="nx">setToken</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kt">PayloadAction</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">;</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">decodedToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">decodeToken</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">);</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">decodedToken</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">true</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="nx">logout</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">state</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">decodedToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="p">});</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setToken</span><span class="p">,</span><span class="w"> </span><span class="nx">logout</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">authSlice</span><span class="p">.</span><span class="nx">actions</span><span class="p">;</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">authSlice</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// ReferencePartyRemarksHistoryAdd</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">apiData</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD</span><span class="p">));</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">referencesService</span><span class="p">.</span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="p">(</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nx">apiData</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD</span><span class="p">));</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">"Successfully added Remarks"</span><span class="p">);</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="nx">success</span><span class="p">(</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">          </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_PARTY_REMARKS_HISTORY_ADD</span><span class="p">,</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">          </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="p">)</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">      </span><span class="p">);</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="p">};</span>
+<p>Here, the <code>setToken</code> action will update the token in the state and decode it using the decodeToken utility.</p>
+<ol>
+<li><strong>Dispatching actions after login or token update:</strong></li>
+</ol>
+<p>In your component or wherever you handle authentication (e.g., Axios interceptors or login logic), you will dispatch the action to set the token and store the decoded value in Redux.</p>
+<p><strong>Example: Axios Interceptor for Token Handling</strong></p>
+<div class="language-ts highlight"><span class="filename">utils/axios.ts</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">axios</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"axios"</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../store"</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setToken</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../redux/slices/authSlice"</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">axiosInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nx">baseURL</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://api.example.com"</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">});</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">// Interceptor to handle token storage and refresh</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">,</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">      </span><span class="c1">// Handle Unauthorized (token expired or invalid)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setToken</span><span class="p">(</span><span class="s2">""</span><span class="p">));</span><span class="w"> </span><span class="c1">// Remove token and clear auth state</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">);</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">axiosInstance</span><span class="p">;</span>
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">actionForReferenceCircularPlanningAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">data1</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_CIRCULAR_PLANNING_ADD</span><span class="p">));</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">referencesService</span><span class="p">.</span><span class="nx">referenceCompanyCircularPlanningAdd</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_CIRCULAR_PLANNING_ADD</span><span class="p">));</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nx">success</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_CIRCULAR_PLANNING_ADD</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="p">);</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">      </span><span class="c1">// hitting another ACTION</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">referenceCircularPlanningRemarksAdd</span><span class="p">(</span><span class="nx">data1</span><span class="p">));</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">};</span>
+<p>After a successful login (e.g., from a <code>login</code> function), you will store the token in Redux:</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// On successful login</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">handleLogin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">username</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">"/login"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">token</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">setToken</span><span class="p">(</span><span class="nx">token</span><span class="p">));</span><span class="w"> </span><span class="c1">// Dispatch the token to Redux</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Login failed:"</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">};</span>
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// circular remkarks add</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">referenceCircularPlanningRemarksAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">init</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_REMARKS_CIRCULAR_PLANNING</span><span class="p">));</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">referencesService</span><span class="p">.</span><span class="nx">referencePartyRemarksHistoryAdd</span><span class="p">(</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="nx">data</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">finish</span><span class="p">(</span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_REMARKS_CIRCULAR_PLANNING</span><span class="p">));</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">"Successfully added Remarks"</span><span class="p">);</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="nx">success</span><span class="p">(</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">          </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_REMARKS_CIRCULAR_PLANNING</span><span class="p">,</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">          </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="p">)</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">      </span><span class="p">);</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">isSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">      </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">errorMessage</span><span class="p">));</span>
-</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="p">};</span>
+<ol>
+<li><strong>Accessing the decoded token in a component:</strong></li>
+</ol>
+<p>You can easily access the decoded token or any other properties from your Redux store using the <code>useSelector</code> hook in React components.</p>
+<div class="language-ts highlight"><span class="filename">components/Profile.tsx</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useSelector</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react-redux"</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">RootState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../store"</span><span class="p">;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Profile</span><span class="o">:</span><span class="w"> </span><span class="kt">React.FC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">decodedToken</span><span class="p">,</span><span class="w"> </span><span class="nx">isAuthenticated</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useSelector</span><span class="p">(</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="p">(</span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="kt">RootState</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">auth</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">isAuthenticated</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Please</span><span class="w"> </span><span class="nx">log</span><span class="w"> </span><span class="ow">in</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Profile</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">User</span><span class="w"> </span><span class="nx">ID</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">decodedToken</span><span class="o">?</span><span class="p">.</span><span class="nx">userId</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Expiration</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">decodedToken</span><span class="o">?</span><span class="p">.</span><span class="nx">exp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">()}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="p">};</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Profile</span><span class="p">;</span>
 </span></code></pre></div>
-</div>
-<h2 id="reducer">REDUCER</h2>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<blockquote>
-<p><code>services/redux/Reference/reducer.js</code></p>
-</blockquote>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// POST circular planning</span>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>Use <a href="#">jwt-decode</a> to decode the JWT payload easily.</li>
+<li>Store the decoded JWT information in Redux using the Redux Toolkit (<code>setToken</code> action).</li>
+<li>Use Axios interceptors to handle token expiration or refresh.</li>
+<li>Access the decoded token in your React components via <code>useSelector</code>.</li>
+</ul>
+<hr>
+<h2 id="alternative-jwt-decoding-without-redux">Alternative (JWT Decoding without Redux):</h2>
+<p>If you just need to decode the token once in the component or in specific places, you can directly use the <code>jwt-decode</code> function without storing it in Redux.</p>
+<p>For example:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">jwtDecode</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"jwt-decode"</span><span class="p">;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_CIRCULAR_PLANNING_ADD_INIT</span><span class="o">:</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="nx">referenceCircularPlanningAddResponse</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="nx">referenceCircularPlanningAddLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_CIRCULAR_PLANNING_ADD_SUCCESS</span><span class="o">:</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">updateItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">state</span><span class="o">?</span><span class="p">.</span><span class="nx">referencePartyListingCircularResponse</span><span class="p">;</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="nx">referenceCircularPlanningAddLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="nx">referenceCircularPlanningAddResponse</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">,</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">        </span><span class="nx">referencePartyListingCircularResponse</span><span class="o">:</span><span class="w"> </span><span class="p">[...</span><span class="nx">updateItems</span><span class="p">,</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">],</span>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_CIRCULAR_PLANNING_ADD_FINISH</span><span class="o">:</span>
-</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">        </span><span class="nx">referenceCircularPlanningAddLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">decodedToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jwtDecode</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">decodedToken</span><span class="p">);</span>
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// CIRCULAR PLANNIG REMARKS</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_REMARKS_CIRCULAR_PLANNING_INIT</span><span class="o">:</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="nx">circularPlanningRemarksResp</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="nx">circularPlanningRemarksLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_REMARKS_CIRCULAR_PLANNING_SUCCESS</span><span class="o">:</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">lastPartyCircular</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingCircularResponse</span><span class="p">[</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingCircularResponse</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="p">];</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">updatedLastPartyCircular</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="p">...</span><span class="nx">lastPartyCircular</span><span class="p">,</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="nx">remarks</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="o">?</span><span class="p">.</span><span class="nx">remarks</span><span class="p">,</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">updatedPartyListingCircularResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">.</span><span class="nx">referencePartyListingCircularResponse</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">),</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">        </span><span class="nx">updatedLastPartyCircular</span><span class="p">,</span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="p">];</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">        </span><span class="nx">circularPlanningRemarksResp</span><span class="o">:</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">,</span>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">        </span><span class="nx">circularPlanningRemarksLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">        </span><span class="nx">referencePartyListingCircularResponse</span><span class="o">:</span>
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">            </span><span class="nx">updatedPartyListingCircularResponse</span><span class="p">,</span>
-</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>
-</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="k">case</span><span class="w"> </span><span class="nx">REFERENCE__TYPES</span><span class="p">.</span><span class="nx">REFERENCE_REMARKS_CIRCULAR_PLANNING_FINISH</span><span class="o">:</span>
-</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">        </span><span class="p">...</span><span class="nx">state</span><span class="p">,</span>
-</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">        </span><span class="nx">circularPlanningRemarksLoading</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">    </span><span class="p">};</span>
-</span></code></pre></div>
-</div></div>
+<p>But using Redux for managing the JWT state is a good practice when you need to globally manage authentication state and access decoded token data across your application.</p>
+<h2 id="conclusion">Conclusion:</h2>
+<p>This approach allows you to decode JWT tokens efficiently, store decoded values in Redux, and manage authentication across your application. Using <code>jwt-decode</code> with Redux Toolkit provides a clear and maintainable structure for handling JWTs in a React app.</p></div>
 
 
 
@@ -4296,7 +4271,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../internal-message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Internal Message">
+          <a href="../pnpm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: pnpm Advanced">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4306,20 +4281,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Internal Message
+                pnpm Advanced
               </div>
             </div>
           </a>
         
         
           
-          <a href="../tutorial-listing/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorial Listing Redux">
+          <a href="../../rtkquery/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Tutorial Listing Redux
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4371,10 +4346,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
