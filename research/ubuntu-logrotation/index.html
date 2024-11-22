@@ -14,11 +14,11 @@
         <link rel="prev" href="../license-doc/">
       
       
-        <link rel="next" href="../precommit/intro/">
+        <link rel="next" href="../ds/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.2">
     
     
       
@@ -3677,6 +3677,48 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../ds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../website-package/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website Package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -3687,10 +3729,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3701,8 +3743,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Precommit
           </label>
@@ -3741,72 +3783,6 @@
   
   <span class="md-ellipsis">
     Typescript
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    TS
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
-            <span class="md-nav__icon md-icon"></span>
-            TS
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ts/react-fc/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ts
   </span>
   
 
@@ -4163,7 +4139,47 @@
 </span></code></pre></div>
 </div>
 </div>
-</div></div>
+</div>
+<hr>
+<div class="admonition question">
+<p class="admonition-title">Why ubunutu log take lot of space issue ?</p>
+</div>
+<p>In Ubuntu (or any Linux-based system), large amounts of disk space can sometimes be consumed by log files. This can happen due to a variety of reasons. Below are some of the common causes and how you can address them:</p>
+<p><strong>1. Log Rotation Issues</strong></p>
+<p>Ubuntu uses <code>logrotate</code>, a utility that automatically rotates and compresses log files to prevent them from consuming too much space. If log rotation is not configured properly, logs can accumulate and grow indefinitely.</p>
+<details class="tip" open="open">
+<summary>Fix:</summary>
+<ul>
+<li>Check if <code>logrotate</code> is working correctly. You can inspect its configuration at <code>/etc/logrotate.conf</code> and the directory <code>/etc/logrotate.d/</code>.</li>
+<li>You can manually rotate logs by running:</li>
+</ul>
+</details>
+<details class="note" open="open">
+<summary>Code Splitting</summary>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Show me differenet patterns and ways to use code-splitting in react large applications.
+</span></code></pre></div>
+<p>Questions to ask yourself when applying code-splitting:</p>
+<ul>
+<li><strong>When should I split my code?</strong> Code-splitting should be used for large, non-essential parts of your app that aren't needed on initial load.</li>
+<li><strong>How can I test the performance improvement?</strong> Use tools like Webpack Bundle Analyzer to see if your bundle size has been reduced.</li>
+<li><strong>Should I preload or <code>prefetch</code> some parts?</strong> Use preload for critical resources needed soon and <code>prefetch</code> for resources that might be needed in the future.</li>
+</ul>
+</details>
+<hr>
+<ul>
+<li><a href="https://askubuntu.com/questions/795438/log-file-eating-up-whole-space-in-ubuntu-16-04-lts-fix">Log file eating up whole space in Ubuntu 16.04 LTS. Fix?</a></li>
+<li><a href="https://sematext.com/blog/ubuntu-logs/">Ubuntu Logs: How to Check and Configure Log Files</a></li>
+<li><a href="https://serverfault.com/questions/403738/after-deleting-log-files-ubuntu-server-still-saying-there-is-no-space">After deleting log files, Ubuntu server still saying there is no space</a></li>
+<li><a href="https://stackoverflow.com/questions/35638219/ubuntu-large-syslog-and-kern-log-files">Ubuntu: large syslog and kern.log files [closed]</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://www.contentful.com/blog/what-is-react-suspense/">React Suspense explained: How to use it for lazy loading and data fetching</a></li>
+<li><a href="https://web.dev/articles/code-splitting-suspense">Code splitting with React.lazy and Suspense </a></li>
+<li><a href="https://www.freecodecamp.org/news/react-suspense/">How to Use React Suspense to Improve your React Projects</a></li>
+<li><a href="https://legacy.reactjs.org/docs/code-splitting.html">Code-Splitting: legacy.reactjs.org</a></li>
+<li><a href="https://refine.dev/blog/react-lazy-loading/#introduction">A Guide on React Lazy Loading: refine.dev</a></li>
+</ul></div>
 
 
 
@@ -4216,13 +4232,13 @@
         
         
           
-          <a href="../precommit/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../ds/" class="md-footer__link md-footer__link--next" aria-label="Next: DS">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                DS
               </div>
             </div>
             <div class="md-footer__button md-icon">
