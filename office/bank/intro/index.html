@@ -732,6 +732,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lodash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lodash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Others
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4408,6 +4435,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lodash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lodash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Others
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4479,7 +4533,56 @@
 <li>Feature flags for incomplete features</li>
 <li>A solid CI/CD pipeline</li>
 </ul>
-</details></div>
+</details>
+<hr>
+<h2 id="reference">Reference</h2>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:598/format:webp/1*6SyQ5KRoFAMDbkjb_7auSg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://medium.com/@subodha.sahu91/4-steps-to-add-sass-scss-to-react-typescript-project-d371d8f6968b" src="https://miro.medium.com/v2/resize:fit:598/format:webp/1*6SyQ5KRoFAMDbkjb_7auSg.png"></a></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># .scss and .sass</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>npm<span class="w"> </span>add<span class="w"> </span>-D<span class="w"> </span>sass-embedded
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># sass</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>npm<span class="w"> </span>add<span class="w"> </span>-D<span class="w"> </span>sass
+</span></code></pre></div>
+<ul>
+<li><a href="https://stackoverflow.com/questions/70842377/how-to-run-sass-with-react-on-vite">How to run SASS with React on Vite?</a></li>
+<li><a href="https://dev.to/godwin_nj/how-to-work-with-sass-in-vite-environment-and-brief-notes-on-important-sass-functionalities-k2">How to setup SASS in Vite Environment and brief notes on important sass functionalities </a></li>
+<li><a href="https://blog.jhordyess.com/sass-vite-a-guide-for-your-next-workflow">Sass &amp; Vite: A Guide for Your Next Workflow</a></li>
+<li><a href="https://medium.com/@subodha.sahu91/4-steps-to-add-sass-scss-to-react-typescript-project-d371d8f6968b">4 Steps to Add SASS/SCSS to React Typescript Project</a></li>
+<li><a href="https://sass-lang.com/dart-sass/">Sass Official</a></li>
+</ul>
+<hr>
+<h2 id="lodash">Lodash</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/lodash">lodash: npmjs</a></li>
+<li><a href="https://github.com/lodash/lodash">lodash: github</a></li>
+</ul>
+<hr>
+<ul>
+<li><code>(index) =&gt; {}</code>: Directly handles the index but does not involve event handling.</li>
+<li><code>(index) =&gt; (e) =&gt; {}</code>: Uses currying to handle dynamic events, capturing both the index (or other data) and the event (e), making it suitable for handling multiple events, like in lists of form elements.</li>
+</ul>
+<hr>
+<h2 id="others">Others</h2>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">handleRateAmtChange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">buyingAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">form</span><span class="o">?</span><span class="p">.</span><span class="nx">getFieldsValue</span><span class="p">().</span><span class="nx">buyingAmount</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">form</span><span class="o">?</span><span class="p">.</span><span class="nx">getFieldsValue</span><span class="p">().</span><span class="nx">rate</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">buyingAmount</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">calculate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">buyingAmount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">rate</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nx">setSellingAmtRate</span><span class="p">(</span><span class="nx">calculate</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">// Correct method to set the field value</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nx">form</span><span class="p">.</span><span class="nx">setFieldsValue</span><span class="p">({</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="nx">sellingAmount</span><span class="o">:</span><span class="w"> </span><span class="nx">calculate</span><span class="p">,</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">info</span><span class="p">({</span><span class="w"> </span><span class="nx">msg</span><span class="o">:</span><span class="w"> </span><span class="s2">"Rate Amount Change"</span><span class="p">,</span><span class="w"> </span><span class="nx">rate</span><span class="p">,</span><span class="w"> </span><span class="nx">calculate</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="p">};</span>
+</span></code></pre></div>
+<ul>
+<li><a href="https://www.shecodes.io/athena/110034-how-to-calculate-the-total-price-in-our-cart-using-react-js-toolkit">[React] - How to calculate the total price in our cart using React.js Toolkit</a></li>
+</ul></div>
 
 
 
