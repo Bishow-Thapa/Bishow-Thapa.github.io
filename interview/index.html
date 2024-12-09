@@ -4321,6 +4321,93 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#learn-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learn React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usedebugvalue" class="md-nav__link">
+    <span class="md-ellipsis">
+      useDebugValue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usememo" class="md-nav__link">
+    <span class="md-ellipsis">
+      useMemo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-of-react-official-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules of React: Official (reference)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rules of React: Official (reference)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-and-hooks-must-be-pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components and Hooks must be pure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-calls-components-and-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      React calls Components and Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-of-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules of Hooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactdev-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      react.dev - Learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -4355,6 +4442,39 @@
 <hr>
 <h2 id="additional">Additional</h2>
 <p><a class="glightbox" href="../images/interview/rt.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="React Doc" src="../images/interview/rt.png"></a></p>
+<hr>
+<h2 id="learn-react"><a href="https://react.dev/learn">Learn React</a></h2>
+<h2 id="reference-react"><a href="https://react.dev/reference/react">Reference React</a></h2>
+<hr>
+<h2 id="usedebugvalue">useDebugValue</h2>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*LPsYTBUNw2GNr3w76Khrnw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="https://medium.com/zestgeek/unveiling-reacts-usedebugvalue-hook-simplifying-debugging-with-examples-015a1af72678" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*LPsYTBUNw2GNr3w76Khrnw.png"></a></p>
+<p><code>useDebugValue</code> is a React Hook that lets you add a label to a custom Hook in React DevTools.</p>
+<div class="language-jsx highlight"><span class="filename">Syntax</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">useDebugValue</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">format</span><span class="o">?</span><span class="p">)</span>
+</span></code></pre></div>
+<details class="tip" open="open">
+<summary>Parameters</summary>
+<ul>
+<li><code>value</code>: The value you want to display in React DevTools. It can have any type.</li>
+<li><strong>optional <code>format</code></strong>: A formatting function. When the component is inspected, React DevTools will call the formatting function with the <code>value</code> as the argument, and then display the returned formatted value (which may have any type). If you don’t specify the formatting function, the original <code>value</code> itself will be displayed.</li>
+</ul>
+</details>
+<ul>
+<li><a href="https://react.dev/reference/react/useDebugValue">React Official</a></li>
+<li><a href="https://react.dev/reference/react/useDebugValue">useDebugValue</a></li>
+<li><a href="https://www.dhiwise.com/post/usedebugvalue-in-react-what-you-need-to-know">UseDebugValue in React</a></li>
+<li><a href="https://react.dev/learn/react-developer-tools">React Developer Tools</a></li>
+<li><a href="https://coding-lesson.com/mastering-the-react-usedebugvalue-hook-a-step-by-step-guide/">React useDebugValue</a></li>
+</ul>
+<hr>
+<h2 id="usememo"><a href="https://react.dev/reference/react/useMemo">useMemo</a></h2>
+<hr>
+<h2 id="rules-of-react-official-reference"><a href="https://react.dev/reference/rules/components-and-hooks-must-be-pure">Rules of React: Official (reference)</a></h2>
+<p>Rendering refers to calculating what the next version of your UI should look like.</p>
+<h3 id="components-and-hooks-must-be-pure"><a href="https://react.dev/reference/rules/components-and-hooks-must-be-pure">Components and Hooks must be pure</a></h3>
+<h3 id="react-calls-components-and-hooks"><a href="https://react.dev/reference/rules/react-calls-components-and-hooks">React calls Components and Hooks</a></h3>
+<h3 id="rules-of-hooks"><a href="https://react.dev/reference/rules/rules-of-hooks">Rules of Hooks</a></h3>
+<hr>
+<h2 id="reactdev-learn"><a href="https://react.dev/learn/managing-state">react.dev - Learn</a></h2>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
