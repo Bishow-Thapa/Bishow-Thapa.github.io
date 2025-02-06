@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/research/npm-publish/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/research/feature-flags/">
       
       
-        <link rel="prev" href="../nx-commands/">
+        <link rel="prev" href="../working-with-numbers-in-js/">
       
       
-        <link rel="next" href="../msw-advanced/">
+        <link rel="next" href="../utils/">
       
       
       <link rel="icon" href="../../images/logo/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>NPM Publish Package - Bishow Thapa</title>
+        <title>Feature Flags - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#npm-publish" class="md-skip">
+        <a href="#feature-flags" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NPM Publish Package
+              Feature Flags
             
           </span>
         </div>
@@ -4256,30 +4256,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    NPM Publish Package
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../npm-publish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4288,71 +4268,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-packages-you-can-publish" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Packages You Can Publish
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-publish-the-package-to-npm" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Publish the Package to npm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-publish-the-package-to-npm" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Publish the Package to npm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-using-your-published-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Using Your Published Package
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4404,10 +4319,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../feature-flags/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Feature Flags
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4416,6 +4351,146 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-feature-flags-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create a Feature Flags File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-feature-flags-in-your-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use Feature Flags in Your Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-managing-feature-flags-dynamically" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Managing Feature Flags Dynamically
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-a-feature-flagging-service-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use a Feature Flagging Service (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-environment-specific-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Environment-Specific Flags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Beginners
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For Beginners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-start-with-static-feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Start with Static Feature Flags?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heres-a-recap-of-how-you-can-implement-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here’s a recap of how you can implement it:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-should-you-move-to-a-more-advanced-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Should You Move to a More Advanced Solution?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Tricks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4476,45 +4551,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types-of-packages-you-can-publish" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Types of Packages You Can Publish
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-feature-flags-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create a Feature Flags File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-feature-flags-in-your-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use Feature Flags in Your Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-managing-feature-flags-dynamically" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Managing Feature Flags Dynamically
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-a-feature-flagging-service-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use a Feature Flagging Service (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-environment-specific-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Environment-Specific Flags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Beginners
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For Beginners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-start-with-static-feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Start with Static Feature Flags?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heres-a-recap-of-how-you-can-implement-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here’s a recap of how you can implement it:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-should-you-move-to-a-more-advanced-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Should You Move to a More Advanced Solution?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-publish-the-package-to-npm" class="md-nav__link">
+  <a href="#git-tricks" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Publish the Package to npm
+      Git Tricks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-publish-the-package-to-npm" class="md-nav__link">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Publish the Package to npm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-using-your-published-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Using Your Published Package
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
+      Reference
     </span>
   </a>
   
@@ -4538,164 +4688,277 @@
   
 
 
-<div><h1 id="npm-publish">NPM Publish</h1>
-<h2 id="types-of-packages-you-can-publish">Types of Packages You Can Publish</h2>
-<p>You can publish a variety of different types of npm packages:</p>
+<div><h1 id="feature-flags">Feature Flags</h1>
+<p><a class="glightbox" href="https://www.youtube.com/embed/AJa2B-twtG4?si=VnyBSp21fkrMDX7O" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><div class="video-container"><iframe src="https://www.youtube.com/embed/AJa2B-twtG4?si=VnyBSp21fkrMDX7O" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></a></p>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>Feature flags are a powerful technique to control the visibility of features in your web application without deploying new code. This allows you to enable or disable features dynamically, test new functionality, and roll out changes gradually.</p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*YxQWofI7RVPWLGtfblAgmw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Feature Flags Pics" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*YxQWofI7RVPWLGtfblAgmw.png"></a></p>
+<hr>
+<h3 id="1-create-a-feature-flags-file">1. Create a Feature Flags File</h3>
+<p>First, you'll want to create a file where you define your feature flags. This can be an object or a module that you import into your components.</p>
+<p>For example, let's create a <code>featureFlags.js</code> file:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// featureFlags.js</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">featureFlags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">newFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// New feature is disabled by default</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">betaFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Beta feature is enabled by default</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">};</span>
+</span></code></pre></div>
+<hr>
+<h3 id="2-use-feature-flags-in-your-components">2. Use Feature Flags in Your Components</h3>
+<p>Next, in your React components, you can use the feature flags to conditionally render different parts of the UI.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">featureFlags</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./featureFlags'</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">App</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Conditionally render feature based on the flag */</span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="p">{</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">newFeature</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">New</span><span class="w"> </span><span class="nx">Feature</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">feature</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Old</span><span class="w"> </span><span class="nx">Feature</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">old</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="p">)}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Another example of a feature flag */</span><span class="p">}</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">{</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">betaFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Beta</span><span class="w"> </span><span class="nx">Feature</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">beta</span><span class="w"> </span><span class="nx">feature</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">      </span><span class="p">)}</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="p">};</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">MyComponent</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h3 id="3-managing-feature-flags-dynamically">3. Managing Feature Flags Dynamically</h3>
+<p>For real-world applications, you may want to manage feature flags dynamically (e.g., via an API or from a config file). For this, you could fetch flags from a remote service and update the flags in your React app.</p>
+<p>Here’s an example using React’s <code>useEffect</code> hook to fetch feature flags:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">FeatureFlags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">flags</span><span class="p">,</span><span class="w"> </span><span class="nx">setFlags</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">({});</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">loading</span><span class="p">,</span><span class="w"> </span><span class="nx">setLoading</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// Simulate an API call to fetch feature flags</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nx">setFlags</span><span class="p">({</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nx">newFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nx">betaFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="p">});</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">loading</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="w"> </span><span class="nx">feature</span><span class="w"> </span><span class="nx">flags</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="p">{</span><span class="nx">flags</span><span class="p">.</span><span class="nx">newFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">New</span><span class="w"> </span><span class="nx">Feature</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">feature</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">      </span><span class="p">)}</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">      </span><span class="p">{</span><span class="nx">flags</span><span class="p">.</span><span class="nx">betaFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Beta</span><span class="w"> </span><span class="nx">Feature</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">beta</span><span class="w"> </span><span class="nx">feature</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">      </span><span class="p">)}</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="p">};</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">FeatureFlags</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h3 id="4-use-a-feature-flagging-service-optional">4. Use a Feature Flagging Service (Optional)</h3>
+<p>For a more sophisticated solution, you can use a third-party service like <mark>LaunchDarkly, Unleash</mark>, or <mark>Flagsmith</mark>. These services offer real-time management of feature flags, which is especially useful for larger teams and applications.</p>
+<p>Here’s how you might use LaunchDarkly:</p>
 <ol>
 <li>
-<p><strong>Utility Libraries</strong></p>
-<ul>
-<li>A package providing utility functions, such as string manipulation, date formatting, etc.</li>
-<li>Example: <code>lodash</code>, <code>moment</code></li>
-</ul>
+<p><strong>Install LaunchDarkly SDK</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm<span class="w"> </span>install<span class="w"> </span>launchdarkly-react-client-sdk
+</span></code></pre></div>
 </li>
 <li>
-<p><strong>CLI Tools</strong></p>
-<ul>
-<li>Command-line interface tools that are used via the terminal.</li>
-<li>Example: <code>create-react-app</code>, <code>eslint</code></li>
-</ul>
-<p>To create a CLI tool, use the "bin" field in your package.json to specify the executable file.</p>
-</li>
-<li>
-<p><strong>Frameworks/Plugins</strong></p>
-<ul>
-<li>Frameworks or plugins that integrate with other tools or libraries.</li>
-<li>Example: React components, Express middleware.</li>
-</ul>
-</li>
-<li>
-<p><strong>Frontend Packages</strong></p>
-<ul>
-<li>Packages designed for use in the browser, such as UI libraries or front-end components.</li>
-<li>Make sure to bundle and transpile your code properly before publishing frontend packages.</li>
-</ul>
+<p><strong>Integrate LaunchDarkly</strong>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">withLDProvider</span><span class="p">,</span><span class="w"> </span><span class="nx">useFlags</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'launchdarkly-react-client-sdk'</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">newFeature</span><span class="p">,</span><span class="w"> </span><span class="nx">betaFeature</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useFlags</span><span class="p">();</span><span class="w"> </span><span class="c1">// Get the feature flags</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="p">{</span><span class="nx">newFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">New</span><span class="w"> </span><span class="nx">Feature</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">Enabled</span><span class="o">&lt;</span><span class="err">/div&gt;}</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="p">{</span><span class="nx">betaFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Beta</span><span class="w"> </span><span class="nx">Feature</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">Enabled</span><span class="o">&lt;</span><span class="err">/div&gt;}</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">};</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1">// Wrap your app with the LaunchDarkly provider</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="kd">const</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">MyComponent</span><span class="w"> </span><span class="o">/&gt;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="p">);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">withLDProvider</span><span class="p">({</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="nx">clientSideID</span><span class="o">:</span><span class="w"> </span><span class="s1">'your-client-side-id'</span><span class="p">,</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="p">})(</span><span class="nx">App</span><span class="p">);</span>
+</span></code></pre></div>
 </li>
 </ol>
 <hr>
-<h2 id="1-publish-the-package-to-npm">1. Publish the Package to npm</h2>
-<p>To create an <code>npm</code> package, you need to:</p>
-<p><strong>a. Set up a new directory</strong></p>
-<ul>
-<li>
-<p>Create a new folder for your project, then navigate to it in your terminal.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>my-package
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>my-package
+<h3 id="5-environment-specific-flags">5. Environment-Specific Flags</h3>
+<p>You may also want to have different feature flags for different environments (e.g., <code>production</code>, <code>staging</code>, or <code>development</code>). You can use environment variables to control this.</p>
+<p>In your <code>featureFlags.js</code>, use environment variables:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">featureFlags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nx">newFeature</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_NEW_FEATURE</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'true'</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">betaFeature</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_BETA_FEATURE</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'true'</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">};</span>
 </span></code></pre></div>
-</li>
-</ul>
-<p><strong>b. Initialize the project with <code>package.json</code></strong></p>
-<ul>
-<li>
-<p>Run <code>npm init</code> or <code>npm init -y</code> to generate a <code>package.json</code> file. The <code>-y</code> flag automatically fills in the default values for you.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>init
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># or</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>npm<span class="w"> </span>init<span class="w"> </span>-y
+<p>And set the environment variables in <code>.env</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>REACT_APP_NEW_FEATURE=true
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>REACT_APP_BETA_FEATURE=false
 </span></code></pre></div>
-<p>This file contains metadata about your package (name, version, description, entry point, etc.).</p>
-</li>
-</ul>
-<p><strong>c. Create your package code</strong></p>
+<details class="tips" open="open">
+<summary>Summary</summary>
 <ul>
-<li>
-<p>Write your JavaScript code in the appropriate files. For example, <code>index.js</code> can be your entry point file.</p>
-<div class="language-jsx highlight"><span class="filename">index.js</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// greet.js</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// Function to greet</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">greet</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">// Function to say goodbye</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kd">function</span><span class="w"> </span><span class="nx">bye</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="sb">`Goodbye, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1">// Export both functions</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="nx">greet</span><span class="p">,</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="nx">bye</span><span class="p">,</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">};</span>
-</span></code></pre></div>
-</li>
-</ul>
-<p><strong>d. Add dependencies (if any)</strong></p>
-<ul>
-<li>
-<p>If your package requires external libraries, you can add them using <code>npm install</code>:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm<span class="w"> </span>install<span class="w"> </span>lodash<span class="w"> </span>--save
-</span></code></pre></div>
-</li>
-</ul>
-<p>This will add <code>lodash</code> as a dependency in your <code>package.json</code>.</p>
-<hr>
-<h2 id="2-publish-the-package-to-npm">2. Publish the Package to <code>npm</code></h2>
-<p><strong>a. Create an npm account</strong></p>
-<ul>
-<li>
-<p>Before publishing, you'll need an npm account. You can create one at <a href="#">npmjs.com</a>. Once you've created your account, log in from the terminal:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm<span class="w"> </span>login
-</span></code></pre></div>
-</li>
-</ul>
-<p>You’ll be prompted for your username, password, and email.</p>
-<p><strong>b. Add your package details to <code>package.json</code></strong></p>
-<ul>
-<li>Make sure the <code>name</code>, <code>version</code>, and <code>main</code> fields are filled correctly in your <code>package.json</code>.</li>
-</ul>
-<p><strong>c. Publish the package</strong></p>
-<ul>
-<li>
-<p>Run the following command to publish your package to npm:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm<span class="w"> </span>publish
-</span></code></pre></div>
-</li>
-</ul>
-<details open="open">
-<summary>Important Notes</summary>
-<ul>
-<li><strong>Package Name</strong>: If you’re publishing a public package, make sure the name is unique on npm. You can search for the name to avoid conflicts.</li>
-<li><strong>Versioning</strong>: You can't publish the same version twice. Update the <code>version</code> field in <code>package.json</code> (use semantic versioning: major.minor.patch).</li>
+<li><strong>Static Feature Flags</strong>: Simple JavaScript objects for flag management.</li>
+<li><strong>Dynamic Feature Flags</strong>: Fetch flags from an API or remote service.</li>
+<li><strong>Third-party services</strong>: LaunchDarkly, Unleash, etc., provide more advanced features for managing flags in production.</li>
+<li><strong>Environment-Specific Flags</strong>: Use environment variables to control features in different environments.</li>
 </ul>
 </details>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.1"</span>
-</span></code></pre></div>
-<p><strong>d. Private packages (optional)</strong></p>
-<ul>
-<li>
-<p>If you want to publish a private package, add <code>"private": true</code> in your <code>package.json</code>, or use a scoped package with a team account for private publishing.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npm<span class="w"> </span>publish<span class="w"> </span>--access<span class="o">=</span>restricted
-</span></code></pre></div>
-</li>
-</ul>
-<h2 id="3-using-your-published-package">3. Using Your Published Package</h2>
-<p>To use your published package in another project:</p>
-<p><strong>a. Install the package</strong></p>
-<ul>
-<li>
-<p>In the project where you want to use the package, run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>npm<span class="w"> </span>install<span class="w"> </span>&lt;package-name&gt;
-</span></code></pre></div>
-</li>
-</ul>
-<p><strong>b. Import and use the package</strong></p>
-<ul>
-<li>
-<p>After installation, you can require the package in your code.</p>
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">greet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"&lt;package-name&gt;"</span><span class="p">);</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">(</span><span class="s2">"World"</span><span class="p">));</span><span class="w"> </span><span class="c1">// Example output: "Hello, World!"</span>
-</span></code></pre></div>
-</li>
-</ul>
+<p>By implementing feature flags, you can decouple code deployment from feature release, making it easier to test and deploy features with greater control.</p>
 <hr>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="for-beginners">For Beginners</h2>
+<p>For a beginner, I recommend starting with static feature flags (using a simple JavaScript object or configuration file). It’s easy to set up and doesn’t require third-party services or complicated configurations. This approach allows you to get a feel for feature flagging without the added complexity, and it's a great way to implement feature flags in small to medium-sized projects.</p>
+<h3 id="why-start-with-static-feature-flags">Why Start with Static Feature Flags?</h3>
 <ul>
-<li><strong>Create</strong>: Use <code>npm init</code> to set up your project and create your code.</li>
-<li><strong>Publish</strong>: Make sure you have an npm account, and use <code>npm publish</code> to upload your package.</li>
-<li><strong>Use</strong>: Install your package with <code>npm install</code> and use it by requiring it in your code.</li>
+<li><strong>Simple and quick to implement</strong>: You can start right away without worrying about external dependencies.</li>
+<li><strong>Easy to understand</strong>: The logic is straightforward, and you get immediate feedback on how flags control your features.</li>
+<li><strong>Great for small projects</strong>: If your app is still in early stages or you don’t expect to scale your feature flagging system too much, this is a good starting point.</li>
 </ul>
-<p>The type of package you publish depends on what you're building, whether it's a utility, a CLI tool, or a framework/plugin.</p></div>
+<h3 id="heres-a-recap-of-how-you-can-implement-it">Here’s a recap of how you can implement it:</h3>
+<ol>
+<li>
+<p><strong>Create a <code>featureFlags.js</code> file that contains your flags</strong>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// featureFlags.js</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">featureFlags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nx">newFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  </span><span class="c1">// Change this to true to enable the new feature</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nx">betaFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">  </span><span class="c1">// Change this to false to disable the beta feature</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">};</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Use flags in your components</strong>:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">featureFlags</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./featureFlags'</span><span class="p">;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Welcome</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">My</span><span class="w"> </span><span class="nx">App</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">            </span><span class="p">{</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">newFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">                    </span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">New</span><span class="w"> </span><span class="nx">Feature</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">                    </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">feature</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">                </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">            </span><span class="p">)}</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">            </span><span class="p">{</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">betaFeature</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">                </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">                    </span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">Beta</span><span class="w"> </span><span class="nx">Feature</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">                    </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">beta</span><span class="w"> </span><span class="nx">feature</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">                </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">            </span><span class="p">)}</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="p">};</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">MyComponent</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Toggle flags based on your needs</strong>: When you need to enable/disable features, simply change the value of flags in the <code>featureFlags.js</code> file.</p>
+</li>
+</ol>
+<hr>
+<h2 id="when-should-you-move-to-a-more-advanced-solution">When Should You Move to a More Advanced Solution?</h2>
+<p>Once you get comfortable with the basics, and if you find that your app grows larger or you need to manage feature flags across different environments (e.g., development, staging, production), then you can consider more advanced solutions like:</p>
+<ul>
+<li><strong>Remote feature flag management</strong> (fetching flags from an API)</li>
+<li><strong>Third-party services like LaunchDarkly</strong> or <strong>Unleash</strong>, which are useful for large applications or teams with more complex requirements (like A/B testing or gradual rollouts).</li>
+</ul>
+<p>But to start, static flags should be more than enough for managing features in your React app! Would you like more help with implementing this in your app?</p>
+<hr>
+<p><strong>(Optional) Add More Features and Flags</strong></p>
+<p>As your app grows, you can add more features and flags. Just remember to:</p>
+<ol>
+<li>Add new flags to the <code>featureFlags.js</code> file.</li>
+<li>Use the flags in the components where those features are implemented.</li>
+</ol>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">featureFlags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nx">newFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nx">betaFeature</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nx">darkMode</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  </span><span class="c1">// New flag for dark mode</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nx">specialOffer</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Special offer flag</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">};</span>
+</span></code></pre></div>
+<p>And in your components:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">darkMode</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s1">'black'</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'white'</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Dark</span><span class="w"> </span><span class="nx">Mode</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">dark</span><span class="w"> </span><span class="nx">mode</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">)}</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">{</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">specialOffer</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Special</span><span class="w"> </span><span class="nx">Offer</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Take</span><span class="w"> </span><span class="nx">advantage</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">special</span><span class="w"> </span><span class="nx">offer</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">)}</span>
+</span></code></pre></div>
+<p>With this approach, you can easily manage which features are <code>enabled</code> or <code>disabled</code> in your app, without needing to redeploy every time you make a change to the feature availability.</p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*78xBYMHvamMMewWWyQ0Vfg.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Feature Flags Diagram" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*78xBYMHvamMMewWWyQ0Vfg.jpeg"></a></p>
+<hr>
+<h2 id="git-tricks">Git Tricks</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>log<span class="w"> </span>--author<span class="o">=</span><span class="s2">"Bishow Thapa"</span><span class="w"> </span>--since<span class="o">=</span><span class="s2">"midnight"</span><span class="w"> </span>--oneline
+</span></code></pre></div>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=AJa2B-twtG4">Youtube, What are Feature Flags? (IBM Technology)</a></li>
+<li><a href="https://github.com/launchdarkly/react-client-sdk">Github, LaunchDarkly Client-side SDK for React.js </a></li>
+<li><a href="https://www.atlassian.com/solutions/devops/integrations/feature-flags">Feature Flagging </a></li>
+<li><a href="https://medium.com/@oyebisijemil_41110/feature-flags-a-technique-for-modifying-application-behavior-without-altering-code-309801026a2f">Feature Flags: A Technique for Modifying Application Behavior without Altering Code</a></li>
+<li><a href="https://medium.com/@ridvanozcan48/feature-flags-and-modular-development-ensuring-flexibility-in-large-android-projects-14e9213c4b2a">Feature Flags and Modular Development: Ensuring Flexibility in Large Android Projects</a></li>
+<li>
+<p><a href="https://www.linkedin.com/pulse/using-feature-flags-aka-toggles-microservices-satish-yadav">Using Feature Flags aka Feature Toggles in Microservices</a></p>
+</li>
+<li>
+<p><a href="https://jwt.rocks/">JWT ROCKS</a></p>
+</li>
+<li><a href="https://token.dev/">JWT Token</a></li>
+</ul></div>
 
 
 
@@ -4731,7 +4994,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../nx-commands/" class="md-footer__link md-footer__link--prev" aria-label="Previous: NX Commands">
+          <a href="../working-with-numbers-in-js/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Numbers in JS">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4741,20 +5004,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                NX Commands
+                Numbers in JS
               </div>
             </div>
           </a>
         
         
           
-          <a href="../msw-advanced/" class="md-footer__link md-footer__link--next" aria-label="Next: MSW Advanced">
+          <a href="../utils/" class="md-footer__link md-footer__link--next" aria-label="Next: Utils">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                MSW Advanced
+                Utils
               </div>
             </div>
             <div class="md-footer__button md-icon">
