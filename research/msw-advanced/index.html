@@ -4217,6 +4217,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../rtk-lazy-query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RTK LazyQuery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../hierarchical-structure/" class="md-nav__link">
         
   
@@ -4289,6 +4310,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MSW Advanced
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4298,6 +4330,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4337,6 +4397,69 @@
   
   <span class="md-ellipsis">
     Feature Flags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redux-persist-local-or-session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redux Persist Local and Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../improved-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Improved Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antd-useWatch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Antd Form Hooks
   </span>
   
 
@@ -4394,6 +4517,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4411,6 +4551,7 @@
 
 
 <div><h1 id="msw-advanced">MSW Advanced</h1>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*3C-KZdOAvpQwkKAx4UYNow.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MSW Diagram" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*3C-KZdOAvpQwkKAx4UYNow.jpeg"></a></p>
 <div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Form</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"antd"</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -4484,7 +4625,13 @@
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"YYY: "</span><span class="p">,</span><span class="w"> </span><span class="nx">buyingAmount</span><span class="p">,</span><span class="w"> </span><span class="s2">"rate: "</span><span class="p">,</span><span class="w"> </span><span class="nx">rate</span><span class="p">);</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="nx">rateConversionData</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Only watch rateConversionData here</span>
-</span></code></pre></div></div>
+</span></code></pre></div>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://mswjs.io/docs/migrations/1.x-to-2.x/">msw migration 1.x → 2.x</a></li>
+<li><a href="https://javascript.plainenglish.io/mock-apis-with-mock-service-worker-in-any-framework-c278097e9a07">Mock APIs with Mock Service Worker in any framework.</a></li>
+</ul></div>
 
 
 
