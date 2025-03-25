@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2025/04/04/understanding-dockerfile-and-builderdockersh-a-brief-overview/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2025/04/14/learning-gatsby/">
       
       
-        <link rel="prev" href="../../../03/01/configuring-django-channels-with-redis-connecting-to-redis-in-docker-vs-localhost/">
+        <link rel="prev" href="../../04/understanding-dockerfile-and-builderdockersh-a-brief-overview/">
       
-      
-        <link rel="next" href="../../14/learning-gatsby/">
       
       
       <link rel="icon" href="../../../../../images/logo/favicon.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Understanding Dockerfile and builderdocker.sh: A Brief Overview - Bishow Thapa</title>
+        <title>Learning Gatsby - Bishow Thapa</title>
       
     
     
@@ -85,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-dockerfile-and-builderdockersh-a-brief-overview" class="md-skip">
+        <a href="#learning-gatsby" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding Dockerfile and builderdocker.sh: A Brief Overview
+              Learning Gatsby
             
           </span>
         </div>
@@ -5431,28 +5429,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-dockerfile" class="md-nav__link">
+  <a href="#part-0-set-up-your-development-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Dockerfile?
+      Part 0: Set Up Your Development Environment
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is a Dockerfile?">
+    <nav class="md-nav" aria-label="Part 0: Set Up Your Development Environment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#key-parts-of-a-dockerfile" class="md-nav__link">
+  <a href="#installation-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Parts of a Dockerfile:
+      Installation Guide
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#gatsby-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Gatsby CLI
     </span>
   </a>
   
@@ -5464,19 +5462,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-builderdockersh-file" class="md-nav__link">
+  <a href="#part-1-create-and-deploy-your-first-gatsby-site" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a builderdocker.sh File?
+      Part 1: Create and Deploy Your First Gatsby Site
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is a builderdocker.sh File?">
+    <nav class="md-nav" aria-label="Part 1: Create and Deploy Your First Gatsby Site">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
+  <a href="#create-a-gatsby-site" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Create a Gatsby site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-your-site-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run your site locally
     </span>
   </a>
   
@@ -5488,55 +5495,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#part-2-use-and-style-react-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Part 2: Use and Style React Components
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-which" class="md-nav__link">
-    <span class="md-ellipsis">
-      When to Use Which?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fundamental-differences" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fundamental Differences:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Arguments
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Arguments">
+    <nav class="md-nav" aria-label="Part 2: Use and Style React Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
+  <a href="#a-quick-intro-to-react" class="md-nav__link">
     <span class="md-ellipsis">
-      Dockerfile
+      A quick intro to React
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A quick intro to React">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is React?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#builderdockersh-shell-script" class="md-nav__link">
+  <a href="#what-is-a-react-component" class="md-nav__link">
     <span class="md-ellipsis">
-      builderdocker.sh (Shell Script)
+      What is a React component?
     </span>
   </a>
   
@@ -5544,6 +5534,140 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a page component
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a page component">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-update-the-home-page-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task: Update the home page content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-gatsby-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Gatsby Concept 💡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-create-a-new-page-component-for-an-about-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task: Create a new page component for an About page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task: Create a new page component for an About page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-new-file-srcpagesaboutjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create a new file: src/pages/about.js.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-a-page-title-to-your-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add a page title to your page.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-gatsby-concept_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Gatsby Concept 💡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-in-a-web-browser-visit-localhost8000about" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. In a web browser, visit localhost:8000/about.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-gatsby-concept_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Gatsby Concept 💡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-link-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the &lt;Link&gt; component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-react-concept-components-with-props" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key React Concept: Components with props
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-reusable-layout-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a reusable layout component
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
   
 </li>
       
@@ -5603,7 +5727,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-04-04 00:00:00+00:00" class="md-ellipsis">April 4, 2025</time>
+                        <time datetime="2025-04-14 00:00:00+00:00" class="md-ellipsis">April 14, 2025</time>
                       </div>
                     </li>
                     
@@ -5615,7 +5739,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              5 min read
+                              9 min read
                             
                           </span>
                         </div>
@@ -5645,7 +5769,16 @@
         
       
       
-        <span class="md-tag md-tag-icon">Personal</span>
+        <span class="md-tag md-tag-icon">React</span>
+      
+    
+      
+      
+        
+        
+      
+      
+        <span class="md-tag md-tag-icon">Toolkit</span>
       
     
   </nav>
@@ -5655,258 +5788,291 @@
   
 
 
-<div><h1 id="understanding-dockerfile-and-builderdockersh-a-brief-overview">Understanding Dockerfile and builderdocker.sh: A Brief Overview</h1>
-<p>In modern software development, Docker has become an essential tool for creating and managing containerized applications. Among the key components of a Docker-based development environment are the <code>Dockerfile</code> and <code>builderdocker.sh</code> scripts. Let's explore what these files are, why they're important, and how they can be used to streamline your development and deployment workflows.</p>
+<div><h1 id="learning-gatsby">Learning Gatsby</h1>
+<p>Build a fast, secure, and powerful website using our React-based, open-source framework.</p>
 <!-- more -->
 
 <hr>
-<h2 id="what-is-a-dockerfile">What is a Dockerfile?</h2>
-<p>A Dockerfile is a <mark>script</mark> that contains instructions for building a Docker image. It defines the steps that need to be followed to set up the environment, install dependencies, copy files, and run the application. Dockerfiles ensure that the environment is consistent across all stages of development, testing, and production.</p>
-<h3 id="key-parts-of-a-dockerfile">Key Parts of a Dockerfile:</h3>
+<h2 id="part-0-set-up-your-development-environment"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/">Part 0: Set Up Your Development Environment</a></h2>
+<p>Gatsby uses a few more technologies under the hood.</p>
+<h3 id="installation-guide"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#installation-guide">Installation Guide</a></h3>
+<p>The rest of this part of the Tutorial walks you through how to install the following tools:</p>
 <ul>
-<li><strong>Base Image</strong>: Specifies the operating system or environment where your application will run (e.g., <code>node:14</code>).</li>
-<li><strong>COPY</strong>: Adds files from your local machine into the Docker image.</li>
-<li><strong>RUN</strong>: Executes commands inside the image (e.g., <code>npm install</code> or <code>pnpm install</code>).</li>
-<li><strong>WORKDIR</strong>: Sets the working directory inside the container.</li>
-<li><strong>CMD/ENTRYPOINT</strong>: Specifies the command to run when the container starts.</li>
+<li>Node.js (v18 or newer, but less than v21)</li>
+<li>Git</li>
+<li>Gatsby command line interface (CLI) (v5 or newer)</li>
+<li>Visual Studio Code</li>
 </ul>
-<h3 id="example">Example</h3>
-<p>Here’s a simplified example of a Dockerfile for a Node.js app:</p>
-<div class="language-dockerfile highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">node:14</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>install
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"npm"</span><span class="p">,</span><span class="w"> </span><span class="s2">"start"</span><span class="p">]</span>
+<h3 id="gatsby-cli"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli">Gatsby CLI</a></h3>
+<p>The Gatsby command line interface (CLI) is a tool that lets you quickly create new Gatsby-powered sites and run commands for developing Gatsby sites.</p>
+<p>The CLI is a published npm package, which means you can install it using npm.</p>
+<div class="language-bash highlight"><span class="filename">SHELL</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>gatsby-cli
 </span></code></pre></div>
-<p>This Dockerfile defines the steps for creating an image with Node.js, installing dependencies, and starting the application.</p>
-<hr>
-<h2 id="what-is-a-builderdockersh-file">What is a <code>builderdocker.sh</code> File?</h2>
-<p>A <code>builderdocker.sh</code> file is a <mark>shell script</mark> often used alongside the Dockerfile to streamline the process of building and managing Docker images. The script is typically used to automate tasks such as setting environment variables, passing arguments to the Docker build process, or managing multiple Docker builds with different configurations.</p>
-<p>For example, you might use the <code>builderdocker.sh</code> file to:</p>
-<ul>
-<li>Set build-time arguments (like environment variables for different environments such as development or production).</li>
-<li>Pass configuration options when building or running Docker images.</li>
-<li>Simplify the process of building and pushing Docker images to a container registry.</li>
-</ul>
-<h3 id="example_1">Example</h3>
-<p>Here’s a simple example of a <code>builderdocker.sh</code> file:</p>
-<div class="language-bash highlight"><span class="filename">sh</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Build the Docker image with a specific argument</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>docker<span class="w"> </span>build<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">ENV_FILE</span><span class="o">=</span><span class="nv">$1</span><span class="w"> </span>-t<span class="w"> </span>my-app:<span class="nv">$1</span><span class="w"> </span>.
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Optionally push the image to a registry</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>docker<span class="w"> </span>push<span class="w"> </span>my-app:<span class="nv">$1</span>
+<div class="language-bash highlight"><span class="filename">SHELL</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gatsby<span class="w"> </span>--version
 </span></code></pre></div>
-<p>In this case, the script takes an argument (<code>$1</code>), which is used as the environment file during the build process.</p>
+<p>See the available commands:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gatsby<span class="w"> </span>--help
+</span></code></pre></div>
 <hr>
-<h2 id="conclusion">Conclusion</h2>
-<p>In summary, <strong>Dockerfiles</strong> and <strong>builderdocker.sh</strong> files are essential for creating consistent, automated, and flexible containerized environments. They streamline the process of building and deploying applications by defining the necessary steps in a Dockerfile and automating the process through a shell script like <code>builderdocker.sh</code>.</p>
-<p>By using build-time arguments and dynamically choosing configuration files (e.g., <code>.env.production</code> or <code>.env.development</code>) based on the Git branch, you can tailor your build process to different environments, ensuring a seamless experience from development to production.</p>
-<hr>
-<h2 id="when-to-use-which">When to Use Which?</h2>
-<ul>
-<li>
-<p>Use a <code>Dockerfile</code> if you want to define the steps for building your Docker image, especially if the conditional logic is related to image configuration, environment setup, or conditional installation of dependencies during the build.</p>
-</li>
-<li>
-<p>Use a <code>builderdocker.sh</code> if you need more advanced automation or orchestration, such as controlling the flow of tasks before or after building the image, interacting with Docker commands dynamically, or managing Docker containers and images.</p>
-</li>
-</ul>
-<p>In summary, both can contain conditional logic, but they serve different purposes and are executed in different contexts.</p>
-<h2 id="fundamental-differences">Fundamental Differences:</h2>
-<table>
-<thead>
-<tr>
-<th><strong>Aspect</strong></th>
-<th><strong>Dockerfile</strong></th>
-<th><strong>builderdocker.sh</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Purpose</strong></td>
-<td>Defines steps for building a Docker image.</td>
-<td>Automates tasks, including Docker build or management.</td>
-</tr>
-<tr>
-<td><strong>Execution Context</strong></td>
-<td>During image build.</td>
-<td>In the <mark>host shell</mark> environment (before or after build).</td>
-</tr>
-<tr>
-<td><strong>Conditional Logic</strong></td>
-<td>Limited to <code>RUN</code> commands or build arguments.</td>
-<td>Full shell scripting capabilities (<code>if</code>, <code>for</code>, etc.).</td>
-</tr>
-<tr>
-<td><strong>Flexibility</strong></td>
-<td>Limited logic and conditional statements.</td>
-<td>Highly flexible for complex logic.</td>
-</tr>
-<tr>
-<td><strong>Example Use Case</strong></td>
-<td>Creating the final image with build-time conditions.</td>
-<td>Automating the build and deployment process.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<details class="success" open="open">
-<summary>Conclusion</summary>
-<ul>
-<li>
-<p><code>Dockerfile</code> is used to define how a Docker image should be built. It’s essential for creating consistent, reproducible environments.</p>
-</li>
-<li>
-<p><code>builderdocker.sh</code> is an optional script that simplifies and automates the process of building Docker images by handling dynamic arguments, environment selection, and other tasks that might need to be repeated.</p>
-</li>
-<li>
-<p><strong>If you don’t use</strong> <code>builderdocker.sh</code>, you’ll still be able to build Docker images, but you’ll lose the benefits of automation, reduced manual errors, and simplified workflows.</p>
-</li>
-</ul>
+<h2 id="part-1-create-and-deploy-your-first-gatsby-site"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-1/">Part 1: Create and Deploy Your First Gatsby Site</a></h2>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/0fd27b745c1de708f034eaf97c4416e0/d61c2/deployment-workflow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Gatsby Workflow Picture" src="https://www.gatsbyjs.com/static/0fd27b745c1de708f034eaf97c4416e0/d61c2/deployment-workflow.png"></a></p>
+<h3 id="create-a-gatsby-site">Create a Gatsby site</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>🎉  Your new Gatsby site My First Gatsby Site has been successfully
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>created at ~/Desktop/my-first-gatsby-site.
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Start by going to the directory with
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  cd my-first-gatsby-site
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Start the local development server with
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  npm run develop
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>See all commands at
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  https://www.gatsbyjs.com/docs/gatsby-cli/
+</span></code></pre></div>
+<h3 id="run-your-site-locally"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-1/#run-your-site-locally">Run your site locally</a></h3>
+<div class="language-bash highlight"><span class="filename">SHELL</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gatsby<span class="w"> </span>develop
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If you weren’t able to install the Gatsby command line interface globally, you can start your development server using the following command instead:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm<span class="w"> </span>run<span class="w"> </span>develop
+</span></code></pre></div>
 </details>
-<p>The script is especially useful in CI/CD pipelines or when you need to manage complex build scenarios where environment-specific configurations are required, based on things like the current branch or deployment environment.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>You can now view my-first-gatsby-site in the browser.
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>⠀
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  http://localhost:8000/
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>⠀
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>View GraphiQL, an in-browser IDE, to explore your site's data and
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>schema
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>⠀
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  http://localhost:8000/___graphql
+</span></code></pre></div>
 <hr>
-<h2 id="docker-arguments">Docker Arguments</h2>
-<p>In <code>Dockerfile</code> and <code>builderdocker.sh</code> (a script file), there are different types of arguments (args) used for defining and configuring the Docker image build process. Let’s go through the main types of arguments used in both:</p>
-<h3 id="dockerfile">Dockerfile</h3>
-<p>In a Dockerfile, you typically use <code>ARG</code> and <code>ENV</code> to define and pass arguments.</p>
-<ol>
-<li>
-<p><strong><code>ARG</code> (Build-time Argument)</strong></p>
-<ul>
-<li>
-<p><code>ARG</code> is used to define variables that can be passed at build time to the Docker image.</p>
-</li>
-<li>
-<p>These arguments are only available during the build process and are not included in the final image unless you explicitly use <code>ENV</code> to make them available in the image.</p>
-</li>
-<li>
-<p>Syntax:</p>
-<div class="language-dockerfile highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">ARG</span><span class="w"> </span>&lt;name&gt;<span class="o">[=</span>&lt;default_value&gt;<span class="o">]</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ARG<span class="w"> </span><span class="nv">VERSION</span><span class="o">=</span><span class="m">1</span>.0
-</span></code></pre></div>
-</li>
-</ul>
-</li>
-<li>
-<p><strong><code>ENV</code> (Environment Variable)</strong></p>
-<ul>
-<li>
-<p><code>ENV</code> is used to define environment variables in the Docker image. These variables are accessible within the container once the image is built and the container is running.</p>
-</li>
-<li>
-<p>You can use <code>ARG</code> in conjunction with <code>ENV</code> to pass build-time arguments into the runtime environment.</p>
-</li>
-<li>
-<p>Syntax:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ENV<span class="w"> </span>&lt;key&gt;<span class="o">=</span>&lt;value&gt;
-</span></code></pre></div>
-</li>
-<li>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ENV<span class="w"> </span><span class="nv">APP_VERSION</span><span class="o">=</span><span class="nv">$VERSION</span>
-</span></code></pre></div>
-</li>
-</ul>
-</li>
-<li>
-<p><code>--build-arg</code> <strong>(Build Arguments Passed During Build)</strong></p>
-<ul>
-<li>
-<p>This is a flag used in the <code>docker build</code> command to pass values to <code>ARG</code> in the Dockerfile.</p>
-</li>
-<li>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>build<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">VERSION</span><span class="o">=</span><span class="m">2</span>.0<span class="w"> </span>.
-</span></code></pre></div>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="builderdockersh-shell-script"><code>builderdocker.sh</code> (Shell Script)</h3>
-<p>In a shell script like <code>builderdocker.sh</code>, arguments <mark>are typically passed through</mark> <strong>positional parameters</strong> or <strong>flags</strong>. These arguments can be used to define variables that will be used within the script for configuring the Docker build or handling build-specific tasks.</p>
-<ol>
-<li>
-<p><strong>Positional Parameters (<code>$1</code>, <code>$2</code>, etc.)</strong></p>
-<ul>
-<li>
-<p>Positional parameters are used to pass arguments to a shell script.</p>
-</li>
-<li>
-<p>They are accessed using <code>$1</code>, <code>$2</code>, etc., where <code>$1</code> represents the first argument, <code>$2</code> represents the second argument, and so on.</p>
-</li>
-<li>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># builderdocker.sh</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"The first argument is: </span><span class="nv">$1</span><span class="s2">"</span>
-</span></code></pre></div>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Flags (<code>--flag-name</code> or <code>-f</code>)</strong></p>
-<ul>
-<li>Flags can be used in the script to pass options or configuration values.</li>
-<li>You would typically use a command-line argument parser to handle these flags.</li>
-<li>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># builderdocker.sh</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">while</span><span class="w"> </span><span class="nb">getopts</span><span class="w"> </span><span class="s2">"a:b:"</span><span class="w"> </span>opt<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nv">$opt</span><span class="w"> </span><span class="k">in</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span>a<span class="o">)</span><span class="w"> </span><span class="nv">ARG_A</span><span class="o">=</span><span class="nv">$OPTARG</span><span class="w"> </span><span class="p">;;</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span>b<span class="o">)</span><span class="w"> </span><span class="nv">ARG_B</span><span class="o">=</span><span class="nv">$OPTARG</span><span class="w"> </span><span class="p">;;</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span>*<span class="o">)</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Invalid option"</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">;;</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">esac</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="k">done</span>
-</span></code></pre></div>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Environment Variables</strong></p>
-<ul>
-<li>You can also pass environment variables in <code>builderdocker.sh</code> that can be accessed in the script.</li>
-<li>These can be set in the script or passed when running the script.</li>
-<li>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">VERSION</span><span class="o">=</span><span class="m">1</span>.0
-</span></code></pre></div>
-</li>
-</ul>
-</li>
-</ol>
+<h2 id="part-2-use-and-style-react-components"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-2/">Part 2: Use and Style React Components</a></h2>
 <details class="tip" open="open">
-<summary>Summary</summary>
+<summary>Learning</summary>
 <ul>
-<li>
-<p><strong>In a Dockerfile</strong>:</p>
-<ul>
-<li><code>ARG</code> defines build-time arguments.</li>
-<li><code>ENV</code> defines environment variables in the image.</li>
-<li><code>--build-arg</code> passes arguments to the <code>ARG</code> during the build.</li>
-</ul>
-</li>
-<li>
-<p><strong>In builderdocker.sh</strong>:</p>
-<ul>
-<li>Positional parameters (<code>$1</code>, <code>$2</code>, etc.) capture input arguments.</li>
-<li>Flags (<code>-a</code>, <code>-b</code>, etc.) can be used for more complex input parsing.</li>
-<li>Environment variables can also be set and used inside the script.</li>
-</ul>
-</li>
+<li>Create <strong>page components</strong> to add new pages to your site.</li>
+<li>Add a title to your site using the <strong>Gatsby Head API</strong>.</li>
+<li>Import and use a <strong>pre-built component</strong> from another package.</li>
+<li>Create your own <strong>reusable “building block” component</strong>.</li>
+<li>Use component <strong>props</strong> to change the way a component renders.</li>
+<li>Use the <code>children</code> prop to create a wrapper component.</li>
 </ul>
 </details>
+<h3 id="a-quick-intro-to-react">A quick intro to React</h3>
+<h4 id="what-is-react">What is React?</h4>
+<p>React is the JavaScript library that Gatsby uses under the hood to create user interfaces (UIs). With React, you can break down your UI into smaller, reusable pieces called <mark>components</mark>.</p>
+<p>For example, imagine the UI for an online store’s Products page:</p>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/e956cd45d790934484f0d93643c87cc7/e0449/ui-built-from-components.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="React" src="https://www.gatsbyjs.com/static/e956cd45d790934484f0d93643c87cc7/e0449/ui-built-from-components.png"></a></p>
+<h4 id="what-is-a-react-component">What is a React component?</h4>
+<p>Under the hood, a <strong>React component</strong> is a function that returns a React element. A <strong>React element</strong> is an object that React uses to render DOM elements.</p>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/d2e8dcd3ec0c8c63d261cb0f9132aa5a/00172/component-without-props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="React Components" src="https://www.gatsbyjs.com/static/d2e8dcd3ec0c8c63d261cb0f9132aa5a/00172/component-without-props.png"></a></p>
+<p>The simplest way to write React elements is with <strong>JSX</strong>. JSX is a JavaScript syntax extension that describes the DOM structure for your component. It looks a bit like having HTML in your JavaScript files:</p>
+<div class="language-js highlight"><span class="filename">JSX</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;;</span>
+</span></code></pre></div>
+<p>So a simple React component might look something like this:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">};</span>
+</span></code></pre></div>
+<h3 id="create-a-page-component"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-2/#create-a-page-component">Create a page component</a></h3>
+<p>There are two main types of components in a Gatsby site. The first type you’ll create are <strong>page components</strong>. A page component contains all the UI elements for a specific page of your site.</p>
+<p>In this section, you’ll create two new page components: one for the Home page and one for an About page.</p>
+<details class="tip" open="open">
+<summary>Key React Concept: Writing a React component</summary>
+<p>There are three main steps to writing a React component:</p>
+<ol>
+<li><strong>Import React</strong> from the <code>'react'</code> package, so that you can use JSX inside your <code>.js</code> file.</li>
+<li><strong>Define your component</strong>. It should be a function that returns a JSX element.</li>
+<li><strong>Export your component</strong>, so that it can be used by other parts of your site.</li>
+</ol>
+<div class="language-js highlight"><span class="filename">my-component.js</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Step 1: Import React. This lets you use JSX inside your .js file.</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="cm">/* Step 2: Define your component. Note that your</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="cm">component name should start with a capital letter. */</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hi</span><span class="p">,</span><span class="w"> </span><span class="nx">welcome</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">my</span><span class="w"> </span><span class="nx">site</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="cm">/* Step 3: Export your component so it</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="cm">can be used by other parts of your app. */</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">MyComponent</span>
+</span></code></pre></div>
+<p>Your component must return a single React element, but you can put as many elements inside that <mark>top-level element</mark> as you want. The code snippet below shows an example of a valid component and an invalid component:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ValidComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">A</span><span class="w"> </span><span class="nx">valid</span><span class="w"> </span><span class="nx">component</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">work</span><span class="w"> </span><span class="nx">fine</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                </span><span class="nx">Since</span><span class="w"> </span><span class="nx">there</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">only</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">top</span><span class="o">-</span><span class="nx">level</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">div</span><span class="p">.</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">InvalidComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">won</span><span class="err">'</span><span class="nx">t</span><span class="w"> </span><span class="nx">work</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Because</span><span class="w"> </span><span class="nx">there</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">two</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">top</span><span class="w"> </span><span class="nx">level</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<h4 id="task-update-the-home-page-content"><a href="">Task: Update the home page content</a></h4>
+<p>Now that you’ve gotten a high-level introduction to React, it’s time to try your hands at writing some React components. To start, you’ll update the content for the home page.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If you haven’t already, open your Gatsby site in Visual Studio Code, and start up your local development server in the command line:</p>
+<ol>
+<li>Open your command line application.</li>
+<li>Change directories into the folder for your Gatsby site.</li>
+<li>Run <code>gatsby develop</code>.</li>
+<li>Open <code>localhost:8000</code> in your web browser.</li>
+</ol>
+</details>
+<ol>
+<li>
+<p>Open your <code>src/pages/index.js</code> file. Replace its contents with the following. (Notice how the component’s structure matches the three steps for writing React components?)</p>
+<div class="language-js highlight"><span class="filename">src/pages/index.js</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// Step 1: Import React</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1">// Step 2: Define your component</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">IndexPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">main</span><span class="o">&gt;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">my</span><span class="w"> </span><span class="nx">Gatsby</span><span class="w"> </span><span class="nx">site</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">I</span><span class="s1">'m making this by following the Gatsby Tutorial.&lt;/p&gt;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="s1">    &lt;/main&gt;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="s1">  );</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="s1">};</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="s1">// You'</span><span class="nx">ll</span><span class="w"> </span><span class="nx">learn</span><span class="w"> </span><span class="nx">about</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">next</span><span class="w"> </span><span class="nx">task</span><span class="p">,</span><span class="w"> </span><span class="nx">just</span><span class="w"> </span><span class="nx">copy</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">now</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">Head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Home</span><span class="w"> </span><span class="nx">Page</span><span class="o">&lt;</span><span class="err">/title&gt;;</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1">// Step 3: Export your component</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">IndexPage</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Go to <code>localhost:8000</code> in a web browser. (You might need to wait a moment while your development server rebuilds.) Once your page updates, it should look something like this:</p>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/d68e4f183db77b362698a9ec74a1951f/f1d1f/index-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Localhost Gatsby Server" src="https://www.gatsbyjs.com/static/d68e4f183db77b362698a9ec74a1951f/f1d1f/index-page.png"></a></p>
+</li>
+</ol>
+<h4 id="key-gatsby-concept">Key Gatsby Concept 💡</h4>
+<p>Gatsby automatically creates pages for React components that are the default export of files in the <code>src/pages</code> directory.</p>
+<p>If a user tries to visit the URL for a page that doesn’t actually exist, Gatsby will use the <code>src/pages/404.js</code> page component to display an error instead. Go ahead and give it a try! (If you’re trying it on <code>localhost:8000</code> you’ll need to click the “Preview custom 404 page” button on the development 404 page.)</p>
+<h4 id="task-create-a-new-page-component-for-an-about-page"><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-2/#task-create-a-new-page-component-for-an-about-page">Task: Create a new page component for an About page</a></h4>
+<p>Now that you’ve updated the existing Home page, try creating a new page from scratch. Make an About page, so that you can tell people a little about yourself.</p>
+<h5 id="1-create-a-new-file-srcpagesaboutjs">1. Create a new file: <code>src/pages/about.js</code>.</h5>
+<p>Use the code below as a starting point for your About page. (Feel free to switch up the content to make it more specific to you. Maybe share your favorite food or go-to vacation spot!)</p>
+<div class="language-jsx highlight"><span class="filename">src/pages/about.js</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// Step 1: Import React</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1">// Step 2: Define your component</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">AboutPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">About</span><span class="w"> </span><span class="nx">Me</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">        </span><span class="nx">Hi</span><span class="w"> </span><span class="nx">there</span><span class="o">!</span><span class="w"> </span><span class="nx">I</span><span class="err">'</span><span class="nx">m</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">proud</span><span class="w"> </span><span class="nx">creator</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">site</span><span class="p">,</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">I</span><span class="w"> </span><span class="nx">built</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">Gatsby</span><span class="p">.</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">};</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1">// Step 3: Export your component</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">AboutPage</span><span class="p">;</span>
+</span></code></pre></div>
+<h5 id="2-add-a-page-title-to-your-page">2. Add a page title to your page.</h5>
+<p>Gatsby lets you define a <code>&lt;title&gt;</code> and other <a href="">document metadata</a> with the <a href="">Gatsby Head API</a>. You have to export a component called <code>Head</code> from your page template to apply the metadata. Adding such metadata helps search engines like Google to better understand your site. For this tutorial you’ll only be adding titles to pages but you can also later add other metadata.</p>
+<div class="language-jsx highlight"><span class="filename">src/pages/about.js</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">AboutPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">About</span><span class="w"> </span><span class="nx">Me</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="nx">Hi</span><span class="w"> </span><span class="nx">there</span><span class="o">!</span><span class="w"> </span><span class="nx">I</span><span class="err">'</span><span class="nx">m</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">proud</span><span class="w"> </span><span class="nx">creator</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">site</span><span class="p">,</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">I</span><span class="w"> </span><span class="nx">built</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">Gatsby</span><span class="p">.</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">};</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">Head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="nx">About</span><span class="w"> </span><span class="nx">Me</span><span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;;</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">AboutPage</span><span class="p">;</span>
+</span></code></pre></div>
+<h5 id="key-gatsby-concept_1">Key Gatsby Concept 💡</h5>
+<p>You can use the <a href="">Gatsby Head API</a> by exporting a named function called <code>Head</code> in your pages and page templates (e.g. the ones used by <code>createPage</code> or the File System Route API).</p>
+<p>Be sure to capitalize <code>Head</code> and please note that exporting this named function inside a component like <code>Layout</code> won’t add the metadata to the <code>&lt;head&gt;</code>. The above works because you’re exporting Head in a page inside <code>src/pages</code>.</p>
+<p>You can add any valid <code>&lt;head&gt;</code> tags inside the function and they’ll be added to the page, for example:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">Head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="o">&lt;&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">About</span><span class="w"> </span><span class="nx">Me</span><span class="o">&lt;</span><span class="err">/title&gt;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">meta</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"description"</span><span class="w"> </span><span class="nx">content</span><span class="o">=</span><span class="s2">"Your description"</span><span class="w"> </span><span class="o">/&gt;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">);</span>
+</span></code></pre></div>
+<p>After going through this tutorial, be sure to check out <a href="">Adding an SEO Component</a>.</p>
+<h5 id="3-in-a-web-browser-visit-localhost8000about">3. In a web browser, visit <code>localhost:8000/about</code>.</h5>
+<p>When your development server finishes rebuilding your site, the About page should look something like this:</p>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/51a6cf2b743248bf809025d7e6b4b3ba/f1d1f/about-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About Me" src="https://www.gatsbyjs.com/static/51a6cf2b743248bf809025d7e6b4b3ba/f1d1f/about-page.png"></a></p>
+<h5 id="key-gatsby-concept_2">Key Gatsby Concept 💡</h5>
+<p>Pages created in the <code>src/pages</code> directory use the name of the file as the route for the page.</p>
+<p>For example, if you had a file called <code>src/pages/garden-gnomes.js</code>, you could access that page at <code>localhost:8000/garden-gnomes</code>.</p>
+<hr>
+<h3 id="use-the-link-component"><a href="">Use the <code>&lt;Link&gt;</code> component</a></h3>
+<p>Now that you’ve built a few page components, it’s time to look at the other type of React components in a Gatsby site: <strong>“building-block” components</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title"><strong>Note</strong>: The term building-block component isn’t an official technical term. It’s just the best name we could come up with to describe this kind of component.</p>
+</div>
+<p>Building-block components are smaller components that represent just a part of a page’s user interface (instead of an entire page). Think back to the store website example from the <a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-2/#what-is-react">“What is React?”</a> section. The <code>Navbar</code>, <code>Sidebar</code>, <code>ProductGrid</code>, and <code>ProductCard</code> components are examples of building-block components. You can combine several smaller building-block components into a larger page component.</p>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/e956cd45d790934484f0d93643c87cc7/321ea/ui-built-from-components.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Components" src="https://www.gatsbyjs.com/static/e956cd45d790934484f0d93643c87cc7/321ea/ui-built-from-components.png"></a></p>
+<p>One of the powerful things about building-block components is that you can reuse the same component in multiple places across your site. This is especially useful for pieces of your UI that share a similar structure but render different values.</p>
+<div class="admonition tip">
+<p class="admonition-title">React has a built-in feature to help you make your components dynamic: <mark>properties</mark> (or <mark>props</mark>, for short).</p>
+</div>
+<h3 id="key-react-concept-components-with-props"><a href="">Key React Concept: Components with props</a></h3>
+<p>You can use component props to change the way a component renders. Props are essentially arguments that you pass into your component function.</p>
+<p><a class="glightbox" href="https://www.gatsbyjs.com/static/c058cc46416d6b9d5d27e571c885c936/321ea/component-with-props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Key React Concept: Components with props" src="https://www.gatsbyjs.com/static/c058cc46416d6b9d5d27e571c885c936/321ea/component-with-props.png"></a></p>
+<hr>
+<p>The <code>Link</code> component is an example of a <strong>pre-built</strong> component that you can use in your site. In other words, the <code>Link</code> component is defined and maintained by another package (in this case, the Gatsby package). That means you can import it and use it in your own components without knowing too much about how it works under the hood.</p>
+<p>The <code>Link</code> component lets you add a link to another page in your Gatsby site. It’s similar to an HTML <code>&lt;a&gt;</code> tag, but with some extra performance benefits. The <code>Link</code> component takes a prop called to, which is similar to the <code>&lt;a&gt;</code> tag’s <code>href</code> attribute. The value should be the URL path to the page on your site you want to link to.</p>
+<div class="language-jsx highlight"><span class="filename">src/pages/index.js</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Link</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"gatsby"</span><span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">IndexPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Welcome</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">my</span><span class="w"> </span><span class="nx">Gatsby</span><span class="w"> </span><span class="nx">site</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Link</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">"/about"</span><span class="p">&gt;</span><span class="nx">About</span><span class="p">&lt;/</span><span class="nt">Link</span><span class="p">&gt;</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">I</span><span class="err">'</span><span class="nx">m</span><span class="w"> </span><span class="nx">making</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">Gatsby</span><span class="w"> </span><span class="nx">Tutorial</span><span class="p">.&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="p">};</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">Head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="nx">Home</span><span class="w"> </span><span class="nx">Page</span><span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;;</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">IndexPage</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h3 id="create-a-reusable-layout-component"><a href="">Create a reusable layout component</a></h3>
+<p>Instead, it would be better to create one common <code>Layout</code> component that groups all the shared elements to reuse across multiple pages. That way, when you need to make updates to the layout, you can make the change in one place and it will automatically be applied to all the pages using that component.</p>
+<p>In this section, you’ll create your first <strong>custom</strong> building-block component: <code>Layout</code>. To do that, you’ll need to use a special React <mark>prop</mark> called <code>children</code>.</p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/">Official: gatsbyjs</a></li>
+</ul>
 <hr></div>
 
 
@@ -6002,7 +6168,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../03/01/configuring-django-channels-with-redis-connecting-to-redis-in-docker-vs-localhost/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuring Django Channels with Redis: Connecting to Redis in Docker vs. Localhost">
+          <a href="../../04/understanding-dockerfile-and-builderdockersh-a-brief-overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding Dockerfile and builderdocker.sh: A Brief Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -6012,27 +6178,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Configuring Django Channels with Redis: Connecting to Redis in Docker vs. Localhost
+                Understanding Dockerfile and builderdocker.sh: A Brief Overview
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../14/learning-gatsby/" class="md-footer__link md-footer__link--next" aria-label="Next: Learning Gatsby">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Learning Gatsby
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
