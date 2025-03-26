@@ -14,7 +14,7 @@
         <link rel="prev" href="../../04/understanding-dockerfile-and-builderdockersh-a-brief-overview/">
       
       
-        <link rel="next" href="../../14/learning-gatsby/">
+        <link rel="next" href="../../12/bun-vs-pnpm/">
       
       
       <link rel="icon" href="../../../../../images/logo/favicon.ico">
@@ -5532,6 +5532,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#issue-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue Solved
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5600,7 +5609,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              8 min read
+                              9 min read
                             
                           </span>
                         </div>
@@ -5986,7 +5995,29 @@
 <li><a href="https://stackoverflow.com/questions/74333969/how-to-create-simple-react-app-without-internet-connection">Stackoverflow: How to create simple React app without internet connection</a></li>
 <li><a href="https://www.reddit.com/r/node/comments/189prv3/whats_the_status_with_bun/">Reddit: What's the status with "Bun"? </a></li>
 <li><a href="https://medium.com/@juliusaromskis/make-your-react-app-offline-ready-the-missing-guide-b047ea318f94">Medium: Make Your React App Offline-Ready: The Missing Guide</a></li>
-</ul></div>
+</ul>
+<hr>
+<h2 id="issue-solved">Issue Solved</h2>
+<div class="admonition bug">
+<p class="admonition-title">[plugin:vite:import-analysis] Failed to resolve import "workbox-window" from "../../../../../@vite-plugin-pwa/virtual:pwa-register". Does the file exist?</p>
+</div>
+<p><code>"workbox-window" from "../../../../../@vite-plugin-pwa/virtual:pwa-register"</code>, suggests that Vite is unable to resolve the import of <code>workbox-window</code> from the virtual:pwa-register module. This issue might be due to several reasons:</p>
+<details class="success" open="open">
+<summary>Missing Dependencies</summary>
+<p>Ensure that all necessary dependencies are installed. <code>vite-plugin-pwa</code> uses <code>workbox-window</code> internally, but it should be handled automatically. However, if you encounter issues, you might need to manually install <code>workbox-window</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>pnpm<span class="w"> </span>add<span class="w"> </span>workbox-window
+</span></code></pre></div>
+</details>
+<p>TypeScript Configuration</p>
+<p>If you're using TypeScript, ensure that your <code>tsconfig.json</code> includes the necessary type definitions for <code>vite-plugin-pwa</code>. You can add the following to your <code>compilerOptions.types</code> array:</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="s2">"compilerOptions"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="s2">"types"</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">      </span><span class="s2">"vite-plugin-pwa/client"</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">}</span>
+</span></code></pre></div></div>
 
 
 
@@ -6098,13 +6129,13 @@
         
         
           
-          <a href="../../14/learning-gatsby/" class="md-footer__link md-footer__link--next" aria-label="Next: Learning Gatsby">
+          <a href="../../12/bun-vs-pnpm/" class="md-footer__link md-footer__link--next" aria-label="Next: Bun vs pnpm">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Learning Gatsby
+                Bun vs pnpm
               </div>
             </div>
             <div class="md-footer__button md-icon">
