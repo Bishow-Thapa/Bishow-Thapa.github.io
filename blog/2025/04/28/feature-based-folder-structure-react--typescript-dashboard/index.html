@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/office/ispl/clickup/2024/september/need-text-editor-in-im/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2025/04/28/feature-based-folder-structure-react--typescript-dashboard/">
       
       
-        <link rel="prev" href="../converting-radio-to-select/">
+        <link rel="prev" href="../../15/what-are-the-best-practices-for-caching-resources-in-a-pwa/">
       
       
-        <link rel="next" href="../conditional-rendering-button/">
+        <link rel="next" href="../gotchas-in-rtk-query/">
       
       
-      <link rel="icon" href="../../../../../../images/logo/favicon.ico">
+      <link rel="icon" href="../../../../../images/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>Text Editor in Internal Message - Bishow Thapa</title>
+        <title>Feature-Based Folder Structure (React + TypeScript Dashboard) - Bishow Thapa</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#email" class="md-skip">
+        <a href="#feature-based-folder-structure-react-typescript-dashboard" class="md-skip">
           Skip to content
         </a>
       
@@ -99,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
-  <img src="../../../../../../images/logo/career.png" alt="logo">
+  <img src="../../../../../images/logo/career.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Text Editor in Internal Message
+              Feature-Based Folder Structure (React + TypeScript Dashboard)
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
     
@@ -240,11 +240,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
           
   
   Blog
@@ -258,13 +260,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../../intro/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../../office/intro/" class="md-tabs__link">
           
   
   Office
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../research/docker/" class="md-tabs__link">
+        <a href="../../../../../research/docker/" class="md-tabs__link">
           
   
   Research
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../codehighlight/antd-table-pagination/" class="md-tabs__link">
+        <a href="../../../../../codehighlight/antd-table-pagination/" class="md-tabs__link">
           
   
   CodeSnap
@@ -322,7 +322,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -333,9 +335,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
-  <img src="../../../../../../images/logo/career.png" alt="logo">
+  <img src="../../../../../images/logo/career.png" alt="logo">
 
     </a>
     Bishow Thapa
@@ -362,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,23 +382,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -408,7 +415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -419,12 +426,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../../blog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../blog/archive/2025/" class="md-nav__link">
+      <a href="../../../../archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../blog/archive/2023/" class="md-nav__link">
+      <a href="../../../../archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,28 +578,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -602,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Office
@@ -616,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../intro/" class="md-nav__link">
+      <a href="../../../../../office/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/intro/" class="md-nav__link">
+      <a href="../../../../../office/bank/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/antd-chartd/" class="md-nav__link">
+      <a href="../../../../../office/bank/antd-chartd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/optimization/" class="md-nav__link">
+      <a href="../../../../../office/bank/optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/guide/" class="md-nav__link">
+      <a href="../../../../../office/bank/guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/sass/" class="md-nav__link">
+      <a href="../../../../../office/bank/sass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/usefull-code/" class="md-nav__link">
+      <a href="../../../../../office/bank/usefull-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -848,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/permission/intro/" class="md-nav__link">
+      <a href="../../../../../office/bank/permission/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/permission/streaming-updates/" class="md-nav__link">
+      <a href="../../../../../office/bank/permission/streaming-updates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -892,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/permission/bank-app-permission/" class="md-nav__link">
+      <a href="../../../../../office/bank/permission/bank-app-permission/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/clickup/2024/november/week1/02-task/" class="md-nav__link">
+      <a href="../../../../../office/bank/clickup/2024/november/week1/02-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1147,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/clickup/2024/december/week4/03-tuesday-task/" class="md-nav__link">
+      <a href="../../../../../office/bank/clickup/2024/december/week4/03-tuesday-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1169,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/clickup/2024/december/week4/04-wednesday-task/" class="md-nav__link">
+      <a href="../../../../../office/bank/clickup/2024/december/week4/04-wednesday-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/last-update/" class="md-nav__link">
+      <a href="../../../../../office/bank/last-update/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/super-loader/" class="md-nav__link">
+      <a href="../../../../../office/bank/super-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1267,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../bank/profile-picture/" class="md-nav__link">
+      <a href="../../../../../office/bank/profile-picture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,8 +1298,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1305,11 +1307,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1324,7 +1326,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Infocom Solution
@@ -1338,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../package/" class="md-nav__link">
+      <a href="../../../../../office/ispl/package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../secret/" class="md-nav__link">
+      <a href="../../../../../office/ispl/secret/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/appuserid/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/appuserid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/priority-listing-select/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/priority-listing-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/sorting-table-antd/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/sorting-table-antd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1487,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/persist-local-storage/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/persist-local-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1509,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/table-rowid/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/table-rowid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/debounce/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/debounce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/table-row-selection-customize/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/table-row-selection-customize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1575,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/error-boundary/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/error-boundary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../important/draft/" class="md-nav__link">
+      <a href="../../../../../office/ispl/important/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1666,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/architecture/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1688,7 +1690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/auth/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1749,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1771,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/internal-message/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1793,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/redux-action-advanced/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/redux-action-advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1815,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/tutorial-listing/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/tutorial-listing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1837,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/public-events/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/public-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1859,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/mail/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1881,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/blog/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1903,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/sisco-view/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/sisco-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1925,7 +1927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/sending-mail/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/sending-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1947,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/sending-im/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/sending-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1969,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/reference-tender-circular/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/reference-tender-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/reference-project-circular/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/reference-project-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2013,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/login/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2035,7 +2037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/excel-api-data/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/excel-api-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2057,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/import-excel-file/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/import-excel-file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2079,7 +2081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/fingerprint/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/fingerprint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2101,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2123,7 +2125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2145,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/groupchat-module/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/groupchat-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2167,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/daily-dairy/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/daily-dairy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2189,7 +2191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2258,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/HTMLRenderer/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/commonModule/HTMLRenderer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2280,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/JSON-stringify/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/commonModule/JSON-stringify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2302,7 +2304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/internalMNew/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/commonModule/internalMNew/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2324,7 +2326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2346,7 +2348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2368,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/commonModule/useReducer/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/commonModule/useReducer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2437,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/tenderModule/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/tenderModule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2498,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
+      <a href="../../../../../office/ispl/documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2541,8 +2543,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2552,11 +2552,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
         
           
           <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
@@ -2571,7 +2571,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_5">
             <span class="md-nav__icon md-icon"></span>
             Clickup
@@ -2582,8 +2582,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2593,11 +2591,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_1" >
         
           
           <label class="md-nav__link" for="__nav_3_3_5_1" id="__nav_3_3_5_1_label" tabindex="0">
@@ -2612,7 +2610,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_5_1">
             <span class="md-nav__icon md-icon"></span>
             2024 year
@@ -2665,7 +2663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/01-replychatbox/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/01-replychatbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2687,7 +2685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/redux-actions/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/redux-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2709,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/dashboard-today-task/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/dashboard-today-task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2731,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/redux-add-upate/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/redux-add-upate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2753,7 +2751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/dashboard-module/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/dashboard-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2775,7 +2773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/tender-mail/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/tender-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2797,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/mail-tender-loader/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/mail-tender-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2819,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/modes-of-communication/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/modes-of-communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2841,7 +2839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/circular-planning/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/circular-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2863,7 +2861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/tender-mail-circular/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/tender-mail-circular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2885,7 +2883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/mail-reply-bug/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/mail-reply-bug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2907,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/compose-email-drawer/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/compose-email-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2929,7 +2927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2951,7 +2949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2973,7 +2971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3042,7 +3040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/showing-button-on-condition/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/showing-button-on-condition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3064,7 +3062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/isCircular-conditionaly-rendering/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3086,7 +3084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/reg-validation-in-mail/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/reg-validation-in-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3108,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3130,7 +3128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/tender-module-task-edit-and-im/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/tender-module-task-edit-and-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3152,7 +3150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/dashboard-daily-task-table-sorting/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3174,7 +3172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3201,8 +3199,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3212,11 +3208,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_1_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3_5_1_3" id="__nav_3_3_5_1_3_label" tabindex="0">
@@ -3231,7 +3227,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_3_5_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_3_5_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_5_1_3">
             <span class="md-nav__icon md-icon"></span>
             September
@@ -3245,7 +3241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../persist-storage-redux/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/persist-storage-redux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3267,7 +3263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../persist-storage-tender-content/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/persist-storage-tender-content/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3289,7 +3285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../company-email-model/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/company-email-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3311,7 +3307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../converting-radio-to-select/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/converting-radio-to-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3330,29 +3326,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Text Editor in Internal Message
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../../office/ispl/clickup/2024/september/need-text-editor-in-im/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3362,42 +3339,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#email" class="md-nav__link">
-    <span class="md-ellipsis">
-      Email
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#internal-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Internal Message
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3410,7 +3351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conditional-rendering-button/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/conditional-rendering-button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3432,7 +3373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../savebase64-excel-button/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/savebase64-excel-button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3454,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../css-scrolling-block-issue/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/css-scrolling-block-issue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3476,7 +3417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tab-circular-planing/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/tab-circular-planing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3498,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../circular-planning-select-value-debug/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/circular-planning-select-value-debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3520,7 +3461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tender-pagination-isActive/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/tender-pagination-isActive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3542,7 +3483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mail-onFocus/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/mail-onFocus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3564,7 +3505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../task-module-set-tos-ccs/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/task-module-set-tos-ccs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3633,7 +3574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../november/mail-mulitple-reference-issue/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/november/mail-mulitple-reference-issue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3655,7 +3596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../november/adding-hyperlink-in-internal-toolbar/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/november/adding-hyperlink-in-internal-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3677,7 +3618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../november/added-loader-in-business-model/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/november/added-loader-in-business-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3699,7 +3640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../november/14-tender-mail-added-refID/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/november/14-tender-mail-added-refID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3721,7 +3662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../november/25-sub-category-in-tenderModule/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/november/25-sub-category-in-tenderModule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3743,7 +3684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../november/23-subsector-tendermodule/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/november/23-subsector-tendermodule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3812,7 +3753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../companies-select-debug/" class="md-nav__link">
+      <a href="../../../../../office/ispl/clickup/2024/september/companies-select-debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3897,7 +3838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/" class="md-nav__link">
+      <a href="../../../../../office/ispl/refactor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3919,7 +3860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/Button/" class="md-nav__link">
+      <a href="../../../../../office/ispl/refactor/Button/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3941,7 +3882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/function-update-setState/" class="md-nav__link">
+      <a href="../../../../../office/ispl/refactor/function-update-setState/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3963,7 +3904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../refactor/noticeboard/" class="md-nav__link">
+      <a href="../../../../../office/ispl/refactor/noticeboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3993,7 +3934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../common-error/" class="md-nav__link">
+      <a href="../../../../../office/common-error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4062,7 +4003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../primesales/intro/" class="md-nav__link">
+      <a href="../../../../../office/primesales/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4131,7 +4072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/intro/" class="md-nav__link">
+      <a href="../../../../../office/redux/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4153,7 +4094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/zustland/" class="md-nav__link">
+      <a href="../../../../../office/redux/zustland/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4175,7 +4116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/zustland-store/" class="md-nav__link">
+      <a href="../../../../../office/redux/zustland-store/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4197,7 +4138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../redux/react-router/" class="md-nav__link">
+      <a href="../../../../../office/redux/react-router/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4266,7 +4207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/codesnap/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/codesnap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4288,7 +4229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/slice/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/slice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4310,7 +4251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/improvement/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/improvement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4332,7 +4273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/axios-cancel/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/axios-cancel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4354,7 +4295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/loggin-in-react/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/loggin-in-react/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4376,7 +4317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/antd-modal/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/antd-modal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4398,7 +4339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/antd-drawer/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/antd-drawer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4420,7 +4361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../codesnapshot/router-dom/" class="md-nav__link">
+      <a href="../../../../../office/codesnapshot/router-dom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4450,7 +4391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../draft/" class="md-nav__link">
+      <a href="../../../../../office/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4518,7 +4459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/docker/" class="md-nav__link">
+      <a href="../../../../../research/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4540,7 +4481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/license-doc/" class="md-nav__link">
+      <a href="../../../../../research/license-doc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4601,7 +4542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/ideas/website-package/" class="md-nav__link">
+      <a href="../../../../../research/ideas/website-package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4623,7 +4564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/ideas/mvp/" class="md-nav__link">
+      <a href="../../../../../research/ideas/mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4645,7 +4586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/ideas/github-copilot/" class="md-nav__link">
+      <a href="../../../../../research/ideas/github-copilot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4667,7 +4608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/ideas/micro-frontend/" class="md-nav__link">
+      <a href="../../../../../research/ideas/micro-frontend/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4689,7 +4630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/ideas/locally-running-ai/" class="md-nav__link">
+      <a href="../../../../../research/ideas/locally-running-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4758,7 +4699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/react/hierarchical-structure/" class="md-nav__link">
+      <a href="../../../../../research/react/hierarchical-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4780,7 +4721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/react/npm-publish/" class="md-nav__link">
+      <a href="../../../../../research/react/npm-publish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4802,7 +4743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/react/working-with-numbers-in-js/" class="md-nav__link">
+      <a href="../../../../../research/react/working-with-numbers-in-js/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4824,7 +4765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/react/feature-flags/" class="md-nav__link">
+      <a href="../../../../../research/react/feature-flags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4846,7 +4787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/react/improved-code/" class="md-nav__link">
+      <a href="../../../../../research/react/improved-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4915,7 +4856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/prototype-stack/overview/" class="md-nav__link">
+      <a href="../../../../../research/prototype-stack/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4937,7 +4878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/prototype-stack/modified/" class="md-nav__link">
+      <a href="../../../../../research/prototype-stack/modified/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5006,7 +4947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/django-api-image/" class="md-nav__link">
+      <a href="../../../../../research/python/django-api-image/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5028,7 +4969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/custom-django-app-structure/" class="md-nav__link">
+      <a href="../../../../../research/python/custom-django-app-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5050,7 +4991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/django-builtin-lightweight-server/" class="md-nav__link">
+      <a href="../../../../../research/python/django-builtin-lightweight-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5072,7 +5013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/redis-locally-or-docker/" class="md-nav__link">
+      <a href="../../../../../research/python/redis-locally-or-docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5133,7 +5074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/websocket/channels-full-guide/" class="md-nav__link">
+      <a href="../../../../../research/python/websocket/channels-full-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5155,7 +5096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/websocket/channels-vs-daphene/" class="md-nav__link">
+      <a href="../../../../../research/python/websocket/channels-vs-daphene/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5177,7 +5118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/websocket/issue-solved/" class="md-nav__link">
+      <a href="../../../../../research/python/websocket/issue-solved/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5246,7 +5187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/redis/intro/" class="md-nav__link">
+      <a href="../../../../../research/python/redis/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5268,7 +5209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/python/redis/redis-cli/" class="md-nav__link">
+      <a href="../../../../../research/python/redis/redis-cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5306,7 +5247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/signalr-transport/" class="md-nav__link">
+      <a href="../../../../../research/signalr-transport/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5328,7 +5269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/js-scientific-notation/" class="md-nav__link">
+      <a href="../../../../../research/js-scientific-notation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5350,7 +5291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../research/80-20/" class="md-nav__link">
+      <a href="../../../../../research/80-20/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5418,7 +5359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/antd-table-pagination/" class="md-nav__link">
+      <a href="../../../../../codehighlight/antd-table-pagination/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5440,7 +5381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/statemanagement/" class="md-nav__link">
+      <a href="../../../../../codehighlight/statemanagement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5462,7 +5403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/rtkQuery-realtime/" class="md-nav__link">
+      <a href="../../../../../codehighlight/rtkQuery-realtime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5484,7 +5425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/js-advanced-interview/" class="md-nav__link">
+      <a href="../../../../../codehighlight/js-advanced-interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5506,7 +5447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/rtk-overview/" class="md-nav__link">
+      <a href="../../../../../codehighlight/rtk-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5528,7 +5469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/rule-of-thumb/" class="md-nav__link">
+      <a href="../../../../../codehighlight/rule-of-thumb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5550,7 +5491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../codehighlight/appBased-folder-structure/" class="md-nav__link">
+      <a href="../../../../../codehighlight/appBased-folder-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5580,6 +5521,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -5589,6 +5532,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5597,18 +5542,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#email" class="md-nav__link">
+  <a href="#typescript-for-beginners" class="md-nav__link">
     <span class="md-ellipsis">
-      Email
+      TypeScript for Beginners
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#internal-message" class="md-nav__link">
+  <a href="#tips-for-maintaining-a-feature-based-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Internal Message
+      Tips for Maintaining a Feature-Based Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-pages-are-handled" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Pages Are Handled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-expo-react-native" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Expo (React Native)
     </span>
   </a>
   
@@ -5623,176 +5604,475 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  
-  
-
-
-  <h1>Text Editor in Internal Message</h1>
-
-<div><div class="admonition question">
-<p class="admonition-title">Need Text Editor ( Like bold , highlight, font change , Color Change ) in Email compose and Internal Message Section.</p>
-</div>
-<h2 id="email">Email</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">ComposeEmailDrawer.js</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">toolBar</span><span class="p">,</span><span class="w"> </span><span class="nx">setToolBar</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;</span><span class="nt">div</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="o">!</span><span class="nx">visibleInternalMessage</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"30%"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"50%"</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="na">className</span><span class="o">=</span><span class="s">"hover aa__icon"</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nx">setToolBar</span><span class="p">(</span><span class="o">!</span><span class="nx">toolBar</span><span class="p">);</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">}}</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">&gt;</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="nx">Aa</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">&lt;</span><span class="nt">div</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`test compose-editor-wrapper </span><span class="si">${</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="nx">toolBar</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s2">"active"</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="si">}</span><span class="sb"> </span><span class="si">${</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="nx">visibleInternalMessage</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s2">"internalmessage-active"</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="si">}</span><span class="sb">`</span><span class="p">}</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="p">&gt;</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Editor</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">            </span><span class="na">className</span><span class="o">=</span><span class="s">"compose-editor"</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="err">//</span><span class="w"> </span><span class="na">...</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">/&gt;</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<hr>
-<h2 id="internal-message">Internal Message</h2>
-<div class="admonition success">
-<p class="admonition-title">Toggling the <code>on/off</code> the toolbar of CKEditor in Internal Message</p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">ReplyChatBox.js</label><label for="__tabbed_2_2">internalmessage.scss</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">showEditorHeader</span><span class="p">,</span><span class="w"> </span><span class="nx">setEditorHeader</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">&lt;&gt;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span><span class="cm">/* Line Number: 1102 uncommented this */</span><span class="p">}</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">"chat-box-editor-header-btn-wrapper"</span><span class="p">&gt;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="na">class</span><span class="o">=</span><span class="s">"btn__chat-editor-header"</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="na">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">                </span><span class="nx">setEditorHeader</span><span class="p">(</span><span class="o">!</span><span class="nx">showEditorHeader</span><span class="p">);</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="p">}}</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">showEditorHeader</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"black"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="p">}}</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="p">&gt;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="c1">// &lt;img src={aa} /&gt;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="nx">Aa</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`replyChatBox </span><span class="si">${</span><span class="nx">replyChatheight</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"active"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">""</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">showEditorHeader</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"showHeader"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">""</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="si">}</span><span class="sb"> `</span><span class="p">}</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="na">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s2">"relative"</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s2">"100%"</span><span class="w"> </span><span class="p">}}</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="p">&gt;</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Editor</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">            </span><span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">editorData</span><span class="p">}</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">            </span><span class="err">//</span><span class="w"> </span><span class="na">toolbar_location</span><span class="o">=</span><span class="s">"bottom"</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">            </span><span class="na">onKeyDown</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">                </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">altKey</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">e</span><span class="p">;</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">altKey</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"Enter"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">                </span><span class="nx">setAltEnt</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">            </span><span class="p">}}</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">            </span><span class="na">init</span><span class="o">=</span><span class="p">{{</span>
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">                </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="s2">"lists advlist"</span><span class="p">,</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">                </span><span class="nx">browser_spellcheck</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">                </span><span class="nx">menubar</span><span class="o">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">                </span><span class="c1">// COMMENTED THIS</span>
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">                </span><span class="c1">// toolbar: "", //bold  italic underLine  | backcolor forecolor   |  bullist numlist</span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">                </span><span class="nx">content_style</span><span class="o">:</span><span class="w"> </span><span class="s2">"p{margin:0px}"</span><span class="p">,</span>
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">                </span><span class="nx">forced_root_block_attrs</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s2">"font-family: Arial; font-size: 10pt"</span><span class="p">,</span>
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">                </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">"internal_replyBox"</span><span class="p">,</span>
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">                </span><span class="p">},</span>
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">                </span><span class="c1">// ADDED FROM THIS</span>
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">                </span><span class="nx">toolbar</span><span class="o">:</span>
-</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">                </span><span class="s2">"fontselect fontsizeselect backcolor forecolor bold | italic | underLine lineheight |  strikethrough alignleft aligncenter alignright |  bullist numlist"</span><span class="p">,</span>
-</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>
-</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">                </span><span class="nx">content_style</span><span class="o">:</span><span class="w"> </span><span class="s2">"p{margin:0px;padding:0px}"</span><span class="p">,</span>
-</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">                </span><span class="nx">forced_root_block</span><span class="o">:</span><span class="w"> </span><span class="s2">"div"</span><span class="p">,</span>
-</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">                </span><span class="nx">forced_root_block_attrs</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s2">"font-family: Arial; font-size: 10pt"</span><span class="p">,</span>
-</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">                </span><span class="kd">class</span><span class="o">:</span><span class="w"> </span><span class="s2">"editor-block-wrapper"</span><span class="p">,</span>
-</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">                </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">"editor-blocks"</span><span class="p">,</span>
-</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">                </span><span class="p">},</span>
-</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">                </span><span class="nx">font_formats</span><span class="o">:</span>
-</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">                </span><span class="s2">"Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde;Arial Narrow=arial narrow,avant garde;Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier;Cambria=cambria;Calibri=calibri;Calibri Body=calibri boby;Georgia=georgia,palatino;Times New Roman=times new roman,times;Helvetica=helvetica;Verdana=verdana,geneva;"</span><span class="p">,</span>
-</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">                </span><span class="c1">// UPTO HERE</span>
-</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">            </span><span class="p">}}</span>
-</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">        </span><span class="p">/&gt;</span>
-</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>
-</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">    </span><span class="p">&lt;/&gt;</span>
-</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="p">)</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-css highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c">/* Line number: 53*/</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">.</span><span class="nc">replyChatBox</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="err">.tox-editor-header</span><span class="w"> </span><span class="err">{</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="o">&amp;</span><span class="p">.</span><span class="nc">showHeader</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="err">.tox-editor-header</span><span class="w"> </span><span class="err">{</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="err">}</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="err">}</span>
-</span></code></pre></div>
-</div>
-</div>
-</div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
             </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-04-28 00:00:00+00:00" class="md-ellipsis">April 28, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              5 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+        
+        
+      
+      
+        <span class="md-tag md-tag-icon">RTK</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<div><h1 id="feature-based-folder-structure-react-typescript-dashboard">Feature-Based Folder Structure (React + TypeScript Dashboard)</h1>
+<p>In a <strong>feature-based structure</strong>, each feature (e.g., <code>dashboard</code>, <code>widgets</code>, <code>auth</code>) is a self-contained module with its own <code>components</code>, <code>styles</code>, <code>types</code>, <code>hooks</code>, and <code>utilities</code>. <strong>Shared resources</strong> (e.g., common <code>components</code>, global <code>styles</code>) are kept in a separate <mark>shared</mark> or common folder. This structure promotes modularity and makes it easier to navigate as your dashboard grows.</p>
+<!-- more -->
+
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Folder Structure</label><label for="__tabbed_1_2">Explanation</label><label for="__tabbed_1_3">Configuration Files</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/personal-dashboard
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── /public
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── index.html          # Main HTML file
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── favicon.ico         # Favicon
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── manifest.json       # Web app manifest
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── /src
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   ├── /features           # Feature-specific modules
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   │   ├── /dashboard      # Dashboard overview feature
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   │   │   ├── components  # Feature-specific components
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   │   │   │   ├── Dashboard.tsx  # Main dashboard component
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   │   │   │   └── DashboardHeader.tsx  # Dashboard header
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   │   │   ├── styles      # Feature-specific styles
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   │   │   │   └── dashboard.css  # Dashboard-specific CSS
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   │   │   ├── types       # Feature-specific TypeScript types
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   │   │   │   └── index.ts  # Interfaces (e.g., DashboardData)
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│   │   │   ├── hooks       # Feature-specific hooks
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│   │   │   │   └── useDashboardData.ts  # Hook for fetching dashboard data
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│   │   │   ├── api         # Feature-specific API calls
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│   │   │   │   └── dashboardApi.ts  # API functions for dashboard
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│   │   │   └── index.ts    # Barrel file to export feature
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│   │   ├── /widgets        # Widgets feature (e.g., charts, cards)
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│   │   │   ├── components
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│   │   │   │   ├── Widget.tsx  # Widget component
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>│   │   │   │   └── WidgetSettings.tsx  # Widget settings panel
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>│   │   │   ├── styles
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>│   │   │   │   └── widget.css  # Widget-specific styles
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│   │   │   ├── types
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│   │   │   │   └── index.ts  # Widget-related types
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>│   │   │   ├── hooks
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>│   │   │   │   └── useWidgetData.ts  # Hook for widget data
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>│   │   │   ├── api
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>│   │   │   │   └── widgetApi.ts  # Widget API calls
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>│   │   │   └── index.ts    # Barrel file
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>│   │   ├── /auth           # Authentication feature
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>│   │   │   ├── components
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>│   │   │   │   ├── Login.tsx  # Login form
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>│   │   │   │   └── LogoutButton.tsx  # Logout button
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>│   │   │   ├── context     # Auth context for user state
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>│   │   │   │   └── AuthContext.ts
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>│   │   │   ├── types
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>│   │   │   │   └── index.ts  # Auth-related types
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>│   │   │   ├── api
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>│   │   │   │   └── authApi.ts  # Auth API calls
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>│   │   │   └── index.ts    # Barrel file
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>│   ├── /shared             # Shared resources across features
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>│   │   ├── components      # Reusable components
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>│   │   │   ├── Button.tsx  # Shared button component
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>│   │   │   └── Card.tsx    # Shared card component
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>│   │   ├── styles          # Shared styles
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>│   │   │   ├── globals.css  # Global CSS (resets, typography)
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>│   │   │   └── tailwind.css  # Tailwind CSS output
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>│   │   ├── utils           # Shared utilities
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>│   │   │   ├── formatters.ts  # Date, currency formatters
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>│   │   │   └── http.ts     # HTTP client (e.g., Axios instance)
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>│   │   ├── types           # Shared TypeScript types
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>│   │   │   └── index.ts    # Common interfaces
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>│   │   └── hooks           # Shared hooks
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>│   │       └── useMediaQuery.ts  # Example shared hook
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>│   ├── /routes             # Route definitions
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>│   │   └── index.tsx       # React Router configuration
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>│   ├── App.tsx             # Main App component
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>│   ├── index.tsx           # ReactDOM render entry
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>│   └── main.tsx            # Alternative entry for Pyodide
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>├── package.json            # Project dependencies and scripts
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>├── tsconfig.json           # TypeScript configuration
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>├── tailwind.config.js      # Tailwind CSS configuration (if using)
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>└── README.md               # Project documentation
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>/public</code>: Static files (e.g., <code>index.html</code>, favicon) served as-is.</li>
+<li>
+<p><code>/src</code>: Main source code directory.</p>
+<ul>
+<li>
+<p><code>/features</code>: Contains feature-specific modules. Each feature has:</p>
+<ul>
+<li><code>components</code>: UI components specific to the feature (e.g., <code>Widget.tsx</code> for the widgets feature).</li>
+<li><code>styles</code>: Feature-specific CSS or Tailwind classes.</li>
+<li><code>types</code>: TypeScript interfaces/types for the feature (e.g., <code>WidgetProps</code>).</li>
+<li><code>hooks</code>: Custom hooks for feature logic (e.g., useWidgetData).</li>
+<li><code>api</code>: API calls related to the feature (e.g., fetching widget data).</li>
+<li><code>index.ts</code>: Barrel file to export all feature-related modules for cleaner imports.</li>
+</ul>
+</li>
+<li>
+<p><code>/shared</code>: Resources used across multiple features:</p>
+<ul>
+<li><code>components</code>: Generic components like <code>Button</code> or <code>Card</code>.</li>
+<li><code>styles</code>: Global CSS and Tailwind output.</li>
+<li><code>utils</code>: Shared utilities (e.g., date formatting, HTTP client).</li>
+<li><code>types</code>: Common TypeScript types.</li>
+<li><code>hooks</code>: Reusable hooks (e.g., <code>useMediaQuery</code> for responsive design).</li>
+</ul>
+</li>
+<li>
+<p><code>/routes</code>: Route definitions using React Router.</p>
+</li>
+<li>
+<p><code>App.tsx</code>: Root component for layout and routing.</p>
+</li>
+<li>
+<p><code>index.tsx</code>: Entry point for rendering the app.</p>
+</li>
+<li>
+<p><code>main.tsx</code>: Alternative entry for Pyodide (browser-based execution).</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code>package.json</code>: Manages dependencies.</li>
+<li><code>tsconfig.json</code>: Configures TypeScript.</li>
+<li><code>tailwind.config.js</code>: Tailwind CSS setup (optional).</li>
+<li><code>README.md</code>: Project documentation.</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="typescript-for-beginners">TypeScript for Beginners</h2>
+<p>As a TypeScript newbie, focus on these concepts from the example:</p>
+<ul>
+<li><strong>Interfaces</strong>: <code>WidgetData</code> defines the shape of widget data (e.g., <code>id: string</code>). Used in components and hooks for type safety.</li>
+<li><strong>React.FC</strong>: Used in <code>Widget</code> to type the component and its props (<code>WidgetProps</code>).</li>
+<li><strong>Hooks with Types</strong>: <code>useWidgetData</code> uses TypeScript to type the state (<code>WidgetData | null</code>) and async functions (<code>Promise&lt;WidgetData&gt;</code>).</li>
+<li><strong>Barrel Files</strong>: <code>index.ts</code> simplifies imports (e.g., <code>import { Widget } from 'features/widgets'</code>).1.</li>
+</ul>
+<h2 id="tips-for-maintaining-a-feature-based-structure">Tips for Maintaining a Feature-Based Structure</h2>
+<ol>
+<li><strong>Keep Features Independent</strong>: Each feature should have minimal dependencies on others, using <code>/shared</code> for common utilities.</li>
+<li><strong>Use Barrel Files</strong>: Export all feature modules in <code>index.ts</code> for cleaner imports.</li>
+<li><strong>Organize by Feature Size</strong>: For small features, you might skip subfolders like <code>hooks</code> or <code>api</code> and keep files directly in the feature folder.</li>
+<li><strong>Absolute Imports</strong>: Configure <code>tsconfig.json</code> to use paths like <code>features/widgets</code> (add <code>"baseUrl": "src"</code> and <code>"paths"</code> in <code>tsconfig.json</code>).</li>
+<li><strong>Leverage Tailwind</strong>: Use Tailwind CSS for styling within features to reduce CSS files (included in the example).</li>
+<li><strong>Testing</strong>: Add a <code>tests</code> folder per feature (e.g., <code>/features/widgets/tests/Widget.test.tsx</code>) for unit tests.</li>
+</ol>
+<hr>
+<h2 id="folder-structure">Folder Structure</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/personal-dashboard
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── /public
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── index.html          # Main HTML file
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── favicon.ico         # Favicon
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   └── manifest.json       # Web app manifest
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── /src
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── /features           # Feature-specific modules
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   │   ├── /dashboard      # Dashboard feature (includes main dashboard page)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   │   │   ├── components  # Feature-specific components, including pages
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   │   │   │   ├── Dashboard.tsx  # Main dashboard page component
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   │   │   │   └── DashboardHeader.tsx  # Sub-component for dashboard
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   │   │   ├── styles      # Feature-specific styles
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│   │   │   │   └── dashboard.css  # Dashboard-specific CSS
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   │   │   ├── types       # Feature-specific TypeScript types
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│   │   │   │   └── index.ts  # Interfaces (e.g., DashboardData)
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>│   │   │   ├── hooks       # Feature-specific hooks
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>│   │   │   │   └── useDashboardData.ts  # Hook for dashboard data
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│   │   │   ├── api         # Feature-specific API calls
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>│   │   │   │   └── dashboardApi.ts  # API functions for dashboard
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>│   │   │   └── index.ts    # Barrel file to export feature
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>│   │   ├── /widgets        # Widgets feature (e.g., charts, cards)
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>│   │   │   ├── components
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>│   │   │   │   ├── Widget.tsx  # Widget component
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>│   │   │   │   └── WidgetSettings.tsx  # Widget settings panel
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>│   │   │   ├── styles
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>│   │   │   │   └── widget.css  # Widget-specific styles
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>│   │   │   ├── types
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>│   │   │   │   └── index.ts  # Widget-related types
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>│   │   │   ├── hooks
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>│   │   │   │   └── useWidgetData.ts  # Hook for widget data
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>│   │   │   ├── api
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>│   │   │   │   └── widgetApi.ts  # Widget API calls
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>│   │   │   └── index.ts    # Barrel file
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>│   │   ├── /auth           # Authentication feature (includes login page)
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>│   │   │   ├── components
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>│   │   │   │   ├── Login.tsx  # Login page component
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>│   │   │   │   └── LogoutButton.tsx  # Logout button component
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>│   │   │   ├── context     # Auth context for user state
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>│   │   │   │   └── AuthContext.ts
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>│   │   │   ├── types
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>│   │   │   │   └── index.ts  # Auth-related types
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>│   │   │   ├── api
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>│   │   │   │   └── authApi.ts  # Auth API calls
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>│   │   │   └── index.ts    # Barrel file
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>│   ├── /shared             # Shared resources across features
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>│   │   ├── components      # Reusable components
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>│   │   │   ├── Button.tsx  # Shared button component
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>│   │   │   └── Card.tsx    # Shared card component
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>│   │   ├── styles          # Shared styles
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>│   │   │   ├── globals.css  # Global CSS (resets, typography)
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>│   │   │   └── tailwind.css  # Tailwind CSS output
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>│   │   ├── utils           # Shared utilities
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>│   │   │   ├── formatters.ts  # Date, currency formatters
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>│   │   │   └── http.ts     # HTTP client (e.g., Axios instance)
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>│   │   ├── types           # Shared TypeScript types
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>│   │   │   └── index.ts    # Common interfaces
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>│   │   └── hooks           # Shared hooks
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>│   │       └── useMediaQuery.ts  # Example shared hook
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>│   ├── /routes             # Route definitions
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>│   │   └── index.tsx       # React Router configuration
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>│   ├── App.tsx             # Main App component
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>│   ├── index.tsx           # ReactDOM render entry
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>│   └── main.tsx            # Alternative entry for Pyodide
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>├── package.json            # Project dependencies and scripts
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>├── tsconfig.json           # TypeScript configuration
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>├── tailwind.config.js      # Tailwind CSS configuration (if using)
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>└── README.md               # Project documentation
+</span></code></pre></div>
+<h2 id="how-pages-are-handled">How Pages Are Handled</h2>
+<ul>
+<li>
+<p><strong>Page-Level Components in Features</strong>: Instead of a <code>/pages</code> folder, components that represent full pages are placed in the <mark>components</mark> subfolder of their respective feature. For example:</p>
+<ul>
+<li><code>Dashboard.tsx</code> in <code>/features/dashboard/components</code> is the main dashboard page.</li>
+<li><code>Login.tsx</code> in <code>/features/auth/components</code> is the login page.</li>
+</ul>
+</li>
+<li>
+<p><strong>Routing</strong>: The <code>/routes</code> folder defines how these page-level components map to URLs using React Router. For instance, <code>/dashboard</code> routes to <code>Dashboard.tsx</code>.</p>
+</li>
+<li><strong>Why No <code>/pages</code> Folder?</strong>: <mark>In a feature-based structure</mark>, grouping page components with their feature keeps related logic together. A separate <code>/pages</code> folder would fragment the feature’s codebase, reducing modularity.</li>
+</ul>
+<hr>
+<h2 id="installation">Installation</h2>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>install<span class="w"> </span>react<span class="w"> </span>react-dom<span class="w"> </span>antd<span class="w"> </span>@ant-design/icons<span class="w"> </span>react-router-dom
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm<span class="w"> </span>install<span class="w"> </span>--save-dev<span class="w"> </span>@types/react<span class="w"> </span>@types/react-dom<span class="w"> </span>@types/react-router-dom
+</span></code></pre></div>
+<ul>
+<li><a href="#">react</a>, <a href="#">react-dom</a>: Required for React apps.</li>
+<li><a href="#">antd</a>, <a href="#">@ant-design/icons</a>: For AntD components and icons.</li>
+<li><a href="#">react-router-dom</a>: For routing.</li>
+<li><a href="#">@types/*</a>: TypeScript type definitions for the above.</li>
+</ul>
+<hr>
+<h2 id="research-expo-react-native">Research Expo (React Native)</h2>
+<p><a href="https://expo.dev/go">Expo Official</a></p>
+<p><a class="glightbox" href="https://www.youtube.com/embed/FdjczjkwQKE?si=1MovnbnF7mSZAaq4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><div class="video-container"><iframe src="https://www.youtube.com/embed/FdjczjkwQKE?si=1MovnbnF7mSZAaq4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></a></p>
+<p><a href="https://docs.expo.dev/get-started/create-a-project/">expo create a new project</a></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npx<span class="w"> </span>create-expo-app@latest
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Start Expo APP</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>npx<span class="w"> </span>expo<span class="w"> </span>start
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># or This also works which eventually starts expo start</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>npm<span class="w"> </span>start
+</span></code></pre></div>
+<details class="bug" open="open">
+<summary>Bug</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm<span class="w"> </span>run<span class="w"> </span>andriod
+</span></code></pre></div>
+</details>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Android Studio Needed?</th>
+<th>Physical Device Support</th>
+<th>Emulator Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android SDK CLI</td>
+<td>No</td>
+<td>Yes</td>
+<td>Genymotion/SDK tools</td>
+<td>Manual setup, more control</td>
+</tr>
+<tr>
+<td>Expo CLI</td>
+<td>No</td>
+<td>Yes (Expo Go app)</td>
+<td>No (native modules)</td>
+<td>Easiest, but limited native support</td>
+</tr>
+<tr>
+<td>Community CLIs (Ignite)</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Depends on CLI, check documentation</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://reactnative.dev">reactnative.dev, Get Started with React Native</a></li>
+</ul>
+<hr></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Bishow-Thapa/github-comments"
+  data-repo-id="R_kgDOK_Y_Kw"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOK_Y_K84CcG6C"
+  data-mapping="blog"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  // Set palette on initial load
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+    // Instruct Giscus to set theme
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  // Register event handlers after documented loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme =
+          palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+        // Instruct Giscus to change theme
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -5809,10 +6089,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../converting-radio-to-select/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Converting radio to select">
+          <a href="../../15/what-are-the-best-practices-for-caching-resources-in-a-pwa/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What are the best practices for caching resources in a PWA">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5822,20 +6104,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Converting radio to select
+                What are the best practices for caching resources in a PWA
               </div>
             </div>
           </a>
         
         
           
-          <a href="../conditional-rendering-button/" class="md-footer__link md-footer__link--next" aria-label="Next: Conditionally Rendering Button">
+          <a href="../gotchas-in-rtk-query/" class="md-footer__link md-footer__link--next" aria-label="Next: Gotchas in RTK Query">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Conditionally Rendering Button
+                Gotchas in RTK Query
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5887,10 +6169,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
