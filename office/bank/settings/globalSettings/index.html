@@ -14,7 +14,7 @@
         <link rel="prev" href="../../form/hooks/">
       
       
-        <link rel="next" href="../../approval/timeline/">
+        <link rel="next" href="../using-global-settings/">
       
       
       <link rel="icon" href="../../../../images/logo/favicon.ico">
@@ -1357,10 +1357,101 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage-in-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      USAGE IN COMPONENTS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtk-query-argument-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 RTK Query Argument Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtk-query-options-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 RTK Query options Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 RTK Query options Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-usequery-like-usegetsettingsquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 For useQuery (like useGetSettingsQuery())
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-usemutation-like-useupdatesettingsmutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 For useMutation (like useUpdateSettingsMutation())
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks-vs-promises-vs-asyncawait-detailed-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Callbacks vs. Promises vs. Async/Await: Detailed Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-global-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -7359,6 +7450,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage-in-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      USAGE IN COMPONENTS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtk-query-argument-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 RTK Query Argument Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtk-query-options-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 RTK Query options Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 RTK Query options Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-usequery-like-usegetsettingsquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 For useQuery (like useGetSettingsQuery())
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-usemutation-like-useupdatesettingsmutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 For useMutation (like useUpdateSettingsMutation())
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks-vs-promises-vs-asyncawait-detailed-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Callbacks vs. Promises vs. Async/Await: Detailed Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7464,7 +7624,309 @@
 </span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">  </span><span class="p">},</span>
 </span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="p">});</span>
-</span></code></pre></div></div>
+</span></code></pre></div>
+<hr>
+<h2 id="usage-in-components">USAGE IN COMPONENTS</h2>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">updateSingleSetting</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/settings/services/globalSettingSlice"</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nx">dispatch</span><span class="p">(</span><span class="nx">updateSingleSetting</span><span class="p">(</span><span class="nx">updatedValues</span><span class="p">));</span>
+</span></code></pre></div>
+<div class="language-js highlight"><span class="filename">CONSTANTS</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">BOOLEAN_STRINGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">TRUE</span><span class="o">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">FALSE</span><span class="o">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">};</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SETTINGS_KEYS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="nx">IS_VERIFIER_NEEDED</span><span class="o">:</span><span class="w"> </span><span class="s2">"IsVerifierNeeded"</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">};</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SETTINGS_KEYS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="nx">IS_VERIFIER_NEEDED</span><span class="o">:</span><span class="w"> </span><span class="s2">"IsVerifierNeeded"</span><span class="p">,</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="c1">// Add more keys as needed</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">};</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="cm">/******************************/</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isVerifierNeeded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="nx">SETTINGS_KEYS</span><span class="p">.</span><span class="nx">IS_VERIFIER_NEEDED</span><span class="p">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">"false"</span><span class="p">;</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="cm">/******************************/</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="kd">const</span><span class="w"> </span><span class="nx">rawValue</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="nx">value</span><span class="p">[</span><span class="nx">SETTINGS_KEYS</span><span class="p">.</span><span class="nx">IS_VERIFIER_NEEDED</span><span class="p">]</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="nx">BOOLEAN_STRINGS</span><span class="p">.</span><span class="nx">FALSE</span><span class="p">;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isVerifierNeeded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rawValue</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">BOOLEAN_STRINGS</span><span class="p">.</span><span class="nx">TRUE</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h2 id="misc">Misc</h2>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">newSettingsData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// Empty object</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">newSettingsData</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">newSettingsData</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
+</span></code></pre></div>
+<p><strong>Testing</strong></p>
+<p>Correct Way to Enable Polling in RTK Query</p>
+<p>RTK Query supports polling <mark>out of the box</mark>. Here's the proper way to set it up:</p>
+<div class="language-js highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// In your service file</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApi</span><span class="p">,</span><span class="w"> </span><span class="nx">fetchBaseQuery</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@reduxjs/toolkit/query/react"</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">settingsApi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createApi</span><span class="p">({</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nx">reducerPath</span><span class="o">:</span><span class="w"> </span><span class="s2">"settingsApi"</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nx">baseQuery</span><span class="o">:</span><span class="w"> </span><span class="nx">fetchBaseQuery</span><span class="p">({</span><span class="w"> </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s2">"/api/"</span><span class="w"> </span><span class="p">}),</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="nx">endpoints</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">builder</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nx">getSettings</span><span class="o">:</span><span class="w"> </span><span class="nx">builder</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="nx">query</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s2">"settings"</span><span class="p">,</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="p">}),</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">  </span><span class="p">}),</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">});</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useGetSettingsQuery</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">settingsApi</span><span class="p">;</span>
+</span></code></pre></div>
+<p><strong>In your component</strong>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isLoading</span><span class="p">,</span><span class="w"> </span><span class="nx">isError</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span><span class="w"> </span><span class="c1">// 10 seconds</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">});</span>
+</span></code></pre></div>
+<hr>
+<h2 id="rtk-query-argument-behavior">🔍 RTK Query Argument Behavior</h2>
+<p>In RTK Query, the first parameter of the hook like useGetSettingsQuery(arg) is the argument passed to your endpoint's query function.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// ✅</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nx">useGetSettingsQuery</span><span class="p">({</span><span class="w"> </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// ❌ this passes pollingInterval as the arg!</span>
+</span></code></pre></div>
+<p><strong>⚠️ Common Mistake That Breaks Polling</strong></p>
+<p>This will break the query:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">useGetSettingsQuery</span><span class="p">({</span><span class="w"> </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// ❌ WRONG</span>
+</span></code></pre></div>
+<p>Because you're passing an object as the <code>arg</code>, <mark>not the options</mark>. That will make RTK Query think you're passing a real query argument (which might not make sense for the endpoint), and the actual polling options are ignored.</p>
+<p><strong>✅ Correct Usage When No Args Are Needed</strong></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">});</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1">// or</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">});</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c1">// or</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="ow">void</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>If the query doesn't use input.</p>
+<p><strong>Sumary</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Position</th>
+<th>Type</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>args</code></td>
+<td>First</td>
+<td>Any</td>
+<td>Input to your query (e.g. ID, filters)</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>Second</td>
+<td>Object</td>
+<td>Config</td>
+</tr>
+</tbody>
+</table>
+<p><strong>✅ TL;DR</strong></p>
+<p>If your query expects no argument, then:</p>
+<ul>
+<li><code>useGetSettingsQuery()</code> ✅</li>
+<li><code>useGetSettingsQuery(undefined, { pollingInterval: 10000 })</code> ✅</li>
+<li><code>useGetSettingsQuery({ pollingInterval: 10000 })</code> ❌ (this is a common mistake)</li>
+</ul>
+<p>Always make sure the <mark>first</mark> parameter is the <strong>query arg</strong>, <mark>second</mark> is the <strong>options object</strong>.</p>
+<hr>
+<h2 id="rtk-query-options-cheat-sheet">🧾 RTK Query <code>options</code> Cheat Sheet</h2>
+<h3 id="for-usequery-like-usegetsettingsquery">🔹 For <code>useQuery</code> (like <code>useGetSettingsQuery()</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>skip</code></td>
+<td>boolean</td>
+<td>If <code>true</code>, disables the query entirely (no fetch, no cache update).</td>
+</tr>
+<tr>
+<td><code>pollingInterval</code></td>
+<td>number</td>
+<td>Interval in <strong>ms</strong> to re-fetch data periodically. <code>0</code> disables polling.</td>
+</tr>
+<tr>
+<td><code>refetchOnMountOrArgChange</code></td>
+<td>boolean</td>
+<td>If <code>true</code>, re-fetches data when component mounts or <code>args</code> change.</td>
+</tr>
+<tr>
+<td><code>refetchOnFocus</code></td>
+<td>boolean</td>
+<td>If <code>true</code>, re-fetches when window/tab regains focus.</td>
+</tr>
+<tr>
+<td><code>refetchOnReconnect</code></td>
+<td>boolean</td>
+<td>If <code>true</code>, re-fetches when the device comes back online.</td>
+</tr>
+<tr>
+<td><code>selectFromResult</code></td>
+<td>function</td>
+<td>Lets you pick part of the query result to reduce rerenders.</td>
+</tr>
+<tr>
+<td><code>forceRefetch</code></td>
+<td>boolean</td>
+<td>Forces the request to bypass the cache and re-fetch from the server.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-usemutation-like-useupdatesettingsmutation">🔸 For <code>useMutation</code> (like <code>useUpdateSettingsMutation()</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>selectFromResult</code></td>
+<td>function</td>
+<td>Same as in queries; lets you customize what the hook returns.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>🔹 What is args?</strong></p>
+<ul>
+<li><code>args</code> (short for <strong><em>arguments</em></strong>) is the <mark>first parameter</mark> you pass to a query or mutation hook.</li>
+<li>It is passed to the <code>query</code> or <code>mutation</code> function you defined in your API slice.</li>
+<li>It determines <mark>what data to fetch or mutate</mark>.</li>
+</ul>
+<blockquote>
+<ol>
+<li>When you fetch something by ID:</li>
+</ol>
+</blockquote>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// API slice</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nx">getUser</span><span class="o">:</span><span class="w"> </span><span class="nx">builder</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nx">query</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`users/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">});</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1">// Usage</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nx">useGetUserQuery</span><span class="p">(</span><span class="mf">123</span><span class="p">);</span><span class="w"> </span><span class="c1">// 123 is the "args"</span>
+</span></code></pre></div>
+<blockquote>
+<ol>
+<li>When no input is needed:</li>
+</ol>
+</blockquote>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">getSettings</span><span class="o">:</span><span class="w"> </span><span class="nx">builder</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nx">query</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s2">"settings"</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">});</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">// Usage</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nx">useGetSettingsQuery</span><span class="p">();</span><span class="w"> </span><span class="c1">// args is undefined</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span><span class="w"> </span><span class="c1">// same</span>
+</span></code></pre></div>
+<p><strong>What is options?</strong></p>
+<ul>
+<li><code>options</code> is the <mark>second parameter</mark> to the hook.</li>
+<li>It configures <mark>how the hook behaves</mark> — it does <strong>not</strong> affect the query string or data sent to the server.</li>
+<li>
+<p>It includes things like:</p>
+<ul>
+<li><code>pollingInterval</code></li>
+<li><code>refetchOnMountOrArgChange</code></li>
+<li><code>skip</code></li>
+<li><code>refetchOnFocus</code></li>
+<li><code>refetchOnReconnect</code></li>
+</ul>
+</li>
+</ul>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nx">refetchOnMountOrArgChange</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">});</span>
+</span></code></pre></div>
+<p><strong>✅ Order and Signature</strong></p>
+<p>All RTK Query hook functions follow this signature:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">useQueryHook</span><span class="p">(</span><span class="nx">args</span><span class="o">?</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">?</span><span class="p">)</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Position</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>args</code></td>
+<td>First</td>
+<td>optional</td>
+<td>Input used by the endpoint's query fn</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>Second</td>
+<td>optional</td>
+<td>Controls hook behavior (polling, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️ Incorrect Order = Bugs</strong></p>
+<p>If you pass <code>options</code> in the <mark>first position by mistake</mark>, it will be treated as <code>args</code>, which breaks your query logic.</p>
+<p>❌ Wrong</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">useGetSettingsQuery</span><span class="p">({</span><span class="w"> </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// options passed as args</span>
+</span></code></pre></div>
+<p>✅ Correct</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">useGetSettingsQuery</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">pollingInterval</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// right order</span>
+</span></code></pre></div>
+<p><strong>🧠 Summary</strong></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Passed To</th>
+<th>Affects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>args</code></td>
+<td>Input for the query/mutation</td>
+<td>Passed as 1st param to hook</td>
+<td>API endpoint URL/data</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>Hook behavior/settings</td>
+<td>Passed as 2nd param to hook</td>
+<td>Hook behavior (polling, etc.)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="callbacks-vs-promises-vs-asyncawait-detailed-comparison"><a href="https://medium.com/womenintechnology/callbacks-vs-promises-vs-async-await-detailed-comparison-d1f6ae7c778a">Callbacks vs. Promises vs. Async/Await: Detailed Comparison</a></h3></div>
 
 
 
@@ -7517,13 +7979,13 @@
         
         
           
-          <a href="../../approval/timeline/" class="md-footer__link md-footer__link--next" aria-label="Next: Timeline">
+          <a href="../using-global-settings/" class="md-footer__link md-footer__link--next" aria-label="Next: Usage">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Timeline
+                Usage
               </div>
             </div>
             <div class="md-footer__button md-icon">

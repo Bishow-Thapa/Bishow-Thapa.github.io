@@ -2,1026 +2,1030 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bishow-thapa.github.io/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/tags/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/28/-why-returning-201-on-a-get-api-is-a-bad-idea-especially-in-rtk-query/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/28/gotchas-in-rtk-query/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/28/feature-based-folder-structure-react--typescript-dashboard/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/05/08/advanced-react-topics/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/05/08/separating-business-logic-from-ui-in-react-an-in-depth-guide/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/05/08/where-to-define-variables-and-hooks-in-react-functional-components/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/05/09/react-component-code-order-where-to-place-state-effects-api-calls-and-handlers/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/05/13/antd-deafultvalues-will-not-work-in-controlled-field/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/05/13/antd-the-value-prop-of-a-select-item-should-not-be-null/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/06/11/i-promise-myself/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/06/11/set-me-settimeout/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/01/adding-a-loader-to-your-react-button-clicks/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/11/api-calls-cancelation-in-react/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/14/approach-to-loading-state-in-createslice-in-redux-toolkit/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/16/best-method-to-store-the-multiple-api-base-in-react/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/09/best-practices-for-managing-constants-and-functions-in-large-react-applications/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/12/bun-vs-pnpm/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/07/canceling-api-calls-in-react-why-it-matters/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/03/01/configuring-django-channels-with-redis-connecting-to-redis-in-docker-vs-localhost/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/06/customizing-error-handling-with-rejectwithvalue-in-redux-toolkit/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/04/difference-between-abstractuser-and-abstractbaseuser/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/04/understanding-dockerfile-and-builderdockersh-a-brief-overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/13/leveraging-env-files-for-scalable-react-development/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/10/effortless-object-management-excluding-empty-properties-in-javascript/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/01/31/embarking-on-a-tech-odyssey/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/15/folder-structure/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/01/react-state-updates-when-to-use-functional-patterns-vs-direct-assignments/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/05/giscus-comment-system/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2023/12/31/embracing-change-navigating-the-landscape-of-2023/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/04/how-to-generate-a-secure-secret-key-in-django/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/14/learning-gatsby/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/09/adding-syntax-hightlighting-in-the-material/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/01/01/elevating-my-craft-unveiling-the-2024-resolutions-of-a-react-developer/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/10/react-offline-service-workers-documentation/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/03/01/resolving-gpg-key-errors-in-ubuntu-repositories-causes-solutions-and-prevention/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/17/rtk-in-depth/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/05/understanding-asyncawait-in-redux-thunks-and-react-components/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/12/understanding-naming-conventions-in-redux-toolkit/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/03/understanding-the-render-function-in-table-components/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/06/using-rejectwithvalue-for-cancellation-tokens-in-rtk/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2025/04/15/what-are-the-best-practices-for-caching-resources-in-a-pwa/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/08/when-to-use-selectedkeys-over-the-active-class-in-ant-design/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/2024/04/16/why-do-we-need-axios-interceptors/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/antd-breakpoint/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/antd-table-pagination/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/appBased-folder-structure/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/formData/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/js-advanced-interview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/rtk-overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/rtkQuery-realtime/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/rule-of-thumb/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/statemanagement/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/supabase/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/webapi/file-api/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/webapi/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/codehighlight/webapi/web-api/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/common-error/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/draft/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/antd-chartd/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/env/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/file-upload/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/guide/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/infinte-scroll/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/optimization/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/profile-picture/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/react-player/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/remember-me/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/sass/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/transformResponse/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/ui-collapsible/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/usefull-code/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/approval/timeline/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/auth/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/auth/refreshTokenPromise/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/auth/rememberme/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/clickup/2024/december/week4/03-tuesday-task/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/clickup/2024/december/week4/04-wednesday-task/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/clickup/2024/november/week1/02-task/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/counter/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/approvers-verifiers/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/file-upload/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/hooks/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/mmd/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/new-logic/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/rate-input-difference/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/rateMinMaxValidator/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/super-loader/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/tolaranceReset/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/tolerance-rate-input/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/form/verifiers-not-selected/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/infiniteQuery/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/infiniteQuery/table/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/issue/rate-loader-issue/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/issue/stale-state-issue/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/issue/pending/navItem/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/issue/solved/permission-response/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/multipart/upload/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/permission/bank-app-permission/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/permission/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/permission/isBankUser/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/permission/streaming-updates/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/settings/globalSettings/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/settings/using-global-settings/</loc>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/antd-drawer/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/antd-modal/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/axios-cancel/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/codesnap/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/improvement/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/loggin-in-react/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/router-dom/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/codesnapshot/slice/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/issue/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/package/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/secret/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/validate-reason/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/01-replychatbox/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/circular-planning/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/compose-email-drawer/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/dashboard-module/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/dashboard-today-task/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/mail-reply-bug/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/mail-tender-loader/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/modes-of-communication/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/redux-actions/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/redux-add-upate/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/tender-mail-circular/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/allOldClickups/tender-mail/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/reg-validation-in-mail/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/showing-button-on-condition/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/august/tender-module-task-edit-and-im/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/november/14-tender-mail-added-refID/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/november/23-subsector-tendermodule/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/november/25-sub-category-in-tenderModule/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/november/added-loader-in-business-model/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/november/adding-hyperlink-in-internal-toolbar/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/november/mail-mulitple-reference-issue/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/circular-planning-select-value-debug/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/companies-select-debug/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/company-email-model/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/conditional-rendering-button/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/converting-radio-to-select/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/css-scrolling-block-issue/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/mail-onFocus/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/need-text-editor-in-im/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/persist-storage-redux/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/persist-storage-tender-content/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/savebase64-excel-button/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/tab-circular-planing/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/task-module-set-tos-ccs/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/clickup/2024/september/tender-pagination-isActive/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/architecture/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/auth/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/blog/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/daily-dairy/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/excel-api-data/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/fingerprint/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/groupchat-internal-message/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/groupchat-module/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/import-excel-file/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/instance-and-internal-message/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/internal-message/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/login/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/mail/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/permisison-based-access-control/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/public-events/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/redux-action-advanced/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/reference-project-circular/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/reference-tender-circular/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/sending-im/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/sending-mail/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/setting-setValue-in-select/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/sisco-view/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/alldocs/tutorial-listing/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/HTMLRenderer/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/JSON-stringify/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/internalMNew/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/reusable-component-tooltip/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/useDebouncedDispatch/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/commonModule/useReducer/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/tenderModule/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/documentation/tenderModule/reusableComponents/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/appuserid/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/debounce/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/draft/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/error-boundary/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/persist-local-storage/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/priority-listing-select/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/sorting-table-antd/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/table-row-selection-customize/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/important/table-rowid/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/refactor/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/refactor/Button/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/refactor/function-update-setState/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/ispl/refactor/noticeboard/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/primesales/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/react-router/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/zustland-store/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/redux/zustland/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/80-20/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/docker/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/js-scientific-notation/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/license-doc/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/linux-last-login/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/signalr-transport/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/validating-meaningful-words/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/Faker.js/faker/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/Faker.js/google-collab/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/Faker.js/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/Faker.js/post-endpoints/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/dockerhub/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/ideas/github-copilot/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/ideas/locally-running-ai/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/ideas/micro-frontend/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/ideas/mvp/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/ideas/website-package/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/prototype-stack/modified/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/prototype-stack/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/custom-django-app-structure/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/django-api-image/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/django-builtin-lightweight-server/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/redis-locally-or-docker/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/redis/intro/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/redis/redis-cli/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/websocket/channels-full-guide/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/websocket/channels-vs-daphene/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/python/websocket/issue-solved/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/rabbitmq/installation/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/rabbitmq/overview/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/rabbitmq/question/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/react/feature-flags/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/react/hierarchical-structure/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/react/improved-code/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/react/npm-publish/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/research/react/working-with-numbers-in-js/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2025/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2023/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/2/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/3/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/4/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/page/5/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2025/page/2/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/page/2/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/blog/archive/2024/page/3/</loc>
-         <lastmod>2025-06-11</lastmod>
+         <lastmod>2025-06-12</lastmod>
     </url>
 </urlset>

@@ -1314,6 +1314,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../office/bank/settings/using-global-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7346,6 +7368,99 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ai-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      States:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumption:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chaining:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async/Await:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-using-promises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Using Promises:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -7422,7 +7537,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -7465,6 +7580,14 @@
 <div><h1 id="i-promise-myself">I <code>Promise</code> myself</h1>
 <!-- more -->
 
+<details class="quote" open="open">
+<summary>setTimeout()</summary>
+<p><code>setTimeout()</code> is an asynchronous JavaScript function that executes a code block or evaluates an expression through a callback function after a delay set in milliseconds.</p>
+<hr>
+<ul>
+<li><a href="https://www.codecademy.com/learn/webdev-intermediate-javascript/modules/javascript-promises/cheatsheet">Codecademy: JS Promise</a></li>
+</ul>
+</details>
 <h2 id="core-concept-what-is-a-promise">🔄 Core Concept: What is a Promise?</h2>
 <p class="annotate">A Promise represents a <mark>value</mark> that may be available <strong>now</strong>, <strong>later</strong>, or <strong>never</strong> (if it fails). (1)</p>
 <ol>
@@ -7624,10 +7747,50 @@
 </li>
 </ul>
 <hr>
+<h2 id="ai-overview"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">AI Overview</a></h2>
+<p>A JavaScript Promise is an object representing the eventual completion (or failure) of an asynchronous operation. It acts as a placeholder for a value that may not be available immediately, allowing you to write cleaner and more manageable asynchronous code.</p>
+<h3 id="key-concepts">Key Concepts:</h3>
+<h4 id="states">States:</h4>
+<p>A Promise can be in <mark>one of three states</mark>:</p>
+<ul>
+<li><strong>Pending</strong>: The initial state, neither fulfilled nor rejected.</li>
+<li><strong>Fulfilled (Resolved)</strong>: The operation completed successfully, and a value is available.</li>
+<li><strong>Rejected</strong>: The operation failed, and an error is available.</li>
+</ul>
+<h4 id="creation">Creation:</h4>
+<p>Promises are created using the <code>Promise</code> constructor, which takes an executor function as an argument. The executor function receives two callbacks: <code>resolve</code> (to fulfill the promise) and <code>reject</code> (to reject the promise).</p>
+<h4 id="consumption">Consumption:</h4>
+<p>Promises are consumed using the <code>.then()</code> and <code>.catch()</code> methods.</p>
+<ul>
+<li><code>.then()</code>: Handles the fulfilled state, taking a callback function that receives the resolved value.</li>
+<li><code>.catch()</code>: Handles the rejected state, taking a callback function that receives the error.</li>
+</ul>
+<h4 id="chaining">Chaining:</h4>
+<p>Promises can be chained together using <code>.then()</code> to create a sequence of asynchronous operations.</p>
+<h4 id="error-handling">Error Handling:</h4>
+<p>Errors in a promise chain can be caught using <code>.catch()</code> at any point in the chain. If an error occurs in a <code>.then()</code> callback, it will propagate down the chain until it reaches a <code>.catch()</code>.
+Promise Methods:</p>
+<ul>
+<li><code>Promise.all()</code>: Takes an array of promises and returns a new promise that resolves when all input promises resolve or rejects if any of them reject.</li>
+<li><code>Promise.allSettled()</code>: Takes an array of promises and returns a new promise that resolves when all input promises have settled (either resolved or rejected).</li>
+<li><code>Promise.any()</code>: Takes an array of promises and returns a new promise that resolves when the first input promise resolves or rejects if all of them reject.</li>
+<li><code>Promise.race()</code>: Takes an array of promises and returns a new promise that resolves or rejects as soon as the first input promise settles.</li>
+</ul>
+<h4 id="asyncawait">Async/Await:</h4>
+<p>Promises are the foundation for <code>async/await</code> syntax, which makes asynchronous code look more like synchronous code.</p>
+<h4 id="benefits-of-using-promises">Benefits of Using Promises:</h4>
+<ul>
+<li><strong>Improved Code Readability</strong>: Promises help avoid "callback hell" by providing a more structured way to handle asynchronous operations.</li>
+<li><strong>Better Error Handling</strong>: Promises make it easier to handle errors in asynchronous code, with clear error propagation through the chain.</li>
+<li><strong>Simplified Asynchronous Logic</strong>: Promises simplify the process of writing and managing asynchronous code.</li>
+</ul>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">MDN: Using promises</a></li>
-</ul></div>
+<li><a href="https://www.codecademy.com/learn/webdev-intermediate-javascript/modules/javascript-promises/cheatsheet">CodeAcademy: Promises</a></li>
+</ul>
+<hr></div>
 
 
 
