@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://bishow-thapa.github.io/research/IIS-Manager/">
       
       
-        <link rel="prev" href="../unwrap/">
+        <link rel="prev" href="../cross-tab-onmessage/">
       
       
-        <link rel="next" href="../signalr-transport/">
+        <link rel="next" href="../iis-manager-url-rewrite/">
       
       
       <link rel="icon" href="../../images/logo/favicon.ico">
@@ -6346,6 +6346,338 @@
   
   
   
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    IIS MANAGER
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    IIS MANAGER
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-add-url-rewrite-rules-via-iis-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 How to Add URL Rewrite Rules via IIS Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠 How to Add URL Rewrite Rules via IIS Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-open-iis-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Open IIS Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-url-rewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Open "URL Rewrite"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configure-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configure Rule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Configure Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition 1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition 2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-apply-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Apply Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-exclude-static-file-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Optional: Exclude Static File Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iis-url-rewrite-rules-for-react-frontend-gui-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      IIS URL Rewrite Rules for React Frontend (GUI Method)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objective
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-open-iis-manager_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Open IIS Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-url-rewrite_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Open URL Rewrite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-a-new-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add a New Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configure-the-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configure the Rule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Configure the Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Match URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iis-manager-url-rewrite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IIS MANAGER POCKET GUIDEE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -6353,14 +6685,14 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
         
           
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6372,8 +6704,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             TS
           </label>
@@ -6484,78 +6816,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    IIS MANAGER
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    IIS MANAGER
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6696,10 +6956,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
         
           
-          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6711,8 +6971,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
             <span class="md-nav__icon md-icon"></span>
             RS
           </label>
@@ -6735,10 +6995,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_1" id="__nav_4_10_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_1" id="__nav_4_12_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6750,8 +7010,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_1">
             <span class="md-nav__icon md-icon"></span>
             Apps
           </label>
@@ -6892,10 +7152,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_2" id="__nav_4_10_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_2" id="__nav_4_12_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6907,8 +7167,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_2">
             <span class="md-nav__icon md-icon"></span>
             React
           </label>
@@ -7049,10 +7309,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_3" id="__nav_4_10_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_3" id="__nav_4_12_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7064,8 +7324,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_3">
             <span class="md-nav__icon md-icon"></span>
             Prototype Stack
           </label>
@@ -7140,10 +7400,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_4" id="__nav_4_10_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_4" id="__nav_4_12_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7155,8 +7415,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_12_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_4">
             <span class="md-nav__icon md-icon"></span>
             Python
           </label>
@@ -7267,10 +7527,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_4_5" id="__nav_4_10_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_4_5" id="__nav_4_12_4_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7282,8 +7542,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_10_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_4_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_12_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_4_5">
             <span class="md-nav__icon md-icon"></span>
             Websocket
           </label>
@@ -7380,10 +7640,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_4_6" id="__nav_4_10_4_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_4_6" id="__nav_4_12_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7395,8 +7655,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_10_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_4_6">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_12_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_4_6">
             <span class="md-nav__icon md-icon"></span>
             Redis
           </label>
@@ -7479,10 +7739,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_5" id="__nav_4_10_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_5" id="__nav_4_12_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7494,8 +7754,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_5">
             <span class="md-nav__icon md-icon"></span>
             RabbitMQ
           </label>
@@ -7592,10 +7852,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_10_6" id="__nav_4_10_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12_6" id="__nav_4_12_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7607,8 +7867,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_12_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12_6">
             <span class="md-nav__icon md-icon"></span>
             Docker
           </label>
@@ -8134,6 +8394,246 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-to-add-url-rewrite-rules-via-iis-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 How to Add URL Rewrite Rules via IIS Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠 How to Add URL Rewrite Rules via IIS Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-open-iis-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Open IIS Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-url-rewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Open "URL Rewrite"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configure-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configure Rule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Configure Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition 1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition 2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-apply-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Apply Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-exclude-static-file-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Optional: Exclude Static File Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iis-url-rewrite-rules-for-react-frontend-gui-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      IIS URL Rewrite Rules for React Frontend (GUI Method)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objective
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-open-iis-manager_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Open IIS Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-url-rewrite_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Open URL Rewrite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-a-new-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add a New Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configure-the-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configure the Rule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Configure the Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Match URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -8165,6 +8665,151 @@
 <p><a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite</a></p>
 <p><a class="glightbox" href="https://docs.espocrm.com/_static/images/administration/iis/physical-path.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IIS Server" src="https://docs.espocrm.com/_static/images/administration/iis/physical-path.png"></a>
 <a class="glightbox" href="https://learn.microsoft.com/en-us/iis/get-started/getting-started-with-iis/getting-started-with-the-iis-manager-in-iis-7-and-iis-8/_static/image1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IIS SERVER" src="https://learn.microsoft.com/en-us/iis/get-started/getting-started-with-iis/getting-started-with-the-iis-manager-in-iis-7-and-iis-8/_static/image1.jpg"></a></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>103.94.159.132:54640
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Bank@123
+</span></code></pre></div>
+<hr>
+<h2 id="how-to-add-url-rewrite-rules-via-iis-manager">🛠 How to Add URL Rewrite Rules via IIS Manager</h2>
+<h3 id="1-open-iis-manager">1. Open IIS Manager</h3>
+<ul>
+<li>Open the IIS Manager (<code>inetmgr</code>)</li>
+<li>Navigate to your site (e.g.,<code>Sites &gt; YourSite</code>)</li>
+</ul>
+<h3 id="2-open-url-rewrite">2. Open "URL Rewrite"</h3>
+<ul>
+<li>Double-click "<strong>URL Rewrite</strong>" in the middle pane</li>
+</ul>
+<h3 id="3-add-rules">3. Add Rules</h3>
+<ul>
+<li>In the right-hand pane, click "<strong>Add Rules...</strong>"</li>
+</ul>
+<p><strong>Step 1: Add Inbound Rule &gt; Blank Rule</strong></p>
+<ul>
+<li>Select <mark>Inbound Rules &gt; Blank rule</mark></li>
+<li>Click <strong>OK</strong></li>
+</ul>
+<h3 id="4-configure-rule">4. Configure Rule</h3>
+<p><strong>Name</strong>: <code>ReactRouteRewrite</code></p>
+<p><strong>Match URL</strong>:</p>
+<ul>
+<li>Requested URL: <code>Matches the Pattern</code></li>
+<li>Using: <code>Regular Expressions</code></li>
+<li>Pattern: <code>.*</code></li>
+</ul>
+<hr>
+<p><strong>Conditions (Click "Add..." 2 times)</strong></p>
+<h4 id="condition-1">Condition 1:</h4>
+<ul>
+<li>Condition input: <code>{REQUEST_FILENAME}</code></li>
+<li>Check if input string: <code>Is Not a File</code></li>
+</ul>
+<h4 id="condition-2">Condition 2:</h4>
+<ul>
+<li>Condition input: <code>{REQUEST_FILENAME}</code></li>
+<li>Check if input string: <code>Is Not a Directory</code></li>
+</ul>
+<blockquote>
+<p>✔️ This ensures static files (like <code>.js</code>, <code>.css</code>, etc.) are <mark>not</mark> rewritten</p>
+</blockquote>
+<h4 id="action">Action:</h4>
+<ul>
+<li>Action Type: <code>Rewrite</code></li>
+<li>Rewrite URL: <code>/index.html</code></li>
+<li>(Leave "Append query string" checked)</li>
+</ul>
+<h3 id="5-apply-rule">5. Apply Rule</h3>
+<ul>
+<li>Click "<strong>Apply</strong>" in the right panel</li>
+</ul>
+<hr>
+<h3 id="optional-exclude-static-file-extensions">✅ Optional: Exclude Static File Extensions</h3>
+<p>If you want to be more precise and exclude specific file extensions (like <code>.js</code>, <code>.css</code>, <code>.jpg</code>, etc.):</p>
+<ol>
+<li>
+<p>Add another <strong>Condition</strong>:</p>
+<ul>
+<li>Condition Input: <code>{REQUEST_URI}</code></li>
+<li>Check if input string: <code>Does Not Match the Pattern</code></li>
+<li>Pattern: <code>.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff2?|ttf|eot|map)$</code></li>
+<li>Use <code>Ignore Case</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="summary">💡 Summary</h3>
+<p>You're using the IIS GUI to avoid modifying <code>web.config</code> directly. This method sets up the rewrite rule visually in the <strong>URL Rewrite module</strong>, and IIS will handle routing of React client-side routes properly (like /dashboard, /about, etc.).</p>
+<p>Let me know if you also need this set up for a subdirectory or a reverse proxy (like React served from <code>/app</code> or <code>/ui</code>).</p>
+<hr>
+<h2 id="iis-url-rewrite-rules-for-react-frontend-gui-method">IIS URL Rewrite Rules for React Frontend (GUI Method)</h2>
+<p>This guide walks you through configuring URL Rewrite rules in IIS for a frontend <strong>React</strong> application using the <strong>IIS Manager</strong> (not by editing <code>web.config</code> manually).</p>
+<hr>
+<h2 id="objective">🎯 Objective</h2>
+<ul>
+<li>Route all React client-side routes to <code>index.html</code></li>
+<li>Serve static files (e.g., <code>.js</code>, <code>.css</code>, <code>.png</code>, etc.) directly without rewriting</li>
+<li>Use the <strong>URL Rewrite GUI</strong> in IIS Manager</li>
+</ul>
+<hr>
+<h2 id="steps">✅ Steps</h2>
+<h3 id="1-open-iis-manager_1">1. Open IIS Manager</h3>
+<ul>
+<li>Run <code>inetmgr</code></li>
+<li>Navigate to your site: <code>Sites &gt; YourSite</code></li>
+</ul>
+<h3 id="2-open-url-rewrite_1">2. Open URL Rewrite</h3>
+<ul>
+<li>Double-click <strong>"URL Rewrite"</strong> in the Features view</li>
+</ul>
+<h3 id="3-add-a-new-rule">3. Add a New Rule</h3>
+<ul>
+<li>Click <strong>"Add Rules..."</strong> (Actions panel on the right)</li>
+<li>Select <strong>Inbound Rules &gt; Blank Rule</strong></li>
+<li>Click <strong>OK</strong></li>
+</ul>
+<h3 id="4-configure-the-rule">4. Configure the Rule</h3>
+<h4 id="general">General</h4>
+<ul>
+<li><strong>Name</strong>: <code>ReactRouteRewrite</code></li>
+</ul>
+<h4 id="match-url">Match URL</h4>
+<ul>
+<li><strong>Requested URL</strong>: <code>Matches the Pattern</code></li>
+<li><strong>Using</strong>: <code>Regular Expressions</code></li>
+<li><strong>Pattern</strong>: <code>.*</code></li>
+</ul>
+<h4 id="conditions">Conditions</h4>
+<p>Click <strong>"Add..."</strong> to add two conditions:</p>
+<p><strong>Condition 1</strong>:</p>
+<ul>
+<li><strong>Condition input</strong>: <code>{REQUEST_FILENAME}</code></li>
+<li><strong>Check if input string</strong>: <code>Is Not a File</code></li>
+</ul>
+<p><strong>Condition 2</strong>:</p>
+<ul>
+<li><strong>Condition input</strong>: <code>{REQUEST_FILENAME}</code></li>
+<li><strong>Check if input string</strong>: <code>Is Not a Directory</code></li>
+</ul>
+<p>(Optional – for better performance)</p>
+<p><strong>Condition 3</strong>:</p>
+<ul>
+<li><strong>Condition input</strong>: <code>{REQUEST_URI}</code></li>
+<li><strong>Check if input string</strong>: <code>Does Not Match the Pattern</code></li>
+<li><strong>Pattern</strong>: <code>.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff2?|ttf|eot|map)$</code></li>
+<li><strong>Ignore Case</strong>: <code>Checked</code></li>
+</ul>
+<h4 id="action_1">Action</h4>
+<ul>
+<li><strong>Action Type</strong>: <code>Rewrite</code></li>
+<li><strong>Rewrite URL</strong>: <code>/index.html</code></li>
+<li><strong>Append query string</strong>: <code>Checked</code></li>
+</ul>
+<hr>
+<h2 id="final-step">✅ Final Step</h2>
+<ul>
+<li>Click <strong>"Apply"</strong> in the right panel to save the rule.</li>
+</ul>
+<hr>
+<h2 id="result">📦 Result</h2>
+<p>Now, all React routes like <code>/dashboard</code>, <code>/profile/123</code>, etc., will load <code>index.html</code>, and React Router will take over. Static assets will load normally.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
@@ -8205,7 +8850,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../unwrap/" class="md-footer__link md-footer__link--prev" aria-label="Previous: unWrap">
+          <a href="../cross-tab-onmessage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cross Tab onmessage">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -8215,20 +8860,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                unWrap
+                Cross Tab onmessage
               </div>
             </div>
           </a>
         
         
           
-          <a href="../signalr-transport/" class="md-footer__link md-footer__link--next" aria-label="Next: Signalr-transport">
+          <a href="../iis-manager-url-rewrite/" class="md-footer__link md-footer__link--next" aria-label="Next: IIS MANAGER POCKET GUIDEE">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Signalr-transport
+                IIS MANAGER POCKET GUIDEE
               </div>
             </div>
             <div class="md-footer__button md-icon">
