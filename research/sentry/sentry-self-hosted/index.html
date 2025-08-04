@@ -9480,7 +9480,7 @@
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">);</span>
 </span></code></pre></div>
 <p><strong>Example API call from React</strong></p>
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s2">"http://localhost:8000/error"</span><span class="p">)</span><span class="w">  </span><span class="c1">// Should trigger FastAPI error</span>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s2">"http://localhost:8000/error"</span><span class="p">)</span><span class="w"> </span><span class="c1">// Should trigger FastAPI error</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Caught error"</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">));</span>
 </span></code></pre></div>
 <hr>
@@ -9505,7 +9505,7 @@
 </span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    tty: true
 </span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
 </span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>  sentry:
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    image: getsentry/sentry:latest  # We already set this up via `self-hosted/`
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    image: getsentry/sentry:latest # We already set this up via `self-hosted/`
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    # In real usage, you run it via ./install.sh and manage with docker-compose inside /sentry folder
 </span></code></pre></div>
 <p>You may also want to run the Sentry services from the <code>sentry</code> folder separately using its own <code>docker-compose.yml</code>.</p>
