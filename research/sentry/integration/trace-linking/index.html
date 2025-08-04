@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/research/observability/guide/best-practices/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/research/sentry/integration/trace-linking/">
       
       
-        <link rel="prev" href="../sentry-vs-prometheus/">
+        <link rel="prev" href="../fastapi/">
       
       
-        <link rel="next" href="../../difference-between-sentry-and-promethus/">
+        <link rel="next" href="../../guide/sentry-vs-prometheus/">
       
       
       <link rel="icon" href="../../../../images/logo/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Best Practices - Bishow Thapa</title>
+        <title>Trace Linking - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#best-practices-for-observability-in-fullstack-apps" class="md-skip">
+        <a href="#trace-linking-frontend-backend-with-sentry" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Best Practices
+              Trace Linking
             
           </span>
         </div>
@@ -7018,6 +7018,8 @@
                 
   
   
+    
+  
   
   
     
@@ -7028,11 +7030,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
         
           
           <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
@@ -7048,7 +7050,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             Sentry Integration
@@ -7059,10 +7061,53 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../sentry/react/" class="md-nav__link">
+      <a href="../react/" class="md-nav__link">
         
   
   
@@ -7085,7 +7130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sentry/react-with-pnpm-axios/" class="md-nav__link">
+      <a href="../react-with-pnpm-axios/" class="md-nav__link">
         
   
   
@@ -7108,89 +7153,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sentry/fastapi/" class="md-nav__link">
+      <a href="../fastapi/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FastAPI Backend
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sentry/trace-linking/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Trace Linking
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sentry/sentry-self-hosted/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Sentry Self Hosted
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sentry-vs-prometheus/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    When to Use What
     
   </span>
   
@@ -7222,7 +7190,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices
+    Trace Linking
     
   </span>
   
@@ -7235,7 +7203,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices
+    Trace Linking
     
   </span>
   
@@ -7258,213 +7226,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-principles" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 General Principles
+      🧱 Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-react-frontend" class="md-nav__link">
+  <a href="#what-are-trace-headers" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚛️ Best Practices for React (Frontend)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚛️ Best Practices for React (Frontend)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-sentryreact-and-errorboundary" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use @sentry/react and ErrorBoundary
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#capture-manual-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Capture manual exceptions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trace-frontend-backend-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Trace frontend → backend requests
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitor-web-vitals" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Monitor Web Vitals
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-fastapi-backend" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Best Practices for FastAPI (Backend)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Best Practices for FastAPI (Backend)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-sentry_sdk-with-asgi-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use sentry_sdk with ASGI integration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#log-handled-errors-manually" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Log handled errors manually
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-performance-tracing" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use performance tracing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-related-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Group related requests
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-prometheus-grafana" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Best Practices for Prometheus + Grafana
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📊 Best Practices for Prometheus + Grafana">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#monitor-resource-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Monitor resource usage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-alerts-wisely" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Set alerts wisely
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-labelstags" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use labels/tags
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep-dashboards-focused" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Keep dashboards focused
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Integration Best Practices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔁 Integration Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-both-sentry-and-prometheus" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use both Sentry and Prometheus
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-distributed-tracing" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use distributed tracing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-privacy-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔐 Security &amp; Privacy Tips
+      🧠 What Are Trace Headers?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cicd-deployment" class="md-nav__link">
+  <a href="#step-1-forward-headers-in-react" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 CI/CD &amp; Deployment
+      ⚛️ Step 1: Forward Headers in React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-receive-traces-in-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 2: Receive Traces in FastAPI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-trace-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Example: Trace in Action
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-trace-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Debugging Trace Linking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cors-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 CORS Note
     </span>
   </a>
   
@@ -7480,9 +7298,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Resources
+      📚 References
     </span>
   </a>
   
@@ -7492,6 +7310,132 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sentry-vs-prometheus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When to Use What
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sentry-self-hosted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sentry Self Hosted
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -7526,6 +7470,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../concept-first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concept First
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7538,10 +7513,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
         
           
-          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
             
   
   
@@ -7554,8 +7529,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
             NEPAL
           </label>
@@ -7656,10 +7631,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
         
           
-          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
             
   
   
@@ -7672,8 +7647,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
             <span class="md-nav__icon md-icon"></span>
             TS
           </label>
@@ -7843,10 +7818,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
         
           
-          <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
             
   
   
@@ -7859,8 +7834,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
             <span class="md-nav__icon md-icon"></span>
             RS
           </label>
@@ -7884,10 +7859,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_1" id="__nav_4_13_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_1" id="__nav_4_10_1_label" tabindex="0">
             
   
   
@@ -7900,8 +7875,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_13_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_1">
             <span class="md-nav__icon md-icon"></span>
             Apps
           </label>
@@ -8048,10 +8023,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_2" id="__nav_4_13_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_2" id="__nav_4_10_2_label" tabindex="0">
             
   
   
@@ -8064,8 +8039,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_13_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_2">
             <span class="md-nav__icon md-icon"></span>
             React
           </label>
@@ -8212,10 +8187,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_3" id="__nav_4_13_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_3" id="__nav_4_10_3_label" tabindex="0">
             
   
   
@@ -8228,8 +8203,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_13_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_3">
             <span class="md-nav__icon md-icon"></span>
             Prototype Stack
           </label>
@@ -8307,10 +8282,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_4" id="__nav_4_13_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_4" id="__nav_4_10_4_label" tabindex="0">
             
   
   
@@ -8323,8 +8298,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_13_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_4">
             <span class="md-nav__icon md-icon"></span>
             Python
           </label>
@@ -8440,10 +8415,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_4_5" id="__nav_4_13_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_4_5" id="__nav_4_10_4_5_label" tabindex="0">
             
   
   
@@ -8456,8 +8431,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_13_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_4_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_10_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_4_5">
             <span class="md-nav__icon md-icon"></span>
             Websocket
           </label>
@@ -8558,10 +8533,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_4_6" id="__nav_4_13_4_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_4_6" id="__nav_4_10_4_6_label" tabindex="0">
             
   
   
@@ -8574,8 +8549,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_13_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_4_6">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_10_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_4_6">
             <span class="md-nav__icon md-icon"></span>
             Redis
           </label>
@@ -8661,10 +8636,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_5" id="__nav_4_13_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_5" id="__nav_4_10_5_label" tabindex="0">
             
   
   
@@ -8677,8 +8652,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_13_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_5">
             <span class="md-nav__icon md-icon"></span>
             RabbitMQ
           </label>
@@ -8779,10 +8754,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_13_6" id="__nav_4_13_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10_6" id="__nav_4_10_6_label" tabindex="0">
             
   
   
@@ -8795,8 +8770,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_13_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_13_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_6">
             <span class="md-nav__icon md-icon"></span>
             Docker
           </label>
@@ -9343,213 +9318,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-principles" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 General Principles
+      🧱 Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-react-frontend" class="md-nav__link">
+  <a href="#what-are-trace-headers" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚛️ Best Practices for React (Frontend)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚛️ Best Practices for React (Frontend)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-sentryreact-and-errorboundary" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use @sentry/react and ErrorBoundary
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#capture-manual-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Capture manual exceptions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trace-frontend-backend-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Trace frontend → backend requests
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitor-web-vitals" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Monitor Web Vitals
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-fastapi-backend" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Best Practices for FastAPI (Backend)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Best Practices for FastAPI (Backend)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-sentry_sdk-with-asgi-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use sentry_sdk with ASGI integration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#log-handled-errors-manually" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Log handled errors manually
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-performance-tracing" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use performance tracing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-related-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Group related requests
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-prometheus-grafana" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Best Practices for Prometheus + Grafana
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📊 Best Practices for Prometheus + Grafana">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#monitor-resource-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Monitor resource usage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-alerts-wisely" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Set alerts wisely
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-labelstags" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use labels/tags
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep-dashboards-focused" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Keep dashboards focused
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Integration Best Practices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔁 Integration Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-both-sentry-and-prometheus" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use both Sentry and Prometheus
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-distributed-tracing" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Use distributed tracing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-privacy-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔐 Security &amp; Privacy Tips
+      🧠 What Are Trace Headers?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cicd-deployment" class="md-nav__link">
+  <a href="#step-1-forward-headers-in-react" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 CI/CD &amp; Deployment
+      ⚛️ Step 1: Forward Headers in React
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-receive-traces-in-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 2: Receive Traces in FastAPI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-trace-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Example: Trace in Action
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-trace-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Debugging Trace Linking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cors-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 CORS Note
     </span>
   </a>
   
@@ -9565,9 +9390,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Resources
+      📚 References
     </span>
   </a>
   
@@ -9592,178 +9417,122 @@
   
 
 
-<div><h1 id="best-practices-for-observability-in-fullstack-apps">Best Practices for Observability in Fullstack Apps</h1>
-<p>To build reliable and maintainable applications, it's essential to follow observability best practices. This guide shares tips for using <strong>Sentry</strong>, <strong>Prometheus</strong>, and <strong>Grafana</strong> effectively in a React + FastAPI project.</p>
-<hr>
-<h2 id="general-principles">🧠 General Principles</h2>
+<div><h1 id="trace-linking-frontend-backend-with-sentry">Trace Linking: Frontend → Backend with Sentry</h1>
+<p>Distributed tracing lets you see how a user request flows <strong>from the frontend (React)</strong> to the <strong>backend (FastAPI)</strong>. This makes it easy to understand:</p>
 <ul>
-<li><strong>Don’t wait for users to report problems.</strong> Your observability stack should catch issues before users feel the pain.</li>
-<li><strong>Measure what matters.</strong> Prioritize user-facing errors, performance bottlenecks, and system-level resource usage.</li>
-<li><strong>Avoid alert fatigue.</strong> Only alert on what truly requires action.</li>
+<li>Which API requests are slow</li>
+<li>Where latency comes from (frontend, network, or backend)</li>
+<li>How errors and spans are connected across services</li>
 </ul>
 <hr>
-<h2 id="best-practices-for-react-frontend">⚛️ Best Practices for React (Frontend)</h2>
-<h3 id="use-sentryreact-and-errorboundary">✅ Use <code>@sentry/react</code> and <code>ErrorBoundary</code></h3>
+<h2 id="requirements">🧱 Requirements</h2>
+<p>To enable trace linking between React and FastAPI:</p>
+<ol>
+<li>Sentry must be initialized with performance monitoring in both React and FastAPI</li>
+<li>React must send special trace headers (<code>sentry-trace</code> and <code>baggage</code>) with every API request</li>
+<li>FastAPI must be running Sentry's <code>ASGI</code> middleware (already done if you followed the <code>fastapi.md</code> guide)</li>
+</ol>
+<hr>
+<h2 id="what-are-trace-headers">🧠 What Are Trace Headers?</h2>
+<p>When a transaction is created in the frontend, Sentry generates headers like:</p>
 <ul>
-<li>Automatically catch component rendering errors.</li>
-<li>Provide a fallback UI to avoid crashing the whole app.</li>
+<li><code>sentry-trace</code>: contains trace ID, span ID, sampling info</li>
+<li><code>baggage</code>: optional metadata for more detailed linking</li>
 </ul>
-<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ErrorBoundary</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@sentry/react"</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">ErrorBoundary</span><span class="w"> </span><span class="na">fallback</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Something</span><span class="w"> </span><span class="nx">went</span><span class="w"> </span><span class="nx">wrong</span><span class="p">.&lt;/</span><span class="nt">p</span><span class="p">&gt;}&gt;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">&lt;</span><span class="nt">App</span><span class="w"> </span><span class="p">/&gt;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">ErrorBoundary</span><span class="p">&gt;</span>
+<p>These headers must be forwarded to the backend on every API call.</p>
+<hr>
+<h2 id="step-1-forward-headers-in-react">⚛️ Step 1: Forward Headers in React</h2>
+<p>If you're using <strong>Axios</strong>, add this to your Axios setup (e.g. <code>axios.js</code> or <code>api.js</code>):</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">axios</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"axios"</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">Sentry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@sentry/react"</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">axios</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Sentry</span><span class="p">.</span><span class="nx">getCurrentHub</span><span class="p">().</span><span class="nx">getScope</span><span class="p">().</span><span class="nx">getTransaction</span><span class="p">();</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">transaction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s2">"sentry-trace"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">toTraceparent</span><span class="p">();</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s2">"baggage"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">transaction</span><span class="p">.</span><span class="nx">toBaggage</span><span class="p">();</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">config</span><span class="p">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">});</span>
 </span></code></pre></div>
+<p>➡️ This ensures that every request includes the trace info needed for backend linking.</p>
 <hr>
-<h3 id="capture-manual-exceptions">✅ Capture manual exceptions</h3>
-<ul>
-<li>Use <code>Sentry.captureException()</code> in <code>try/catch</code> blocks for API or logic errors.</li>
-</ul>
+<h2 id="step-2-receive-traces-in-fastapi">🚀 Step 2: Receive Traces in FastAPI</h2>
+<p>If you used the <code>SentryAsgiMiddleware</code> (as shown in <code>fastapi.md</code>), FastAPI will automatically extract and continue the trace using those headers.</p>
+<p>You don't need to write any extra code.</p>
 <hr>
-<h3 id="trace-frontend-backend-requests">✅ Trace frontend → backend requests</h3>
-<ul>
-<li>Forward <code>sentry-trace</code>and <code>baggage</code> headers when calling APIs.</li>
-<li>Helps link user interaction to backend latency.</li>
-</ul>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">fetch</span><span class="p">(</span><span class="s2">"/api/data"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="s2">"sentry-trace"</span><span class="o">:</span><span class="w"> </span><span class="nx">Sentry</span><span class="p">.</span><span class="nx">getCurrentHub</span><span class="p">().</span><span class="nx">getScope</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="nx">getTransaction</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="nx">toTraceparent</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">''</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="s2">"baggage"</span><span class="o">:</span><span class="w"> </span><span class="nx">Sentry</span><span class="p">.</span><span class="nx">getCurrentHub</span><span class="p">().</span><span class="nx">getScope</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="nx">getTransaction</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="nx">toBaggage</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">''</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">});</span>
+<h2 id="example-trace-in-action">🔍 Example: Trace in Action</h2>
+<ol>
+<li>A user clicks "Load Dashboard"</li>
+<li>React starts a transaction (<code>Dashboard Load</code>)</li>
+<li>React calls <code>/api/dashboard</code>, sending trace headers</li>
+<li>FastAPI receives the headers and continues the transaction</li>
+<li>In Sentry, you’ll see:</li>
+</ol>
+<div class="language-vbnet highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Dashboard</span><span class="w"> </span><span class="n">Load</span><span class="w"> </span><span class="p">(</span><span class="n">React</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">└──</span><span class="w"> </span><span class="k">GET</span><span class="w"> </span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">dashboard</span><span class="w"> </span><span class="p">(</span><span class="n">FastAPI</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">DB</span><span class="w"> </span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">(</span><span class="k">optional</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">DB</span><span class="w"> </span><span class="n">traced</span><span class="p">)</span>
 </span></code></pre></div>
+<p>✅ You get full visibility from browser to database!</p>
 <hr>
-<h3 id="monitor-web-vitals">✅ Monitor Web Vitals</h3>
+<h2 id="debugging-trace-linking">🧪 Debugging Trace Linking</h2>
 <ul>
-<li>Capture metrics like LCP, FID, CLS using Sentry’s Performance API.</li>
-</ul>
-<hr>
-<h2 id="best-practices-for-fastapi-backend">🚀 Best Practices for FastAPI (Backend)</h2>
-<h3 id="use-sentry_sdk-with-asgi-integration">✅ Use <code>sentry_sdk</code> with <code>ASGI</code> integration</h3>
-<ul>
-<li>Automatically capture uncaught exceptions and context.</li>
-</ul>
-<h3 id="log-handled-errors-manually">✅ Log handled errors manually</h3>
-<ul>
+<li>Use the <mark>Sentry Performance view</mark> to verify if the traces are connected</li>
 <li>
-<p>If you catch an error, use <code>capture_exception()</code> to still report it.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">sentry_sdk</span> <span class="kn">import</span> <span class="n">capture_exception</span>
+<p>If they show up separately:</p>
+<ul>
+<li>Check that both apps share the same <code>Sentry project</code> or organization</li>
+<li>Make sure the trace headers are not stripped by a proxy (e.g., NGINX, CORS, etc.)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="cors-note">🔐 CORS Note</h2>
+<p>Make sure your backend CORS settings allow these custom headers:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">fastapi.middleware.cors</span> <span class="kn">import</span> <span class="n">CORSMiddleware</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">try</span><span class="p">:</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">risky_operation</span><span class="p">()</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">capture_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">app</span><span class="o">.</span><span class="n">add_middleware</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">CORSMiddleware</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">allow_origins</span><span class="o">=</span><span class="p">[</span><span class="s2">"*"</span><span class="p">],</span>  <span class="c1"># Use specific origins in production!</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">allow_credentials</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">allow_methods</span><span class="o">=</span><span class="p">[</span><span class="s2">"*"</span><span class="p">],</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">allow_headers</span><span class="o">=</span><span class="p">[</span><span class="s2">"*"</span><span class="p">],</span>  <span class="c1"># Make sure this includes 'sentry-trace' and 'baggage'</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">)</span>
 </span></code></pre></div>
-</li>
-</ul>
-<h3 id="use-performance-tracing">✅ Use performance tracing</h3>
-<ul>
-<li>
-<p>Set <code>traces_sample_rate = 1.0</code>for <strong>dev/staging</strong>, <mark>but lower it in</mark> <strong>production</strong> (e.g., <code>0.2</code>).</p>
-</li>
-<li>
-<p>Trace latency and slow DB calls.</p>
-</li>
-</ul>
-<h3 id="group-related-requests">✅ Group related requests</h3>
-<ul>
-<li>Use transactions and spans to group backend logic into traceable blocks.</li>
-</ul>
-<hr>
-<h2 id="best-practices-for-prometheus-grafana">📊 Best Practices for Prometheus + Grafana</h2>
-<h3 id="monitor-resource-usage">✅ Monitor resource usage</h3>
-<ul>
-<li>Track FastAPI container CPU, memory, and uptime with Prometheus exporters (e.g., <code>node_exporter</code>, <code>cadvisor</code>).</li>
-</ul>
-<h3 id="set-alerts-wisely">✅ Set alerts wisely</h3>
-<ul>
-<li>
-<p>Alert on things that can be acted on (e.g., memory &gt; 90%, API latency &gt; 2s).</p>
-</li>
-<li>
-<p>Avoid alerts for temporary spikes.</p>
-</li>
-</ul>
-<h3 id="use-labelstags">✅ Use labels/tags</h3>
-<ul>
-<li>Use <code>job</code>, <code>instance</code>, <code>env</code>, and <code>app</code> labels to slice metrics effectively in Grafana.</li>
-</ul>
-<h3 id="keep-dashboards-focused">✅ Keep dashboards focused</h3>
-<ul>
-<li>Create role-based dashboards: dev (errors + traces), ops (infra health), product (business metrics).</li>
-</ul>
-<hr>
-<h2 id="integration-best-practices">🔁 Integration Best Practices</h2>
-<h3 id="use-both-sentry-and-prometheus">✅ Use both Sentry and Prometheus</h3>
-<ul>
-<li>Sentry shows what broke and why (errors, stack traces, performance)</li>
-<li>Prometheus/Grafana show system health and trends</li>
-</ul>
-<h3 id="use-distributed-tracing">✅ Use distributed tracing</h3>
-<ul>
-<li>Link React → FastAPI with trace headers</li>
-<li>Use OpenTelemetry (optional) if you want vendor-neutral tracing</li>
-</ul>
-<hr>
-<h2 id="security-privacy-tips">🔐 Security &amp; Privacy Tips</h2>
-<ul>
-<li>Mask PII before sending to Sentry (e.g., emails, tokens)</li>
-<li>Don’t expose internal URLs or server logs in frontend traces</li>
-<li>Use rate limits and sampling in production</li>
-</ul>
-<hr>
-<h2 id="cicd-deployment">🧪 CI/CD &amp; Deployment</h2>
-<ul>
-<li>Add healthchecks for Prometheus to scrape</li>
-<li>Use <code>mkdocs</code> to document observability stack internally</li>
-<li>Auto-deploy dashboards or Sentry config using Terraform or CI scripts</li>
-</ul>
 <hr>
 <h2 id="summary">✅ Summary</h2>
 <table>
 <thead>
 <tr>
-<th>Area</th>
-<th>Tool(s)</th>
-<th>Key Best Practices</th>
+<th>Step</th>
+<th>Tool</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Frontend Errors</td>
-<td>Sentry</td>
-<td>Use <code>ErrorBoundary</code>, capture API failures</td>
+<td>1</td>
+<td>React (Sentry)</td>
+<td>Start transaction and forward trace headers via Axios</td>
 </tr>
 <tr>
-<td>Backend Errors</td>
-<td>Sentry</td>
-<td>Auto and manual error reporting</td>
+<td>2</td>
+<td>FastAPI (Sentry)</td>
+<td>Use <code>SentryAsgiMiddleware</code> to continue the trace</td>
 </tr>
 <tr>
-<td>Performance</td>
-<td>Sentry + Prometheus</td>
-<td>Use tracing and metrics</td>
-</tr>
-<tr>
-<td>System Health</td>
-<td>Prometheus + Grafana</td>
-<td>Monitor containers, set actionable alerts</td>
-</tr>
-<tr>
-<td>Fullstack Tracing</td>
-<td>Sentry</td>
-<td>Link frontend → backend spans</td>
+<td>3</td>
+<td>Sentry UI</td>
+<td>View full end-to-end trace in Performance dashboard</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="resources">📚 Resources</h2>
+<h2 id="references">📚 References</h2>
 <ul>
-<li><a href="https://docs.sentry.io/platforms/javascript/react/">Sentry React Docs</a></li>
-<li><a href="https://docs.sentry.io/platforms/python/">Sentry Python Docs</a></li>
-<li><a href="https://prometheus.io/docs/">Prometheus Docs</a></li>
-<li><a href="https://grafana.com/docs/grafana/latest/alerting/">Grafana Alerts Guide</a></li>
-<li><a href="https://grafana.com/docs/grafana/latest/alerting/">Web Vitals Explained</a></li>
+<li><a href="https://docs.sentry.io/product/performance/distributed-tracing/">Sentry Distributed Tracing Docs</a></li>
+<li><a href="https://docs.sentry.io/platforms/javascript/react/">Sentry React SDK</a></li>
+<li><a href="https://docs.sentry.io/platforms/python/guides/fastapi/">Sentry Python/FastAPI Guide</a></li>
 </ul></div>
 
 
@@ -9800,7 +9569,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../sentry-vs-prometheus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: When to Use What">
+          <a href="../fastapi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FastAPI Backend">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -9810,20 +9579,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                When to Use What
+                FastAPI Backend
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../difference-between-sentry-and-promethus/" class="md-footer__link md-footer__link--next" aria-label="Next: Difference bet Sentry and Promethus">
+          <a href="../../guide/sentry-vs-prometheus/" class="md-footer__link md-footer__link--next" aria-label="Next: When to Use What">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Difference bet Sentry and Promethus
+                When to Use What
               </div>
             </div>
             <div class="md-footer__button md-icon">
