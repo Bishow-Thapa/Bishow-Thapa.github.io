@@ -8665,6 +8665,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#what-does-batched-mean" class="md-nav__link">
     <span class="md-ellipsis">
       What Does “Batched” Mean?
@@ -8672,8 +8682,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#without-batching-hypothetical" class="md-nav__link">
     <span class="md-ellipsis">
       🔁 Without Batching (hypothetical)
@@ -8681,8 +8691,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#with-batching-react-18" class="md-nav__link">
     <span class="md-ellipsis">
       ✅ With Batching (React 18+)
@@ -8690,13 +8700,51 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#real-life-analogy" class="md-nav__link">
     <span class="md-ellipsis">
       🧪 Real-Life Analogy
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-batched-vs-non-batched-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Visual: Batched vs Non-Batched Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Visual: Batched vs Non-Batched Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-batching-react-18-or-manually-flushed-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Without Batching (React &lt;18 or manually flushed updates)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-batching-react-18-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ With Batching (React 18+ default)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -10004,6 +10052,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#what-does-batched-mean" class="md-nav__link">
     <span class="md-ellipsis">
       What Does “Batched” Mean?
@@ -10011,8 +10069,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#without-batching-hypothetical" class="md-nav__link">
     <span class="md-ellipsis">
       🔁 Without Batching (hypothetical)
@@ -10020,8 +10078,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#with-batching-react-18" class="md-nav__link">
     <span class="md-ellipsis">
       ✅ With Batching (React 18+)
@@ -10029,13 +10087,51 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#real-life-analogy" class="md-nav__link">
     <span class="md-ellipsis">
       🧪 Real-Life Analogy
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-batched-vs-non-batched-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Visual: Batched vs Non-Batched Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Visual: Batched vs Non-Batched Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-batching-react-18-or-manually-flushed-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Without Batching (React &lt;18 or manually flushed updates)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-batching-react-18-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ With Batching (React 18+ default)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -10059,15 +10155,16 @@
 
 
 <div><h1 id="batched">Batched</h1>
-<h2 id="what-does-batched-mean">What Does “Batched” Mean?</h2>
+<h2 id="overview">Overview</h2>
+<h3 id="what-does-batched-mean">What Does “Batched” Mean?</h3>
 <p>Batched updates = React groups multiple state updates together, so they trigger just one re-render and one DOM update cycle.</p>
-<h2 id="without-batching-hypothetical">🔁 Without Batching (hypothetical)</h2>
+<h3 id="without-batching-hypothetical">🔁 Without Batching (hypothetical)</h3>
 <div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">setCount</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// causes a re-render</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">setName</span><span class="p">(</span><span class="s2">"John"</span><span class="p">);</span><span class="w"> </span><span class="c1">// causes a second re-render</span>
 </span></code></pre></div>
 <p>➡ Without batching: 2 state changes = 2 re-renders = 2 DOM updates</p>
 <hr>
-<h2 id="with-batching-react-18">✅ With Batching (React 18+)</h2>
+<h3 id="with-batching-react-18">✅ With Batching (React 18+)</h3>
 <div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">setCount</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">setName</span><span class="p">(</span><span class="s2">"John"</span><span class="p">);</span>
 </span></code></pre></div>
@@ -10085,10 +10182,40 @@
 </blockquote>
 <p>Before React 18, only React event handlers batched by default.</p>
 <hr>
-<h2 id="real-life-analogy">🧪 Real-Life Analogy</h2>
+<h3 id="real-life-analogy">🧪 Real-Life Analogy</h3>
 <ul>
 <li><strong>Batched updates</strong> = Writing multiple emails, then clicking "Send All" instead of sending each one separately.</li>
-</ul></div>
+</ul>
+<hr>
+<h2 id="visual-batched-vs-non-batched-updates">📊 Visual: Batched vs Non-Batched Updates</h2>
+<h3 id="without-batching-react-18-or-manually-flushed-updates">🔁 Without Batching (React &lt;18 or manually flushed updates)</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Time →
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>┌─────────────┬─────────────┬───────────────┐
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>| setCount(1) | setName('A')| UI re-renders |
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>|   (triggers re-render)    | again         |
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>└─────────────┴─────────────┴───────────────┘
+</span></code></pre></div>
+<ul>
+<li>➡ Two updates → Two renders → Two DOM commits</li>
+<li>🙅‍♂️ Inefficient and causes visual jank if updates are fast or frequent</li>
+</ul>
+<hr>
+<h3 id="with-batching-react-18-default">✅ With Batching (React 18+ default)</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Time →
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>┌────────────────────────────┐
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>| setCount(1) + setName('A') |
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>|   (batched automatically)  |
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>└────────────┬───────────────┘
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>             ▼
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        🧠 Single render
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>             ▼
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        ✅ One DOM commit
+</span></code></pre></div>
+<ul>
+<li>➡ Multiple updates → One render → One DOM update</li>
+<li>🎉 Smoother, faster, more efficient</li>
+</ul>
+<hr></div>
 
 
 
