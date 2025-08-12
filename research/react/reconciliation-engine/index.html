@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/research/testing/setTimeout-questions/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/research/react/reconciliation-engine/">
       
       
-        <link rel="prev" href="../cookie/">
+        <link rel="prev" href="../is-useRef-a-mutex/">
       
       
-        <link rel="next" href="../arrow-vs-function/">
+        <link rel="next" href="../hierarchical-structure/">
       
       
       <link rel="icon" href="../../../images/logo/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>setTimeout Question - Bishow Thapa</title>
+        <title>Reconciliation - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#settimeout-questions" class="md-skip">
+        <a href="#reconciliation-engine" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              setTimeout Question
+              Reconciliation
             
           </span>
         </div>
@@ -7191,8 +7191,6 @@
                 
   
   
-    
-  
   
   
     
@@ -7203,11 +7201,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
           <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
@@ -7223,7 +7221,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             RT Testing
@@ -7237,7 +7235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing-101/" class="md-nav__link">
+      <a href="../../testing/testing-101/" class="md-nav__link">
         
   
   
@@ -7260,7 +7258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rtk101/" class="md-nav__link">
+      <a href="../../testing/rtk101/" class="md-nav__link">
         
   
   
@@ -7283,7 +7281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mutex/" class="md-nav__link">
+      <a href="../../testing/mutex/" class="md-nav__link">
         
   
   
@@ -7306,7 +7304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cancelling-rtkquery-api/" class="md-nav__link">
+      <a href="../../testing/cancelling-rtkquery-api/" class="md-nav__link">
         
   
   
@@ -7329,7 +7327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../race-condition/" class="md-nav__link">
+      <a href="../../testing/race-condition/" class="md-nav__link">
         
   
   
@@ -7352,7 +7350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mutex/" class="md-nav__link">
+      <a href="../../testing/mutex/" class="md-nav__link">
         
   
   
@@ -7375,7 +7373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../antd-datepickerIssue/" class="md-nav__link">
+      <a href="../../testing/antd-datepickerIssue/" class="md-nav__link">
         
   
   
@@ -7398,7 +7396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cookie/" class="md-nav__link">
+      <a href="../../testing/cookie/" class="md-nav__link">
         
   
   
@@ -7418,32 +7416,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    setTimeout Question
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../testing/setTimeout-questions/" class="md-nav__link">
         
   
   
@@ -7454,473 +7430,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-basic-delay" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔰 1. Basic Delay
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-multiple-settimeout-calls" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 2. Multiple setTimeout Calls
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-loop-with-delayed-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 3. Loop with Delayed Logs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-whats-wrong-here-var-scoping" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤯 4. What's Wrong Here? (Var Scoping)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cancel-a-timeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧹 5. Cancel a Timeout
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-recursively-repeat-settimeout-alternative-to-setinterval" class="md-nav__link">
-    <span class="md-ellipsis">
-      🕰️ 6. Recursively Repeat setTimeout (Alternative to setInterval)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-delay-in-an-async-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 7. Delay in an Async Function
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-throttle-with-settimeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      🕳️ 8. Throttle with setTimeout
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-order-of-execution-event-loop-insight" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 9. Order of Execution (Event Loop Insight)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-progressive-timeout-based-on-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 10. Progressive Timeout Based on Input
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#theory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theory
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Theory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#settimeout-how-it-works-behind-the-scenes" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 setTimeout: How It Works (Behind the Scenes)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#is-settimeout-a-microtask-or-macro-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Is setTimeout a Microtask or Macro Task?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#difference-between-microtasks-macrotasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧬 Difference Between Microtasks &amp; Macrotasks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-loop-execution-order-simplified" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Event Loop Execution Order (Simplified)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-find-if-its-micro-or-macro" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 How to Find If It’s Micro or Macro
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Visual Flow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#real-world-implication" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧵 Real-World Implication
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠️ Summary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagram
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diagram">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mental-picture-the-javascript-event-loop" class="md-nav__link">
-    <span class="md-ellipsis">
-      🖼️ Mental Picture: The JavaScript Event Loop
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-by-step-event-loop-animation" class="md-nav__link">
-    <span class="md-ellipsis">
-      👨‍🍳 Step-by-Step Event Loop Animation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#walkthrough" class="md-nav__link">
-    <span class="md-ellipsis">
-      👣 Walkthrough:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="👣 Walkthrough:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-call-stack-starts" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏱️ 1. Call Stack Starts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-microtask-queue-runs" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 2. Microtask Queue Runs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-macrotask-queue-runs" class="md-nav__link">
-    <span class="md-ellipsis">
-      📮 3. Macrotask Queue Runs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diagram-summary-imagine-this-loop" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Diagram Summary (Imagine This Loop)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#text-based-diagram-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎨 Text-based Diagram Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remember" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 Remember
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pro-tip-use-chrome-devtools" class="md-nav__link">
-    <span class="md-ellipsis">
-      📘 Pro Tip: Use Chrome DevTools
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question" class="md-nav__link">
-    <span class="md-ellipsis">
-      Question
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#javascript-event-loop-deep-dive" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 JavaScript Event Loop – Deep Dive
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧠 JavaScript Event Loop – Deep Dive">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-event-loop-core-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 The Event Loop – Core Components
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-it-works-step-by-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ How it works – Step-by-Step
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚙️ How it works – Step-by-Step">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-execute-synchronous-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Step 1: Execute Synchronous Code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-after-the-stack-is-empty" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Step 2: After the Stack is Empty
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-queues-what-goes-where" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Common Queues: What Goes Where?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-what-trips-people-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Example: What trips people up
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusing-things-clarified" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Confusing Things Clarified
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧠 Confusing Things Clarified">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#confusion-1-why-does-promisethen-run-before-settimeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Confusion #1: Why does Promise.then run before setTimeout?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusion-2-is-queuemicrotask-the-same-as-promisethen" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Confusion #2: Is queueMicrotask the same as Promise.then?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusion-3-is-settimeout-0-truly-immediate" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Confusion #3: Is setTimeout(..., 0) truly "immediate"?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠 Visual Model
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎓 Summary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -7933,7 +7442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arrow-vs-function/" class="md-nav__link">
+      <a href="../../testing/arrow-vs-function/" class="md-nav__link">
         
   
   
@@ -7956,7 +7465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../js-hoisting/" class="md-nav__link">
+      <a href="../../testing/js-hoisting/" class="md-nav__link">
         
   
   
@@ -7979,7 +7488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arrow-mistakes/" class="md-nav__link">
+      <a href="../../testing/arrow-mistakes/" class="md-nav__link">
         
   
   
@@ -8002,7 +7511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../general-vs-promise-callback/" class="md-nav__link">
+      <a href="../../testing/general-vs-promise-callback/" class="md-nav__link">
         
   
   
@@ -8784,6 +8293,8 @@
                 
   
   
+    
+  
   
   
     
@@ -8794,11 +8305,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" checked>
         
           
           <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
@@ -8814,7 +8325,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             RS
@@ -8989,6 +8500,8 @@
                 
   
   
+    
+  
   
   
     
@@ -8999,11 +8512,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11_2" checked>
         
           
           <label class="md-nav__link" for="__nav_4_11_2" id="__nav_4_11_2_label" tabindex="0">
@@ -9019,7 +8532,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_11_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_11_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_11_2">
             <span class="md-nav__icon md-icon"></span>
             React
@@ -9033,7 +8546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/useRef-indepth/" class="md-nav__link">
+      <a href="../useRef-indepth/" class="md-nav__link">
         
   
   
@@ -9056,7 +8569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/is-useRef-a-mutex/" class="md-nav__link">
+      <a href="../is-useRef-a-mutex/" class="md-nav__link">
         
   
   
@@ -9076,10 +8589,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../react/reconciliation-engine/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Reconciliation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -9090,6 +8625,155 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-reconciliation-engine-in-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 What is the Reconciliation Engine in React?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-reconciliation-in-react-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Evolution of Reconciliation in React Versions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tldr-across-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧵 TL;DR Across Versions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiber-reconciliation-engine-visual-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiber Reconciliation Engine (Visual Breakdown)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fiber Reconciliation Engine (Visual Breakdown)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traditional-stack-reconciler-react-15-and-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Traditional Stack Reconciler (React 15 and before)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-16-fiber-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 React 16+: Fiber Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-18-concurrent-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ React 18: Concurrent Rendering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-introduced-with-fiber" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Concepts Introduced with Fiber
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reacts-internal-fiber-structure-simplified" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ React’s Internal Fiber Structure (simplified)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-in-react-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updated in React 19
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -9102,7 +8786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/hierarchical-structure/" class="md-nav__link">
+      <a href="../hierarchical-structure/" class="md-nav__link">
         
   
   
@@ -9125,7 +8809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/npm-publish/" class="md-nav__link">
+      <a href="../npm-publish/" class="md-nav__link">
         
   
   
@@ -9148,7 +8832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/working-with-numbers-in-js/" class="md-nav__link">
+      <a href="../working-with-numbers-in-js/" class="md-nav__link">
         
   
   
@@ -9171,7 +8855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/feature-flags/" class="md-nav__link">
+      <a href="../feature-flags/" class="md-nav__link">
         
   
   
@@ -9194,7 +8878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../react/improved-code/" class="md-nav__link">
+      <a href="../improved-code/" class="md-nav__link">
         
   
   
@@ -10367,178 +10051,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-basic-delay" class="md-nav__link">
+  <a href="#what-is-the-reconciliation-engine-in-react" class="md-nav__link">
     <span class="md-ellipsis">
-      🔰 1. Basic Delay
+      🔄 What is the Reconciliation Engine in React?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-multiple-settimeout-calls" class="md-nav__link">
+  <a href="#evolution-of-reconciliation-in-react-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      🔁 2. Multiple setTimeout Calls
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-loop-with-delayed-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 3. Loop with Delayed Logs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-whats-wrong-here-var-scoping" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤯 4. What's Wrong Here? (Var Scoping)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cancel-a-timeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧹 5. Cancel a Timeout
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-recursively-repeat-settimeout-alternative-to-setinterval" class="md-nav__link">
-    <span class="md-ellipsis">
-      🕰️ 6. Recursively Repeat setTimeout (Alternative to setInterval)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-delay-in-an-async-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 7. Delay in an Async Function
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-throttle-with-settimeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      🕳️ 8. Throttle with setTimeout
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-order-of-execution-event-loop-insight" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 9. Order of Execution (Event Loop Insight)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-progressive-timeout-based-on-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 10. Progressive Timeout Based on Input
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#theory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theory
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Theory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#settimeout-how-it-works-behind-the-scenes" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 setTimeout: How It Works (Behind the Scenes)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#is-settimeout-a-microtask-or-macro-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Is setTimeout a Microtask or Macro Task?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#difference-between-microtasks-macrotasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧬 Difference Between Microtasks &amp; Macrotasks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-loop-execution-order-simplified" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Event Loop Execution Order (Simplified)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-find-if-its-micro-or-macro" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 How to Find If It’s Micro or Macro
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Visual Flow
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#real-world-implication" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧵 Real-World Implication
+      ⚙️ Evolution of Reconciliation in React Versions
     </span>
   </a>
   
@@ -10547,7 +10081,16 @@
           <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠️ Summary
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tldr-across-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧵 TL;DR Across Versions
     </span>
   </a>
   
@@ -10559,106 +10102,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagram" class="md-nav__link">
+  <a href="#fiber-reconciliation-engine-visual-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagram
+      Fiber Reconciliation Engine (Visual Breakdown)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Diagram">
+    <nav class="md-nav" aria-label="Fiber Reconciliation Engine (Visual Breakdown)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mental-picture-the-javascript-event-loop" class="md-nav__link">
+  <a href="#traditional-stack-reconciler-react-15-and-before" class="md-nav__link">
     <span class="md-ellipsis">
-      🖼️ Mental Picture: The JavaScript Event Loop
+      🧱 Traditional Stack Reconciler (React 15 and before)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-by-step-event-loop-animation" class="md-nav__link">
+  <a href="#react-16-fiber-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      👨‍🍳 Step-by-Step Event Loop Animation
+      🧶 React 16+: Fiber Architecture
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#walkthrough" class="md-nav__link">
+  <a href="#react-18-concurrent-rendering" class="md-nav__link">
     <span class="md-ellipsis">
-      👣 Walkthrough:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="👣 Walkthrough:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-call-stack-starts" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏱️ 1. Call Stack Starts
+      ⚡ React 18: Concurrent Rendering
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-microtask-queue-runs" class="md-nav__link">
+  <a href="#summary-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 2. Microtask Queue Runs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-macrotask-queue-runs" class="md-nav__link">
-    <span class="md-ellipsis">
-      📮 3. Macrotask Queue Runs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#diagram-summary-imagine-this-loop" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Diagram Summary (Imagine This Loop)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#text-based-diagram-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎨 Text-based Diagram Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remember" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 Remember
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pro-tip-use-chrome-devtools" class="md-nav__link">
-    <span class="md-ellipsis">
-      📘 Pro Tip: Use Chrome DevTools
+      Summary Comparison
     </span>
   </a>
   
@@ -10670,146 +10153,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#question" class="md-nav__link">
+  <a href="#key-concepts-introduced-with-fiber" class="md-nav__link">
     <span class="md-ellipsis">
-      Question
+      📌 Key Concepts Introduced with Fiber
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#javascript-event-loop-deep-dive" class="md-nav__link">
+  <a href="#reacts-internal-fiber-structure-simplified" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 JavaScript Event Loop – Deep Dive
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧠 JavaScript Event Loop – Deep Dive">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-event-loop-core-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 The Event Loop – Core Components
+      🛠️ React’s Internal Fiber Structure (simplified)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#how-it-works-step-by-step" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#updated-in-react-19" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ How it works – Step-by-Step
+      Updated in React 19
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="⚙️ How it works – Step-by-Step">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-execute-synchronous-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Step 1: Execute Synchronous Code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-after-the-stack-is-empty" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Step 2: After the Stack is Empty
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-queues-what-goes-where" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Common Queues: What Goes Where?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-what-trips-people-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Example: What trips people up
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusing-things-clarified" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Confusing Things Clarified
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧠 Confusing Things Clarified">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#confusion-1-why-does-promisethen-run-before-settimeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Confusion #1: Why does Promise.then run before setTimeout?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusion-2-is-queuemicrotask-the-same-as-promisethen" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Confusion #2: Is queueMicrotask the same as Promise.then?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confusion-3-is-settimeout-0-truly-immediate" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Confusion #3: Is setTimeout(..., 0) truly "immediate"?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠 Visual Model
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎓 Summary
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -10832,613 +10198,250 @@
   
 
 
-<div><h1 id="settimeout-questions"><code>setTimeout</code> Questions</h1>
-<p>Here are <strong>10 progressively challenging example questions</strong> focused on understanding and using <code>setTimeout</code> in JavaScript — ranging from beginner to advanced levels.</p>
+<div><h1 id="reconciliation-engine">Reconciliation Engine</h1>
+<h2 id="overview">Overview</h2>
+<h3 id="what-is-the-reconciliation-engine-in-react">🔄 What is the Reconciliation Engine in React?</h3>
+<p>The <mark>Reconciliation Engine</mark> is a core part of how React updates the DOM efficiently. It's the algorithm React uses to:</p>
+<ul>
+<li>Compare the current Virtual DOM with the new Virtual DOM after a state or prop change.</li>
+<li>Decide <mark>what changed</mark>.</li>
+<li>Update the actual DOM <mark>minimally</mark> to reflect those changes.</li>
+</ul>
+<p>This process is what gives React its performance benefits — it avoids unnecessary re-renders and only makes the minimal set of changes required to keep the UI in sync with your component state.</p>
 <hr>
-<h2 id="example">Example</h2>
-<h3 id="1-basic-delay">🔰 1. Basic Delay</h3>
-<p><strong>Q</strong>: Log <code>"Hello"</code> to the console after 2 seconds.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">},</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
-</span></code></pre></div>
-<hr>
-<h3 id="2-multiple-settimeout-calls">🔁 2. Multiple setTimeout Calls</h3>
-<p><strong>Q</strong>: Log <code>"One"</code> after 1 second, <code>"Two"</code> after 2 seconds, and <code>"Three"</code> after 3 seconds.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"One"</span><span class="p">),</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Two"</span><span class="p">),</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Three"</span><span class="p">),</span><span class="w"> </span><span class="mf">3000</span><span class="p">);</span>
-</span></code></pre></div>
-<hr>
-<h3 id="3-loop-with-delayed-logs">🔄 3. Loop with Delayed Logs</h3>
-<p><strong>Q</strong>: Log numbers <code>1</code> through <code>5</code>, one per second.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">),</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
-<h3 id="4-whats-wrong-here-var-scoping">🤯 4. What's Wrong Here? (Var Scoping)</h3>
-<p><strong>Q</strong>: What will this code print?</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">),</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><strong>A</strong>: It prints <code>4</code> three times. Use <code>let</code> instead of <code>var</code> to fix closure issues.</p>
-<hr>
-<h3 id="5-cancel-a-timeout">🧹 5. Cancel a Timeout</h3>
-<p><strong>Q</strong>: Schedule a message to log after 5 seconds, but cancel it after 2 seconds.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"You won't see this"</span><span class="p">);</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">},</span><span class="w"> </span><span class="mf">5000</span><span class="p">);</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Timeout canceled"</span><span class="p">);</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">},</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
-</span></code></pre></div>
-<hr>
-<h3 id="6-recursively-repeat-settimeout-alternative-to-setinterval">🕰️ 6. Recursively Repeat <code>setTimeout</code> (Alternative to <code>setInterval</code>)</h3>
-<p><strong>Q</strong>: Print <code>"Tick"</code> every second, but stop after 5 times.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">tick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">count</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Tick"</span><span class="p">);</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">tick</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nx">tick</span><span class="p">();</span>
-</span></code></pre></div>
-<hr>
-<h3 id="7-delay-in-an-async-function">🧪 7. Delay in an Async Function</h3>
-<p><strong>Q</strong>: Create a reusable <code>wait(ms)</code> function using <code>setTimeout</code>.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">wait</span><span class="p">(</span><span class="nx">ms</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">ms</span><span class="p">));</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">demo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Start"</span><span class="p">);</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">wait</span><span class="p">(</span><span class="mf">2000</span><span class="p">);</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"2 seconds later"</span><span class="p">);</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nx">demo</span><span class="p">();</span>
-</span></code></pre></div>
-<hr>
-<h3 id="8-throttle-with-settimeout">🕳️ 8. Throttle with <code>setTimeout</code></h3>
-<p><strong>Q</strong>: Prevent a function from being called more than once every 2 seconds.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">throttle</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span><span class="w"> </span><span class="nx">delay</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">ready</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">ready</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nx">ready</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="nx">args</span><span class="p">);</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="nx">ready</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="nx">delay</span><span class="p">);</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">throttle</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Clicked"</span><span class="p">),</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
-</span></code></pre></div>
-<h3 id="9-order-of-execution-event-loop-insight">🧠 9. Order of Execution (Event Loop Insight)</h3>
-<p><strong>Q</strong>: What will be printed?</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"A"</span><span class="p">);</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"B"</span><span class="p">),</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"C"</span><span class="p">);</span>
-</span></code></pre></div>
-<p><strong>A</strong>: Output:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">A</span><span class="p">;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">C</span><span class="p">;</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">B</span><span class="p">;</span>
-</span></code></pre></div>
-<p>Because <code>setTimeout(..., 0)</code> is scheduled <em>after</em> the current call stack.</p>
-<hr>
-<h3 id="10-progressive-timeout-based-on-input">💡 10. Progressive Timeout Based on Input</h3>
-<p><strong>Q</strong>: For an array of names, log each name with increasing delay (e.g., 0s, 1s, 2s…)</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"Alice"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Charlie"</span><span class="p">];</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nx">names</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">),</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">});</span>
-</span></code></pre></div>
-<hr>
-<h2 id="theory">Theory</h2>
-<h3 id="settimeout-how-it-works-behind-the-scenes">🔍 <code>setTimeout</code>: How It Works (Behind the Scenes)</h3>
-<p><strong>🧠 High-level Process:</strong></p>
-<p>When you call:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hi"</span><span class="p">),</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Here’s what happens:</p>
-<ol>
-<li>
-<p><mark>JavaScript runs synchronously</mark> — it encounters <code>setTimeout</code>, registers the callback with the browser or Node.js environment.</p>
-</li>
-<li>
-<p>The environment sets a <mark>timer</mark> for the specified delay (e.g. 1000 ms).</p>
-</li>
-<li>
-<p>After the timer finishes:</p>
-</li>
-<li>
-<p>The callback is <mark>queued in the task queue</mark> (aka <strong><em>macro task queue</em></strong>).</p>
-</li>
-<li>
-<p>The <mark>event loop</mark> picks it up <em>only after the current call stack is empty</em> and <mark>all microtasks</mark> have been processed.</p>
-</li>
-</ol>
-<hr>
-<h3 id="is-settimeout-a-microtask-or-macro-task">🧩 Is setTimeout a Microtask or Macro Task?</h3>
-<p>✅ Answer:</p>
-<p><code>setTimeout</code> is a <mark>macro task</mark> (aka <strong>task</strong> or <strong>macrotask</strong>).</p>
-<hr>
-<h3 id="difference-between-microtasks-macrotasks">🧬 Difference Between Microtasks &amp; Macrotasks</h3>
+<h3 id="evolution-of-reconciliation-in-react-versions">⚙️ Evolution of Reconciliation in React Versions</h3>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th>Microtask</th>
-<th>Macrotask (Task)</th>
+<th>Version</th>
+<th>Reconciliation Engine</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Examples</td>
-<td><code>Promise.then</code>, <code>queueMicrotask</code></td>
-<td><code>setTimeout</code>, <code>setInterval</code>, <code>setImmediate</code>, I/O</td>
+<td><strong>React 15 and below</strong></td>
+<td><strong>Stack Reconciler</strong></td>
+<td>Synchronous and recursive — couldn't pause or resume work.</td>
 </tr>
 <tr>
-<td>Timing</td>
-<td>Runs <strong>after current stack</strong>, before any macrotask</td>
-<td>Runs <strong>after microtasks</strong></td>
+<td><strong>React 16</strong></td>
+<td><strong>Fiber Reconciler</strong> ✅</td>
+<td>Introduced a <strong>completely new architecture</strong>. Enables incremental rendering, better error handling, async rendering prep.</td>
 </tr>
 <tr>
-<td>Priority</td>
-<td><strong>Higher priority</strong></td>
-<td>Lower than microtasks</td>
+<td><strong>React 18</strong></td>
+<td><strong>Concurrent Rendering (built on Fiber)</strong> ✅</td>
+<td>Introduced true <strong>concurrent features</strong> like <code>startTransition</code>, <code>useDeferredValue</code>, and <strong>automatic batching</strong>. Fiber is extended to allow React to pause and resume work.</td>
 </tr>
 <tr>
-<td>Use case</td>
-<td>Quick, short operations</td>
-<td>Scheduled tasks or async callbacks</td>
+<td><strong>React 19</strong></td>
+<td>✅ Uses <strong>same Fiber-based engine with enhancements</strong></td>
+<td>Builds on React 18 with new features like <code>useOptimistic</code>, <code>actions</code>, but no change in the core reconciliation engine.</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="event-loop-execution-order-simplified">🔁 Event Loop Execution Order (Simplified)</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Call Stack → Microtask Queue → Macrotask Queue
-</span></code></pre></div>
-<ol>
-<li>Finish current synchronous code</li>
-<li>Empty the microtask queue</li>
-<li>Take one macrotask, run it</li>
-<li>Repeat...</li>
-</ol>
-<hr>
-<h3 id="how-to-find-if-its-micro-or-macro">🧪 How to Find If It’s Micro or Macro</h3>
-<p>You can experiment:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"script start"</span><span class="p">);</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"setTimeout"</span><span class="p">);</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"promise1"</span><span class="p">);</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="p">});</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nx">queueMicrotask</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"microtask"</span><span class="p">);</span>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="p">});</span>
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"script end"</span><span class="p">);</span>
-</span></code></pre></div>
-<p>💡 Output:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>script<span class="w"> </span>start
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>script<span class="w"> </span>end
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>promise1
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>microtask
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>setTimeout
-</span></code></pre></div>
-<details class="tip" open="open">
-<summary>🔎 Why?</summary>
+<h3 id="summary">Summary</h3>
 <ul>
-<li><code>promise1</code> and <code>queueMicrotask</code> are microtasks</li>
-<li><code>setTimeout</code> is a <mark>macro task</mark></li>
-<li>Microtasks run <em>before</em> macrotasks once the stack is empty</li>
+<li>React <mark>16</mark> introduced the <strong>Fiber Reconciler</strong>, replacing the older stack-based system.</li>
+<li>React <mark>18</mark> added <strong>Concurrent Rendering</strong>, which is built on top of Fiber.</li>
+<li>React <mark>19</mark> continues using the same reconciliation engine (Fiber), with optimizations and new features, but no brand-new reconciliation algorithm.</li>
 </ul>
-</details>
-<hr>
-<h3 id="visual-flow">🧠 Visual Flow</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>JS Execution Starts
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>↓
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Script Runs (synchronous)
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>↓
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Queue Microtasks (Promise.then, queueMicrotask)
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>↓
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>Run Microtasks (if any)
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>↓
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>Run First Macrotask (like setTimeout callback)
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>↓
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>Repeat
-</span></code></pre></div>
-<hr>
-<h3 id="real-world-implication">🧵 Real-World Implication</h3>
-<p>If you're doing something like:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"timeout"</span><span class="p">),</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"promise"</span><span class="p">));</span>
-</span></code></pre></div>
-<p>Even though both are "async", the <code>promise</code> <strong>runs first</strong>, because it’s a <mark>microtask</mark>, which has <mark>higher priority</mark> than a <code>setTimeout</code> (macro task).</p>
-<hr>
-<h3 id="summary">🛠️ Summary</h3>
-<ul>
-<li><code>setTimeout</code> is <strong>macro task</strong>.</li>
-<li>Use <code>Promise</code>, <code>queueMicrotask</code> for <strong>microtasks</strong>.</li>
-<li>Microtasks always <mark>run before</mark> macrotasks, once the stack clears.</li>
-<li>To debug or inspect, use logging and DevTools (Performance tab) to track callback execution order.</li>
-</ul>
-<hr>
-<h2 id="diagram">Diagram</h2>
-<p>Great! Here's an <em>animated-style explanation</em> of the <mark>event loop</mark>, focusing on <code>setTimeout</code> (macro task) and Promises (microtasks), with a <mark>visual mental model</mark> — like a step-by-step cartoon in your head.</p>
-<hr>
-<h3 id="mental-picture-the-javascript-event-loop">🖼️ Mental Picture: The JavaScript Event Loop</h3>
-<p>Imagine JavaScript as a <mark>chef</mark> working in a <strong>single-threaded kitchen</strong>:</p>
-<ul>
-<li>🥄 <strong>Call Stack</strong>: The chef’s current list of instructions (one thing at a time).</li>
-<li>📦 <strong>Microtask Queue</strong>: Small urgent tasks like reminders ("Add salt!") right after cooking each item.</li>
-<li>📮 <strong>Macrotask Queue</strong>: New orders from customers (like <code>setTimeout</code>) that wait until the current dish is done and cleanup is complete.</li>
-</ul>
-<hr>
-<h3 id="step-by-step-event-loop-animation">👨‍🍳 Step-by-Step Event Loop Animation</h3>
-<p>Step 1: Run Synchronous Code (Script Phase)</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"A"</span><span class="p">);</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"B"</span><span class="p">),</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Macro task</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"C"</span><span class="p">));</span><span class="w"> </span><span class="c1">// Microtask</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"D"</span><span class="p">);</span>
-</span></code></pre></div>
 <blockquote>
-<p>Output order?</p>
+<p>So, the <strong>Reconciliation Engine (Fiber)</strong> came in <mark>React 16</mark>, and was significantly <strong>enhanced in React 18</strong> with concurrent rendering.</p>
 </blockquote>
+<p>Let me know if you want a visual of how Fiber works or how it compares to the old system.</p>
 <hr>
-<h3 id="walkthrough">👣 Walkthrough:</h3>
-<h4 id="1-call-stack-starts">⏱️ 1. Call Stack Starts</h4>
-<ul>
-<li><code>console.log("A")</code> → prints A</li>
-<li>Registers <code>setTimeout(..., 0)</code> → handed off to the <strong>browser</strong> to wait 0ms</li>
-<li><code>Promise.then(...)</code> → pushed to <strong>microtask queue</strong></li>
-<li><code>console.log("D")</code> → prints <code>D</code></li>
-</ul>
-<h4 id="2-microtask-queue-runs">📦 2. Microtask Queue Runs</h4>
-<ul>
-<li>The stack is now <strong>empty</strong>, so JS engine checks:</li>
-<li>Any microtasks? Yes → run <code>console.log("C")</code></li>
-</ul>
-<h4 id="3-macrotask-queue-runs">📮 3. Macrotask Queue Runs</h4>
-<ul>
-<li>Then the <code>setTimeout</code> callback is picked → prints <code>B</code></li>
-</ul>
-<p>✅ Final Output:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>A
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>D
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>C
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>B
-</span></code></pre></div>
-<hr>
-<h3 id="diagram-summary-imagine-this-loop">🔁 Diagram Summary (Imagine This Loop)</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="o">+</span><span class="c1">--------------------------+</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="o">|</span><span class="w">    </span><span class="k">Call</span><span class="w"> </span><span class="n">Stack</span><span class="w"> </span><span class="p">(</span><span class="n">Empty</span><span class="o">?</span><span class="p">)</span><span class="w">   </span><span class="o">|</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="o">+</span><span class="c1">--------------------------+</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">           </span><span class="err">↓</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="o">+</span><span class="c1">--------------------------+</span>
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="o">|</span><span class="w">    </span><span class="n">Run</span><span class="w"> </span><span class="k">All</span><span class="w"> </span><span class="n">Microtasks</span><span class="w">    </span><span class="o">|</span>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">Promises</span><span class="p">,</span><span class="w"> </span><span class="n">queueMicrotask</span><span class="p">)</span><span class="w"> </span><span class="o">|</span>
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="o">+</span><span class="c1">--------------------------+</span>
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">           </span><span class="err">↓</span>
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="o">+</span><span class="c1">--------------------------+</span>
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="o">|</span><span class="w">     </span><span class="n">Run</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">Macrotask</span><span class="w">      </span><span class="o">|</span>
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">setTimeout</span><span class="p">,</span><span class="w"> </span><span class="n">setInterval</span><span class="p">)</span><span class="o">|</span>
-</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="o">+</span><span class="c1">--------------------------+</span>
-</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">           </span><span class="err">↓</span>
-</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">     </span><span class="n">Repeat</span><span class="w"> </span><span class="n">forever</span><span class="p">...</span>
-</span></code></pre></div>
-<hr>
-<h3 id="text-based-diagram-example">🎨 Text-based Diagram Example</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">START</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w"> </span><span class="err">↓</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="ss">"A"</span><span class="p">)</span><span class="w">          </span><span class="err">→</span><span class="w"> </span><span class="ss">"A"</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w"> </span><span class="err">↓</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">setTimeout</span><span class="p">(...)</span><span class="w">           </span><span class="err">→</span><span class="w"> </span><span class="n">Scheduled</span><span class="w"> </span><span class="p">(</span><span class="n">macro</span><span class="p">)</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w"> </span><span class="err">↓</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="n">Promise</span><span class="p">.</span><span class="k">then</span><span class="p">(...)</span><span class="w">         </span><span class="err">→</span><span class="w"> </span><span class="n">Queued</span><span class="w"> </span><span class="p">(</span><span class="n">micro</span><span class="p">)</span>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w"> </span><span class="err">↓</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="ss">"D"</span><span class="p">)</span><span class="w">          </span><span class="err">→</span><span class="w"> </span><span class="ss">"D"</span>
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w"> </span><span class="err">↓</span>
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">Run</span><span class="w"> </span><span class="n">Microtask</span><span class="w"> </span><span class="n">Queue</span><span class="p">:</span>
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">   </span><span class="err">→</span><span class="w"> </span><span class="ss">"C"</span>
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w"> </span><span class="err">↓</span>
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="n">Run</span><span class="w"> </span><span class="n">Macrotask</span><span class="w"> </span><span class="n">Queue</span><span class="p">:</span>
-</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">   </span><span class="err">→</span><span class="w"> </span><span class="ss">"B"</span>
-</span></code></pre></div>
-<hr>
-<h3 id="remember">💡 Remember</h3>
+<h3 id="tldr-across-versions">🧵 TL;DR Across Versions</h3>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th>Microtask</th>
-<th>Macrotask</th>
+<th>Version</th>
+<th>Reconciliation Engine</th>
+<th>Notable Features</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Timing</td>
-<td>After stack, before tasks</td>
-<td>After microtasks</td>
+<td><strong>15 &amp; below</strong></td>
+<td>Stack Reconciler</td>
+<td>Synchronous, non-interruptible</td>
 </tr>
 <tr>
-<td>Priority</td>
-<td>🚀 High</td>
-<td>🐢 Lower</td>
+<td><strong>16</strong></td>
+<td><strong>Fiber</strong> ✅</td>
+<td>New asynchronous-ready engine</td>
 </tr>
 <tr>
-<td>Examples</td>
-<td><code>Promise.then</code>, <code>queueMicrotask</code></td>
-<td><code>setTimeout</code>, <code>setInterval</code></td>
+<td><strong>17</strong></td>
+<td>Fiber (same)</td>
+<td>Infrastructure improvements, no changes to Fiber</td>
+</tr>
+<tr>
+<td><strong>18</strong></td>
+<td>Fiber + <strong>Concurrent Features</strong> ✅</td>
+<td><code>startTransition</code>, <code>useDeferredValue</code>, automatic batching</td>
+</tr>
+<tr>
+<td><strong>19</strong></td>
+<td>Fiber + Enhancements ✅</td>
+<td><code>use</code>, <code>useOptimistic</code>, form actions, etc.</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="pro-tip-use-chrome-devtools">📘 Pro Tip: Use Chrome DevTools</h3>
-<ol>
-<li>Open <em>DevTools → Performance Tab</em></li>
-<li>Record your app's behavior</li>
-<li>Look at <em>“Tasks”</em> and <em>“Microtasks”</em> flamecharts</li>
-</ol>
-<p>You can <mark>see when and how each queued task is executed</mark> relative to the main thread.</p>
-<hr>
-<h2 id="question">Question</h2>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"script start"</span><span class="p">);</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"setTimeout"</span><span class="p">);</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"promise1"</span><span class="p">);</span>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="p">});</span>
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="nx">queueMicrotask</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"microtask"</span><span class="p">);</span>
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">});</span>
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"script end"</span><span class="p">);</span>
+<h2 id="fiber-reconciliation-engine-visual-breakdown">Fiber Reconciliation Engine (Visual Breakdown)</h2>
+<h3 id="traditional-stack-reconciler-react-15-and-before">🧱 Traditional Stack Reconciler (React 15 and before)</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Root]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  ├──&gt; [Child 1]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  |       ├──&gt; [Grandchild 1]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  |       └──&gt; [Grandchild 2]
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  └──&gt; [Child 2]
 </span></code></pre></div>
-<div class="admonition question">
-<p class="admonition-title">how is this queueMicrotask is promise</p>
-</div>
-<blockquote>
-<p>🧠 JavaScript Event Loop Explained (Simplified)</p>
-</blockquote>
-<p>JavaScript has:</p>
+<p>➡ <mark>Stack-based</mark>, <strong>depth-first</strong>, synchronous traversal.</p>
 <ul>
-<li><strong>Call Stack</strong> – runs synchronous code.</li>
-<li><strong>Microtask Queue</strong> – runs after the current script but <mark>before</mark> timers (like <code>setTimeout</code>).</li>
-<li><strong>Macrotask Queue</strong> – for <code>setTimeout</code>, <code>setInterval</code>, etc.</li>
+<li><mark>No pausing</mark> once updates start.</li>
+<li>Large trees = potential jank / slow rendering.</li>
 </ul>
 <hr>
-<h2 id="javascript-event-loop-deep-dive">🧠 JavaScript Event Loop – Deep Dive</h2>
-<p>Absolutely! Let's dive into the JavaScript Event Loop with depth and clarity, highlighting where people commonly get confused — and clear those up with visuals and examples.</p>
-<hr>
-<p>JavaScript is <mark>single-threaded</mark>, meaning it can do one thing at a time. But it's also <strong>asynchronous</strong> – it <em>feels</em> like it can do multiple things, thanks to the <mark>event loop, callback queues</mark>, and <mark>background APIs</mark>.</p>
-<hr>
-<h3 id="the-event-loop-core-components">🔁 The Event Loop – Core Components</h3>
-<ol>
-<li><strong>Call Stack</strong> (synchronous code runs here)</li>
-<li><strong>Web APIs / Background Threads</strong> (for async stuff like <code>setTimeout</code>, <code>fetch</code>, etc.)</li>
-<li>
-<p><strong>Task Queues</strong>:</p>
+<h3 id="react-16-fiber-architecture">🧶 React 16+: Fiber Architecture</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Root Fiber]
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   |
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   ├──&gt; [Child Fiber]
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   |       ├──&gt; [Grandchild Fiber A]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   |       └──&gt; [Grandchild Fiber B]
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>   └──&gt; [Sibling Fiber]
+</span></code></pre></div>
+<p>➡ <strong>Fiber = a unit of work</strong>.</p>
 <ul>
-<li><mark>Microtask Queue</mark> (Promise callbacks, <code>queueMicrotask</code>)</li>
-<li><mark>Macrotask Queue</mark> (aka Task Queue – <code>setTimeout</code>, <code>setInterval</code>, UI events)</li>
+<li>Updates are <em>broken into small units</em> (fibers).</li>
+<li>React can <em>pause</em>, <em>abort</em>, or <em>resume</em> work between frames.</li>
+<li>Makes features like <em>timeouts</em>, <em>priorities</em>, <em>suspense</em> possible.</li>
 </ul>
-</li>
-<li>
-<p><strong>Event Loop</strong> (the engine that runs this whole show)</p>
-</li>
-</ol>
 <hr>
-<h3 id="how-it-works-step-by-step">⚙️ How it works – Step-by-Step</h3>
-<h4 id="step-1-execute-synchronous-code">🔹 Step 1: Execute Synchronous Code</h4>
+<h3 id="react-18-concurrent-rendering">⚡ React 18: Concurrent Rendering</h3>
+<p>🕒 Time-Slicing (visual idea)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>⏱️ Frame Budget (e.g., 16ms/frame for 60fps)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>-------------------------------------------
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>|   Fiber 1   | Fiber 2   | ... pause ... |
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>-------------------------------------------
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      🔁 resume in next frame if time runs out
+</span></code></pre></div>
+<p>➡ React renders chunks of work incrementally.</p>
 <ul>
-<li>The <mark>call stack</mark> runs all <strong>regular (synchronous)</strong> code top to bottom.</li>
-<li>Any <mark>async tasks</mark> (like <code>setTimeout</code>, <code>Promise</code>) are sent to their appropriate queues.</li>
+<li>If something is high-priority (e.g., user input), it <em>pauses</em> low-priority work.</li>
+<li>Can start transitions (<code>startTransition</code>), showing loading states for less critical updates.</li>
+<li>DOM updates happen <em>only when the work is complete</em>.</li>
 </ul>
-<h4 id="step-2-after-the-stack-is-empty">🔹 Step 2: After the Stack is Empty</h4>
-<p>Once the call stack is empty, the event loop:</p>
-<ol>
-<li>
-<p>Checks the <mark>Microtask Queue</mark> and runs everything in it (<em>before</em> anything else).</p>
-</li>
-<li>
-<p>Only when the microtask queue is empty, it checks the <mark>Macrotask Queue</mark> (like <code>setTimeout</code>) and runs one task.</p>
-</li>
-<li>
-<p>Then goes back to check microtasks again. Repeat.</p>
-</li>
-</ol>
-<blockquote>
-<p>🔥 This is where <strong>most people get confused</strong> — <mark>microtasks are always processed before macrotasks</mark>, and they are processed <em>in full</em> before any macrotask can run.</p>
-</blockquote>
 <hr>
-<h3 id="common-queues-what-goes-where">📦 Common Queues: What Goes Where?</h3>
+<h3 id="summary-comparison">Summary Comparison</h3>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th>Queue Type</th>
-<th>Runs when?</th>
+<th>React Version</th>
+<th>Engine</th>
+<th>Can Pause Work?</th>
+<th>Supports Concurrency?</th>
+<th>DOM Updates</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>console.log()</code></td>
-<td>Call Stack</td>
+<td>React 15</td>
+<td>Stack Reconciler</td>
+<td>❌ No</td>
+<td>❌ No</td>
 <td>Immediately</td>
 </tr>
 <tr>
-<td><code>setTimeout</code></td>
-<td>Macrotask</td>
-<td>After all microtasks are done</td>
+<td>React 16</td>
+<td>Fiber</td>
+<td>✅ Yes (prep)</td>
+<td>❌ Not yet</td>
+<td>Immediate</td>
 </tr>
 <tr>
-<td><code>setInterval</code></td>
-<td>Macrotask</td>
-<td>Same as above</td>
+<td>React 17</td>
+<td>Fiber</td>
+<td>✅ Yes</td>
+<td>❌ Not yet</td>
+<td>Immediate</td>
 </tr>
 <tr>
-<td><code>Promise.then</code></td>
-<td>Microtask</td>
-<td>After call stack, before macrotasks</td>
-</tr>
-<tr>
-<td><code>queueMicrotask</code></td>
-<td>Microtask</td>
-<td>Same as above</td>
-</tr>
-<tr>
-<td><code>fetch().then()</code></td>
-<td>Microtask</td>
-<td>Then/catch is a microtask</td>
-</tr>
-<tr>
-<td><code>requestAnimationFrame</code></td>
-<td>Special case</td>
-<td>Before paint</td>
+<td>React 18+</td>
+<td>Fiber + Concurrent</td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>Batched after work is complete</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="example-what-trips-people-up">🔍 Example: What trips people up</h3>
-<p>🔥 Code:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"start"</span><span class="p">);</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"setTimeout"</span><span class="p">);</span>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"promise"</span><span class="p">);</span>
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">});</span>
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="nx">queueMicrotask</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"microtask"</span><span class="p">);</span>
-</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="p">});</span>
-</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>
-</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"end"</span><span class="p">);</span>
+<h2 id="key-concepts-introduced-with-fiber">📌 Key Concepts Introduced with Fiber</h2>
+<ul>
+<li><strong>Each element = a Fiber Node</strong>.</li>
+<li>Fiber has links: <code>child</code>, <code>sibling</code>, <code>return</code> (like a linked tree).</li>
+<li>Tracks <strong>effect tags</strong>: what needs to change (e.g., placement, update, deletion).</li>
+<li>Enables <strong>Suspense, error boundaries, priority updates, concurrent features</strong>.</li>
+</ul>
+<hr>
+<h2 id="reacts-internal-fiber-structure-simplified">🛠️ React’s Internal Fiber Structure (simplified)</h2>
+<p>Each <strong>Fiber Node</strong> contains:</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w">        </span><span class="c1">// Function or DOM tag</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nx">stateNode</span><span class="o">:</span><span class="w"> </span><span class="kt">instance</span><span class="p">,</span><span class="w">    </span><span class="c1">// DOM node or class instance</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nx">return</span><span class="o">:</span><span class="w"> </span><span class="kt">parent</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">child</span><span class="o">:</span><span class="w"> </span><span class="kt">first</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">sibling</span><span class="o">:</span><span class="w"> </span><span class="kt">next</span><span class="w"> </span><span class="nx">sibling</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nx">alternate</span><span class="o">:</span><span class="w"> </span><span class="kt">old</span><span class="w"> </span><span class="nx">fiber</span><span class="w"> </span><span class="p">(</span><span class="k">for</span><span class="w"> </span><span class="nx">diffing</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nx">flags</span><span class="o">:</span><span class="w"> </span><span class="kt">effect</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.,</span><span class="w"> </span><span class="nx">Placement</span><span class="p">,</span><span class="w"> </span><span class="nx">Update</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
 </span></code></pre></div>
-<blockquote>
-<p>🧠 What happens:</p>
-</blockquote>
+<p>This allows React to:</p>
+<ul>
+<li>Compare new and old fiber trees</li>
+<li>Determine which parts to update</li>
+<li>Schedule updates asynchronously</li>
+</ul>
+<hr>
+<h2 id="updated-in-react-19">Updated in React 19</h2>
 <table>
 <thead>
 <tr>
-<th>Step</th>
-<th>Action</th>
-<th>Output</th>
+<th>React Version</th>
+<th>Reconciliation Engine</th>
+<th>Time-Slicing</th>
+<th>Concurrency Features</th>
+<th>New APIs</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td><code>console.log("start")</code></td>
-<td><code>start</code></td>
+<td><strong>React 16</strong></td>
+<td>Fiber ✅</td>
+<td>🚫 No</td>
+<td>🚫 No</td>
+<td>❌</td>
 </tr>
 <tr>
-<td>2</td>
-<td><code>setTimeout</code> added to macrotask</td>
-<td>(queued)</td>
+<td><strong>React 18</strong></td>
+<td>Fiber ✅</td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td><code>startTransition</code>, <code>useDeferredValue</code></td>
 </tr>
 <tr>
-<td>3</td>
-<td><code>Promise.then(...)</code> → microtask</td>
-<td>(queued)</td>
-</tr>
-<tr>
-<td>4</td>
-<td><code>queueMicrotask(...)</code> → microtask</td>
-<td>(queued)</td>
-</tr>
-<tr>
-<td>5</td>
-<td><code>console.log("end")</code></td>
-<td><code>end</code></td>
-</tr>
-<tr>
-<td>6</td>
-<td>Microtasks run:</td>
-<td><code>promise</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>microtask</code></td>
-</tr>
-<tr>
-<td>7</td>
-<td>Macrotask (<code>setTimeout</code>) runs</td>
-<td><code>setTimeout</code></td>
+<td><strong>React 19</strong></td>
+<td>Fiber ✅</td>
+<td>✅ Yes</td>
+<td>✅ Yes (optimized)</td>
+<td><code>use</code>, <code>useOptimistic</code>, form actions, server components</td>
 </tr>
 </tbody>
-</table>
-<blockquote>
-<p>✅ Final Output:</p>
-</blockquote>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>start
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>end
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>promise
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>microtask
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>setTimeout
-</span></code></pre></div>
-<hr>
-<h3 id="confusing-things-clarified">🧠 Confusing Things Clarified</h3>
-<h4 id="confusion-1-why-does-promisethen-run-before-settimeout">❗ Confusion #1: Why does Promise.then run before setTimeout?</h4>
-<p>Because <code>Promise.then</code> goes into the <strong>microtask queue</strong>, and the event loop <mark>always prioritizes microtasks before macrotasks</mark>.</p>
-<hr>
-<h4 id="confusion-2-is-queuemicrotask-the-same-as-promisethen">❗ Confusion #2: Is <code>queueMicrotask</code> the same as <code>Promise.then</code>?</h4>
-<p>Almost. Both queue microtasks. The difference is:</p>
-<ul>
-<li><code>Promise.then</code> has overhead of creating/handling a Promise object.</li>
-<li><code>queueMicrotask</code> is a <mark>lower-level</mark>, lightweight way to queue a microtask.</li>
-</ul>
-<p>They go in the <mark>same queue</mark>, and execute in <strong>insertion order</strong>.</p>
-<hr>
-<h4 id="confusion-3-is-settimeout-0-truly-immediate">❗ Confusion #3: Is <code>setTimeout(..., 0)</code> truly "immediate"?</h4>
-<p><mark>No</mark>. Even with 0ms delay, it goes into the <mark>macrotask queue</mark>. It will only run after all synchronous and microtasks are done.</p>
-<hr>
-<h3 id="visual-model">🛠 Visual Model</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">+</span><span class="c1">------------------+</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="o">|</span><span class="w">   </span><span class="k">Call</span><span class="w"> </span><span class="n">Stack</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="c1">---- Runs first</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="o">+</span><span class="c1">------------------+</span>
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="err">↓</span>
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="o">+</span><span class="c1">------------------+</span>
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="o">|</span><span class="w"> </span><span class="n">Microtask</span><span class="w"> </span><span class="n">Queue</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="c1">---- Runs after stack is empty</span>
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">Promises</span><span class="p">,</span><span class="w"> </span><span class="n">qMT</span><span class="p">)</span><span class="w">  </span><span class="o">|</span>
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="o">+</span><span class="c1">------------------+</span>
-</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">        </span><span class="err">↓</span>
-</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="o">+</span><span class="c1">------------------+</span>
-</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="o">|</span><span class="w"> </span><span class="n">Macrotask</span><span class="w"> </span><span class="n">Queue</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="c1">---- setTimeout, setInterval, etc.</span>
-</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="o">+</span><span class="c1">------------------+</span>
-</span></code></pre></div>
-<blockquote>
-<p>⚠️ The Event Loop always clears <strong>microtasks</strong> first before even touching macrotasks.</p>
-</blockquote>
-<hr>
-<h3 id="summary_1">🎓 Summary</h3>
-<ul>
-<li>JavaScript runs <mark>synchronous</mark> code first.</li>
-<li>Then processes <mark>all microtasks</mark> (like <code>Promise.then</code>, <code>queueMicrotask</code>).</li>
-<li>Then processes <mark>one macrotask</mark> (like <code>setTimeout</code>), then checks microtasks again.</li>
-<li>This cycle continues forever.</li>
-</ul></div>
+</table></div>
 
 
 
@@ -11474,7 +10477,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../cookie/" class="md-footer__link md-footer__link--prev" aria-label="Previous: cookie">
+          <a href="../is-useRef-a-mutex/" class="md-footer__link md-footer__link--prev" aria-label="Previous: useRef mutex or not">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -11484,20 +10487,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                cookie
+                useRef mutex or not
               </div>
             </div>
           </a>
         
         
           
-          <a href="../arrow-vs-function/" class="md-footer__link md-footer__link--next" aria-label="Next: arrow">
+          <a href="../hierarchical-structure/" class="md-footer__link md-footer__link--next" aria-label="Next: Hierarchical">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                arrow
+                Hierarchical
               </div>
             </div>
             <div class="md-footer__button md-icon">
