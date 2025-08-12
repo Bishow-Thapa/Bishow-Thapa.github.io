@@ -14,7 +14,7 @@
         <link rel="prev" href="../is-useRef-a-mutex/">
       
       
-        <link rel="next" href="../hierarchical-structure/">
+        <link rel="next" href="../batched-in-react/">
       
       
       <link rel="icon" href="../../../images/logo/favicon.ico">
@@ -8730,6 +8730,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#react-19-same-time-slicing-smarter-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      React 19: Same Time-Slicing, Smarter Scheduling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#summary-comparison" class="md-nav__link">
     <span class="md-ellipsis">
       Summary Comparison
@@ -8762,9 +8771,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updated-in-react-19" class="md-nav__link">
+  <a href="#visual-how-react-19-stacks-on-top-of-fiber" class="md-nav__link">
     <span class="md-ellipsis">
-      Updated in React 19
+      🧶 Visual: How React 19 Stacks on Top of Fiber
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useoptimistic-react-19-vs-optimistic-updates-in-rtk-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 useOptimistic (React 19) vs Optimistic Updates in RTK Query
     </span>
   </a>
   
@@ -8774,6 +8792,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batched-in-react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Batched in react
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deferred-in-react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deferred in react
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -10139,6 +10203,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#react-19-same-time-slicing-smarter-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      React 19: Same Time-Slicing, Smarter Scheduling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#summary-comparison" class="md-nav__link">
     <span class="md-ellipsis">
       Summary Comparison
@@ -10171,9 +10244,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updated-in-react-19" class="md-nav__link">
+  <a href="#visual-how-react-19-stacks-on-top-of-fiber" class="md-nav__link">
     <span class="md-ellipsis">
-      Updated in React 19
+      🧶 Visual: How React 19 Stacks on Top of Fiber
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useoptimistic-react-19-vs-optimistic-updates-in-rtk-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 useOptimistic (React 19) vs Optimistic Updates in RTK Query
     </span>
   </a>
   
@@ -10336,6 +10418,59 @@
 <li>DOM updates happen <em>only when the work is complete</em>.</li>
 </ul>
 <hr>
+<h3 id="react-19-same-time-slicing-smarter-scheduling">React 19: Same Time-Slicing, Smarter Scheduling</h3>
+<p>Just like React 18:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>⏱️ Frame Budget (e.g., 16ms/frame for 60fps)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>-------------------------------------------
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>|   Fiber 1   | Fiber 2   | ... pause ... |
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>-------------------------------------------
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      🔁 resume in next frame if time runs out
+</span></code></pre></div>
+<p>But in React 19, features like <code>use</code> and <code>useOptimistic</code> allow <strong>more precise control over suspended UI</strong>, optimistic rendering, and seamless transitions — <mark>without blocking the main thread</mark>.</p>
+<details class="quote" open="open">
+<summary>🧵 Visual: How It All Fits</summary>
+<p>🧠 Under the Hood</p>
+<ul>
+<li>React 19 <strong>still uses time-slicing</strong>, allowing fibers to be processed in chunks.</li>
+<li>DOM updates are still <mark>batched</mark> and <mark>deferred</mark> until the work is complete.</li>
+<li><strong>Suspense boundaries</strong>, <code>startTransition</code>, and <code>use</code> are now <mark>first-class citizens</mark> for smoother loading and data-fetching.</li>
+</ul>
+</details>
+<table>
+<thead>
+<tr>
+<th>React Version</th>
+<th>Reconciliation Engine</th>
+<th>Time-Slicing</th>
+<th>Concurrency Features</th>
+<th>New APIs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>React 16</strong></td>
+<td>Fiber ✅</td>
+<td>🚫 No</td>
+<td>🚫 No</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>React 18</strong></td>
+<td>Fiber ✅</td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td><code>startTransition</code>, <code>useDeferredValue</code></td>
+</tr>
+<tr>
+<td><strong>React 19</strong></td>
+<td>Fiber ✅</td>
+<td>✅ Yes</td>
+<td>✅ Yes (optimized)</td>
+<td><code>use</code>, <code>useOptimistic</code>, form actions, server components</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h3 id="summary-comparison">Summary Comparison</h3>
 <table>
 <thead>
@@ -10389,16 +10524,16 @@
 <hr>
 <h2 id="reacts-internal-fiber-structure-simplified">🛠️ React’s Internal Fiber Structure (simplified)</h2>
 <p>Each <strong>Fiber Node</strong> contains:</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w">        </span><span class="c1">// Function or DOM tag</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nx">stateNode</span><span class="o">:</span><span class="w"> </span><span class="kt">instance</span><span class="p">,</span><span class="w">    </span><span class="c1">// DOM node or class instance</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nx">return</span><span class="o">:</span><span class="w"> </span><span class="kt">parent</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">child</span><span class="o">:</span><span class="w"> </span><span class="kt">first</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">sibling</span><span class="o">:</span><span class="w"> </span><span class="kt">next</span><span class="w"> </span><span class="nx">sibling</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nx">alternate</span><span class="o">:</span><span class="w"> </span><span class="kt">old</span><span class="w"> </span><span class="nx">fiber</span><span class="w"> </span><span class="p">(</span><span class="k">for</span><span class="w"> </span><span class="nx">diffing</span><span class="p">)</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nx">flags</span><span class="o">:</span><span class="w"> </span><span class="kt">effect</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.,</span><span class="w"> </span><span class="nx">Placement</span><span class="p">,</span><span class="w"> </span><span class="nx">Update</span><span class="p">)</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w">        </span><span class="c1">// Function or DOM tag</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nx">stateNode</span><span class="o">:</span><span class="w"> </span><span class="kt">instance</span><span class="p">,</span><span class="w">    </span><span class="c1">// DOM node or class instance</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nx">return</span><span class="o">:</span><span class="w"> </span><span class="kt">parent</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nx">child</span><span class="o">:</span><span class="w"> </span><span class="kt">first</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="nx">sibling</span><span class="o">:</span><span class="w"> </span><span class="kt">next</span><span class="w"> </span><span class="nx">sibling</span><span class="w"> </span><span class="nx">fiber</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nx">alternate</span><span class="o">:</span><span class="w"> </span><span class="kt">old</span><span class="w"> </span><span class="nx">fiber</span><span class="w"> </span><span class="p">(</span><span class="k">for</span><span class="w"> </span><span class="nx">diffing</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="nx">flags</span><span class="o">:</span><span class="w"> </span><span class="kt">effect</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.,</span><span class="w"> </span><span class="nx">Placement</span><span class="p">,</span><span class="w"> </span><span class="nx">Update</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>This allows React to:</p>
 <ul>
@@ -10407,41 +10542,122 @@
 <li>Schedule updates asynchronously</li>
 </ul>
 <hr>
-<h2 id="updated-in-react-19">Updated in React 19</h2>
+<h2 id="visual-how-react-19-stacks-on-top-of-fiber">🧶 Visual: How React 19 Stacks on Top of Fiber</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>        +-------------------------------+
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>        | React 19 (High-level Features)|
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        |-------------------------------|
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        |  ✅ use                      |
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        |  ✅ useOptimistic            |
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        |  ✅ Form Actions             |
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        |  ✅ Server Components (RSC)  |
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        +-------------------------------+
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>                     ⬇
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        +-------------------------------+
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        | React 18: Concurrent Features |
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        |-------------------------------|
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        |  ✅ Time Slicing              |
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        |  ✅ startTransition           |
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        |  ✅ Suspense + DeferredValue  |
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>        +-------------------------------+
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>                     ⬇
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>        +-------------------------------+
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>        | React 16+: Fiber Engine       |
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>        |-------------------------------|
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>        |  ✅ Incremental Rendering     |
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>        |  ✅ Pausable Work Units       |
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>        |  ✅ Effect Tags + Tree Diffing|
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>        +-------------------------------+
+</span></code></pre></div>
+<blockquote>
+<p>🎞️ Visual Diagram: <code>use</code> + <code>useOptimistic</code> Flow in React 19</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>🧑 User types a comment and hits "Submit"
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>│
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>├──▶ 🧠 `addOptimisticComment()` called
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│     └── UI updates immediately (fiber renders optimistic value)
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>├──▶ ⏳ `submitComment()` returns a Promise
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│     └── React keeps rendering, no blocking yet
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>├──▶ 🌀 `setPendingPromise(promise)` triggers re-render
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>│
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>├──▶ ⛔ `&lt;p&gt;{use(pendingPromise)}&lt;/p&gt;` suspends here!
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>│     └── React "pauses" this part of the fiber tree
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>│     └── Can still render other siblings or show fallback
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>│
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>└──▶ ✅ When promise resolves:
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>      └── `use()` resumes rendering
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>      └── Success message appears!
+</span></code></pre></div>
+<hr>
+<h2 id="useoptimistic-react-19-vs-optimistic-updates-in-rtk-query">🔁 <code>useOptimistic</code> (React 19) vs Optimistic Updates in RTK Query</h2>
 <table>
 <thead>
 <tr>
-<th>React Version</th>
-<th>Reconciliation Engine</th>
-<th>Time-Slicing</th>
-<th>Concurrency Features</th>
-<th>New APIs</th>
+<th>Feature</th>
+<th><code>useOptimistic</code> (React 19)</th>
+<th>RTK Query Optimistic Updates</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>React 16</strong></td>
-<td>Fiber ✅</td>
-<td>🚫 No</td>
-<td>🚫 No</td>
-<td>❌</td>
+<td>🔧 Tool Type</td>
+<td><strong>UI-level hook</strong></td>
+<td><strong>Data layer tool</strong> (Redux-based)</td>
 </tr>
 <tr>
-<td><strong>React 18</strong></td>
-<td>Fiber ✅</td>
-<td>✅ Yes</td>
-<td>✅ Yes</td>
-<td><code>startTransition</code>, <code>useDeferredValue</code></td>
+<td>📦 Part of</td>
+<td>React DOM</td>
+<td>Redux Toolkit Query</td>
 </tr>
 <tr>
-<td><strong>React 19</strong></td>
-<td>Fiber ✅</td>
-<td>✅ Yes</td>
-<td>✅ Yes (optimized)</td>
-<td><code>use</code>, <code>useOptimistic</code>, form actions, server components</td>
+<td>💡 Primary Purpose</td>
+<td>Optimistically update UI during form interactions or async UI changes</td>
+<td>Optimistically update the <strong>Redux cache</strong> to reflect expected server state</td>
+</tr>
+<tr>
+<td>🔁 Rollback?</td>
+<td><strong>Manual</strong> — you decide what to do if the promise fails</td>
+<td><strong>Yes</strong>, via RTK’s <code>onQueryStarted</code> + <code>updateQueryData</code> with rollback helpers</td>
+</tr>
+<tr>
+<td>🌍 Scope</td>
+<td><strong>Local to component</strong></td>
+<td><strong>Global, across app state</strong></td>
+</tr>
+<tr>
+<td>🧠 Complexity</td>
+<td>Minimal logic, more declarative</td>
+<td>More control, but more boilerplate</td>
+</tr>
+<tr>
+<td>🧵 Uses Fiber?</td>
+<td>✅ Yes, integrated with concurrent rendering</td>
+<td>❌ No, runs through Redux middleware logic</td>
+</tr>
+<tr>
+<td>🚫 Handles Errors</td>
+<td>Not by default — you must handle failures manually</td>
+<td>✅ Built-in try/catch for server errors with rollback options</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<hr>
+<blockquote>
+<p>🎯 Final Decision Tree</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Are you using Redux + RTK Query?
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> ├── YES ──▶ Use RTK Query's optimistic updates (you get rollback + cache consistency)
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> └── NO
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      ├── Using server state across pages/components?
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      │      ├── YES ──▶ Consider adding RTK Query
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      │      └── NO
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>      │           ├── Just need quick UI feedback?
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      │           │      ├── YES ──▶ useOptimistic
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>      │           │      └── NO ──▶ Regular useState/useTransition
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>      │
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>      └── Want zero setup &amp; local-only logic? ──▶ useOptimistic
+</span></code></pre></div></div>
 
 
 
@@ -10494,13 +10710,13 @@
         
         
           
-          <a href="../hierarchical-structure/" class="md-footer__link md-footer__link--next" aria-label="Next: Hierarchical">
+          <a href="../batched-in-react/" class="md-footer__link md-footer__link--next" aria-label="Next: Batched in react">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Hierarchical
+                Batched in react
               </div>
             </div>
             <div class="md-footer__button md-icon">
