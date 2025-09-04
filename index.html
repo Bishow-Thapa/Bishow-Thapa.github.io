@@ -12233,6 +12233,12 @@
 <!-- A Beginner's Guide to WebSockets -->
 
 <p><a class="glightbox" href="https://www.youtube.com/embed/8ARodQ4Wlf4?si=WtKr0bw-lyIsIAuk" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><div class="video-container"><iframe src="https://www.youtube.com/embed/8ARodQ4Wlf4?si=WtKr0bw-lyIsIAuk" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></a></p>
+<!-- Frontend System Design Interview: How to Design a Typeahead Component (With This 5-Step Model)  -->
+
+<p><a class="glightbox" href="https://www.youtube.com/embed/Sky0Ln0hrZs?si=K5IyS1SaY_-MQ6SY" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><div class="video-container"><iframe src="https://www.youtube.com/embed/Sky0Ln0hrZs?si=K5IyS1SaY_-MQ6SY" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></a></p>
+<!-- Frontend System Design: The 2025 Web Performance Roadmap  -->
+
+<p><a class="glightbox" href="https://www.youtube.com/embed/KUdqbIHn8Ic?si=gHmLAGZLtHcyMnr8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><div class="video-container"><iframe src="https://www.youtube.com/embed/KUdqbIHn8Ic?si=gHmLAGZLtHcyMnr8" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></a></p>
 <hr>
 <h2 id="vvip-you-cant-ignore-this">VVIP || YOU CANT IGNORE THIS</h2>
 <p>Here's a <strong>memory trick</strong> and some <strong>code examples</strong> to help you remember the 7 falsy values in JavaScript.</p>
@@ -12335,7 +12341,125 @@
 </span></code></pre></div>
 <p><strong>Knowing what’s falsy helps you avoid bugs when checking if a variable “has a value.”</strong></p>
 <hr>
-<h2 id="never-miss-this-react"><a href="https://bishow-thapa.github.io/blog/2025/08/28/conditionally-adding-columns-in-react-push-vs-filterboolean/#react-usestate-immutability-is-crucial">NEVER MISS THIS REACT</a></h2></div>
+<h2 id="never-miss-this-react"><a href="https://bishow-thapa.github.io/blog/2025/08/28/conditionally-adding-columns-in-react-push-vs-filterboolean/#react-usestate-immutability-is-crucial">NEVER MISS THIS REACT</a></h2>
+<hr>
+<details class="tip" open="open">
+<summary>REACT BASIC 101</summary>
+<p>These are fundamental concepts in React but can be a bit confusing because the terminology sounds similar. Let's break down the differences between <strong>React Elements</strong>, <strong>React Components</strong>, and <strong>React Component Instances</strong>, with simple definitions and examples.</p>
+<hr>
+<p><strong>📦 1. React Elements</strong></p>
+<blockquote>
+<p>A React Element is a plain JavaScript object that describes what you want to see on the screen.</p>
+</blockquote>
+<ul>
+<li>It’s the output of calling <code>React.createElement(...)</code> or using JSX like <code>&lt;div&gt;Hello&lt;/div&gt;</code>.</li>
+<li>React elements are <mark>immutable</mark> and <mark>lightweight</mark>.</li>
+<li>They describe the <mark>structure</mark>, not behavior.</li>
+</ul>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="nx">world</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">// or equivalently:</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s1">'Hello, world!'</span><span class="p">);</span>
+</span></code></pre></div>
+<p>👉 This does <strong>not</strong> render anything by itself. It’s just a description of what should be rendered.</p>
+<hr>
+<p><strong>🧱 2. React Components</strong></p>
+<blockquote>
+<p>A <strong>React Component</strong> is a <strong>function</strong> or <strong>class</strong> that returns React Elements.</p>
+</blockquote>
+<ul>
+<li>Components are <strong>reusable</strong> building blocks.</li>
+<li>They can have logic, state, and lifecycle methods (in class components) or hooks (in function components).</li>
+</ul>
+<p>Function Component Example:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Class Component Example:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Welcome</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="nx">render</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>👉 When you use <code>&lt;Welcome name="Alice" /&gt;</code>, React <strong>calls the component</strong> and expects it to return a <strong>React Element</strong>.</p>
+<hr>
+<p><strong>🧍‍♂️ 3. React Component Instances</strong></p>
+<blockquote>
+<p>A <strong>component instance</strong> is what React creates when it renders a component <strong>into the DOM</strong>.</p>
+</blockquote>
+<ul>
+<li>For <strong>function components</strong>, the instance is just the execution of the function.</li>
+<li>For <strong>class components</strong>, React creates an <mark>instance of the class</mark>, and this instance persists between renders.</li>
+<li>Component instances can hold <mark>state</mark>, trigger <mark>side effects</mark>, and interact with the DOM via <mark>refs</mark> or <mark>lifecycle methods</mark>.</li>
+</ul>
+<p>Example with a class:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Counter</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">        </span><span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="nx">render</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">}&lt;/</span><span class="nt">button</span><span class="p">&gt;;</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p>When <code>&lt;Counter /&gt;</code> is rendered, React creates an <strong>instance of</strong> <code>Counter</code>, which:</p>
+<ul>
+<li>Calls the <code>constructor</code></li>
+<li>Tracks <code>this.state</code></li>
+<li>Calls <code>render()</code> on re-renders</li>
+</ul>
+</li>
+</ul>
+<p>👉 This is the <strong>component instance</strong> — it’s what holds the state and lifecycle.</p>
+<hr>
+<blockquote>
+<p>⚖️ Quick Summary Table</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Is it Code?</th>
+<th>What is it?</th>
+<th>Example Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>React Element</strong></td>
+<td>✅</td>
+<td>Description of what to render</td>
+<td><code>&lt;div&gt;Hello&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><strong>React Component</strong></td>
+<td>✅</td>
+<td>Function or class that returns elements</td>
+<td><code>function MyComponent() { ... }</code></td>
+</tr>
+<tr>
+<td><strong>React Component Instance</strong></td>
+<td>🚫 (Created by React)</td>
+<td>Live object created during rendering</td>
+<td>Instance of <code>MyComponent</code> at runtime</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>📌 In Short:</p>
+</blockquote>
+<ul>
+<li><strong>React Element</strong> → a plain object describing the UI.</li>
+<li><strong>React Component</strong> → a function or class that returns elements.</li>
+<li><strong>Component Instance</strong> → what React creates from a component to manage state/lifecycle.</li>
+</ul>
+</details></div>
 
 
 
