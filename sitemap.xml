@@ -649,10 +649,6 @@
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
-         <loc>https://bishow-thapa.github.io/office/bank/app-activity/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
          <loc>https://bishow-thapa.github.io/office/bank/env/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
@@ -670,10 +666,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/refactor/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/rendering-components/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
@@ -721,6 +713,10 @@
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
+         <loc>https://bishow-thapa.github.io/office/bank/auth/passwordCheck/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
          <loc>https://bishow-thapa.github.io/office/bank/auth/refreshTokenPromise/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
@@ -730,6 +726,14 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/auth/rememberme/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/auth/session-timeout-fallback/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/auth/session-timeout-fallback2/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
@@ -746,6 +750,10 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/basic/mail-validation/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/basic/mft-api-changes/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
@@ -766,6 +774,10 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/basic/transformResponse/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/basic/upload-images-type/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
@@ -802,6 +814,26 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/basic/polling/manual/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/branch/back-swift-office/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/branch/one-route-mft-currency/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/branch/rendering-components/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/branch/upload-backoffice-which-is-best/</loc>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://bishow-thapa.github.io/office/bank/branch/upload-backoffice/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
@@ -950,42 +982,6 @@
     </url>
     <url>
          <loc>https://bishow-thapa.github.io/office/bank/settings/using-global-settings/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/back-swift-office/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/mft-api-changes/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/one-route-mft-currency/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/passwordCheck/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/session-timeout-fallback/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/session-timeout-fallback2/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/upload-backoffice-which-is-best/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/upload-backoffice/</loc>
-         <lastmod>2025-09-18</lastmod>
-    </url>
-    <url>
-         <loc>https://bishow-thapa.github.io/office/bank/updates/upload-images-type/</loc>
          <lastmod>2025-09-18</lastmod>
     </url>
     <url>
