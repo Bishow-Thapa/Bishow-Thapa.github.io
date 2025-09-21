@@ -11524,6 +11524,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#last-suggestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      LAST SUGGESTION
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -11592,7 +11601,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              4 min read
+                              6 min read
                             
                           </span>
                         </div>
@@ -11870,6 +11879,136 @@ If you try to use them in a plain JavaScript function, it's like trying to use a
 </tr>
 </tbody>
 </table>
+<hr>
+<h2 id="last-suggestion">LAST SUGGESTION</h2>
+<blockquote>
+<p>🥊 The Two Options</p>
+</blockquote>
+<p><strong>Option 1</strong>: Everything in <code>performLogout()</code></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">authApi</span><span class="p">.</span><span class="nx">endpoints</span><span class="p">.</span><span class="nx">logoutApp</span><span class="p">.</span><span class="nx">initiate</span><span class="p">()).</span><span class="nx">unwrap</span><span class="p">();</span>
+</span></code></pre></div>
+<ul>
+<li>This means <code>performLogout()</code> handles the logout API call <strong>and</strong> the Redux state cleanup.</li>
+<li>No separate utility (<code>handleFullLogout</code>) needed.</li>
+</ul>
+<p><strong>Option 2</strong>: Split into utility (handleFullLogout)</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">handleFullLogout</span><span class="p">(</span><span class="nx">dispatch</span><span class="p">);</span><span class="w"> </span><span class="c1">// &lt;- API call is moved to a utility</span>
+</span></code></pre></div>
+<ul>
+<li>The API logic is separated into its own function.</li>
+<li><code>performLogout()</code> handles state clearing only.</li>
+<li>More modular and testable.</li>
+</ul>
+<blockquote>
+<p>✅ Recommendation</p>
+</blockquote>
+<p><strong>👑 Use Option 2</strong>: Utility Function (<code>handleFullLogout</code>)</p>
+<p>Why?</p>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Separation of Concerns</strong></td>
+<td>You isolate API logic from Redux cleanup. Easier to reason about.</td>
+</tr>
+<tr>
+<td><strong>Reusability</strong></td>
+<td>You can call <code>handleFullLogout(dispatch)</code> elsewhere if needed (e.g. from other flows like token expiry or idle timeout).</td>
+</tr>
+<tr>
+<td><strong>Clean Code</strong></td>
+<td>Each function does one thing: <code>handleFullLogout()</code> logs out via API, <code>performLogout()</code> resets app state.</td>
+</tr>
+<tr>
+<td><strong>Testability</strong></td>
+<td>Easier to mock and unit test the logout API separately from the Redux logic.</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>If the logout API logic grows (e.g., error handling, logging out from multiple services), it’s cleanly contained.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>🧠 Example of When This Helps</p>
+</blockquote>
+<p>Let’s say in the future you want to handle logout from <strong>multiple places</strong>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// idleTimeoutHandler.js</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">handleFullLogout</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./logoutUser"</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">await</span><span class="w"> </span><span class="nx">handleFullLogout</span><span class="p">(</span><span class="nx">dispatch</span><span class="p">);</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1">// maybe skip some Redux clears depending on context</span>
+</span></code></pre></div>
+<p>With Option 2, that’s easy and avoids duplication.</p>
+<hr>
+<blockquote>
+<p>🧹 Bottom Line</p>
+</blockquote>
+<p>✅ <strong>Use Option 2</strong> — split the logout API call into <code>handleFullLogout(dispatch)</code> for cleaner, scalable, and testable code.</p>
+<p>If you're good with it, I can help you:</p>
+<ul>
+<li>Add unit tests</li>
+<li>Add TypeScript typings</li>
+<li>Create a fallback <mark>retry mechanism</mark> in <code>handleFullLogout</code></li>
+</ul>
+<p>Let me know!</p>
+<hr>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>├── shared/
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>│   └── utils/
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>│       ├── rememberMe.js
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>│       ├── logger.js
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>│       ├── logoutUser.js        &lt;-- ✅ utility for logout API
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>│       └── logoutHelper.js      &lt;-- ✅ main logout function
+</span></code></pre></div>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">// @shared/utils/logoutUser.js</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">authApi</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/auth/services/authApi"</span><span class="p">;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1">// ✅ Only handles the API call</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleFullLogout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">authApi</span><span class="p">.</span><span class="nx">endpoints</span><span class="p">.</span><span class="nx">logoutApp</span><span class="p">.</span><span class="nx">initiate</span><span class="p">()).</span><span class="nx">unwrap</span><span class="p">();</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">};</span>
+</span></code></pre></div>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">// @shared/utils/logoutHelper.js</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">logout</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/auth/services/authSlice"</span><span class="p">;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">resetState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/notifications/services/chatSlice"</span><span class="p">;</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">clearGlobalSetting</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/settings/services/globalSettingSlice"</span><span class="p">;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">clearBageCount</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/settings/services/counterBadgeSlice"</span><span class="p">;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">logoutFromIdle</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/idle/services/idleSlice"</span><span class="p">;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">stopSignalR</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/notifications/services/chatThunks"</span><span class="p">;</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">clearBase64Data</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@features/profile/services/profileSlice"</span><span class="p">;</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="k">import</span><span class="w"> </span><span class="nx">rememeberMe</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@shared/utils/rememberMe"</span><span class="p">;</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="k">import</span><span class="w"> </span><span class="nx">logger</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@shared/utils/logger"</span><span class="p">;</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">handleFullLogout</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./logoutUser"</span><span class="p">;</span><span class="w"> </span><span class="c1">// ✅ API-only utility</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">performLogout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w">    </span><span class="c1">// 🔐 1. Perform logout API call</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">handleFullLogout</span><span class="p">(</span><span class="nx">dispatch</span><span class="p">);</span>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">    </span><span class="c1">// 🔄 2. Reset client-side state</span>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">logout</span><span class="p">());</span>
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">stopSignalR</span><span class="p">());</span>
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">logoutFromIdle</span><span class="p">());</span>
+</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">resetState</span><span class="p">());</span>
+</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">clearGlobalSetting</span><span class="p">());</span>
+</span><span id="__span-17-26"><a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">clearBageCount</span><span class="p">());</span>
+</span><span id="__span-17-27"><a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="w">    </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">clearBase64Data</span><span class="p">());</span>
+</span><span id="__span-17-28"><a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a><span class="w">    </span><span class="nx">rememeberMe</span><span class="p">();</span>
+</span><span id="__span-17-29"><a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>
+</span><span id="__span-17-30"><a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a><span class="w">    </span><span class="c1">// Optional: redirect, toast, etc.</span>
+</span><span id="__span-17-31"><a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-32"><a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">error</span><span class="p">({</span><span class="w"> </span><span class="nx">msg</span><span class="o">:</span><span class="w"> </span><span class="s2">"Logout API failed"</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-17-33"><a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-17-34"><a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="p">};</span>
+</span></code></pre></div>
 <hr></div>
 
 
