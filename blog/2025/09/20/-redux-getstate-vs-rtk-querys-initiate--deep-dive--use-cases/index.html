@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2025/08/29/javascript-falsy-values/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/blog/2025/09/20/-redux-getstate-vs-rtk-querys-initiate--deep-dive--use-cases/">
       
       
-        <link rel="prev" href="../../28/conditionally-adding-columns-in-react-push-vs-filterboolean/">
+        <link rel="prev" href="../../../08/29/javascript-falsy-values/">
       
       
-        <link rel="next" href="../../../09/20/-redux-getstate-vs-rtk-querys-initiate--deep-dive--use-cases/">
+        <link rel="next" href="../../21/why-react-hooks-can-only-run-inside-components/">
       
       
       <link rel="icon" href="../../../../../images/logo/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>JavaScript Falsy Values - Bishow Thapa</title>
+        <title>🔍 Redux getState() vs RTK Query's initiate() — Deep Dive & Use Cases - Bishow Thapa</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#javascript-falsy-values" class="md-skip">
+        <a href="#redux-getstate-vs-rtk-querys-initiate-deep-dive-use-cases" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JavaScript Falsy Values
+              🔍 Redux getState() vs RTK Query's initiate() — Deep Dive &amp; Use Cases
             
           </span>
         </div>
@@ -11378,36 +11378,96 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#memory-trick-0-funnsy" class="md-nav__link">
+  <a href="#1-getstate-what-is-it" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Memory Trick: 0 FUNNSY
+      📦 1. getState() — What Is It?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#list-of-falsy-values" class="md-nav__link">
+  <a href="#2-initiate-what-is-it" class="md-nav__link">
     <span class="md-ellipsis">
-      📋 List of Falsy Values
+      📦 2. initiate() — What Is It?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-example" class="md-nav__link">
+  <a href="#key-differences" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Code Example
+      🔍 Key Differences
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-it-matters" class="md-nav__link">
+  <a href="#real-world-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 Why It Matters
+      🧪 Real-World Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Real-World Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-auth-token-handling-in-basequery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Example 1: Auth Token Handling in baseQuery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-logout-programmatically-from-basequery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚪 Example 2: Logout Programmatically from baseQuery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ When to Use Each
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Final Thoughts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Further Reading
     </span>
   </a>
   
@@ -11469,7 +11529,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-08-29 00:00:00+00:00" class="md-ellipsis">August 29, 2025</time>
+                        <time datetime="2025-09-20 00:00:00+00:00" class="md-ellipsis">September 20, 2025</time>
                       </div>
                     </li>
                     
@@ -11481,7 +11541,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -11511,7 +11571,7 @@
         
       
       
-        <span class="md-tag md-tag-icon">JavaScript</span>
+        <span class="md-tag md-tag-icon">react</span>
       
     
   </nav>
@@ -11521,70 +11581,185 @@
   
 
 
-<div><h1 id="javascript-falsy-values">JavaScript Falsy Values</h1>
-<p>There are <strong>7 main falsy values</strong> in JavaScript. These are values that evaluate to <code>false</code> in a Boolean context (such as inside an <code>if</code> statement).</p>
+<div><h1 id="redux-getstate-vs-rtk-querys-initiate-deep-dive-use-cases">🔍 Redux <code>getState()</code> vs RTK Query's <code>initiate()</code> — Deep Dive &amp; Use Cases</h1>
+<p>When building scalable apps using <strong>Redux Toolkit (RTK)</strong> and <strong>RTK Query</strong>, <mark>two powerful tools</mark> you'll often use are:</p>
+<ul>
+<li><code>getState()</code> – from Redux</li>
+<li><code>initiate()</code> – from RTK Query endpoint definitions</li>
+</ul>
 <!-- more -->
 
-<h2 id="memory-trick-0-funnsy">🧠 Memory Trick: <code>0 FUNNSY</code></h2>
-<p>Use the phrase <strong><code>0 FUNNSY</code></strong> to remember them:</p>
+<hr>
+<p>In this post, we'll break down:</p>
 <ul>
-<li><strong>0</strong> → <code>0</code> (Number zero)</li>
-<li><strong>F</strong> → <code>false</code> (Boolean false)</li>
-<li><strong>U</strong> → <code>undefined</code> (A variable not assigned a value)</li>
-<li><strong>N</strong> → <code>null</code> (Intentional absence of value)</li>
-<li><strong>N</strong> → <code>NaN</code> (Not-a-Number, e.g., result of invalid math)</li>
-<li><strong>S</strong> → <code>""</code> (Empty string)</li>
-<li><strong>Y</strong> → <code>0n</code> (BigInt zero — the "Y" is just a mnemonic stretch)</li>
+<li>✅ What each is</li>
+<li>📌 When and why to use them</li>
+<li>📦 Practical real-world scenarios</li>
+<li>🧠 Best practices for clean architecture</li>
 </ul>
 <hr>
-<h2 id="list-of-falsy-values">📋 List of Falsy Values</h2>
-<ol>
-<li><code>false</code> – Boolean false</li>
-<li><code>0</code> – Number zero</li>
-<li><code>-0</code> – Negative zero (also falsy)</li>
-<li><code>0n</code> – BigInt zero</li>
-<li><code>""</code> – Empty string</li>
-<li><code>null</code> – No object value</li>
-<li><code>undefined</code> – Variable not assigned</li>
-<li><code>NaN</code> – Invalid number (e.g., <code>0 / 0</code>)</li>
-</ol>
+<h2 id="1-getstate-what-is-it">📦 1. <code>getState()</code> — What Is It?</h2>
+<p><code>getState()</code> is a function provided by the Redux store that lets you <strong>read the current application state</strong> from anywhere (especially inside <code>middleware</code>, <code>thunks</code>, or <code>baseQuery</code>).</p>
 <blockquote>
-<p><strong>Note:</strong> <code>-0</code> is technically distinct from <code>0</code>, but both behave the same in Boolean contexts.</p>
+<p>✅ Where it's used:</p>
 </blockquote>
-<hr>
-<h2 id="code-example">💻 Code Example</h2>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">falsyValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0n</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="kc">NaN</span><span class="p">];</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">falsyValues</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nb">String</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="si">}</span><span class="sb"> is falsy`</span><span class="p">);</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">});</span>
-</span></code></pre></div>
-<blockquote>
-<p>✅ Expected Output</p>
-</blockquote>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>false is falsy
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>0 is falsy
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>0 is falsy
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>0 is falsy
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> is falsy
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>null is falsy
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>undefined is falsy
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>NaN is falsy
-</span></code></pre></div>
-<hr>
-<h2 id="why-it-matters">🔍 Why It Matters</h2>
-<p>Falsy values are important in conditional logic. For example:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">userInput</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="c1">// This block only runs if userInput is truthy</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>Knowing which values are falsy helps you:</p>
 <ul>
-<li>Avoid unexpected behavior</li>
-<li>Write cleaner, safer conditions</li>
-<li>Debug tricky logic errors in JS</li>
+<li>Custom thunks</li>
+<li>Middleware</li>
+<li>RTK Query's <code>baseQuery</code> (like <code>fetchBaseQuery</code>, <code>axiosBaseQuery</code>)</li>
+<li>Logic that depends on current app state (e.g., token, feature flags, locale)</li>
+</ul>
+<blockquote>
+<p>📌 Example:</p>
+</blockquote>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fetchBaseQuery</span><span class="p">({</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s2">"/api"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">prepareHeaders</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">headers</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getState</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getState</span><span class="p">().</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nx">headers</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">headers</span><span class="p">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">});</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 When to use:</p>
+</blockquote>
+<ul>
+<li>Attaching authentication tokens</li>
+<li>Customizing requests based on Redux state</li>
+<li>Deciding whether to make a request based on flags</li>
+</ul>
+<hr>
+<h2 id="2-initiate-what-is-it">📦 2. <code>initiate()</code> — What Is It?</h2>
+<p><code>initiate()</code> is a utility method automatically generated by <strong>RTK Query</strong> that lets you <strong>trigger a query</strong> or <strong>mutation programmatically</strong> (<mark>outside of React</mark>).</p>
+<blockquote>
+<p>✅ Where it's used:</p>
+</blockquote>
+<ul>
+<li>Inside custom logout/login utilities</li>
+<li>Inside <code>extraReducers</code> or listeners</li>
+<li>In <code>baseQuery</code>, middleware, or any non-React logic</li>
+</ul>
+<blockquote>
+<p>📌 Example:</p>
+</blockquote>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">authApi</span><span class="p">.</span><span class="nx">endpoints</span><span class="p">.</span><span class="nx">logoutApp</span><span class="p">.</span><span class="nx">initiate</span><span class="p">({</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="p">})).</span><span class="nx">unwrap</span><span class="p">();</span>
+</span></code></pre></div>
+<p>This calls the <code>logoutApp</code> mutation manually and returns a Promise. It works <mark>even outside React</mark> — such as during background logout, session expiration, etc.</p>
+<hr>
+<h2 id="key-differences">🔍 Key Differences</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>getState()</code></th>
+<th><code>initiate()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Read Redux state</td>
+<td>Programmatically run RTK Query endpoint</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>Get token, flags, locale, etc.</td>
+<td>Trigger an API request manually</td>
+</tr>
+<tr>
+<td>Where used</td>
+<td>Middleware, baseQuery, custom logic</td>
+<td>Services, listeners, thunks</td>
+</tr>
+<tr>
+<td>Returns</td>
+<td>Redux state (object)</td>
+<td>A thunk (Promise + metadata)</td>
+</tr>
+<tr>
+<td>Example</td>
+<td><code>getState().auth.token</code></td>
+<td><code>dispatch(authApi.endpoints.xyz.initiate())</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="real-world-use-cases">🧪 Real-World Use Cases</h2>
+<h3 id="example-1-auth-token-handling-in-basequery">🔐 Example 1: Auth Token Handling in <code>baseQuery</code></h3>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">prepareHeaders</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">headers</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getState</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getState</span><span class="p">().</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="nx">headers</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"Authorization"</span><span class="p">,</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">headers</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">};</span>
+</span></code></pre></div>
+<p>📌 You use <code>getState()</code> here because you're only <mark>reading state</mark>.</p>
+<h3 id="example-2-logout-programmatically-from-basequery">🚪 Example 2: Logout Programmatically from <code>baseQuery</code></h3>
+<p>In a custom <code>axiosBaseQuery.js</code>:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getState</span><span class="p">().</span><span class="nx">auth</span><span class="p">.</span><span class="nx">user</span><span class="o">?</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">authApi</span><span class="p">.</span><span class="nx">endpoints</span><span class="p">.</span><span class="nx">logoutApp</span><span class="p">.</span><span class="nx">initiate</span><span class="p">({</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="p">}));</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 You use <code>initiate()</code> here because you're <mark>triggering a mutation</mark>.</p>
+<hr>
+<h2 id="when-to-use-each">✅ When to Use Each</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You need the current auth token</td>
+<td><code>getState()</code></td>
+</tr>
+<tr>
+<td>You want to fire a mutation manually</td>
+<td><code>initiate()</code></td>
+</tr>
+<tr>
+<td>You want to check user permissions</td>
+<td><code>getState()</code></td>
+</tr>
+<tr>
+<td>You want to call logout API</td>
+<td><code>initiate()</code></td>
+</tr>
+<tr>
+<td>React isn't available (e.g. in thunk)</td>
+<td><code>initiate()</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="best-practices">💡 Best Practices</h2>
+<ul>
+<li>✅ Use <code>getState()</code> for <strong>reading</strong> any app state, especially in custom <code>baseQuery</code> or middleware</li>
+<li>✅ Use <code>initiate()</code> when you need to <strong>trigger</strong> an API query/mutation manually</li>
+<li>❌ Don’t try to use hooks like <code>useLoginMutation()</code> outside of components — always use <code>initiate()</code> instead</li>
+<li>✅ Always call <code>.unwrap()</code> on <code>initiate()</code> if you want to handle success/failure as normal Promises</li>
+</ul>
+<hr>
+<h2 id="final-thoughts">🧠 Final Thoughts</h2>
+<p>Understanding when to use <code>getState()</code> vs <code>initiate()</code> helps you:</p>
+<ul>
+<li>Keep your logic clean and predictable</li>
+<li>Avoid invalid hook usage errors (like using <code>useLogoutAppMutation()</code> outside components)</li>
+<li>Write maintainable, testable Redux + RTK Query code</li>
+</ul>
+<hr>
+<h2 id="further-reading">📚 Further Reading</h2>
+<ul>
+<li><a href="https://redux-toolkit.js.org/rtk-query/api/created-api/endpoints#initiate">RTK Query: initiate() docs</a></li>
+<li><a href="https://redux.js.org/tutorials/fundamentals/part-4-store#writing-custom-middleware">Redux Middleware &amp; getState()</a></li>
+<li><a href="https://redux-toolkit.js.org/rtk-query/api/fetchBaseQuery">RTK Query baseQuery options</a></li>
 </ul>
 <hr></div>
 
@@ -11681,7 +11856,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../28/conditionally-adding-columns-in-react-push-vs-filterboolean/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Conditionally Adding Columns in React: push vs filter(Boolean)">
+          <a href="../../../08/29/javascript-falsy-values/" class="md-footer__link md-footer__link--prev" aria-label="Previous: JavaScript Falsy Values">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -11691,20 +11866,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Conditionally Adding Columns in React: push vs filter(Boolean)
+                JavaScript Falsy Values
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../09/20/-redux-getstate-vs-rtk-querys-initiate--deep-dive--use-cases/" class="md-footer__link md-footer__link--next" aria-label="Next: 🔍 Redux getState() vs RTK Query&#39;s initiate() — Deep Dive &amp;amp; Use Cases">
+          <a href="../../21/why-react-hooks-can-only-run-inside-components/" class="md-footer__link md-footer__link--next" aria-label="Next: Why React Hooks Can Only Run Inside Components">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                🔍 Redux getState() vs RTK Query's initiate() — Deep Dive &amp; Use Cases
+                Why React Hooks Can Only Run Inside Components
               </div>
             </div>
             <div class="md-footer__button md-icon">
