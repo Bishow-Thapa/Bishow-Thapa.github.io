@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://bishow-thapa.github.io/migration/python/websocket/channels-vs-daphene/">
+        <link rel="canonical" href="https://bishow-thapa.github.io/migration/expo/auth-refactor/">
       
       
-        <link rel="prev" href="../channels-full-guide/">
+        <link rel="prev" href="../eas/">
       
       
-        <link rel="next" href="../issue-solved/">
+        <link rel="next" href="../../google-collab/">
       
       
-      <link rel="icon" href="../../../../images/logo/favicon.ico">
+      <link rel="icon" href="../../../images/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Channel vs Daphene - Bishow Thapa</title>
+        <title>Mobile Auth Refactor - Bishow Thapa</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#channels-vs-daphene" class="md-skip">
+        <a href="#auth-refactored" class="md-skip">
           Skip to content
         </a>
       
@@ -99,9 +99,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../.." title="Bishow Thapa" class="md-header__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
-  <img src="../../../../images/logo/career.png" alt="logo">
+  <img src="../../../images/logo/career.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Channel vs Daphene
+              Mobile Auth Refactor
             
           </span>
         </div>
@@ -229,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -250,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -270,7 +270,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../office/intro/" class="md-tabs__link">
+        <a href="../../../office/intro/" class="md-tabs__link">
           
   
   
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../web-dev-icebergs/" class="md-tabs__link">
+        <a href="../../web-dev-icebergs/" class="md-tabs__link">
           
   
   
@@ -319,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../research/testing/testing-101/" class="md-tabs__link">
+        <a href="../../../research/testing/testing-101/" class="md-tabs__link">
           
   
   
@@ -342,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../codehighlight/antd-table-pagination/" class="md-tabs__link">
+        <a href="../../../codehighlight/antd-table-pagination/" class="md-tabs__link">
           
   
   
@@ -376,9 +376,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
+    <a href="../../.." title="Bishow Thapa" class="md-nav__button md-logo" aria-label="Bishow Thapa" data-md-component="logo">
       
-  <img src="../../../../images/logo/career.png" alt="logo">
+  <img src="../../../images/logo/career.png" alt="logo">
 
     </a>
     Bishow Thapa
@@ -405,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -470,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
         
   
   
@@ -561,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   
@@ -586,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/archive/2023/" class="md-nav__link">
+      <a href="../../../blog/archive/2023/" class="md-nav__link">
         
   
   
@@ -665,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/intro/" class="md-nav__link">
+      <a href="../../../office/intro/" class="md-nav__link">
         
   
   
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/task/" class="md-nav__link">
+      <a href="../../../office/task/" class="md-nav__link">
         
   
   
@@ -752,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/intro/" class="md-nav__link">
+      <a href="../../../office/bank/intro/" class="md-nav__link">
         
   
   
@@ -816,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/1-domain/overview/" class="md-nav__link">
+      <a href="../../../office/bank/1-domain/overview/" class="md-nav__link">
         
   
   
@@ -880,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/1-domain/swifMT/overview/" class="md-nav__link">
+      <a href="../../../office/bank/1-domain/swifMT/overview/" class="md-nav__link">
         
   
   
@@ -903,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/1-domain/swifMT/updated/" class="md-nav__link">
+      <a href="../../../office/bank/1-domain/swifMT/updated/" class="md-nav__link">
         
   
   
@@ -983,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/notification/" class="md-nav__link">
+      <a href="../../../office/bank/basic/notification/" class="md-nav__link">
         
   
   
@@ -1006,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/react-player/" class="md-nav__link">
+      <a href="../../../office/bank/basic/react-player/" class="md-nav__link">
         
   
   
@@ -1029,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/transformResponse/" class="md-nav__link">
+      <a href="../../../office/bank/basic/transformResponse/" class="md-nav__link">
         
   
   
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/profile-picture/" class="md-nav__link">
+      <a href="../../../office/bank/basic/profile-picture/" class="md-nav__link">
         
   
   
@@ -1075,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/file-upload/" class="md-nav__link">
+      <a href="../../../office/bank/basic/file-upload/" class="md-nav__link">
         
   
   
@@ -1098,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/antd-chartd/" class="md-nav__link">
+      <a href="../../../office/bank/basic/antd-chartd/" class="md-nav__link">
         
   
   
@@ -1121,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/mail-validation/" class="md-nav__link">
+      <a href="../../../office/bank/basic/mail-validation/" class="md-nav__link">
         
   
   
@@ -1144,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/dynamic-refetch/" class="md-nav__link">
+      <a href="../../../office/bank/basic/dynamic-refetch/" class="md-nav__link">
         
   
   
@@ -1167,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/redux-async/" class="md-nav__link">
+      <a href="../../../office/bank/basic/redux-async/" class="md-nav__link">
         
   
   
@@ -1190,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/polling/manual/" class="md-nav__link">
+      <a href="../../../office/bank/basic/polling/manual/" class="md-nav__link">
         
   
   
@@ -1213,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/counter/overview/" class="md-nav__link">
+      <a href="../../../office/bank/basic/counter/overview/" class="md-nav__link">
         
   
   
@@ -1236,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/multipart/upload/" class="md-nav__link">
+      <a href="../../../office/bank/basic/multipart/upload/" class="md-nav__link">
         
   
   
@@ -1259,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/upload-images-type/" class="md-nav__link">
+      <a href="../../../office/bank/basic/upload-images-type/" class="md-nav__link">
         
   
   
@@ -1282,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/mft-api-changes/" class="md-nav__link">
+      <a href="../../../office/bank/basic/mft-api-changes/" class="md-nav__link">
         
   
   
@@ -1346,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/infiniteQuery/overview/" class="md-nav__link">
+      <a href="../../../office/bank/basic/infiniteQuery/overview/" class="md-nav__link">
         
   
   
@@ -1369,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/infiniteQuery/table/" class="md-nav__link">
+      <a href="../../../office/bank/basic/infiniteQuery/table/" class="md-nav__link">
         
   
   
@@ -1392,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/infiniteQuery/infinte-scroll/" class="md-nav__link">
+      <a href="../../../office/bank/basic/infiniteQuery/infinte-scroll/" class="md-nav__link">
         
   
   
@@ -1464,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/issue/solved/permission-response/" class="md-nav__link">
+      <a href="../../../office/bank/basic/issue/solved/permission-response/" class="md-nav__link">
         
   
   
@@ -1487,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/issue/rate-loader-issue/" class="md-nav__link">
+      <a href="../../../office/bank/basic/issue/rate-loader-issue/" class="md-nav__link">
         
   
   
@@ -1510,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/basic/issue/stale-state-issue/" class="md-nav__link">
+      <a href="../../../office/bank/basic/issue/stale-state-issue/" class="md-nav__link">
         
   
   
@@ -1590,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/overview/" class="md-nav__link">
+      <a href="../../../office/bank/auth/overview/" class="md-nav__link">
         
   
   
@@ -1613,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/refreshTokenPromise/" class="md-nav__link">
+      <a href="../../../office/bank/auth/refreshTokenPromise/" class="md-nav__link">
         
   
   
@@ -1636,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/rememberme/" class="md-nav__link">
+      <a href="../../../office/bank/auth/rememberme/" class="md-nav__link">
         
   
   
@@ -1659,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/remember-me/" class="md-nav__link">
+      <a href="../../../office/bank/auth/remember-me/" class="md-nav__link">
         
   
   
@@ -1682,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/central-logout/" class="md-nav__link">
+      <a href="../../../office/bank/auth/central-logout/" class="md-nav__link">
         
   
   
@@ -1705,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/2025-09-16-useLoginHandler-optimize/" class="md-nav__link">
+      <a href="../../../office/bank/auth/2025-09-16-useLoginHandler-optimize/" class="md-nav__link">
         
   
   
@@ -1728,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/session-timeout-fallback/" class="md-nav__link">
+      <a href="../../../office/bank/auth/session-timeout-fallback/" class="md-nav__link">
         
   
   
@@ -1751,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/session-timeout-fallback2/" class="md-nav__link">
+      <a href="../../../office/bank/auth/session-timeout-fallback2/" class="md-nav__link">
         
   
   
@@ -1774,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/passwordCheck/" class="md-nav__link">
+      <a href="../../../office/bank/auth/passwordCheck/" class="md-nav__link">
         
   
   
@@ -1797,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/login-refactored/" class="md-nav__link">
+      <a href="../../../office/bank/auth/login-refactored/" class="md-nav__link">
         
   
   
@@ -1820,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/auth/logout-refactored/" class="md-nav__link">
+      <a href="../../../office/bank/auth/logout-refactored/" class="md-nav__link">
         
   
   
@@ -1892,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/permission/intro/" class="md-nav__link">
+      <a href="../../../office/bank/permission/intro/" class="md-nav__link">
         
   
   
@@ -1915,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/permission/streaming-updates/" class="md-nav__link">
+      <a href="../../../office/bank/permission/streaming-updates/" class="md-nav__link">
         
   
   
@@ -1938,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/permission/bank-app-permission/" class="md-nav__link">
+      <a href="../../../office/bank/permission/bank-app-permission/" class="md-nav__link">
         
   
   
@@ -1961,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/permission/isBankUser/" class="md-nav__link">
+      <a href="../../../office/bank/permission/isBankUser/" class="md-nav__link">
         
   
   
@@ -1984,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/permission/showing-permissions-listing/" class="md-nav__link">
+      <a href="../../../office/bank/permission/showing-permissions-listing/" class="md-nav__link">
         
   
   
@@ -2007,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/permission/2025-12-08-permission-settings/" class="md-nav__link">
+      <a href="../../../office/bank/permission/2025-12-08-permission-settings/" class="md-nav__link">
         
   
   
@@ -2079,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/approval/timeline/" class="md-nav__link">
+      <a href="../../../office/bank/approval/timeline/" class="md-nav__link">
         
   
   
@@ -2102,7 +2102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/approval/serialNo/" class="md-nav__link">
+      <a href="../../../office/bank/approval/serialNo/" class="md-nav__link">
         
   
   
@@ -2174,7 +2174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/approvers-verifiers/" class="md-nav__link">
+      <a href="../../../office/bank/form/approvers-verifiers/" class="md-nav__link">
         
   
   
@@ -2197,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/super-loader/" class="md-nav__link">
+      <a href="../../../office/bank/form/super-loader/" class="md-nav__link">
         
   
   
@@ -2220,7 +2220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/new-logic/" class="md-nav__link">
+      <a href="../../../office/bank/form/new-logic/" class="md-nav__link">
         
   
   
@@ -2243,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/file-upload/" class="md-nav__link">
+      <a href="../../../office/bank/form/file-upload/" class="md-nav__link">
         
   
   
@@ -2266,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/rate-input-difference/" class="md-nav__link">
+      <a href="../../../office/bank/form/rate-input-difference/" class="md-nav__link">
         
   
   
@@ -2289,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/tolerance-rate-input/" class="md-nav__link">
+      <a href="../../../office/bank/form/tolerance-rate-input/" class="md-nav__link">
         
   
   
@@ -2312,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/tolaranceReset/" class="md-nav__link">
+      <a href="../../../office/bank/form/tolaranceReset/" class="md-nav__link">
         
   
   
@@ -2335,7 +2335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/rateMinMaxValidator/" class="md-nav__link">
+      <a href="../../../office/bank/form/rateMinMaxValidator/" class="md-nav__link">
         
   
   
@@ -2358,7 +2358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/verifiers-not-selected/" class="md-nav__link">
+      <a href="../../../office/bank/form/verifiers-not-selected/" class="md-nav__link">
         
   
   
@@ -2381,7 +2381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/mmd/" class="md-nav__link">
+      <a href="../../../office/bank/form/mmd/" class="md-nav__link">
         
   
   
@@ -2404,7 +2404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/hooks/" class="md-nav__link">
+      <a href="../../../office/bank/form/hooks/" class="md-nav__link">
         
   
   
@@ -2427,7 +2427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/counter-party-limit/" class="md-nav__link">
+      <a href="../../../office/bank/form/counter-party-limit/" class="md-nav__link">
         
   
   
@@ -2450,7 +2450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/2025-12-04-isMultipleVeifierRequired-state/" class="md-nav__link">
+      <a href="../../../office/bank/form/2025-12-04-isMultipleVeifierRequired-state/" class="md-nav__link">
         
   
   
@@ -2473,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/2025-12-03-cbs-textfield-added/" class="md-nav__link">
+      <a href="../../../office/bank/form/2025-12-03-cbs-textfield-added/" class="md-nav__link">
         
   
   
@@ -2496,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/form/2025-09-11-disbale-upload-rate-logic-in-mft/" class="md-nav__link">
+      <a href="../../../office/bank/form/2025-09-11-disbale-upload-rate-logic-in-mft/" class="md-nav__link">
         
   
   
@@ -2568,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/globalSettings/" class="md-nav__link">
+      <a href="../../../office/bank/settings/globalSettings/" class="md-nav__link">
         
   
   
@@ -2591,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/using-global-settings/" class="md-nav__link">
+      <a href="../../../office/bank/settings/using-global-settings/" class="md-nav__link">
         
   
   
@@ -2614,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/delete-users/" class="md-nav__link">
+      <a href="../../../office/bank/settings/delete-users/" class="md-nav__link">
         
   
   
@@ -2637,7 +2637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/polling-setting/" class="md-nav__link">
+      <a href="../../../office/bank/settings/polling-setting/" class="md-nav__link">
         
   
   
@@ -2660,7 +2660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/redux-localStorage-sync/" class="md-nav__link">
+      <a href="../../../office/bank/settings/redux-localStorage-sync/" class="md-nav__link">
         
   
   
@@ -2683,7 +2683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/2025-12-06-separating-initial-loading-vs-paginate-infinite-scroll-in-table/" class="md-nav__link">
+      <a href="../../../office/bank/settings/2025-12-06-separating-initial-loading-vs-paginate-infinite-scroll-in-table/" class="md-nav__link">
         
   
   
@@ -2706,7 +2706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/2025-09-11-setting-counterparty-add-checkbox/" class="md-nav__link">
+      <a href="../../../office/bank/settings/2025-09-11-setting-counterparty-add-checkbox/" class="md-nav__link">
         
   
   
@@ -2729,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/2025-09-08-import-user/" class="md-nav__link">
+      <a href="../../../office/bank/settings/2025-09-08-import-user/" class="md-nav__link">
         
   
   
@@ -2752,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/2025-09-09-settings-key-defensive-programming/" class="md-nav__link">
+      <a href="../../../office/bank/settings/2025-09-09-settings-key-defensive-programming/" class="md-nav__link">
         
   
   
@@ -2775,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/rate-template/" class="md-nav__link">
+      <a href="../../../office/bank/settings/rate-template/" class="md-nav__link">
         
   
   
@@ -2798,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/settings/research/" class="md-nav__link">
+      <a href="../../../office/bank/settings/research/" class="md-nav__link">
         
   
   
@@ -2870,7 +2870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/branch/one-route-mft-currency/" class="md-nav__link">
+      <a href="../../../office/bank/branch/one-route-mft-currency/" class="md-nav__link">
         
   
   
@@ -2893,7 +2893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/branch/upload-backoffice/" class="md-nav__link">
+      <a href="../../../office/bank/branch/upload-backoffice/" class="md-nav__link">
         
   
   
@@ -2916,7 +2916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/branch/upload-backoffice-which-is-best/" class="md-nav__link">
+      <a href="../../../office/bank/branch/upload-backoffice-which-is-best/" class="md-nav__link">
         
   
   
@@ -2939,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/branch/back-swift-office/" class="md-nav__link">
+      <a href="../../../office/bank/branch/back-swift-office/" class="md-nav__link">
         
   
   
@@ -2962,7 +2962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/branch/rendering-components/" class="md-nav__link">
+      <a href="../../../office/bank/branch/rendering-components/" class="md-nav__link">
         
   
   
@@ -2985,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/branch/deal-report-list-backoffice-swift-doc/" class="md-nav__link">
+      <a href="../../../office/bank/branch/deal-report-list-backoffice-swift-doc/" class="md-nav__link">
         
   
   
@@ -3098,7 +3098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/security/oauth-pkce/overview/" class="md-nav__link">
+      <a href="../../../office/bank/security/oauth-pkce/overview/" class="md-nav__link">
         
   
   
@@ -3170,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/security/storage/overview/" class="md-nav__link">
+      <a href="../../../office/bank/security/storage/overview/" class="md-nav__link">
         
   
   
@@ -3250,7 +3250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/utils/forex-label/" class="md-nav__link">
+      <a href="../../../office/bank/utils/forex-label/" class="md-nav__link">
         
   
   
@@ -3273,7 +3273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/env/" class="md-nav__link">
+      <a href="../../../office/bank/env/" class="md-nav__link">
         
   
   
@@ -3345,7 +3345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/ui-collapsible/" class="md-nav__link">
+      <a href="../../../office/bank/ui-collapsible/" class="md-nav__link">
         
   
   
@@ -3368,7 +3368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/guide/" class="md-nav__link">
+      <a href="../../../office/bank/guide/" class="md-nav__link">
         
   
   
@@ -3391,7 +3391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/optimization/" class="md-nav__link">
+      <a href="../../../office/bank/optimization/" class="md-nav__link">
         
   
   
@@ -3414,7 +3414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/sass/" class="md-nav__link">
+      <a href="../../../office/bank/sass/" class="md-nav__link">
         
   
   
@@ -3437,7 +3437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/usefull-code/" class="md-nav__link">
+      <a href="../../../office/bank/usefull-code/" class="md-nav__link">
         
   
   
@@ -3460,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/refactor/" class="md-nav__link">
+      <a href="../../../office/bank/refactor/" class="md-nav__link">
         
   
   
@@ -3532,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/clickup/2024-11-02-task/" class="md-nav__link">
+      <a href="../../../office/bank/clickup/2024-11-02-task/" class="md-nav__link">
         
   
   
@@ -3555,7 +3555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/clickup/2024-12-03-tuesday-task/" class="md-nav__link">
+      <a href="../../../office/bank/clickup/2024-12-03-tuesday-task/" class="md-nav__link">
         
   
   
@@ -3578,7 +3578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/bank/clickup/2024-12-04-wednesday-task/" class="md-nav__link">
+      <a href="../../../office/bank/clickup/2024-12-04-wednesday-task/" class="md-nav__link">
         
   
   
@@ -3658,7 +3658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/package/" class="md-nav__link">
+      <a href="../../../office/ispl/package/" class="md-nav__link">
         
   
   
@@ -3681,7 +3681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/validate-reason/" class="md-nav__link">
+      <a href="../../../office/ispl/validate-reason/" class="md-nav__link">
         
   
   
@@ -3704,7 +3704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/issue/" class="md-nav__link">
+      <a href="../../../office/ispl/issue/" class="md-nav__link">
         
   
   
@@ -3768,7 +3768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/pdf/" class="md-nav__link">
+      <a href="../../../office/ispl/pdf/" class="md-nav__link">
         
   
   
@@ -3840,7 +3840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/appuserid/" class="md-nav__link">
+      <a href="../../../office/ispl/important/appuserid/" class="md-nav__link">
         
   
   
@@ -3863,7 +3863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/priority-listing-select/" class="md-nav__link">
+      <a href="../../../office/ispl/important/priority-listing-select/" class="md-nav__link">
         
   
   
@@ -3886,7 +3886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/sorting-table-antd/" class="md-nav__link">
+      <a href="../../../office/ispl/important/sorting-table-antd/" class="md-nav__link">
         
   
   
@@ -3909,7 +3909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/persist-local-storage/" class="md-nav__link">
+      <a href="../../../office/ispl/important/persist-local-storage/" class="md-nav__link">
         
   
   
@@ -3932,7 +3932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/table-rowid/" class="md-nav__link">
+      <a href="../../../office/ispl/important/table-rowid/" class="md-nav__link">
         
   
   
@@ -3955,7 +3955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/debounce/" class="md-nav__link">
+      <a href="../../../office/ispl/important/debounce/" class="md-nav__link">
         
   
   
@@ -3978,7 +3978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/table-row-selection-customize/" class="md-nav__link">
+      <a href="../../../office/ispl/important/table-row-selection-customize/" class="md-nav__link">
         
   
   
@@ -4001,7 +4001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/error-boundary/" class="md-nav__link">
+      <a href="../../../office/ispl/important/error-boundary/" class="md-nav__link">
         
   
   
@@ -4024,7 +4024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/important/draft/" class="md-nav__link">
+      <a href="../../../office/ispl/important/draft/" class="md-nav__link">
         
   
   
@@ -4096,7 +4096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/architecture/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/architecture/" class="md-nav__link">
         
   
   
@@ -4119,7 +4119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/auth/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/auth/" class="md-nav__link">
         
   
   
@@ -4183,7 +4183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/setting-setValue-in-select/" class="md-nav__link">
         
   
   
@@ -4206,7 +4206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/internal-message/" class="md-nav__link">
         
   
   
@@ -4229,7 +4229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/redux-action-advanced/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/redux-action-advanced/" class="md-nav__link">
         
   
   
@@ -4252,7 +4252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/tutorial-listing/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/tutorial-listing/" class="md-nav__link">
         
   
   
@@ -4275,7 +4275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/public-events/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/public-events/" class="md-nav__link">
         
   
   
@@ -4298,7 +4298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/mail/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/mail/" class="md-nav__link">
         
   
   
@@ -4321,7 +4321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/blog/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/blog/" class="md-nav__link">
         
   
   
@@ -4344,7 +4344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/sisco-view/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sisco-view/" class="md-nav__link">
         
   
   
@@ -4367,7 +4367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/sending-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sending-mail/" class="md-nav__link">
         
   
   
@@ -4390,7 +4390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/sending-im/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/sending-im/" class="md-nav__link">
         
   
   
@@ -4413,7 +4413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/reference-tender-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/reference-tender-circular/" class="md-nav__link">
         
   
   
@@ -4436,7 +4436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/reference-project-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/reference-project-circular/" class="md-nav__link">
         
   
   
@@ -4459,7 +4459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/login/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/login/" class="md-nav__link">
         
   
   
@@ -4482,7 +4482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/excel-api-data/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/excel-api-data/" class="md-nav__link">
         
   
   
@@ -4505,7 +4505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/import-excel-file/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/import-excel-file/" class="md-nav__link">
         
   
   
@@ -4528,7 +4528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/fingerprint/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/fingerprint/" class="md-nav__link">
         
   
   
@@ -4551,7 +4551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/groupchat-internal-message/" class="md-nav__link">
         
   
   
@@ -4574,7 +4574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/instance-and-internal-message/" class="md-nav__link">
         
   
   
@@ -4597,7 +4597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/groupchat-module/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/groupchat-module/" class="md-nav__link">
         
   
   
@@ -4620,7 +4620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/daily-dairy/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/daily-dairy/" class="md-nav__link">
         
   
   
@@ -4643,7 +4643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/alldocs/permisison-based-access-control/" class="md-nav__link">
         
   
   
@@ -4715,7 +4715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/commonModule/HTMLRenderer/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/HTMLRenderer/" class="md-nav__link">
         
   
   
@@ -4738,7 +4738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/commonModule/JSON-stringify/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/JSON-stringify/" class="md-nav__link">
         
   
   
@@ -4761,7 +4761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/commonModule/internalMNew/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/internalMNew/" class="md-nav__link">
         
   
   
@@ -4784,7 +4784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/reusable-component-tooltip/" class="md-nav__link">
         
   
   
@@ -4807,7 +4807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/useDebouncedDispatch/" class="md-nav__link">
         
   
   
@@ -4830,7 +4830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/commonModule/useReducer/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/commonModule/useReducer/" class="md-nav__link">
         
   
   
@@ -4902,7 +4902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/tenderModule/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/tenderModule/" class="md-nav__link">
         
   
   
@@ -4966,7 +4966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
+      <a href="../../../office/ispl/documentation/tenderModule/reusableComponents/intro/" class="md-nav__link">
         
   
   
@@ -5136,7 +5136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/01-replychatbox/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/01-replychatbox/" class="md-nav__link">
         
   
   
@@ -5159,7 +5159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/redux-actions/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/redux-actions/" class="md-nav__link">
         
   
   
@@ -5182,7 +5182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/dashboard-today-task/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-today-task/" class="md-nav__link">
         
   
   
@@ -5205,7 +5205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/redux-add-upate/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/redux-add-upate/" class="md-nav__link">
         
   
   
@@ -5228,7 +5228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/dashboard-module/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-module/" class="md-nav__link">
         
   
   
@@ -5251,7 +5251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/tender-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/tender-mail/" class="md-nav__link">
         
   
   
@@ -5274,7 +5274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/mail-tender-loader/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/mail-tender-loader/" class="md-nav__link">
         
   
   
@@ -5297,7 +5297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/modes-of-communication/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/modes-of-communication/" class="md-nav__link">
         
   
   
@@ -5320,7 +5320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/circular-planning/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/circular-planning/" class="md-nav__link">
         
   
   
@@ -5343,7 +5343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/tender-mail-circular/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/tender-mail-circular/" class="md-nav__link">
         
   
   
@@ -5366,7 +5366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/mail-reply-bug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/mail-reply-bug/" class="md-nav__link">
         
   
   
@@ -5389,7 +5389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/compose-email-drawer/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/compose-email-drawer/" class="md-nav__link">
         
   
   
@@ -5412,7 +5412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/internal-message-only-system-to-show-in-tos/" class="md-nav__link">
         
   
   
@@ -5435,7 +5435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/dashboard-noticeboard-after-4pm/" class="md-nav__link">
         
   
   
@@ -5458,7 +5458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/allOldClickups/re-sent-outbox-mail/" class="md-nav__link">
         
   
   
@@ -5530,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/showing-button-on-condition/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/showing-button-on-condition/" class="md-nav__link">
         
   
   
@@ -5553,7 +5553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/isCircular-conditionaly-rendering/" class="md-nav__link">
         
   
   
@@ -5576,7 +5576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/reg-validation-in-mail/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/reg-validation-in-mail/" class="md-nav__link">
         
   
   
@@ -5599,7 +5599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/circular-planning-highlight-person-contact-list/" class="md-nav__link">
         
   
   
@@ -5622,7 +5622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/tender-module-task-edit-and-im/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/tender-module-task-edit-and-im/" class="md-nav__link">
         
   
   
@@ -5645,7 +5645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/dashboard-daily-task-table-sorting/" class="md-nav__link">
         
   
   
@@ -5668,7 +5668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/august/dashboard-tender-scrollable-issue-in-tablet-view/" class="md-nav__link">
         
   
   
@@ -5740,7 +5740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/persist-storage-redux/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/persist-storage-redux/" class="md-nav__link">
         
   
   
@@ -5763,7 +5763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/persist-storage-tender-content/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/persist-storage-tender-content/" class="md-nav__link">
         
   
   
@@ -5786,7 +5786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/company-email-model/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/company-email-model/" class="md-nav__link">
         
   
   
@@ -5809,7 +5809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/converting-radio-to-select/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/converting-radio-to-select/" class="md-nav__link">
         
   
   
@@ -5832,7 +5832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/need-text-editor-in-im/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/need-text-editor-in-im/" class="md-nav__link">
         
   
   
@@ -5855,7 +5855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/conditional-rendering-button/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/conditional-rendering-button/" class="md-nav__link">
         
   
   
@@ -5878,7 +5878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/savebase64-excel-button/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/savebase64-excel-button/" class="md-nav__link">
         
   
   
@@ -5901,7 +5901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/css-scrolling-block-issue/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/css-scrolling-block-issue/" class="md-nav__link">
         
   
   
@@ -5924,7 +5924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/tab-circular-planing/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/tab-circular-planing/" class="md-nav__link">
         
   
   
@@ -5947,7 +5947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/circular-planning-select-value-debug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/circular-planning-select-value-debug/" class="md-nav__link">
         
   
   
@@ -5970,7 +5970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/tender-pagination-isActive/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/tender-pagination-isActive/" class="md-nav__link">
         
   
   
@@ -5993,7 +5993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/mail-onFocus/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/mail-onFocus/" class="md-nav__link">
         
   
   
@@ -6016,7 +6016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/task-module-set-tos-ccs/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/task-module-set-tos-ccs/" class="md-nav__link">
         
   
   
@@ -6088,7 +6088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/november/mail-mulitple-reference-issue/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/mail-mulitple-reference-issue/" class="md-nav__link">
         
   
   
@@ -6111,7 +6111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/november/adding-hyperlink-in-internal-toolbar/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/adding-hyperlink-in-internal-toolbar/" class="md-nav__link">
         
   
   
@@ -6134,7 +6134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/november/added-loader-in-business-model/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/added-loader-in-business-model/" class="md-nav__link">
         
   
   
@@ -6157,7 +6157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/november/14-tender-mail-added-refID/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/14-tender-mail-added-refID/" class="md-nav__link">
         
   
   
@@ -6180,7 +6180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/november/25-sub-category-in-tenderModule/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/25-sub-category-in-tenderModule/" class="md-nav__link">
         
   
   
@@ -6203,7 +6203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/november/23-subsector-tendermodule/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/november/23-subsector-tendermodule/" class="md-nav__link">
         
   
   
@@ -6275,7 +6275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/clickup/2024/september/companies-select-debug/" class="md-nav__link">
+      <a href="../../../office/ispl/clickup/2024/september/companies-select-debug/" class="md-nav__link">
         
   
   
@@ -6363,7 +6363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/refactor/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/" class="md-nav__link">
         
   
   
@@ -6386,7 +6386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/refactor/Button/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/Button/" class="md-nav__link">
         
   
   
@@ -6409,7 +6409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/refactor/function-update-setState/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/function-update-setState/" class="md-nav__link">
         
   
   
@@ -6432,7 +6432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/ispl/refactor/noticeboard/" class="md-nav__link">
+      <a href="../../../office/ispl/refactor/noticeboard/" class="md-nav__link">
         
   
   
@@ -6463,7 +6463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/common-error/" class="md-nav__link">
+      <a href="../../../office/common-error/" class="md-nav__link">
         
   
   
@@ -6535,7 +6535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/primesales/intro/" class="md-nav__link">
+      <a href="../../../office/primesales/intro/" class="md-nav__link">
         
   
   
@@ -6607,7 +6607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/codesnap/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/codesnap/" class="md-nav__link">
         
   
   
@@ -6630,7 +6630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/slice/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/slice/" class="md-nav__link">
         
   
   
@@ -6653,7 +6653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/improvement/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/improvement/" class="md-nav__link">
         
   
   
@@ -6676,7 +6676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/axios-cancel/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/axios-cancel/" class="md-nav__link">
         
   
   
@@ -6699,7 +6699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/loggin-in-react/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/loggin-in-react/" class="md-nav__link">
         
   
   
@@ -6722,7 +6722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/antd-modal/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/antd-modal/" class="md-nav__link">
         
   
   
@@ -6745,7 +6745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/antd-drawer/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/antd-drawer/" class="md-nav__link">
         
   
   
@@ -6768,7 +6768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/codesnapshot/router-dom/" class="md-nav__link">
+      <a href="../../../office/codesnapshot/router-dom/" class="md-nav__link">
         
   
   
@@ -6799,7 +6799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/secret/" class="md-nav__link">
+      <a href="../../../office/secret/" class="md-nav__link">
         
   
   
@@ -6863,7 +6863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/redux/intro/" class="md-nav__link">
+      <a href="../../../office/redux/intro/" class="md-nav__link">
         
   
   
@@ -6886,7 +6886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/redux/zustland/" class="md-nav__link">
+      <a href="../../../office/redux/zustland/" class="md-nav__link">
         
   
   
@@ -6909,7 +6909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/redux/zustland-store/" class="md-nav__link">
+      <a href="../../../office/redux/zustland-store/" class="md-nav__link">
         
   
   
@@ -6932,7 +6932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/redux/react-router/" class="md-nav__link">
+      <a href="../../../office/redux/react-router/" class="md-nav__link">
         
   
   
@@ -7004,7 +7004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/draft/" class="md-nav__link">
+      <a href="../../../office/draft/" class="md-nav__link">
         
   
   
@@ -7027,7 +7027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../office/React.cloneElement/" class="md-nav__link">
+      <a href="../../../office/React.cloneElement/" class="md-nav__link">
         
   
   
@@ -7111,7 +7111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../web-dev-icebergs/" class="md-nav__link">
+      <a href="../../web-dev-icebergs/" class="md-nav__link">
         
   
   
@@ -7134,7 +7134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../linkedin/" class="md-nav__link">
+      <a href="../../linkedin/" class="md-nav__link">
         
   
   
@@ -7157,7 +7157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../git-tag/" class="md-nav__link">
+      <a href="../../git-tag/" class="md-nav__link">
         
   
   
@@ -7221,7 +7221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../javascript/js-scientific-notation/" class="md-nav__link">
+      <a href="../../javascript/js-scientific-notation/" class="md-nav__link">
         
   
   
@@ -7244,7 +7244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../javascript/first-class-in-js/" class="md-nav__link">
+      <a href="../../javascript/first-class-in-js/" class="md-nav__link">
         
   
   
@@ -7316,7 +7316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/useRef-indepth/" class="md-nav__link">
+      <a href="../../react/useRef-indepth/" class="md-nav__link">
         
   
   
@@ -7339,7 +7339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/is-useRef-a-mutex/" class="md-nav__link">
+      <a href="../../react/is-useRef-a-mutex/" class="md-nav__link">
         
   
   
@@ -7362,7 +7362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/reconciliation-engine/" class="md-nav__link">
+      <a href="../../react/reconciliation-engine/" class="md-nav__link">
         
   
   
@@ -7385,7 +7385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/batched-in-react/" class="md-nav__link">
+      <a href="../../react/batched-in-react/" class="md-nav__link">
         
   
   
@@ -7408,7 +7408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/deferred-in-react/" class="md-nav__link">
+      <a href="../../react/deferred-in-react/" class="md-nav__link">
         
   
   
@@ -7431,7 +7431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/memo-theory/" class="md-nav__link">
+      <a href="../../react/memo-theory/" class="md-nav__link">
         
   
   
@@ -7454,7 +7454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/hierarchical-structure/" class="md-nav__link">
+      <a href="../../react/hierarchical-structure/" class="md-nav__link">
         
   
   
@@ -7477,7 +7477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/npm-publish/" class="md-nav__link">
+      <a href="../../react/npm-publish/" class="md-nav__link">
         
   
   
@@ -7500,7 +7500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/working-with-numbers-in-js/" class="md-nav__link">
+      <a href="../../react/working-with-numbers-in-js/" class="md-nav__link">
         
   
   
@@ -7523,7 +7523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/react-update-notifier/" class="md-nav__link">
+      <a href="../../react/react-update-notifier/" class="md-nav__link">
         
   
   
@@ -7546,7 +7546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/feature-flags/" class="md-nav__link">
+      <a href="../../react/feature-flags/" class="md-nav__link">
         
   
   
@@ -7569,7 +7569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/improved-code/" class="md-nav__link">
+      <a href="../../react/improved-code/" class="md-nav__link">
         
   
   
@@ -7633,7 +7633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/overview/" class="md-nav__link">
+      <a href="../../react/app-version-update/overview/" class="md-nav__link">
         
   
   
@@ -7656,7 +7656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/issue/" class="md-nav__link">
+      <a href="../../react/app-version-update/issue/" class="md-nav__link">
         
   
   
@@ -7679,7 +7679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/serviceWorker-issue/" class="md-nav__link">
+      <a href="../../react/app-version-update/serviceWorker-issue/" class="md-nav__link">
         
   
   
@@ -7743,7 +7743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/overview/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/overview/" class="md-nav__link">
         
   
   
@@ -7766,7 +7766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/notes/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/notes/" class="md-nav__link">
         
   
   
@@ -7830,7 +7830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/concept/service-worker-concept/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/concept/service-worker-concept/" class="md-nav__link">
         
   
   
@@ -7902,7 +7902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/theory/service-worker-theory/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/theory/service-worker-theory/" class="md-nav__link">
         
   
   
@@ -7974,7 +7974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/docs/vite-react-pwa/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/docs/vite-react-pwa/" class="md-nav__link">
         
   
   
@@ -8046,7 +8046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/code/service-worker/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/code/service-worker/" class="md-nav__link">
         
   
   
@@ -8069,7 +8069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/code/sw-register/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/code/sw-register/" class="md-nav__link">
         
   
   
@@ -8141,7 +8141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/code/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/code/" class="md-nav__link">
         
   
   
@@ -8164,7 +8164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/misconception/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/misconception/" class="md-nav__link">
         
   
   
@@ -8187,7 +8187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/offline/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/offline/" class="md-nav__link">
         
   
   
@@ -8210,7 +8210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/offlineReady-vs-navigator.onLine/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/offlineReady-vs-navigator.onLine/" class="md-nav__link">
         
   
   
@@ -8233,7 +8233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/final-suggestion/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/final-suggestion/" class="md-nav__link">
         
   
   
@@ -8256,7 +8256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/final-date-suggestion/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/final-date-suggestion/" class="md-nav__link">
         
   
   
@@ -8279,7 +8279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/app-version-update/service-worker/working/defensive-programming/" class="md-nav__link">
+      <a href="../../react/app-version-update/service-worker/working/defensive-programming/" class="md-nav__link">
         
   
   
@@ -8359,7 +8359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/web-push-api/overview/" class="md-nav__link">
+      <a href="../../react/web-push-api/overview/" class="md-nav__link">
         
   
   
@@ -8488,7 +8488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/setup/overview/" class="md-nav__link">
+      <a href="../../sentry/setup/overview/" class="md-nav__link">
         
   
   
@@ -8511,7 +8511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/setup/install-sentry/" class="md-nav__link">
+      <a href="../../sentry/setup/install-sentry/" class="md-nav__link">
         
   
   
@@ -8534,7 +8534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/setup/sentry-self-hosted/" class="md-nav__link">
+      <a href="../../sentry/setup/sentry-self-hosted/" class="md-nav__link">
         
   
   
@@ -8606,7 +8606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/integration/react/" class="md-nav__link">
+      <a href="../../sentry/integration/react/" class="md-nav__link">
         
   
   
@@ -8629,7 +8629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/integration/react-with-pnpm-axios/" class="md-nav__link">
+      <a href="../../sentry/integration/react-with-pnpm-axios/" class="md-nav__link">
         
   
   
@@ -8652,7 +8652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/integration/fastapi/" class="md-nav__link">
+      <a href="../../sentry/integration/fastapi/" class="md-nav__link">
         
   
   
@@ -8675,7 +8675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/integration/trace-linking/" class="md-nav__link">
+      <a href="../../sentry/integration/trace-linking/" class="md-nav__link">
         
   
   
@@ -8747,7 +8747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/guide/sentry-vs-prometheus/" class="md-nav__link">
+      <a href="../../sentry/guide/sentry-vs-prometheus/" class="md-nav__link">
         
   
   
@@ -8770,7 +8770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/guide/best-practices/" class="md-nav__link">
+      <a href="../../sentry/guide/best-practices/" class="md-nav__link">
         
   
   
@@ -8801,7 +8801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/difference-between-sentry-and-promethus/" class="md-nav__link">
+      <a href="../../sentry/difference-between-sentry-and-promethus/" class="md-nav__link">
         
   
   
@@ -8824,7 +8824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sentry/concept-first/" class="md-nav__link">
+      <a href="../../sentry/concept-first/" class="md-nav__link">
         
   
   
@@ -8896,7 +8896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nodejs/overview/" class="md-nav__link">
+      <a href="../../nodejs/overview/" class="md-nav__link">
         
   
   
@@ -8919,7 +8919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nodejs/nodejs-module-types/" class="md-nav__link">
+      <a href="../../nodejs/nodejs-module-types/" class="md-nav__link">
         
   
   
@@ -8991,7 +8991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../linux/pamac-vs-pacman/" class="md-nav__link">
+      <a href="../../linux/pamac-vs-pacman/" class="md-nav__link">
         
   
   
@@ -9014,7 +9014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../linux/linux-last-login/" class="md-nav__link">
+      <a href="../../linux/linux-last-login/" class="md-nav__link">
         
   
   
@@ -9042,8 +9042,6 @@
                 
   
   
-    
-  
   
   
     
@@ -9054,11 +9052,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
         
           
           <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
@@ -9074,7 +9072,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_9">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -9088,7 +9086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-api-image/" class="md-nav__link">
+      <a href="../../python/django-api-image/" class="md-nav__link">
         
   
   
@@ -9111,7 +9109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../custom-django-app-structure/" class="md-nav__link">
+      <a href="../../python/custom-django-app-structure/" class="md-nav__link">
         
   
   
@@ -9134,7 +9132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-builtin-lightweight-server/" class="md-nav__link">
+      <a href="../../python/django-builtin-lightweight-server/" class="md-nav__link">
         
   
   
@@ -9157,7 +9155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis-locally-or-docker/" class="md-nav__link">
+      <a href="../../python/redis-locally-or-docker/" class="md-nav__link">
         
   
   
@@ -9177,8 +9175,6 @@
                 
   
   
-    
-  
   
   
     
@@ -9189,11 +9185,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_5" >
         
           
           <label class="md-nav__link" for="__nav_4_9_5" id="__nav_4_9_5_label" tabindex="0">
@@ -9209,7 +9205,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_9_5">
             <span class="md-nav__icon md-icon"></span>
             Websocket
@@ -9223,7 +9219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../channels-full-guide/" class="md-nav__link">
+      <a href="../../python/websocket/channels-full-guide/" class="md-nav__link">
         
   
   
@@ -9243,32 +9239,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Channel vs Daphene
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../python/websocket/channels-vs-daphene/" class="md-nav__link">
         
   
   
@@ -9279,44 +9253,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#diffrence" class="md-nav__link">
-    <span class="md-ellipsis">
-      DIFFRENCE
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#channels-and-channel_redis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Channels and Channel_redis
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -9329,7 +9265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../issue-solved/" class="md-nav__link">
+      <a href="../../python/websocket/issue-solved/" class="md-nav__link">
         
   
   
@@ -9401,7 +9337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/intro/" class="md-nav__link">
+      <a href="../../python/redis/intro/" class="md-nav__link">
         
   
   
@@ -9424,7 +9360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/redis-cli/" class="md-nav__link">
+      <a href="../../python/redis/redis-cli/" class="md-nav__link">
         
   
   
@@ -9504,7 +9440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../prototype-stack/overview/" class="md-nav__link">
+      <a href="../../prototype-stack/overview/" class="md-nav__link">
         
   
   
@@ -9527,7 +9463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../prototype-stack/modified/" class="md-nav__link">
+      <a href="../../prototype-stack/modified/" class="md-nav__link">
         
   
   
@@ -9599,7 +9535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rabbitmq/overview/" class="md-nav__link">
+      <a href="../../rabbitmq/overview/" class="md-nav__link">
         
   
   
@@ -9622,7 +9558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rabbitmq/installation/" class="md-nav__link">
+      <a href="../../rabbitmq/installation/" class="md-nav__link">
         
   
   
@@ -9645,7 +9581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rabbitmq/question/" class="md-nav__link">
+      <a href="../../rabbitmq/question/" class="md-nav__link">
         
   
   
@@ -9717,7 +9653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dockerhub/overview/" class="md-nav__link">
+      <a href="../../dockerhub/overview/" class="md-nav__link">
         
   
   
@@ -9789,7 +9725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nepal/cit-nepal/" class="md-nav__link">
+      <a href="../../nepal/cit-nepal/" class="md-nav__link">
         
   
   
@@ -9812,7 +9748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nepal/rights/" class="md-nav__link">
+      <a href="../../nepal/rights/" class="md-nav__link">
         
   
   
@@ -9835,7 +9771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nepal/information/" class="md-nav__link">
+      <a href="../../nepal/information/" class="md-nav__link">
         
   
   
@@ -9858,7 +9794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nepal/personal/" class="md-nav__link">
+      <a href="../../nepal/personal/" class="md-nav__link">
         
   
   
@@ -9930,7 +9866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../roadmap/80-20/" class="md-nav__link">
+      <a href="../../roadmap/80-20/" class="md-nav__link">
         
   
   
@@ -9953,7 +9889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../roadmap/license-doc/" class="md-nav__link">
+      <a href="../../roadmap/license-doc/" class="md-nav__link">
         
   
   
@@ -9976,7 +9912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../roadmap/video/" class="md-nav__link">
+      <a href="../../roadmap/video/" class="md-nav__link">
         
   
   
@@ -9999,7 +9935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../roadmap/signalr-transport/" class="md-nav__link">
+      <a href="../../roadmap/signalr-transport/" class="md-nav__link">
         
   
   
@@ -10071,7 +10007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/website-package/" class="md-nav__link">
+      <a href="../../developer/website-package/" class="md-nav__link">
         
   
   
@@ -10094,7 +10030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/mvp/" class="md-nav__link">
+      <a href="../../developer/mvp/" class="md-nav__link">
         
   
   
@@ -10117,7 +10053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/github-copilot/" class="md-nav__link">
+      <a href="../../developer/github-copilot/" class="md-nav__link">
         
   
   
@@ -10140,7 +10076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/micro-frontend/" class="md-nav__link">
+      <a href="../../developer/micro-frontend/" class="md-nav__link">
         
   
   
@@ -10163,7 +10099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/locally-running-ai/" class="md-nav__link">
+      <a href="../../developer/locally-running-ai/" class="md-nav__link">
         
   
   
@@ -10186,7 +10122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/lead-fe/" class="md-nav__link">
+      <a href="../../developer/lead-fe/" class="md-nav__link">
         
   
   
@@ -10209,7 +10145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/think-architect/" class="md-nav__link">
+      <a href="../../developer/think-architect/" class="md-nav__link">
         
   
   
@@ -10232,7 +10168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/fe-system-design/" class="md-nav__link">
+      <a href="../../developer/fe-system-design/" class="md-nav__link">
         
   
   
@@ -10255,7 +10191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/faang/" class="md-nav__link">
+      <a href="../../developer/faang/" class="md-nav__link">
         
   
   
@@ -10278,7 +10214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/bug/" class="md-nav__link">
+      <a href="../../developer/bug/" class="md-nav__link">
         
   
   
@@ -10350,7 +10286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iis-server/IIS-Manager/" class="md-nav__link">
+      <a href="../../iis-server/IIS-Manager/" class="md-nav__link">
         
   
   
@@ -10373,7 +10309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iis-server/iis-manager-url-rewrite/" class="md-nav__link">
+      <a href="../../iis-server/iis-manager-url-rewrite/" class="md-nav__link">
         
   
   
@@ -10401,6 +10337,8 @@
                 
   
   
+    
+  
   
   
     
@@ -10411,11 +10349,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_17" checked>
         
           
           <label class="md-nav__link" for="__nav_4_17" id="__nav_4_17_label" tabindex="0">
@@ -10431,7 +10369,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_17_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_17_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_17">
             <span class="md-nav__icon md-icon"></span>
             Expo
@@ -10445,7 +10383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../expo/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -10468,7 +10406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../expo/apk/" class="md-nav__link">
+      <a href="../apk/" class="md-nav__link">
         
   
   
@@ -10491,7 +10429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../expo/eas/" class="md-nav__link">
+      <a href="../eas/" class="md-nav__link">
         
   
   
@@ -10511,10 +10449,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../expo/auth-refactor/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Mobile Auth Refactor
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -10525,6 +10485,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#previous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previous
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updated Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Before
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -10545,7 +10552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../google-collab/" class="md-nav__link">
+      <a href="../../google-collab/" class="md-nav__link">
         
   
   
@@ -10568,7 +10575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../UI_DESIGN_OLD_DAYS/" class="md-nav__link">
+      <a href="../../UI_DESIGN_OLD_DAYS/" class="md-nav__link">
         
   
   
@@ -10680,7 +10687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/testing-101/" class="md-nav__link">
+      <a href="../../../research/testing/testing-101/" class="md-nav__link">
         
   
   
@@ -10703,7 +10710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/rtk101/" class="md-nav__link">
+      <a href="../../../research/testing/rtk101/" class="md-nav__link">
         
   
   
@@ -10726,7 +10733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/mutex/" class="md-nav__link">
+      <a href="../../../research/testing/mutex/" class="md-nav__link">
         
   
   
@@ -10749,7 +10756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/cancelling-rtkquery-api/" class="md-nav__link">
+      <a href="../../../research/testing/cancelling-rtkquery-api/" class="md-nav__link">
         
   
   
@@ -10772,7 +10779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/race-condition/" class="md-nav__link">
+      <a href="../../../research/testing/race-condition/" class="md-nav__link">
         
   
   
@@ -10795,7 +10802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/mutex/" class="md-nav__link">
+      <a href="../../../research/testing/mutex/" class="md-nav__link">
         
   
   
@@ -10818,7 +10825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/antd-datepickerIssue/" class="md-nav__link">
+      <a href="../../../research/testing/antd-datepickerIssue/" class="md-nav__link">
         
   
   
@@ -10841,7 +10848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/cookie/" class="md-nav__link">
+      <a href="../../../research/testing/cookie/" class="md-nav__link">
         
   
   
@@ -10864,7 +10871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/setTimeout-questions/" class="md-nav__link">
+      <a href="../../../research/testing/setTimeout-questions/" class="md-nav__link">
         
   
   
@@ -10887,7 +10894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/arrow-vs-function/" class="md-nav__link">
+      <a href="../../../research/testing/arrow-vs-function/" class="md-nav__link">
         
   
   
@@ -10910,7 +10917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/js-hoisting/" class="md-nav__link">
+      <a href="../../../research/testing/js-hoisting/" class="md-nav__link">
         
   
   
@@ -10933,7 +10940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/arrow-mistakes/" class="md-nav__link">
+      <a href="../../../research/testing/arrow-mistakes/" class="md-nav__link">
         
   
   
@@ -10956,7 +10963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/testing/general-vs-promise-callback/" class="md-nav__link">
+      <a href="../../../research/testing/general-vs-promise-callback/" class="md-nav__link">
         
   
   
@@ -11035,7 +11042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/antd-table-pagination/" class="md-nav__link">
+      <a href="../../../codehighlight/antd-table-pagination/" class="md-nav__link">
         
   
   
@@ -11058,7 +11065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/statemanagement/" class="md-nav__link">
+      <a href="../../../codehighlight/statemanagement/" class="md-nav__link">
         
   
   
@@ -11081,7 +11088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/rtkQuery-realtime/" class="md-nav__link">
+      <a href="../../../codehighlight/rtkQuery-realtime/" class="md-nav__link">
         
   
   
@@ -11104,7 +11111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/js-advanced-interview/" class="md-nav__link">
+      <a href="../../../codehighlight/js-advanced-interview/" class="md-nav__link">
         
   
   
@@ -11127,7 +11134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/rtk-overview/" class="md-nav__link">
+      <a href="../../../codehighlight/rtk-overview/" class="md-nav__link">
         
   
   
@@ -11150,7 +11157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/rule-of-thumb/" class="md-nav__link">
+      <a href="../../../codehighlight/rule-of-thumb/" class="md-nav__link">
         
   
   
@@ -11173,7 +11180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/antd-breakpoint/" class="md-nav__link">
+      <a href="../../../codehighlight/antd-breakpoint/" class="md-nav__link">
         
   
   
@@ -11196,7 +11203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/appBased-folder-structure/" class="md-nav__link">
+      <a href="../../../codehighlight/appBased-folder-structure/" class="md-nav__link">
         
   
   
@@ -11260,7 +11267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/webapi/overview/" class="md-nav__link">
+      <a href="../../../codehighlight/webapi/overview/" class="md-nav__link">
         
   
   
@@ -11283,7 +11290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/webapi/file-api/" class="md-nav__link">
+      <a href="../../../codehighlight/webapi/file-api/" class="md-nav__link">
         
   
   
@@ -11306,7 +11313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/webapi/web-api/" class="md-nav__link">
+      <a href="../../../codehighlight/webapi/web-api/" class="md-nav__link">
         
   
   
@@ -11337,7 +11344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/formData/" class="md-nav__link">
+      <a href="../../../codehighlight/formData/" class="md-nav__link">
         
   
   
@@ -11401,7 +11408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../codehighlight/supabase/intro/" class="md-nav__link">
+      <a href="../../../codehighlight/supabase/intro/" class="md-nav__link">
         
   
   
@@ -11459,18 +11466,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diffrence" class="md-nav__link">
+  <a href="#previous" class="md-nav__link">
     <span class="md-ellipsis">
-      DIFFRENCE
+      Previous
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#channels-and-channel_redis" class="md-nav__link">
+  <a href="#updated-now" class="md-nav__link">
     <span class="md-ellipsis">
-      Channels and Channel_redis
+      Updated Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Before
     </span>
   </a>
   
@@ -11495,57 +11511,205 @@
   
 
 
-<div><h1 id="channels-vs-daphene">Channels <code>vs</code> Daphene</h1>
-<details class="tip" open="open">
-<summary>In summary</summary>
-<ul>
-<li><strong>Django Channels</strong> = <mark>Framework</mark> for adding asynchronous features to Django.</li>
-<li><strong>Daphne</strong> = <mark>ASGI server</mark> that serves the application and handles the asynchronous protocols</li>
-</ul>
-</details>
-<hr>
-<h2 id="diffrence">DIFFRENCE</h2>
-<p>The key difference between WSGI (Web Server Gateway Interface) and ASGI (Asynchronous Server Gateway Interface) is how they handle <mark>synchronous</mark> vs. <mark>asynchronous</mark> communication in web applications.</p>
-<hr>
-<p>Example Scenarios:</p>
-<ul>
-<li>WSGI: Traditional websites like blogs, content management systems (CMS), or APIs that primarily handle HTTP requests.</li>
-<li>ASGI: Real-time applications like live chat systems, online multiplayer games, stock price updates, or apps with push notifications.</li>
-</ul>
-<p>In short:</p>
-<ul>
-<li>WSGI = synchronous (one request at a time).</li>
-<li>ASGI = asynchronous (can handle many requests concurrently, supporting WebSockets and real-time communication).</li>
-</ul>
-<hr>
-<h2 id="channels-and-channel_redis">Channels and Channel_redis</h2>
-<p>In Django, <code>channels</code> and <code>channel_redis</code> are related components used for handling real-time communication and asynchronous features, like WebSockets, in Django applications. Here’s the key difference between them:</p>
-<p>Example in Django:</p>
-<ul>
-<li><code>channels</code> handles the WebSocket connection and consumers.</li>
-<li><code>channels_redis</code> ensures that messages sent via WebSockets (or any asynchronous communication) can be broadcasted across different Django workers or instances via Redis.</li>
-</ul>
-<details class="success" open="open">
-<summary>Typical Setup in <code>settings.py</code>:</summary>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># settings.py for Django Channels and Redis</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">ASGI_APPLICATION</span> <span class="o">=</span> <span class="s2">"yourproject.asgi.application"</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Channels Redis configuration</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">CHANNEL_LAYERS</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="s1">'BACKEND'</span><span class="p">:</span> <span class="s1">'channels_redis.core.RedisChannelLayer'</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s1">'CONFIG'</span><span class="p">:</span> <span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            <span class="s2">"hosts"</span><span class="p">:</span> <span class="p">[(</span><span class="s1">'127.0.0.1'</span><span class="p">,</span> <span class="mi">6379</span><span class="p">)],</span>  <span class="c1"># Redis server connection</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="p">},</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="p">},</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+<div><h1 id="auth-refactored">Auth Refactored</h1>
+<h2 id="previous">Previous</h2>
+<div class="language-jsx highlight"><span class="filename">context/AuthProvider.tsx</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createContext</span><span class="p">,</span><span class="w"> </span><span class="nx">useContext</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="p">,</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">supabase</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@/lib/supabase"</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Session</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@supabase/supabase-js"</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useRouter</span><span class="p">,</span><span class="w"> </span><span class="nx">useSegments</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"expo-router"</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">type</span><span class="w"> </span><span class="nx">AuthContextType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="nx">Session</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nx">loading</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nx">signOut</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">Promise</span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kd">const</span><span class="w"> </span><span class="nx">AuthContext</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nx">createContext</span><span class="w"> </span><span class="o">&lt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nx">AuthContextType</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nx">loading</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nx">signOut</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{},</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">AuthProvider</span><span class="p">({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">ReactNode</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">session</span><span class="p">,</span><span class="w"> </span><span class="nx">setSession</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">useState</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">Session</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="kc">null</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">loading</span><span class="p">,</span><span class="w"> </span><span class="nx">setLoading</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useRouter</span><span class="p">();</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">segments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useSegments</span><span class="p">();</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="c1">// Load initial session</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="nx">supabase</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">getSession</span><span class="p">().</span><span class="nx">then</span><span class="p">(({</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">      </span><span class="nx">setSession</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">session</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="c1">// Listen for session changes</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">listener</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">supabase</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">onAuthStateChange</span><span class="p">(</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">      </span><span class="p">(</span><span class="nx">_event</span><span class="p">,</span><span class="w"> </span><span class="nx">newSession</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">        </span><span class="nx">setSession</span><span class="p">(</span><span class="nx">newSession</span><span class="p">);</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">      </span><span class="nx">listener</span><span class="p">.</span><span class="nx">subscription</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">  </span><span class="c1">// Redirect logic</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">loading</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">inAuthGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">segments</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"auth"</span><span class="p">;</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">session</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">inAuthGroup</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">      </span><span class="nx">router</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"/auth/login"</span><span class="p">);</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">session</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">inAuthGroup</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">      </span><span class="nx">router</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"/"</span><span class="p">);</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="nx">session</span><span class="p">,</span><span class="w"> </span><span class="nx">segments</span><span class="p">,</span><span class="w"> </span><span class="nx">loading</span><span class="p">]);</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">  </span><span class="c1">// Sign out method</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">supabase</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">signOut</span><span class="p">();</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">    </span><span class="nx">setSession</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"/auth/login"</span><span class="p">);</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">AuthContext</span><span class="p">.</span><span class="na">Provider</span><span class="w"> </span><span class="na">value</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">session</span><span class="p">,</span><span class="w"> </span><span class="nx">loading</span><span class="p">,</span><span class="w"> </span><span class="nx">signOut</span><span class="w"> </span><span class="p">}}&gt;</span>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">      </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">AuthContext</span><span class="p">.</span><span class="na">Provider</span><span class="p">&gt;</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="p">}</span>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">useAuth</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">useContext</span><span class="p">(</span><span class="nx">AuthContext</span><span class="p">);</span>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="p">}</span>
 </span></code></pre></div>
-</details>
-<p>Conclusion:</p>
+<p>Before (your old setup, probably):</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// app/_layout.tsx</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AuthProvider</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@/providers/AuthProvider"</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">RootLayout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">AuthProvider</span><span class="p">&gt;{</span><span class="cm">/* rest of your app */</span><span class="p">}&lt;/</span><span class="nt">AuthProvider</span><span class="p">&gt;;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-jsx highlight"><span class="filename">profile.tsx</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useAuth</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@/context/AuthProvider"</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h2 id="updated-now">Updated Now</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/context/auth-context.tsx
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/hooks/useAuthSession.ts
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>/providers/AuthProvider.tsx
+</span></code></pre></div>
+<p>This makes it modular:</p>
 <ul>
-<li><code>channels</code> gives Django the capability to handle WebSockets and asynchronous protocols.</li>
-<li><code>channels_redis</code> enables inter-process communication using Redis, making it possible to scale Django applications while maintaining real-time capabilities.</li>
-</ul></div>
+<li>All <strong>state &amp; Supabase logic</strong> → <code>useAuthSession</code></li>
+<li><strong>Context + Provider</strong> → <code>auth-context.tsx</code> &amp; <code>AuthProvider.tsx</code></li>
+<li><strong>Routing logic</strong> → only inside <code>AuthProvider</code></li>
+</ul>
+<p>✅ After modularizing — <strong>the import path stays the same</strong>, just cleaner inside:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// app/_layout.tsx</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AuthProvider</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@/providers/AuthProvider"</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">RootLayout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">AuthProvider</span><span class="p">&gt;{</span><span class="cm">/* rest of your app */</span><span class="p">}&lt;/</span><span class="nt">AuthProvider</span><span class="p">&gt;;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr>
+<h2 id="login-before">Login Before</h2>
+<div class="language-jsx highlight"><span class="filename">login.tsx</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">View</span><span class="p">,</span><span class="w"> </span><span class="nx">TextInput</span><span class="p">,</span><span class="w"> </span><span class="nx">Button</span><span class="p">,</span><span class="w"> </span><span class="nx">Text</span><span class="p">,</span><span class="w"> </span><span class="nx">StyleSheet</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react-native"</span><span class="p">;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">supabase</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@/lib/supabase"</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useRouter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"expo-router"</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">LoginScreen</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useRouter</span><span class="p">();</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="nx">setEmail</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">password</span><span class="p">,</span><span class="w"> </span><span class="nx">setPassword</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="nx">setMessage</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">signIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">supabase</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">signInWithPassword</span><span class="p">({</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="nx">email</span><span class="p">,</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">      </span><span class="nx">password</span><span class="p">,</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">      </span><span class="nx">setMessage</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">      </span><span class="nx">setMessage</span><span class="p">(</span><span class="s2">"Login successful!"</span><span class="p">);</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">      </span><span class="nx">router</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"/"</span><span class="p">);</span><span class="w"> </span><span class="c1">// redirect to home tab</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">View</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">container</span><span class="p">}&gt;</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Text</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">label</span><span class="p">}&gt;</span><span class="nx">Email</span><span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">TextInput</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">        </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">input</span><span class="p">}</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">        </span><span class="na">placeholder</span><span class="o">=</span><span class="s">"Enter email"</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">        </span><span class="na">placeholderTextColor</span><span class="o">=</span><span class="s">"#aaa"</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">        </span><span class="na">autoCapitalize</span><span class="o">=</span><span class="s">"none"</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">        </span><span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">email</span><span class="p">}</span>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">        </span><span class="na">onChangeText</span><span class="o">=</span><span class="p">{</span><span class="nx">setEmail</span><span class="p">}</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">      </span><span class="p">/&gt;</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Text</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">label</span><span class="p">}&gt;</span><span class="nx">Password</span><span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">TextInput</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">        </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">input</span><span class="p">}</span>
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">        </span><span class="na">placeholder</span><span class="o">=</span><span class="s">"Enter password"</span>
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">        </span><span class="na">placeholderTextColor</span><span class="o">=</span><span class="s">"#aaa"</span>
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">        </span><span class="na">secureTextEntry</span>
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="w">        </span><span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">password</span><span class="p">}</span>
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="w">        </span><span class="na">onChangeText</span><span class="o">=</span><span class="p">{</span><span class="nx">setPassword</span><span class="p">}</span>
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="w">      </span><span class="p">/&gt;</span>
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">Button</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s">"Login"</span><span class="w"> </span><span class="na">onPress</span><span class="o">=</span><span class="p">{</span><span class="nx">signIn</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="w">      </span><span class="p">{</span><span class="nx">message</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">""</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">Text</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">message</span><span class="p">}&gt;{</span><span class="nx">message</span><span class="p">}&lt;/</span><span class="nt">Text</span><span class="p">&gt;}</span>
+</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>
+</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">View</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">signupButton</span><span class="p">}&gt;</span>
+</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">Button</span>
+</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="w">          </span><span class="na">title</span><span class="o">=</span><span class="s">"Go to Signup"</span>
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="w">          </span><span class="na">color</span><span class="o">=</span><span class="s">"#888"</span>
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="w">          </span><span class="na">onPress</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">"/auth/signup"</span><span class="p">)}</span>
+</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="w">        </span><span class="p">/&gt;</span>
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">View</span><span class="p">&gt;</span>
+</span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">View</span><span class="p">&gt;</span>
+</span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a><span class="p">}</span>
+</span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a>
+</span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a><span class="kd">const</span><span class="w"> </span><span class="nx">styles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">StyleSheet</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a><span class="w">  </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a><span class="w">    </span><span class="nx">flex</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+</span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a><span class="w">    </span><span class="nx">padding</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+</span><span id="__span-5-63"><a id="__codelineno-5-63" name="__codelineno-5-63" href="#__codelineno-5-63"></a><span class="w">    </span><span class="nx">justifyContent</span><span class="o">:</span><span class="w"> </span><span class="s2">"center"</span><span class="p">,</span>
+</span><span id="__span-5-64"><a id="__codelineno-5-64" name="__codelineno-5-64" href="#__codelineno-5-64"></a><span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s2">"#121212"</span><span class="p">,</span><span class="w"> </span><span class="c1">// dark background</span>
+</span><span id="__span-5-65"><a id="__codelineno-5-65" name="__codelineno-5-65" href="#__codelineno-5-65"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-5-66"><a id="__codelineno-5-66" name="__codelineno-5-66" href="#__codelineno-5-66"></a><span class="w">  </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a><span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">"#fff"</span><span class="p">,</span>
+</span><span id="__span-5-68"><a id="__codelineno-5-68" name="__codelineno-5-68" href="#__codelineno-5-68"></a><span class="w">    </span><span class="nx">marginBottom</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+</span><span id="__span-5-69"><a id="__codelineno-5-69" name="__codelineno-5-69" href="#__codelineno-5-69"></a><span class="w">    </span><span class="nx">fontSize</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+</span><span id="__span-5-70"><a id="__codelineno-5-70" name="__codelineno-5-70" href="#__codelineno-5-70"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-5-71"><a id="__codelineno-5-71" name="__codelineno-5-71" href="#__codelineno-5-71"></a><span class="w">  </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-72"><a id="__codelineno-5-72" name="__codelineno-5-72" href="#__codelineno-5-72"></a><span class="w">    </span><span class="nx">borderWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+</span><span id="__span-5-73"><a id="__codelineno-5-73" name="__codelineno-5-73" href="#__codelineno-5-73"></a><span class="w">    </span><span class="nx">borderColor</span><span class="o">:</span><span class="w"> </span><span class="s2">"#444"</span><span class="p">,</span>
+</span><span id="__span-5-74"><a id="__codelineno-5-74" name="__codelineno-5-74" href="#__codelineno-5-74"></a><span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span>
+</span><span id="__span-5-75"><a id="__codelineno-5-75" name="__codelineno-5-75" href="#__codelineno-5-75"></a><span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">"#fff"</span><span class="p">,</span>
+</span><span id="__span-5-76"><a id="__codelineno-5-76" name="__codelineno-5-76" href="#__codelineno-5-76"></a><span class="w">    </span><span class="nx">marginBottom</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+</span><span id="__span-5-77"><a id="__codelineno-5-77" name="__codelineno-5-77" href="#__codelineno-5-77"></a><span class="w">    </span><span class="nx">padding</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+</span><span id="__span-5-78"><a id="__codelineno-5-78" name="__codelineno-5-78" href="#__codelineno-5-78"></a><span class="w">    </span><span class="nx">borderRadius</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+</span><span id="__span-5-79"><a id="__codelineno-5-79" name="__codelineno-5-79" href="#__codelineno-5-79"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-5-80"><a id="__codelineno-5-80" name="__codelineno-5-80" href="#__codelineno-5-80"></a><span class="w">  </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-81"><a id="__codelineno-5-81" name="__codelineno-5-81" href="#__codelineno-5-81"></a><span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">"#f66"</span><span class="p">,</span>
+</span><span id="__span-5-82"><a id="__codelineno-5-82" name="__codelineno-5-82" href="#__codelineno-5-82"></a><span class="w">    </span><span class="nx">marginVertical</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+</span><span id="__span-5-83"><a id="__codelineno-5-83" name="__codelineno-5-83" href="#__codelineno-5-83"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-5-84"><a id="__codelineno-5-84" name="__codelineno-5-84" href="#__codelineno-5-84"></a><span class="w">  </span><span class="nx">signupButton</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-85"><a id="__codelineno-5-85" name="__codelineno-5-85" href="#__codelineno-5-85"></a><span class="w">    </span><span class="nx">marginTop</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+</span><span id="__span-5-86"><a id="__codelineno-5-86" name="__codelineno-5-86" href="#__codelineno-5-86"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-5-87"><a id="__codelineno-5-87" name="__codelineno-5-87" href="#__codelineno-5-87"></a><span class="p">});</span>
+</span></code></pre></div></div>
 
 
 
@@ -11581,7 +11745,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../channels-full-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Channel">
+          <a href="../eas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EAS">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -11591,20 +11755,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Channel
+                EAS
               </div>
             </div>
           </a>
         
         
           
-          <a href="../issue-solved/" class="md-footer__link md-footer__link--next" aria-label="Next: Issue Solved">
+          <a href="../../google-collab/" class="md-footer__link md-footer__link--next" aria-label="Next: Google Collab">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Issue Solved
+                Google Collab
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -11658,10 +11822,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "content.code.copy", "navigation.tabs", "navigation.top", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
