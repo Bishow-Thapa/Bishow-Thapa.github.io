@@ -459,7 +459,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ID Based Dynamic Route">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-define-the-dynamic-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Define the Dynamic Route:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Define the Dynamic Route:">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -11801,7 +11810,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ID Based Dynamic Route">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-define-the-dynamic-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Define the Dynamic Route:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Define the Dynamic Route:">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -12040,11 +12058,9 @@
 </span></code></pre></div>
 <hr>
 <h2 id="id-based-dynamic-route">ID Based Dynamic Route</h2>
-<p>In React, creating ID-based page routes, also known as dynamic routes, is accomplished using a routing library like React Router. This allows for routes that can handle varying parameters, such as product IDs or user IDs, within a single page application.</p>
+<p>In React, creating ID-based page routes, also known as <mark>dynamic routes</mark>, is accomplished using a routing library like React Router. This allows for routes that can handle varying parameters, such as product IDs or user IDs, within a single page application.</p>
 <p>Here's how to implement ID-based page routes using React Router:</p>
-<ol>
-<li>Define the Dynamic Route:</li>
-</ol>
+<h2 id="1-define-the-dynamic-route">1. Define the Dynamic Route:</h2>
 <p>In your <code>Routes</code> configuration, define a route with a parameter placeholder, typically using a colon followed by the parameter name (e.g., <code>:id</code>).</p>
 <div class="language-jsx highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BrowserRouter</span><span class="p">,</span><span class="w"> </span><span class="nx">Routes</span><span class="p">,</span><span class="w"> </span><span class="nx">Route</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react-router-dom"</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">HomePage</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./pages/HomePage"</span><span class="p">;</span>
@@ -12082,17 +12098,11 @@
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">ProductPage</span><span class="p">;</span>
 </span></code></pre></div>
 <p>Explanation:</p>
-<ul>
-<li><strong>Dynamic Route Definition</strong>:</li>
-</ul>
+<p><strong>Dynamic Route Definition</strong>:</p>
 <p>The <code>path="/products/:id"</code> tells React Router to match any URL that starts with <code>/products/</code> followed by any value. This value will be captured as the <code>id</code> parameter.</p>
-<ul>
-<li><strong><code>useParams</code> Hook</strong>:</li>
-</ul>
+<p><strong><code>useParams</code> Hook</strong>:</p>
 <p>This hook, when called within a functional component rendered by a dynamic route, returns an object containing the route parameters as key-value pairs. In this case, it would return <code>{ id: "someValue" }</code>.</p>
-<ul>
-<li><strong>Using the ID</strong>:</li>
-</ul>
+<p><strong>Using the ID</strong>:</p>
 <p>Once you have the <code>id</code>, you can use it to perform various actions, such as:</p>
 <ul>
 <li>Fetching specific data from an API (e.g., <code>fetchProductById(id)</code>).</li>
